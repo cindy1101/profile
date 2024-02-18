@@ -1,0 +1,2697 @@
+* {margin: 0; padding: 0;}
+li {list-style: none;}
+a {text-decoration: none;}
+img {display: block;}
+
+*::-webkit-scrollbar {
+    display: none; /* 크롬, 사파리, 오페라, 엣지 */
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'min_bold';
+    font-weight: 600;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'bold';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.ttf') format("truetype");
+    font-display: swap;
+}
+
+body {font-family: 'Pretendard'; line-height: 16px;}
+
+p {margin-bottom: 0;}
+
+ul {margin: 0; padding: 0;}
+
+input:not([type]), input[type="text"], input[type="password"], 
+input[type="date"], input[type="datetime"], 
+input[type="datetime-local"], input[type="month"], 
+input[type="week"], input[type="email"], input[type="number"], 
+input[type="search"], input[type="tel"], input[type="time"], 
+input[type="url"], input[type="color"], textarea
+{box-shadow: none;
+background-color: #fff;
+padding: 0;
+margin-bottom: 0;
+outline: none;}
+
+input[type="checkbox"]
+{margin-bottom: 0;}
+
+input[type="checkbox"]+label, input[type="radio"]+label 
+{margin: 0;}
+
+@media all and (min-width: 1420px)
+{   
+    /*비주얼베너*/
+    div.visual_sub_banner
+    {width: 100%; height: 350px;
+    margin-top: 139.44px;
+    overflow: hidden;
+    position: relative;}
+
+    div.visual_sub_banner img
+    {width: 100%; height: 100%;
+    object-fit: cover;
+    transition: all 2s;
+    transform: scale(1.2);}
+
+    p.visual_sub_text
+    {width: 100%;
+    position: absolute;
+    top: calc(50% - 25px); left: 0;
+    text-align: center;
+    opacity: 0;
+    transition: all 2s;
+    font-family: bold; color: #fff;
+    font-size: 42px; line-height: 50px;}
+
+    /*루트*/
+    div.nav_ex
+    {width: 100%;
+    background-color: #51b8ff;}
+
+    nav.nav_box
+    {width: 1400px;
+    margin: 0 auto;
+    overflow: hidden;}
+
+    nav.nav_box>ul
+    {width: 100%;
+    overflow: hidden;}
+
+    nav.nav_box>ul>li
+    {float: left;}
+
+    nav.nav_box>ul>li:nth-child(1)
+    {width: 20px; height: 20px;
+    margin-top: 10px; margin-bottom: 10px;}
+    
+    nav.nav_box>ul>li:nth-child(1) img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    nav.nav_box>ul>li>p
+    {line-height: 40px;
+    color: #fff;
+    margin-left: 10px; margin-right: 10px;}
+
+    nav.nav_box>ul>li>a>p
+    {line-height: 40px;
+    color: #fff;}
+
+
+    /*전체 박스*/
+    div.health_screening_detaile_ex
+    {width: 1400px;
+    margin: 100px auto;
+    margin-bottom: 150px;}
+
+    /*타이틀*/
+    div.health_screening_detaile_title_ex
+    {width: 100%;
+    margin-bottom: 50px; padding-bottom: 50px;
+    border-bottom: 1px solid #222; box-sizing: border-box;}
+
+    div.health_screening_detaile_title_ex>p:nth-child(1)
+    {width: 100%;
+    font-family: 'min_bold'; line-height: 25px;
+    color: #51b8ff; 
+    margin-bottom: 10px;}
+
+    div.health_screening_detaile_title_ex>p:nth-child(2)
+    {width: 100%;
+    font-size: 28px; font-family: bold; line-height: 32px;
+    color: #222; word-break: keep-all;}
+
+     /*비주얼 박스*/
+    div.health_screening_detaile_visual_ex
+    {width: 100%;
+    margin-bottom: 50px; padding-bottom: 30px;
+    border-bottom: 1px solid #ddd; box-sizing: border-box;}
+
+    /*슬라이드 이미지*/
+    div.health_screening_detaile_visual
+    {width: 100%;
+    margin-bottom: 30px;}
+
+    div.health_screening_detaile_visual_img
+    {width: 100%; height: 0;
+    position: relative;
+    padding-bottom: 100%;
+    border-radius: 5px;
+    overflow: hidden;}
+
+    div.health_screening_detaile_visual_img img
+    {width: 100%; height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0; left: 0;}
+
+    /*설명*/
+    div.health_visual_txt_box
+    {width: 100%;
+    background-color: #f3f3f3;
+    padding-top: 30px; padding-bottom: 30px;}
+
+    div.health_visual_txt_box>p
+    {width: calc(100% - 60px);
+    margin: 0 auto;
+    line-height: 25px; color: #222;
+    word-break: keep-all;}
+
+
+
+    /*공통된 입력 폼*/
+    div.health_screening_information_ex
+    {width: 100%;
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    margin-bottom: 50px;}
+
+    div.health_screening_information_box
+    {width: 48.5%;
+    margin-right: 3%;
+    margin-bottom: 30px;}
+
+    div.health_screening_information_box:nth-child(2n+2)
+    {margin-right: 0;}
+
+    /*타이틀*/
+    div.health_screening_information_title
+    {width: 100%;
+    margin-bottom: 20px;}
+
+    div.health_screening_information_icon
+    {width: 35px; height: 35px;
+    margin-bottom: 10px;}
+
+    div.health_screening_information_icon img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    p.health_screening_information_title_txt
+    {width: 100%;
+    word-break: keep-all; font-size: 22px; font-family: bold;
+    color: #222; line-height: 30px;}
+    
+    /*글*/
+    p.health_screening_information_txt
+    {width: 100%;
+    word-break: keep-all;
+    line-height: 25px; color: #555;}
+
+    /*링크*/
+    a.health_screening_information_link
+    {width: 100%;
+    display: block;}
+
+    a.health_screening_information_link>p
+    {width: 100%;
+    word-wrap: break-word;
+    word-break: break-all;
+    line-height: 25px;
+    font-size: 15px;
+    color: #51b8ff; text-decoration: underline;
+    text-decoration-color: #51b8ff;}
+
+
+
+
+    /*건강검진 내용 보여주는 큰 박스*/
+    div.health_screening_detaile_button_ex
+    {width: 100%;
+    margin-bottom: 80px;}
+
+    input[type="checkbox"].health_screening_btn {display: none;}
+
+    /*라벨 박스*/
+    div.health_screening_btn_label_box
+    {width: 100%;
+    overflow: hidden;
+    padding-bottom: 15px; margin-bottom: 30px;
+    border-bottom: 1px solid #222; box-sizing: border-box;}
+
+    div.health_screening_btn_label_box>label
+    {width: 268px;
+    margin-right: 15px;
+    border-radius: 5px;
+    border: 1px solid #51b8ff; box-sizing: border-box;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    transition: all 0.3s;}
+
+    div.health_screening_btn_label_box>label:nth-child(5n+5)
+    {margin-right: 0;}
+
+    div.health_screening_btn_label_box>label>p
+    {width: calc(100% - 40px);
+    margin: 0 auto;
+    text-align: center;
+    line-height: 25px;
+    color: #51b8ff; word-break: keep-all;
+    padding-top: 15px; padding-bottom: 15px;
+    transition: all 0.3s;}
+
+    /*시트*/
+    div.health_screening_btn_sheet_ex
+    {width: 100%;
+    margin-bottom: 30px;}
+
+    div.health_screening_btn_sheet_box
+    {width: 100%;}
+
+    /*시트 타이틀*/
+    div.health_screening_btn_sheet_title
+    {width: 100%;
+    margin-bottom: 50px; padding-bottom: 50px;
+    border-bottom: 1px solid #ddd; box-sizing: border-box;}
+
+    div.health_screening_btn_sheet_title>p:nth-child(1)
+    {width: 100%;
+    text-align: center; line-height: 30px; font-size: 24px;
+    font-family: bold; color: #1f4e79;
+    margin-bottom: 10px;}
+
+    div.health_screening_btn_sheet_title>p:nth-child(2)
+    {width: 800px;
+    margin: 0 auto;
+    text-align: center; font-size: 16px;
+    word-break: keep-all;
+    line-height: 25px; color: #777;}
+
+    /*아이템*/
+    div.item_health_ex
+    {width: 100%;
+    display: flex;
+    align-items: stretch;
+    overflow: hidden;
+    margin-bottom: 50px; padding-bottom: 50px;
+    border-bottom: 1px solid #ddd; box-sizing: border-box;}
+
+    /*아이템 타이틀*/
+    div.item_health_title
+    {width: 220px;
+    margin-right: 10px;}
+
+    div.item_health_icon
+    {width: 35px; height: 35px;
+    margin-bottom: 10px;}
+
+    div.item_health_icon img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    div.item_health_title>p:nth-child(2)
+    {width: 100%;
+    font-size: 22px; font-family: bold; color: #222; line-height: 25px;}
+    
+    /*아이템 내용*/
+    p.item_health_contetns
+    {width: calc(100% - 230px);
+    word-break: keep-all;
+    color: #333; line-height: 25px;}
+
+    p.item_health_contetns>span
+    {font-family: bold;}
+
+    p.item_health_contetns img
+    {width: 850px; height: auto;
+    margin-top: 20px; margin-bottom: 20px;}
+
+     /*가격*/
+    div.cost_health_ex
+    {width: 100%;
+    display: flex;
+    align-items: stretch;
+    overflow: hidden;
+    margin-bottom: 50px; padding-bottom: 50px;
+    border-bottom: 1px solid #ddd; box-sizing: border-box;}
+
+    /*가격 타이틀*/
+    div.cost_health_title
+    {width: 220px;
+    margin-right: 10px;}
+
+    div.cost_health_icon
+    {width: 35px; height: 35px;
+    margin-bottom: 10px;}
+
+    div.cost_health_icon img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    div.cost_health_title>p:nth-child(2)
+    {width: 100%;
+    font-size: 22px; font-family: bold; color: #222; line-height: 25px;}
+    
+    /*가격 내용*/
+    p.cost_health_contetns
+    {width: calc(100% - 230px);
+    word-break: keep-all;
+    color: #333; line-height: 25px;}
+
+    p.cost_health_contetns img
+    {width: 850px; height: auto;
+    margin-top: 20px; margin-bottom: 20px;}
+
+    /*기타내용*/
+    div.other_guidance_health_ex
+    {width: 100%;
+    display: flex;
+    align-items: stretch;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #ddd; box-sizing: border-box;
+    overflow: hidden;}
+
+    /*기타내용 타이틀*/
+    div.other_guidance_health_title
+    {width: 220px;
+    margin-right: 10px;}
+
+    div.other_guidance_health_icon
+    {width: 35px; height: 35px;
+    margin-bottom: 10px;}
+
+    div.other_guidance_health_icon img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    div.other_guidance_health_title>p:nth-child(2)
+    {width: 100%;
+    font-size: 22px; font-family: bold; color: #222; line-height: 25px;}
+    
+    /*기타 내용*/
+    p.other_guidance_health_contetns
+    {width: calc(100% - 230px);
+    word-break: keep-all;
+    color: #333; line-height: 25px;}
+
+    p.other_guidance_health_contetns img
+    {width: 850px; height: auto;
+    margin-top: 20px; margin-bottom: 20px;}
+
+    /*pdf 다운로드*/
+    a.download_health
+    {width: 150px; height: 45px;
+    display: block;
+    margin-left: calc(100% - 150px);
+    border: 1px solid red; box-sizing: border-box;
+    border-radius: 5px;
+    transition: all 0.3s;}
+
+    a.download_health>p
+    {text-align: center; line-height: 45px; color: red;
+    transition: all 0.3s;}
+
+    a.download_health:hover
+    {background-color: red;
+    border: none;}
+
+    a.download_health:hover>p
+    {color: #fff;}
+
+    /*정보 입력*/
+    div.health_screening_cart_form_ex
+    {width: 100%;}
+
+    div.health_screening_cart_form_box
+    {width: 100%;
+    display: flex;
+    align-items: stretch;
+    margin-bottom: 100px;
+    overflow: hidden;}
+
+    /*달력*/
+    div.date_of_ues_ex
+    {width: 47.5%;
+    margin-right: 5%;}
+    
+    /*달력 타이틀*/
+    div.date_of_ues_title
+    {width: 100%;
+    margin-bottom: 20px;}
+
+    div.date_of_ues_title_icon
+    {width: 35px; height: 35px;
+    margin-bottom: 10px;}
+
+    div.date_of_ues_title_icon img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    p.date_of_ues_title_icon_txt
+    {width: 100%;
+    word-break: keep-all; font-size: 22px; font-family: bold;
+    color: #222; line-height: 30px;}
+
+    div.health_screening_calendar_ex
+    {width: 100%;}
+
+    /*달력 제어*/
+    #health_screening_calnedar_box
+    {width: 100%; height: 50px;
+    outline: none;
+    border: 1px solid #ccc; box-sizing: border-box;
+    background: #fff;
+    text-indent: 10px; color: #222;
+    font-size: 15px;
+    font-family: 'Pretendard' !important;
+    margin-bottom: 10px;}
+
+    #health_screening_calnedar_box::placeholder {color: #222;}
+
+    /*달력 제어*/
+    .flatpickr-calendar
+    {width: 100% !important;
+    box-shadow: 0 0 0 !important;
+    border: 1px solid #ddd; box-sizing: border-box;
+    font-family: 'Pretendard' !important;}
+
+    .flatpickr-calendar.inline {top: 0;}
+
+    .flatpickr-months
+    {padding-top: 10px; padding-bottom: 10px;
+    background-color: #1f4e79;}
+
+    .flatpickr-current-month
+    {padding: 0;}
+
+    .flatpickr-current-month .flatpickr-monthDropdown-months
+    {height: 30px;
+    font-size: 17px !important;
+    background: #1f4e79 !important;
+    font-family: 'Pretendard' !important;
+    color: #fff !important;}
+
+    .flatpickr-current-month input.cur-year
+    {height: 30px;
+    font-size: 17px !important;
+    background: #1f4e79 !important;
+    font-family: 'Pretendard' !important;
+    overflow-y: hidden !important;
+    color: #fff !important;}
+    
+    /*년도 선택하는 거 안 보이게*/
+    .arrowUp {display: none !important;}
+
+    .arrowDown {display: none !important;}
+
+    /*꺽세 위치 잡기*/
+    .flatpickr-months .flatpickr-prev-month.flatpickr-prev-month
+    {top: 6.5px;
+    fill: #fff !important;}
+
+    .flatpickr-months .flatpickr-next-month.flatpickr-next-month
+    {top: 6.5px;
+    fill: #fff !important;}
+
+    .flatpickr-months .flatpickr-prev-month.flatpickr-prev-month:hover svg
+    {fill: #fff;}
+
+    .flatpickr-months .flatpickr-next-month.flatpickr-next-month:hover svg
+    {fill: #fff;}
+    
+    /*중앙 정렬*/
+    .flatpickr-rContainer
+    {width: calc(100% - 40px);
+    margin: 0 auto;}
+
+    .flatpickr-days
+    {width: 100%;}
+
+    .dayContainer
+    {width: 100%;
+    min-width: 100%; max-width: none;
+    margin: 0 auto;}
+
+    .flatpickr-day
+    {width: 14.28571428%; 
+    max-width: 14.28571428%; min-width: none;}
+
+    /*요일 표시 넓게*/
+    .flatpickr-weekdays
+    {padding-top: 5px; padding-bottom: 5px;}
+    
+    /*토, 일 색깔 바꾸기*/
+    span.flatpickr-weekday:nth-child(1)
+    {color: red !important;}
+
+    span.flatpickr-weekday:nth-child(7)
+    {color: blue !important;}
+
+    /*오늘 날짜*/
+    .flatpickr-day.today
+    {border: none;}
+
+    .flatpickr-day.today:hover
+    {background-color: #e6e6e6;
+    background: #e6e6e6;
+    color: #222;}
+
+    /*요일*/
+    .flatpickr-day
+    {height: 100%; height: 50px;
+    border-radius: 0;
+    line-height: 50px;}
+    
+
+    /*인원, 시간*/
+    div.personnel_ex
+    {width: 47.5%;}
+
+    /*인원 시간 타이틀*/
+    div.personnel_title
+    {width: 100%;
+    margin-bottom: 20px;}
+
+    div.personnel_title_icon
+    {width: 35px; height: 35px;
+    margin-bottom: 10px;}
+
+    div.personnel_title_icon img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    p.personnel_title_icon_txt
+    {width: 100%;
+    word-break: keep-all; font-size: 22px; font-family: bold;
+    color: #222; line-height: 30px;}
+
+    div.personnel_form_ex
+    {width: 100%;}
+
+    #health_screening_time_select
+    {width: 100%; height: 50px;
+    margin: 0; padding: 0 25px 0 10px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    background: url('../img/select_dowm_icon.png') no-repeat 97% 50%/15px auto;
+    outline: none;
+    color: #222; font-size: 15px;
+    font-family: 'Pretendard' !important;
+    border: 1px solid #ddd; box-sizing: border-box;
+    -webkit-appearance: none; /* for chrome */
+    -moz-appearance: none; /*for firefox*/
+    appearance: none;}
+
+    #health_screening_time_select::-ms-expand
+    {display: none;}
+
+    #health_screening_product_select
+    {width: 100%; height: 50px;
+    margin: 0; padding: 0 25px 0 10px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    background: url('../img/select_dowm_icon.png') no-repeat 97% 50%/15px auto;
+    outline: none;
+    color: #222; font-size: 15px;
+    font-family: 'Pretendard' !important;
+    border: 1px solid #ddd; box-sizing: border-box;
+    -webkit-appearance: none; /* for chrome */
+    -moz-appearance: none; /*for firefox*/
+    appearance: none;}
+
+    #health_screening_product_select::-ms-expand
+    {display: none;}
+
+    /*인원*/
+    div.select_people_ex
+    {width: 100%;}
+    
+    /*성인*/
+    div.adults_ex_h
+    {width: 100%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;}
+
+    div.adults_ex_h>p:nth-child(1)
+    {width: calc(100% - 160px);
+    margin-right: 10px;
+    font-family: 'min_bold'; line-height: 25px; color: #222;}
+
+    #adults_select
+    {width: 150px; height: 50px;
+    margin: 0; padding: 0 25px 0 10px;
+    background-color: #fff;
+    background: url('../img/select_dowm_icon.png') no-repeat 97% 50%/15px auto;
+    outline: none;
+    color: #222; font-size: 15px;
+    font-family: 'Pretendard' !important;
+    border: 1px solid #ddd; box-sizing: border-box;
+    -webkit-appearance: none; /* for chrome */
+    -moz-appearance: none; /*for firefox*/
+    appearance: none;}
+
+    #adults_select::-ms-expand
+    {display: none;}
+
+    /*청소년*/
+    div.teens_ex_h
+    {width: 100%;
+    margin-top: 15px; margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;}
+
+    div.teens_ex_h>div
+    {width: calc(100% - 160px);
+    margin-right: 10px;}
+
+    div.teens_ex_h>div>p:nth-child(1)
+    {width: 100%;
+    margin-bottom: 5px;
+    word-break: keep-all;
+    font-family: 'min_bold'; line-height: 20px; color: #222;}
+
+    div.teens_ex_h>div>p:nth-child(2)
+    {width: 100%;
+    font-size: 14px; line-height: 18px;
+    word-break: keep-all; color: #555;}
+
+    #teens_select
+    {width: 150px; height: 50px;
+    margin: 0; padding: 0 25px 0 10px;
+    background-color: #fff;
+    background: url('../img/select_dowm_icon.png') no-repeat 97% 50%/15px auto;
+    outline: none;
+    color: #222; font-size: 15px;
+    font-family: 'Pretendard' !important;
+    border: 1px solid #ddd; box-sizing: border-box;
+    -webkit-appearance: none; /* for chrome */
+    -moz-appearance: none; /*for firefox*/
+    appearance: none;}
+
+    #teens_select::-ms-expand
+    {display: none;}
+
+    /*유아*/
+    div.toddlers_ex_h
+    {width: 100%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;}
+
+    div.toddlers_ex_h>div
+    {width: calc(100% - 160px);
+    margin-right: 10px;}
+
+    div.toddlers_ex_h>div>p:nth-child(1)
+    {width: 100%;
+    margin-bottom: 5px;
+    word-break: keep-all;
+    font-family: 'min_bold'; line-height: 20px; color: #222;}
+
+    div.toddlers_ex_h>div>p:nth-child(2)
+    {width: 100%;
+    font-size: 14px; line-height: 18px;
+    word-break: keep-all; color: #555;}
+
+    #toddlers_select
+    {width: 150px; height: 50px;
+    margin: 0; padding: 0 25px 0 10px;
+    background-color: #fff;
+    background: url('../img/select_dowm_icon.png') no-repeat 97% 50%/15px auto;
+    outline: none;
+    color: #222; font-size: 15px;
+    font-family: 'Pretendard' !important;
+    border: 1px solid #ddd; box-sizing: border-box;
+    -webkit-appearance: none; /* for chrome */
+    -moz-appearance: none; /*for firefox*/
+    appearance: none;}
+
+    #toddlers_select::-ms-expand
+    {display: none;}
+
+     /*버튼 박스*/
+    div.health_screening_cart_form_btn_box
+    {width: fit-content;
+    margin: 0 auto;
+    overflow: hidden;}
+
+    /*버튼*/
+    #detaile_in_cart
+    {width: 300px; height: 50px;
+    border-radius: 5px;
+    float: left;
+    margin-right: 20px;
+    border: none; outline: none;
+    font-family: 'Pretendard' !important; line-height: 50px; text-align: center;
+    font-size: 16px; color: #fff;
+    background-color: #51b8ff;
+    transition: all 0.3s;}
+
+    #detaile_in_cart:hover
+    {background-color: #1f4e79;}
+
+    /*목록*/
+    a.health_screening_menu_btn
+    {width: 300px; height: 50px;
+    border-radius: 5px;
+    background-color: #ccc;
+    display: block;
+    float: left;
+    transition: all 0.3s;}
+
+    a.health_screening_menu_btn>p
+    {width: 100%;
+    transition: all 0.3s;
+    text-align: center; line-height: 50px; color: #222;}
+
+    a.health_screening_menu_btn:hover
+    {background-color: #222;}
+
+    a.health_screening_menu_btn:hover>p
+    {color: #fff;}
+
+     /*장바구니 담기 팝업*/
+    div.cart_submit_popup_ex
+    {width: 100%; height: 100vh;
+    background-color: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(2px);
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+
+    div.cart_submit_popup
+    {width: 500px;
+    padding-top: 50px; padding-bottom: 50px;
+    background-color: #fff;
+    border-radius: 5px;}
+
+    div.cart_submit_img_box
+    {width: 80px; height: 80px;
+    margin: 0 auto;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 3px solid #ddd; box-sizing: border-box;}
+
+    div.cart_submit_img_box img
+    {width: 50px; height: 50px;
+    margin: 15px auto;}
+
+    p.cart_submit_title
+    {width: calc(100% - 40px);
+    margin: 0 auto;
+    word-break: keep-all;
+    text-align: center; line-height: 25px;
+    font-size: 17px; font-family: 'min_bold'; color: #222;
+    margin-bottom: 30px;}
+
+    div.cart_link_box
+    {width: calc(100% - 40px);
+    margin: 0 auto;
+    overflow: hidden;}
+
+    div.cart_link_box>a:nth-child(1)
+    {width: calc(50% - 10px); height: 50px;
+    border-radius: 5px;
+    float: left;
+    display: block;
+    background-color: #51b8ff;
+    margin-right: 20px;
+    transition: all 0.3s;}
+
+    div.cart_link_box>a:nth-child(1)>p
+    {color: #fff;
+    font-size: 15px;
+    text-align: center; line-height: 50px;
+    transition: all 0.3s;}
+
+    div.cart_link_box>a:nth-child(1):hover {background-color: #1f4e79;}
+
+    div.cart_link_box>a:nth-child(1):hover>p {color: #fff;}
+
+    div.cart_link_box>p:nth-child(2)
+    {width: calc(50% - 10px); height: 50px;
+    border-radius: 5px;
+    float: left;
+    font-size: 15px;
+    text-align: center; line-height: 50px;
+    color: #222; background-color: #ccc;
+    display: block;
+    transition: all 0.3s;}
+
+    div.cart_link_box>p:nth-child(2):hover
+    {background-color: #222; color: #fff;}
+
+}
+
+@media all and (min-width: 769px) and (max-width : 1419px)
+{   
+     /*비주얼베너*/
+    div.visual_sub_banner
+    {width: 100%; height: 350px;
+    margin-top: 139.44px;
+    overflow: hidden;
+    position: relative;}
+
+    div.visual_sub_banner img
+    {width: 100%; height: 100%;
+    object-fit: cover;
+    transition: all 2s;
+    transform: scale(1.2);}
+
+    p.visual_sub_text
+    {width: 100%;
+    position: absolute;
+    top: calc(50% - 25px); left: 0;
+    text-align: center;
+    opacity: 0;
+    transition: all 2s;
+    font-family: bold; color: #fff;
+    font-size: 42px; line-height: 50px;}
+
+    /*루트*/
+    div.nav_ex
+    {width: 100%;
+    background-color: #51b8ff;}
+
+    nav.nav_box
+    {width: 90%;
+    margin: 0 auto;}
+
+    nav.nav_box>ul
+    {width: 100%;
+    overflow: hidden;}
+
+    nav.nav_box>ul>li
+    {width: fit-content;
+    float: left;
+    margin-right: 10px;}
+
+    nav.nav_box>ul>li:nth-child(1)
+    {width: 20px; height: 20px;
+    margin-top: 10px; margin-bottom: 10px;}
+
+    nav.nav_box>ul>li:nth-child(1)>a
+    {width: 100%; height: 100%;
+    display: block;}
+
+    nav.nav_box>ul>li:nth-child(1)>a img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    nav.nav_box>ul>li>p
+    {line-height: 40px; color: #fff;}
+
+    nav.nav_box>ul>li:last-child>a>p
+    {line-height: 40px; color: #fff;}
+
+    nav.nav_box>ul>li:last-child
+    {margin-right: 0;}
+
+
+    /*전체 박스*/
+    div.health_screening_detaile_ex
+    {width: 90%;
+    margin: 100px auto;
+    margin-bottom: 150px;}
+
+     /*타이틀*/
+    div.health_screening_detaile_title_ex
+    {width: 100%;
+    margin-bottom: 50px; padding-bottom: 30px;
+    border-bottom: 1px solid #222; box-sizing: border-box;}
+
+    div.health_screening_detaile_title_ex>p:nth-child(1)
+    {width: 100%;
+    font-size: 17px; font-family: 'min_bold'; color: #51b8ff;
+    line-height: 25px; word-break: keep-all;
+    margin-bottom: 5px;}
+
+    div.health_screening_detaile_title_ex>p:nth-child(2)
+    {width: 100%;
+    font-size: 28px; font-family: bold; line-height: 32px;
+    color: #222; word-break: keep-all;}
+
+     /*비주얼 슬라이드*/
+    div.health_screening_detaile_visual_ex
+    {width: 100%;
+    margin-bottom: 50px; padding-bottom: 30px;
+    border-bottom: 1px solid #ddd; box-sizing: border-box;}
+
+    div.health_screening_detaile_visual
+    {width: 100%;
+    margin-bottom: 30px;}
+
+    div.health_screening_detaile_visual_img
+    {width: 100%; height: 0;
+    position: relative;
+    padding-bottom: 100%;
+    border-radius: 5px;
+    overflow: hidden;}
+
+    div.health_screening_detaile_visual_img img
+    {width: 100%; height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0; left: 0;}
+
+    /*소개*/
+    div.health_visual_txt_box
+    {width: 100%;
+    padding-top: 30px; padding-bottom: 30px;
+    background-color: #f3f3f3;
+    margin-top: 30px;}
+
+    div.health_visual_txt_box>p
+    {width: calc(100% - 60px);
+    margin: 0 auto;
+    word-break: keep-all; font-size: 15px; color: #222;
+    line-height: 25px;}
+
+
+
+     /*기본 정보 입력 폼*/
+    div.health_screening_information_ex
+    {width: 100%;
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    overflow: hidden;}
+
+    div.health_screening_information_box
+    {width: 47.5%;
+    margin-right: 5%;
+    margin-bottom: 30px;}
+
+    div.health_screening_information_box:nth-child(2n+2)
+    {margin-right: 0;}
+
+    /*기본 정보 타이틀*/
+    div.health_screening_information_title
+    {width: 100%;
+    margin-bottom: 15px;}
+
+    div.health_screening_information_icon
+    {width: 35px; height: 35px;
+    margin-bottom: 10px;}
+
+    div.health_screening_information_icon img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    p.health_screening_information_title_txt
+    {width: 100%;
+    font-size: 20px;
+    font-family: bold; color: #222; line-height: 25px;}
+
+    /*기본 정보 내용*/
+    p.health_screening_information_title
+    {width: 100%;
+    word-break: keep-all;
+    color: #555; line-height: 25px;}
+
+    a.health_screening_information_link
+    {width: 100%;
+    display: block;}
+
+    a.health_screening_information_link>p
+    {width: 100%;
+    word-wrap: break-word;
+    word-break: break-all;
+    line-height: 25px;
+    color: #51b8ff; text-decoration: underline;
+    text-decoration-color: #51b8ff;}
+
+
+
+
+    /*건강검진 내용 보여주는 큰 박스*/
+    div.health_screening_detaile_button_ex
+    {width: 100%;
+    margin-bottom: 80px;}
+
+    input[type="checkbox"].health_screening_btn {display: none;}
+
+    /*라벨 박스*/
+    div.health_screening_btn_label_box
+    {width: 100%;
+    overflow: hidden; 
+    padding-bottom: 15px; margin-bottom: 30px;
+    border-bottom: 1px solid #222; box-sizing: border-box;}
+
+    div.health_screening_btn_label_box>label
+    {width: 23.5%;
+    margin-right: 2%;
+    border-radius: 5px;
+    border: 1px solid #51b8ff; box-sizing: border-box;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    transition: all 0.3s;}
+
+    div.health_screening_btn_label_box>label:nth-child(4n+4)
+    {margin-right: 0;}
+
+    div.health_screening_btn_label_box>label>p
+    {width: calc(100% - 40px);
+    margin: 0 auto;
+    text-align: center;
+    line-height: 25px;
+    color: #51b8ff; word-break: keep-all;
+    padding-top: 15px; padding-bottom: 15px;
+    transition: all 0.3s;}
+
+    /*시트*/
+    div.health_screening_btn_sheet_ex
+    {width: 100%;
+    margin-bottom: 30px;}
+
+    div.health_screening_btn_sheet_box
+    {width: 100%;}
+
+    /*시트 타이틀*/
+    div.health_screening_btn_sheet_title
+    {width: 100%;
+    margin-bottom: 50px; padding-bottom: 50px;
+    border-bottom: 1px solid #ddd; box-sizing: border-box;}
+
+    div.health_screening_btn_sheet_title>p:nth-child(1)
+    {width: 100%;
+    text-align: center; line-height: 35px; font-size: 28px;
+    font-family: bold; color: #1f4e79;
+    margin-bottom: 10px;}
+
+    div.health_screening_btn_sheet_title>p:nth-child(2)
+    {width: 90%;
+    margin: 0 auto;
+    text-align: center; font-size: 16px;
+    word-break: keep-all;
+    line-height: 25px; color: #777;}
+
+    /*아이템*/
+    div.item_health_ex
+    {width: 100%;
+    display: flex;
+    align-items: stretch;
+    overflow: hidden;
+    margin-bottom: 50px; padding-bottom: 50px;
+    border-bottom: 1px solid #ddd; box-sizing: border-box;}
+
+    /*아이템 타이틀*/
+    div.item_health_title
+    {width: 220px;
+    margin-right: 10px;}
+
+    div.item_health_icon
+    {width: 35px; height: 35px;
+    margin-bottom: 10px;}
+
+    div.item_health_icon img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    div.item_health_title>p:nth-child(2)
+    {width: 100%;
+    font-size: 22px; font-family: bold; color: #222; line-height: 25px;}
+    
+    /*아이템 내용*/
+    p.item_health_contetns
+    {width: calc(100% - 230px);
+    word-break: keep-all;
+    color: #333; line-height: 25px;}
+
+    p.item_health_contetns>span
+    {font-family: bold;}
+
+    p.item_health_contetns img
+    {width: 800px; height: auto;
+    max-width: 100%;
+    margin-top: 20px; margin-bottom: 20px;}
+
+    /*가격*/
+    div.cost_health_ex
+    {width: 100%;
+    display: flex;
+    align-items: stretch;
+    overflow: hidden;
+    margin-bottom: 50px; padding-bottom: 50px;
+    border-bottom: 1px solid #ddd; box-sizing: border-box;}
+
+    /*가격 타이틀*/
+    div.cost_health_title
+    {width: 220px;
+    margin-right: 10px;}
+
+    div.cost_health_icon
+    {width: 35px; height: 35px;
+    margin-bottom: 10px;}
+
+    div.cost_health_icon img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    div.cost_health_title>p:nth-child(2)
+    {width: 100%;
+    font-size: 22px; font-family: bold; color: #222; line-height: 25px;}
+    
+    /*가격 내용*/
+    p.cost_health_contetns
+    {width: calc(100% - 230px);
+    word-break: keep-all;
+    color: #333; line-height: 25px;}
+
+    p.cost_health_contetns img
+    {width: 800px; height: auto;
+    max-width: 100%;
+    margin-top: 20px; margin-bottom: 20px;}
+
+    /*기타내용*/
+    div.other_guidance_health_ex
+    {width: 100%;
+    display: flex;
+    align-items: stretch;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #ddd; box-sizing: border-box;
+    overflow: hidden;}
+
+    /*기타내용 타이틀*/
+    div.other_guidance_health_title
+    {width: 220px;
+    margin-right: 10px;}
+
+    div.other_guidance_health_icon
+    {width: 35px; height: 35px;
+    margin-bottom: 10px;}
+
+    div.other_guidance_health_icon img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    div.other_guidance_health_title>p:nth-child(2)
+    {width: 100%;
+    font-size: 22px; font-family: bold; color: #222; line-height: 25px;}
+    
+    /*기타 내용*/
+    p.other_guidance_health_contetns
+    {width: calc(100% - 230px);
+    word-break: keep-all;
+    color: #333; line-height: 25px;}
+
+    p.other_guidance_health_contetns img
+    {width: 800px; height: auto;
+    max-width: 100%;
+    margin-top: 20px; margin-bottom: 20px;}
+
+    /*pdf 다운로드*/
+    a.download_health
+    {width: 150px; height: 45px;
+    display: block;
+    margin-left: calc(100% - 150px);
+    border: 1px solid red; box-sizing: border-box;
+    border-radius: 5px;
+    transition: all 0.3s;}
+
+    a.download_health>p
+    {text-align: center; line-height: 45px; color: red;
+    transition: all 0.3s;}
+
+    a.download_health:hover
+    {background-color: red;
+    border: none;}
+
+    a.download_health:hover>p
+    {color: #fff;}
+    
+
+
+    /*카트 담는 내용*/
+    div.health_screening_cart_form_ex
+    {width: 100%;}
+
+    div.health_screening_cart_form_box
+    {width: 100%;
+    display: flex;
+    align-items: stretch;
+    margin-bottom: 100px;
+    overflow: hidden;}
+
+     /*달력*/
+    div.date_of_ues_ex
+    {width: 47.5%;
+    margin-right: 5%;}
+    
+    /*달력 타이틀*/
+    div.date_of_ues_title
+    {width: 100%;
+    margin-bottom: 15px;}
+
+    div.date_of_ues_title_icon
+    {width: 35px; height: 35px;
+    margin-bottom: 10px;}
+
+    div.date_of_ues_title_icon img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    p.date_of_ues_title_icon_txt
+    {width: 100%;
+    font-size: 20px;
+    font-family: bold; color: #222; line-height: 25px;}
+
+    div.health_screening_calendar_ex
+    {width: 100%;}
+
+    /*달력 제어*/
+    #health_screening_calnedar_box
+    {width: 100%; height: 50px;
+    outline: none;
+    border: 1px solid #ccc; box-sizing: border-box;
+    background: #fff;
+    text-indent: 10px; color: #222;
+    font-size: 15px;
+    font-family: 'Pretendard' !important;
+    margin-bottom: 10px;}
+
+    #restaurant_calnedar_box::placeholder {color: #222;}
+
+    /*달력 제어*/
+    .flatpickr-calendar
+    {width: 100% !important;
+    box-shadow: 0 0 0 !important;
+    border: 1px solid #ddd; box-sizing: border-box;
+    font-family: 'Pretendard' !important;}
+
+    .flatpickr-calendar.inline {top: 0;}
+
+    .flatpickr-months
+    {padding-top: 10px; padding-bottom: 10px;
+    background-color: #1f4e79;}
+
+    .flatpickr-current-month
+    {padding: 0;}
+
+    .flatpickr-current-month .flatpickr-monthDropdown-months
+    {height: 30px;
+    font-size: 17px !important;
+    background: #1f4e79 !important;
+    font-family: 'Pretendard' !important;
+    color: #fff !important;}
+
+    .flatpickr-current-month input.cur-year
+    {height: 30px;
+    font-size: 17px !important;
+    background: #1f4e79 !important;
+    font-family: 'Pretendard' !important;
+    overflow-y: hidden !important;
+    color: #fff !important;}
+    
+    /*년도 선택하는 거 안 보이게*/
+    .arrowUp {display: none !important;}
+
+    .arrowDown {display: none !important;}
+
+    /*꺽세 위치 잡기*/
+    .flatpickr-months .flatpickr-prev-month.flatpickr-prev-month
+    {top: 6.5px;
+    fill: #fff !important;}
+
+    .flatpickr-months .flatpickr-next-month.flatpickr-next-month
+    {top: 6.5px;
+    fill: #fff !important;}
+
+    .flatpickr-months .flatpickr-prev-month.flatpickr-prev-month:hover svg
+    {fill: #fff;}
+
+    .flatpickr-months .flatpickr-next-month.flatpickr-next-month:hover svg
+    {fill: #fff;}
+    
+    /*중앙 정렬*/
+    .flatpickr-rContainer
+    {width: calc(100% - 20px);
+    margin: 0 auto;}
+
+    .flatpickr-days
+    {width: 100%;}
+
+    .dayContainer
+    {width: 100%;
+    min-width: 100%; max-width: none;
+    margin: 0 auto;}
+
+    .flatpickr-day
+    {width: 14.28571428%; 
+    max-width: 14.28571428%; min-width: none;}
+
+    /*요일 표시 넓게*/
+    .flatpickr-weekdays
+    {padding-top: 5px; padding-bottom: 5px;}
+    
+    /*토, 일 색깔 바꾸기*/
+    span.flatpickr-weekday:nth-child(1)
+    {color: red !important;}
+
+    span.flatpickr-weekday:nth-child(7)
+    {color: blue !important;}
+
+    /*오늘 날짜*/
+    .flatpickr-day.today
+    {border: none;}
+
+    .flatpickr-day.today:hover
+    {background-color: #e6e6e6;
+    background: #e6e6e6;
+    color: #222;}
+
+    /*요일*/
+    .flatpickr-day
+    {height: 100%; height: 45px;
+    border-radius: 0;
+    line-height: 45px;}
+
+     /*인원, 시간*/
+    div.personnel_ex
+    {width: 47.5%;}
+
+    /*인원 타이틀*/
+    div.personnel_title
+    {width: 100%;
+    margin-bottom: 15px;}
+
+    div.personnel_title_icon
+    {width: 35px; height: 35px;
+    margin-bottom: 10px;}
+
+    div.personnel_title_icon img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    p.personnel_title_icon_txt
+    {width: 100%;
+    font-size: 20px;
+    font-family: bold; color: #222; line-height: 25px;}
+
+    /*인원 폼*/
+    div.personnel_form_ex
+    {width: 100%;}
+
+    #health_screening_time_select
+    {width: 100%; height: 50px;
+    margin: 0; padding: 0 25px 0 10px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    background: url('../img/select_dowm_icon.png') no-repeat 97% 50%/15px auto;
+    outline: none;
+    color: #222; font-size: 14px;
+    font-family: 'Pretendard' !important;
+    border: 1px solid #ddd; box-sizing: border-box;
+    -webkit-appearance: none; /* for chrome */
+    -moz-appearance: none; /*for firefox*/
+    appearance: none;}
+
+    #health_screening_time_select::-ms-expand
+    {display: none;}
+
+    #health_screening_product_select
+    {width: 100%; height: 50px;
+    margin: 0; padding: 0 25px 0 10px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    background: url('../img/select_dowm_icon.png') no-repeat 97% 50%/15px auto;
+    outline: none;
+    color: #222; font-size: 14px;
+    font-family: 'Pretendard' !important;
+    border: 1px solid #ddd; box-sizing: border-box;
+    -webkit-appearance: none; /* for chrome */
+    -moz-appearance: none; /*for firefox*/
+    appearance: none;}
+
+    #health_screening_product_select::-ms-expand
+    {display: none;}
+
+    /*성인, 유아, 아동*/
+    div.select_people_ex
+    {width: 100%;}
+
+    /*성인*/
+    div.adults_ex_h
+    {width: 100%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;}
+
+    div.adults_ex_h>p:nth-child(1)
+    {width: calc(100% - 160px);
+    margin-right: 10px;
+    font-family: 'min_bold'; line-height: 25px; color: #222;}
+
+    #adults_select
+    {width: 150px; height: 50px;
+    margin: 0; padding: 0 25px 0 10px;
+    background-color: #fff;
+    background: url('../img/select_dowm_icon.png') no-repeat 97% 50%/15px auto;
+    outline: none;
+    color: #222; font-size: 15px;
+    font-family: 'Pretendard' !important;
+    border: 1px solid #ddd; box-sizing: border-box;
+    -webkit-appearance: none; /* for chrome */
+    -moz-appearance: none; /*for firefox*/
+    appearance: none;}
+
+    #adults_select::-ms-expand
+    {display: none;}
+
+    /*청소년*/
+    div.teens_ex_h
+    {width: 100%;
+    margin-top: 15px; margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;}
+
+    div.teens_ex_h>div
+    {width: calc(100% - 160px);
+    margin-right: 10px;}
+
+    div.teens_ex_h>div>p:nth-child(1)
+    {width: 100%;
+    margin-bottom: 5px;
+    word-break: keep-all;
+    font-family: 'min_bold'; line-height: 20px; color: #222;}
+
+    div.teens_ex_h>div>p:nth-child(2)
+    {width: 100%;
+    font-size: 14px; line-height: 18px;
+    word-break: keep-all; color: #555;}
+
+    #teens_select
+    {width: 150px; height: 50px;
+    margin: 0; padding: 0 25px 0 10px;
+    background-color: #fff;
+    background: url('../img/select_dowm_icon.png') no-repeat 97% 50%/15px auto;
+    outline: none;
+    color: #222; font-size: 15px;
+    font-family: 'Pretendard' !important;
+    border: 1px solid #ddd; box-sizing: border-box;
+    -webkit-appearance: none; /* for chrome */
+    -moz-appearance: none; /*for firefox*/
+    appearance: none;}
+
+    #teens_select::-ms-expand
+    {display: none;}
+
+    /*유아*/
+    div.toddlers_ex_h
+    {width: 100%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;}
+
+    div.toddlers_ex_h>div
+    {width: calc(100% - 160px);
+    margin-right: 10px;}
+
+    div.toddlers_ex_h>div>p:nth-child(1)
+    {width: 100%;
+    margin-bottom: 5px;
+    word-break: keep-all;
+    font-family: 'min_bold'; line-height: 20px; color: #222;}
+
+    div.toddlers_ex_h>div>p:nth-child(2)
+    {width: 100%;
+    font-size: 14px; line-height: 18px;
+    word-break: keep-all; color: #555;}
+
+    #toddlers_select
+    {width: 150px; height: 50px;
+    margin: 0; padding: 0 25px 0 10px;
+    background-color: #fff;
+    background: url('../img/select_dowm_icon.png') no-repeat 97% 50%/15px auto;
+    outline: none;
+    color: #222; font-size: 15px;
+    font-family: 'Pretendard' !important;
+    border: 1px solid #ddd; box-sizing: border-box;
+    -webkit-appearance: none; /* for chrome */
+    -moz-appearance: none; /*for firefox*/
+    appearance: none;}
+
+    #toddlers_select::-ms-expand
+    {display: none;}
+
+     /*버튼 박스*/
+    div.health_screening_cart_form_btn_box
+    {width: fit-content;
+    margin: 0 auto;
+    overflow: hidden;}
+
+    /*버튼*/
+    #detaile_in_cart
+    {width: 300px; height: 50px;
+    border-radius: 5px;
+    float: left;
+    margin-right: 20px;
+    border: none; outline: none;
+    font-family: 'Pretendard' !important; line-height: 50px; text-align: center;
+    font-size: 16px; color: #fff;
+    background-color: #51b8ff;
+    transition: all 0.3s;}
+
+    #detaile_in_cart:hover
+    {background-color: #1f4e79;}
+
+    /*목록*/
+    a.health_screening_menu_btn
+    {width: 300px; height: 50px;
+    border-radius: 5px;
+    background-color: #ccc;
+    display: block;
+    float: left;
+    transition: all 0.3s;}
+
+    a.health_screening_menu_btn>p
+    {width: 100%;
+    transition: all 0.3s;
+    text-align: center; line-height: 50px; color: #222;}
+
+    a.health_screening_menu_btn:hover
+    {background-color: #222;}
+
+    a.health_screening_menu_btn:hover>p
+    {color: #fff;}
+
+
+    /*장바구니 담기 팝업*/
+    div.cart_submit_popup_ex
+    {width: 100%; height: 100vh;
+    background-color: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(2px);
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+
+    div.cart_submit_popup
+    {width: 500px;
+    padding-top: 50px; padding-bottom: 50px;
+    background-color: #fff;
+    border-radius: 5px;}
+
+    div.cart_submit_img_box
+    {width: 80px; height: 80px;
+    margin: 0 auto;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 3px solid #ddd; box-sizing: border-box;}
+
+    div.cart_submit_img_box img
+    {width: 50px; height: 50px;
+    margin: 15px auto;}
+
+    p.cart_submit_title
+    {width: calc(100% - 40px);
+    margin: 0 auto;
+    word-break: keep-all;
+    text-align: center; line-height: 25px;
+    font-size: 17px; font-family: 'min_bold'; color: #222;
+    margin-bottom: 30px;}
+
+    div.cart_link_box
+    {width: calc(100% - 40px);
+    margin: 0 auto;
+    overflow: hidden;}
+
+    div.cart_link_box>a:nth-child(1)
+    {width: calc(50% - 10px); height: 50px;
+    border-radius: 5px;
+    float: left;
+    display: block;
+    background-color: #51b8ff;
+    margin-right: 20px;
+    transition: all 0.3s;}
+
+    div.cart_link_box>a:nth-child(1)>p
+    {color: #fff;
+    font-size: 15px;
+    text-align: center; line-height: 50px;
+    transition: all 0.3s;}
+
+    div.cart_link_box>a:nth-child(1):hover {background-color: #1f4e79;}
+
+    div.cart_link_box>a:nth-child(1):hover>p {color: #fff;}
+
+    div.cart_link_box>p:nth-child(2)
+    {width: calc(50% - 10px); height: 50px;
+    border-radius: 5px;
+    float: left;
+    font-size: 15px;
+    text-align: center; line-height: 50px;
+    color: #222; background-color: #ccc;
+    display: block;
+    transition: all 0.3s;}
+
+    div.cart_link_box>p:nth-child(2):hover
+    {background-color: #222; color: #fff;}
+
+
+}
+
+
+@media all and (min-width: 769px) and (max-width: 1279px)
+{
+    /*비주얼배너*/
+    div.visual_sub_banner
+    {margin-top: 0;}
+
+}
+
+
+@media all and (min-width: 769px) and (max-width : 1024px)
+{   
+
+    /*기본 정보*/
+    div.health_screening_information_box
+    {width: 48.5%;
+    margin-right: 3%;}
+
+    /*라벨 박스*/
+    div.health_screening_btn_label_box>label
+    {width: 32%;
+    margin-right: 2%;
+    border-radius: 5px;
+    border: 1px solid #51b8ff; box-sizing: border-box;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    transition: all 0.3s;}
+
+    div.health_screening_btn_label_box>label:nth-child(4n+4)
+    {margin-right: 2%;}
+
+    div.health_screening_btn_label_box>label:nth-child(3n+3)
+    {margin-right: 0;}
+
+    div.health_screening_btn_label_box>label>p
+    {width: calc(100% - 40px);
+    margin: 0 auto;
+    text-align: center;
+    line-height: 20px; font-size: 15px;
+    color: #51b8ff;
+    padding-top: 15px; padding-bottom: 15px;
+    transition: all 0.3s;}
+
+    /*달력*/
+    div.date_of_ues_ex
+    {width: 48.5%;
+    margin-right: 3%;}
+
+    /*인원*/
+    div.personnel_ex
+    {width: 48.5%;}
+}
+
+@media all and (max-width: 768px)
+{   
+    /*비주얼베너*/
+    div.visual_sub_banner
+    {width: 100%; height: 250px;
+    overflow: hidden;
+    position: relative;}
+
+    div.visual_sub_banner img
+    {width: 100%; height: 100%;
+    object-fit: cover;
+    transition: all 2s;
+    transform: scale(1.2);}
+
+    p.visual_sub_text
+    {width: 100%;
+    position: absolute;
+    top: calc(50% - 20px); left: 0;
+    text-align: center;
+    opacity: 0;
+    transition: all 2s;
+    font-family: bold; color: #fff;
+    font-size: 32px; line-height: 40px;}
+
+    /*루트*/
+    div.nav_ex
+    {width: 100%;
+    background-color: #51b8ff;}
+
+    nav.nav_box
+    {width: 90%;
+    margin: 0 auto;}
+
+    nav.nav_box>ul
+    {width: 100%;
+    overflow: hidden;}
+
+    nav.nav_box>ul>li
+    {float: left;}
+
+    nav.nav_box>ul>li:nth-child(1)
+    {width: 20px; height: 20px;
+    margin-top: 10px; margin-bottom: 10px;
+    margin-right: 10px;}
+
+    nav.nav_box>ul>li:nth-child(1)>a img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    nav.nav_box>ul>li:nth-child(2)
+    {width: fit-content;
+    margin-right: 10px;}
+
+    nav.nav_box>ul>li:nth-child(2)>p
+    {font-size: 15px; line-height: 40px; color: #fff;}
+
+    nav.nav_box>ul>li:nth-child(3)
+    {width: fit-content;
+    max-width: calc(100% - 50px);}
+
+    nav.nav_box>ul>li:nth-child(3)>a>p
+    {font-size: 15px; line-height: 40px; 
+    color: #fff;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;}
+
+
+     /*전체 박스*/
+    div.health_screening_detaile_ex
+    {width: 90%;
+    margin: 50px auto;
+    margin-bottom: 80px;}
+    
+    /*타이틀*/
+    div.health_screening_detaile_title_ex
+    {width: 100%;
+    padding-bottom: 30px; margin-bottom: 30px;
+    border-bottom: 1px solid #222; box-sizing: border-box;}
+
+    div.health_screening_detaile_title_ex>p:nth-child(1)
+    {width: 100%;
+    font-family: 'min_bold'; color: #51b8ff; line-height: 20px;
+    word-break: keep-all; font-size: 15px;
+    margin-bottom: 5px;}
+
+    div.health_screening_detaile_title_ex>p:nth-child(2)
+    {width: 100%;
+    word-break: keep-all;
+    font-size: 22px; font-family: bold; color: #222; line-height: 27px;}
+    
+     /*비주얼 슬라이드 이미지*/
+    div.health_screening_detaile_visual_ex
+    {width: 100%;}
+
+    div.health_screening_detaile_visual
+    {width: 100%;
+    margin-bottom: 20px;}
+
+    div.health_screening_detaile_visual_img
+    {width: 100%; height: 0;
+    position: relative;
+    padding-bottom: 100%;
+    border-radius: 5px;
+    overflow: hidden;}
+
+    div.health_screening_detaile_visual_img img
+    {width: 100%; height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0; left: 0;}
+
+    /*소개*/
+    div.health_visual_txt_box
+    {width: 100%; max-height: 250px;
+    overflow-y: scroll;
+    background-color: #f3f3f3;
+    margin-bottom: 30px;}
+    
+    div.health_visual_txt_box>p 
+    {width: calc(100% - 40px);
+    margin: 0 auto;
+    font-size: 15px; line-height: 25px; color: #222;
+    word-break: keep-all;
+    padding-top: 20px; padding-bottom: 20px;}
+
+    /*스크롤바 바꾸기*/
+    .health_visual_txt_box::-webkit-scrollbar
+    {width: 2px;
+    display: block;}
+
+    .health_visual_txt_box::-webkit-scrollbar-thumb
+    {background-color: #51b8ff;
+    border-radius: 10px;}
+
+    .health_visual_txt_box::-webkit-scrollbar-track
+    {background-color: #ddd;}
+
+
+
+    /*기본 입력*/
+    div.health_screening_information_ex
+    {width: 100%;
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    overflow: hidden;
+    margin-bottom: 30px;}
+
+    div.health_screening_information_box
+    {width: 49%;
+    margin-right: 2%;
+    margin-bottom: 20px;}
+
+    div.health_screening_information_box:nth-child(2n+2)
+    {margin-right: 0;}
+
+    /*타이틀*/
+    div.health_screening_information_title
+    {width: 100%;
+    margin-bottom: 10px;}
+
+    div.health_screening_information_icon
+    {width: 30px; height: 30px;
+    margin-bottom: 10px;}
+
+    div.health_screening_information_icon img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    p.health_screening_information_title_txt
+    {width: 100%;
+    font-family: bold; color: #222; line-height: 25px;
+    font-size: 17px;
+    word-break: keep-all;}
+
+    /*기본 정보 글*/
+    p.health_screening_information_txt
+    {width: 100%;
+    word-break: keep-all;
+    font-size: 15px; color: #555; line-height: 22px;}
+
+    a.health_screening_information_link
+    {width: 100%;
+    display: block;}
+
+    a.health_screening_information_link>p
+    {width: 100%;
+    word-wrap: break-word;
+    word-break: break-all;
+    line-height: 22px;
+    font-size: 15px;
+    color: #51b8ff; text-decoration: underline;
+    text-decoration-color: #51b8ff;}
+
+
+
+
+
+    /*건강검진 내용 보여주는 큰 박스*/
+    div.health_screening_detaile_button_ex
+    {width: 100%;
+    margin-bottom: 50px;}
+
+    input[type="checkbox"].health_screening_btn {display: none;}
+
+    /*라벨 박스*/
+    div.health_screening_btn_label_box
+    {width: 100%;
+    overflow: hidden;
+    padding-bottom: 15px; margin-bottom: 15px;
+    border-bottom: 1px solid #222; box-sizing: border-box;}
+
+    div.health_screening_btn_label_box>label
+    {width: 49%;
+    margin-right: 2%;
+    border-radius: 5px;
+    border: 1px solid #51b8ff; box-sizing: border-box;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    transition: all 0.3s;}
+
+    div.health_screening_btn_label_box>label:nth-child(2n+2)
+    {margin-right: 0;}
+
+    div.health_screening_btn_label_box>label>p
+    {width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 20px; word-break: keep-all;
+    color: #51b8ff; font-size: 15px;
+    padding-top: 15px; padding-bottom: 15px;
+    transition: all 0.3s;}
+
+    /*시트*/
+    div.health_screening_btn_sheet_ex
+    {width: 100%;
+    margin-bottom: 30px;}
+
+    /*시트 디테일*/
+    div.health_screening_btn_sheet_box
+    {width: 100%;}
+
+    /*시트 타이틀*/
+    div.health_screening_btn_sheet_title
+    {width: 100%;
+    padding-bottom: 20px; margin-bottom: 20px;
+    border-bottom: 1px solid #ddd; box-sizing: border-box;}
+
+    div.health_screening_btn_sheet_title>p:nth-child(1)
+    {width: 100%;
+    word-break: keep-all; line-height: 26px; text-align: center;
+    font-size: 24px; font-family: bold; color: #1f4e79;
+    margin-bottom: 5px;}
+
+    div.health_screening_btn_sheet_title>p:nth-child(2)
+    {width: 85%;
+    margin: 0 auto; text-align: center; word-break: keep-all;
+    font-size: 15px; color: #777; line-height: 20px;}
+
+    /*아이템*/
+    div.item_health_ex
+    {width: 100%;
+    margin-bottom: 20px; padding-bottom: 20px;
+    border-bottom: 1px solid #ddd; box-sizing: border-box;}
+
+    /*아이템 타이틀*/
+    div.item_health_title
+    {width: 100%;
+    margin-bottom: 15px;}
+
+    div.item_health_icon
+    {width: 35px; height: 35px;
+    margin: 0 auto;
+    margin-bottom: 10px;}
+
+    div.item_health_icon img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    div.item_health_title>p:nth-child(2)
+    {width: 100%; text-align: center;
+    font-size: 20px; font-family: bold; line-height: 25px; color: #222;}
+
+    /*아이템 컨텐츠*/
+    p.item_health_contetns
+    {width: 100%;
+    font-size: 15px; line-height: 20px;
+    color: #333; word-break: keep-all;}
+
+    p.item_health_contetns>span
+    {font-family: bold;}
+
+    p.item_health_contetns img
+    {width: 90%; height: auto;
+    margin: 10px auto;}
+
+
+     /*가격*/
+    div.cost_health_ex
+    {width: 100%;
+    margin-bottom: 20px; padding-bottom: 20px;
+    border-bottom: 1px solid #ddd; box-sizing: border-box;}
+
+    /*가격 타이틀*/
+    div.cost_health_title
+    {width: 100%;
+    margin-bottom: 15px;}
+
+    div.cost_health_icon
+    {width: 35px; height: 35px;
+    margin: 0 auto;
+    margin-bottom: 10px;}
+
+    div.cost_health_icon img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    div.cost_health_title>p:nth-child(2)
+    {width: 100%; text-align: center;
+    font-size: 20px; font-family: bold; line-height: 25px; color: #222;}
+
+    /*가격 컨텐츠*/
+    p.cost_health_contetns
+    {width: 100%;
+    font-size: 15px; line-height: 20px;
+    color: #333; word-break: keep-all;}
+
+    p.cost_health_contetns>span
+    {font-family: bold;}
+
+    p.cost_health_contetns img
+    {width: 90%; height: auto;
+    margin: 10px auto;}
+
+     /*기타사항*/
+    div.other_guidance_health_ex
+    {width: 100%;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd; box-sizing: border-box;}
+
+    /*기타사항 타이틀*/
+    div.other_guidance_health_title
+    {width: 100%;
+    margin-bottom: 15px;}
+
+    div.other_guidance_health_icon
+    {width: 35px; height: 35px;
+    margin: 0 auto;
+    margin-bottom: 10px;}
+
+    div.other_guidance_health_icon img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    div.other_guidance_health_title>p:nth-child(2)
+    {width: 100%; text-align: center;
+    font-size: 20px; font-family: bold; line-height: 25px; color: #222;}
+
+    /*기타사항 컨텐츠*/
+    p.other_guidance_health_contetns
+    {width: 100%;
+    font-size: 15px; line-height: 20px;
+    color: #333; word-break: keep-all;}
+
+    p.other_guidance_health_contetns>span
+    {font-family: bold;}
+
+    p.other_guidance_health_contetns img
+    {width: 90%; height: auto;
+    margin: 10px auto;}
+
+    /*pdf 다운로드*/
+    a.download_health
+    {width: 120px; height: 45px;
+    display: block;
+    margin-left: calc(100% - 120px);
+    background-color: red;
+    border-radius: 5px;
+    transition: all 0.3s;}
+
+    a.download_health>p
+    {text-align: center; line-height: 45px; color: #fff;
+    font-size: 15px;}
+
+
+
+    /*카트 담을 폼 입력*/
+    div.health_screening_cart_form_ex
+    {width: 100%;}
+
+    div.health_screening_cart_form_box
+    {width: 100%;
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    overflow: hidden;
+    margin-bottom: 80px;}
+
+    /*달력*/
+    div.date_of_ues_ex
+    {width: 49%;
+    margin-right: 2%;}
+
+    /*달력 타이틀*/
+    div.date_of_ues_title
+    {width: 100%;
+    margin-bottom: 15px;}
+
+    div.date_of_ues_title_icon
+    {width: 30px; height: 30px;
+    margin-bottom: 5px;}
+
+    div.date_of_ues_title_icon img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    p.date_of_ues_title_icon_txt
+    {width: 100%;
+    font-size: 17px;
+    font-family: bold; color: #222; line-height: 25px;
+    word-break: keep-all;}
+
+    div.health_screening_calendar_ex
+    {width: 100%;}
+
+    #health_screening_calnedar_box
+    {width: 100%; height: 45px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    background: #fff;
+    text-indent: 10px; outline: none; font-size: 15px; color: #222;
+    margin-bottom: 10px;
+    font-family: 'Pretendard' !important;}
+
+    #health_screening_calnedar_box::placeholder {color: #222;}
+    
+    /*달력 제어*/
+    .flatpickr-calendar
+    {width: 100% !important;
+    box-shadow: 0 0 0 !important;
+    border: 1px solid #ddd; box-sizing: border-box;
+    font-family: 'Pretendard' !important;}
+    
+    .flatpickr-calendar.inline {top: 0;}
+
+    .flatpickr-months
+    {padding-top: 10px; padding-bottom: 10px;
+    background-color: #1f4e79;}
+
+    .flatpickr-current-month
+    {padding: 0;}
+
+    .flatpickr-current-month .flatpickr-monthDropdown-months
+    {height: 30px;
+    font-size: 17px !important;
+    background: #1f4e79 !important;
+    font-family: 'Pretendard' !important;
+    color: #fff !important;}
+
+    .flatpickr-current-month input.cur-year
+    {height: 30px;
+    font-size: 17px !important;
+    background: #1f4e79 !important;
+    font-family: 'Pretendard' !important;
+    overflow-y: hidden !important;
+    color: #fff !important;}
+    
+    /*년도 선택하는 거 안 보이게*/
+    .arrowUp {display: none !important;}
+
+    .arrowDown {display: none !important;}
+    
+    /*꺽세 위치 잡기*/
+    .flatpickr-months .flatpickr-prev-month.flatpickr-prev-month
+    {top: 6.5px;
+    fill: #fff !important;}
+
+    .flatpickr-months .flatpickr-next-month.flatpickr-next-month
+    {top: 6.5px;
+    fill: #fff !important;}
+
+    .flatpickr-months .flatpickr-prev-month.flatpickr-prev-month:hover svg
+    {fill: #fff;}
+
+    .flatpickr-months .flatpickr-next-month.flatpickr-next-month:hover svg
+    {fill: #fff;}
+    
+    /*중앙 정렬*/
+    .flatpickr-rContainer
+    {width: calc(100% - 10px);
+    margin: 0 auto;}
+
+    .flatpickr-days
+    {width: 100%;}
+
+    .dayContainer
+    {width: 100%;
+    min-width: 100%; max-width: none;
+    margin: 0 auto;}
+
+    .flatpickr-day
+    {width: 14.28571428%; 
+    max-width: 14.28571428%; min-width: none;}
+    
+    /*요일 표시 넓게*/
+    .flatpickr-weekdays
+    {padding-top: 5px; padding-bottom: 5px;}
+    
+    /*토, 일 색깔 바꾸기*/
+    span.flatpickr-weekday:nth-child(1)
+    {color: red !important;}
+
+    span.flatpickr-weekday:nth-child(7)
+    {color: blue !important;}
+
+    /*오늘 날짜*/
+    .flatpickr-day.today
+    {border: none;}
+
+    .flatpickr-day.today:hover
+    {background-color: #e6e6e6;
+    background: #e6e6e6;
+    color: #222;}
+
+    /*요일*/
+    .flatpickr-day
+    {height: 100%; height: 40px;
+    line-height: 40px;
+    border-radius: 0;}
+
+    /*인원*/
+    div.personnel_ex
+    {width: 49%;}
+
+     /*인원 타이틀*/
+    div.personnel_title
+    {width: 100%;
+    margin-bottom: 15px;}
+
+    div.personnel_title_icon
+    {width: 30px; height: 30px;
+    margin-bottom: 5px;}
+
+    div.personnel_title_icon img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    p.personnel_title_icon_txt
+    {width: 100%;
+    font-size: 17px;
+    font-family: bold; color: #222; line-height: 25px;
+    word-break: keep-all;}
+
+    /*인원 폼*/
+    div.personnel_form_ex
+    {width: 100%;}
+
+    #health_screening_time_select
+    {width: 100%; height: 45px;
+    margin: 0; padding: 0 25px 0 10px;
+    background-color: #fff;
+    background: url('../img/select_dowm_icon.png') no-repeat 97% 50%/15px auto;
+    outline: none;
+    color: #222; font-size: 14px;
+    font-family: 'Pretendard' !important;
+    border: 1px solid #ddd; box-sizing: border-box;
+    -webkit-appearance: none; /* for chrome */
+    -moz-appearance: none; /*for firefox*/
+    appearance: none;
+    margin-bottom: 10px;}
+
+    #health_screening_time_select::-ms-expand
+    {display: none;}
+
+    #health_screening_product_select
+    {width: 100%; height: 45px;
+    margin: 0; padding: 0 25px 0 10px;
+    background-color: #fff;
+    background: url('../img/select_dowm_icon.png') no-repeat 97% 50%/15px auto;
+    outline: none;
+    color: #222; font-size: 14px;
+    font-family: 'Pretendard' !important;
+    border: 1px solid #ddd; box-sizing: border-box;
+    -webkit-appearance: none; /* for chrome */
+    -moz-appearance: none; /*for firefox*/
+    appearance: none;}
+
+    #health_screening_product_select::-ms-expand
+    {display: none;}
+
+    /*인원*/
+    div.select_people_ex
+    {width: 100%;
+    margin-top: 20px;}
+
+    /*성인*/
+    div.adults_ex_h
+    {width: 100%;}
+
+    div.adults_ex_h>p:nth-child(1)
+    {width: 100%;
+    word-break: keep-all; font-family: bold; line-height: 25px;
+    color: #222;
+    margin-bottom: 10px;}
+
+    #adults_select
+    {width: 100%; height: 45px;
+    margin: 0; padding: 0 25px 0 10px;
+    background-color: #fff;
+    background: url('../img/select_dowm_icon.png') no-repeat 97% 50%/15px auto;
+    outline: none;
+    color: #222; font-size: 15px;
+    font-family: 'Pretendard' !important;
+    border: 1px solid #ddd; box-sizing: border-box;
+    -webkit-appearance: none; /* for chrome */
+    -moz-appearance: none; /*for firefox*/
+    appearance: none;}
+
+    #adults_select::-ms-expand
+    {display: none;}
+
+    /*청소년?*/
+    div.teens_ex_h
+    {width: 100%;
+    margin-top: 15px; margin-bottom: 15px;}
+
+    div.teens_ex_h>div:nth-child(1)
+    {width: 100%;
+    margin-bottom: 10px;}
+
+    div.teens_ex_h>div:nth-child(1)>p:nth-child(1)
+    {width: 100%;
+    word-break: keep-all; font-family: bold; line-height: 25px;
+    color: #222;}
+
+    div.teens_ex_h>div:nth-child(1)>p:nth-child(2)
+    {width: 100%;
+    font-size: 14px; line-height: 20px; color: #777;
+    word-break: keep-all;}
+
+    #teens_select
+    {width: 100%; height: 45px;
+    margin: 0; padding: 0 25px 0 10px;
+    background-color: #fff;
+    background: url('../img/select_dowm_icon.png') no-repeat 97% 50%/15px auto;
+    outline: none;
+    color: #222; font-size: 15px;
+    font-family: 'Pretendard' !important;
+    border: 1px solid #ddd; box-sizing: border-box;
+    -webkit-appearance: none; /* for chrome */
+    -moz-appearance: none; /*for firefox*/
+    appearance: none;}
+
+    #teens_select::-ms-expand
+    {display: none;}
+
+    /*유아*/
+    div.toddlers_ex_h
+    {width: 100%;
+    margin-top: 15px; margin-bottom: 15px;}
+
+    div.toddlers_ex_h>div:nth-child(1)
+    {width: 100%;
+    margin-bottom: 10px;}
+
+    div.toddlers_ex_h>div:nth-child(1)>p:nth-child(1)
+    {width: 100%;
+    word-break: keep-all; font-family: bold; line-height: 25px;
+    color: #222;}
+
+    div.toddlers_ex_h>div:nth-child(1)>p:nth-child(2)
+    {width: 100%;
+    font-size: 14px; line-height: 20px; color: #777;
+    word-break: keep-all;}
+
+    #toddlers_select
+    {width: 100%; height: 45px;
+    margin: 0; padding: 0 25px 0 10px;
+    background-color: #fff;
+    background: url('../img/select_dowm_icon.png') no-repeat 97% 50%/15px auto;
+    outline: none;
+    color: #222; font-size: 15px;
+    font-family: 'Pretendard' !important;
+    border: 1px solid #ddd; box-sizing: border-box;
+    -webkit-appearance: none; /* for chrome */
+    -moz-appearance: none; /*for firefox*/
+    appearance: none;}
+
+    #toddlers_select::-ms-expand
+    {display: none;}
+
+    /*버튼 박스*/
+    div.health_screening_cart_form_btn_box
+    {width: 100%;
+    overflow: hidden;}
+
+    #detaile_in_cart
+    {width: 49%; height: 50px;
+    margin-right: 2%;
+    border: none; outline: none;
+    background-color: #51b8ff; color: #fff;
+    border-radius: 5px;
+    float: left;
+    font-size: 15px; text-align: center; line-height: 50px;
+    font-family: 'Pretendard' !important;}
+
+    a.health_screening_menu_btn
+    {width: 49%; height: 50px;
+    border-radius: 5px;
+    background-color: #222;
+    display: block;
+    float: left;}
+
+    a.health_screening_menu_btn>p
+    {text-align: center; font-size: 15px;
+    color: #fff; line-height: 50px;}
+
+    /*장바구니 담기 팝업*/
+    div.cart_submit_popup_ex
+    {width: 100%; height: 100vh;
+    background-color: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(2px);
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+
+    div.cart_submit_popup
+    {width: 500px;
+    padding-top: 50px; padding-bottom: 50px;
+    background-color: #fff;
+    border-radius: 5px;}
+
+    div.cart_submit_img_box
+    {width: 80px; height: 80px;
+    margin: 0 auto;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 3px solid #ddd; box-sizing: border-box;}
+
+    div.cart_submit_img_box img
+    {width: 50px; height: 50px;
+    margin: 15px auto;}
+
+    p.cart_submit_title
+    {width: calc(100% - 40px);
+    margin: 0 auto;
+    word-break: keep-all;
+    text-align: center; line-height: 25px;
+    font-size: 17px; font-family: 'min_bold'; color: #222;
+    margin-bottom: 30px;}
+
+    div.cart_link_box
+    {width: calc(100% - 40px);
+    margin: 0 auto;
+    overflow: hidden;}
+
+    div.cart_link_box>a:nth-child(1)
+    {width: calc(50% - 10px); height: 50px;
+    border-radius: 5px;
+    float: left;
+    display: block;
+    background-color: #51b8ff;
+    margin-right: 20px;}
+
+    div.cart_link_box>a:nth-child(1)>p
+    {color: #fff;
+    font-size: 15px;
+    text-align: center; line-height: 50px;}
+
+    div.cart_link_box>p:nth-child(2)
+    {width: calc(50% - 10px); height: 50px;
+    border-radius: 5px;
+    float: left;
+    font-size: 15px;
+    text-align: center; line-height: 50px;
+    color: #222; background-color: #ccc;
+    display: block;}
+}
+
+@media all and (max-width: 600px)
+{   
+    /*비주얼베너*/
+    div.visual_sub_banner
+    {width: 100%; height: 200px;
+    overflow: hidden;
+    position: relative;}
+
+    /*비주얼 배너*/
+    div.visual_sub_banner img
+    {width: 100%; height: 100%;
+    object-fit: cover;
+    transition: all 2s;
+    transform: scale(1.2);}
+
+    p.visual_sub_text
+    {width: 100%;
+    position: absolute;
+    top: calc(50% + 5px); left: 0;
+    text-align: center;
+    opacity: 0;
+    transition: all 2s;
+    font-family: bold; color: #fff;
+    font-size: 24px; line-height: 30px;}
+    
+    /*설명*/
+    div.health_visual_txt_box>p
+    {width: 90%;
+    margin: 0 auto;
+    font-size: 14px; line-height: 22px; color: #222;
+    word-break: keep-all;
+    padding-top: 5%; padding-bottom: 5%;}
+
+
+    /*기본 입력*/
+    div.health_screening_information_box
+    {margin-right: 0;
+    width: 100%;}
+
+    /*라벨*/
+    div.health_screening_btn_label_box>label>p
+    {width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 20px; word-break: keep-all;
+    color: #51b8ff; font-size: 14px;
+    padding-top: 5%; padding-bottom: 5%;
+    transition: all 0.3s;}
+
+    div.health_screening_btn_sheet_title>p:nth-child(2)
+    {width: 90%;
+    margin: 0 auto; text-align: center;
+    font-size: 15px; color: #777; line-height: 20px;}
+
+    /*병원 상세 프로그램 정보 이미지*/
+    p.item_health_contetns img
+    {width: 100%; height: auto;
+    margin: 10px auto;}
+
+    p.cost_health_contetns img
+    {width: 100%; height: auto;
+    margin: 10px auto;}
+
+    p.other_guidance_health_contetns img
+    {width: 100%; height: auto;
+    margin: 10px auto;}
+
+    /*달력*/
+    div.date_of_ues_ex
+    {width: 100%;
+    margin-right: 0;
+    margin-bottom: 30px;}
+
+    div.personnel_ex
+    {width: 100%;}
+
+    /*버튼 박스*/
+    div.health_screening_cart_form_btn_box
+    {width: 100%;
+    overflow: hidden;}
+
+    #detaile_in_cart
+    {width: 100%; height: 50px;
+    margin-right: 0;
+    border: none; outline: none;
+    background-color: #51b8ff; color: #fff;
+    border-radius: 5px;
+    float: inherit;
+    font-size: 15px; text-align: center; line-height: 50px;
+    font-family: 'Pretendard' !important;
+    margin-bottom: 10px;}
+
+    a.health_screening_menu_btn
+    {width: 100%; height: 50px;
+    border-radius: 5px;
+    background-color: #222;
+    display: block;
+    float: inherit;}
+
+    a.health_screening_menu_btn>p
+    {text-align: center; font-size: 15px;
+    color: #fff; line-height: 50px;}
+
+    /*장바구니 담기 팝업*/
+    div.cart_submit_popup_ex
+    {width: 100%; height: 100vh;
+    background-color: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(2px);
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+
+    div.cart_submit_popup
+    {width: 90%;
+    padding-top: 30px; padding-bottom: 30px;
+    background-color: #fff;
+    border-radius: 5px;}
+
+    div.cart_submit_img_box
+    {width: 80px; height: 80px;
+    margin: 0 auto;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid #ddd; box-sizing: border-box;}
+
+    div.cart_submit_img_box img
+    {width: 50px; height: 50px;
+    margin: 15px auto;}
+
+    p.cart_submit_title
+    {width: 90%;
+    margin: 0 auto;
+    word-break: keep-all;
+    text-align: center; line-height: 25px;
+    font-size: 16px; font-family: 'min_bold'; color: #222;
+    margin-bottom: 20px;}
+
+    div.cart_link_box
+    {width: 90%;
+    margin: 0 auto;
+    overflow: hidden;}
+
+    div.cart_link_box>a:nth-child(1)
+    {width: 100%; height: 50px;
+    border-radius: 5px;
+    float: inherit;
+    display: block;
+    background-color: #51b8ff;
+    margin-right: 0;
+    margin-bottom: 10px;}
+
+    div.cart_link_box>a:nth-child(1)>p
+    {color: #fff;
+    font-size: 14px;
+    text-align: center; line-height: 50px;}
+
+    div.cart_link_box>p:nth-child(2)
+    {width: 100%; height: 50px;
+    border-radius: 5px;
+    float: inherit;
+    font-size: 14px;
+    text-align: center; line-height: 50px;
+    color: #222; background-color: #ccc;
+    display: block;}
+}

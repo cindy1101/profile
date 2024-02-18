@@ -1,0 +1,2167 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, minimum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <title>Health Screening Detaile</title>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon_icon_medi.png">
+
+    <script src="../js/jquery.min.js"></script>
+
+    <!--달력-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <!--owl캐러셀-->
+    <script src="../js/owl.carousel.js"></script>
+    <link href="../css/docs.theme.min.css" rel="stylesheet">
+    <link href="../css/owl.carousel.min.css" rel="stylesheet">
+    <link href="../css/owl.theme.default.min.css" rel="stylesheet">
+
+    <!--헤더, 풋터-->
+    <link href="../css/footer.css" rel="stylesheet">
+    <link href="../css/header.css" rel="stylesheet">
+
+    <!--윙메뉴-->
+    <link href="../css/wing_menu.css" rel="stylesheet">
+
+    <!--팝업-->
+    <link href="../css/cart_popup.css" rel="stylesheet">
+    <script src="../js/cart_popup.js"></script>
+
+    <!--스타일시트-->
+    <link href="css/healthscreening_detaile.css" rel="stylesheet">
+</head>
+<script>
+    window.GitpleConfig = {"appCode":"z5aqTLvXr5YrbBAdKVQc3EW1145ad3"};
+    !function(){function e(){function e(){var e=t.contentDocument,a=e.createElement("script");a.type="text/javascript",a.async=!0,a.src=window[n]&&window[n].url?window[n].url+"/inapp-web/gitple-loader.js":"https://app.gitple.io/inapp-web/gitple-loader.js",a.charset="UTF-8",e.head&&e.head.appendChild(a)}var t=document.getElementById(a);t||((t=document.createElement("iframe")).id=a,t.style.display="none",t.style.width="0",t.style.height="0",t.addEventListener?t.addEventListener("load",e,!1):t.attachEvent?t.attachEvent("onload",e):t.onload=e,document.body.appendChild(t))}var t=window,n="GitpleConfig",a="gitple-loader-frame";if(!window.Gitple){document;var i=function(){i.ex&&i.ex(arguments)};i.q=[],i.ex=function(e){i.processApi?i.processApi.apply(void 0,e):i.q&&i.q.push(e)},window.Gitple=i,t.attachEvent?t.attachEvent("onload",e):t.addEventListener("load",e,!1)}}();
+    Gitple('boot');
+</script>
+<body>
+
+    <input type="checkbox" id="header_open_mobile">
+
+    <header class="mobile_header">
+
+        <div class="mobile_header_top_box">
+
+            <div class="mobile_header_top">
+
+                <a href="../index.html" class="mobile_header_logo">
+                    <img src="../img/white_logo.png">
+                </a>
+
+                <label for="header_open_mobile" class="mobile_header_open_menu">
+                    <img src="../img/menu_open_mobile.png">
+                </label>
+
+            </div><!--mobile_header_top-->
+
+        </div><!--mobile_header_top_box-->
+
+        <div class="mobile_menu_sheet">
+
+            <div class="close_search_mobile_ex">
+
+                <input type="checkbox" id="mobile_search_btn" class="lnb_chk">
+
+                <div class="close_search_mobile_box">
+
+                    <label for="mobile_search_btn">
+                        <img src="../img/search_icon_black.png">
+                    </label>
+
+                    <label for="header_open_mobile">
+                        <img src="../img/black_close_icon.png">
+                    </label>
+
+                </div><!--close_search_mobile_box-->
+
+
+            </div><!--close_search_mobile_ex-->
+
+            <div class="mobile_menu_quickmenu_ex">
+
+                <a href="https://www.visakorea.com/" class="mobile_menu_quickmenu_box">
+
+                  <div>
+                        <div>
+                            <img src="../img/visa_white_icon.png">
+                        </div>
+
+                        <p>Credit Card Payment</p>
+                  </div>
+
+                </a>
+
+                <a href="https://www.paypal.com/kr/home" class="mobile_menu_quickmenu_box">
+                    
+                   <div>
+                        <div>
+                            <img src="../img/paypal_white_icon.png">
+                        </div>
+
+                        <p>PayPal</p>
+                   </div>
+
+                </a>
+
+                <a href="#" class="mobile_menu_quickmenu_box reservation_mobile_cart">
+
+                    <div>
+                        <div>
+                            <img src="../img/order_white.png">
+                        </div>
+
+                        <p>Order</p>
+                   </div>
+                </a>
+
+                <a href="http://www.koreatournet.kr/currencyconverter.php" class="mobile_menu_quickmenu_box">
+                    
+                    <div>
+                        <div>
+                            <img src="../img/currency_white_icon.png">
+                        </div>
+    
+                        <p>Currency Converter</p>
+                    </div>
+                    
+                </a>
+
+                <a href="#" class="mobile_weather_box">
+
+                    <div>
+                        <div>
+                            <img src="../img/sunney.png">
+                        </div>
+                        
+                        <div>
+                            <p>28°C</p>
+                            <p>sunny</p>
+                        </div>
+                    </div>
+                </a>
+
+            </div><!--mobile_menu_quickmenu_ex-->
+
+            <input type="checkbox" id="mobile_lnb_open01" class="lnb_chk">
+            <input type="checkbox" id="mobile_lnb_open02" class="lnb_chk">
+            <input type="checkbox" id="mobile_lnb_open03" class="lnb_chk">
+            <input type="checkbox" id="mobile_lnb_open04" class="lnb_chk">
+            <input type="checkbox" id="mobile_lnb_open05" class="lnb_chk">
+            <input type="checkbox" id="mobile_lnb_open06" class="lnb_chk">
+
+            <div class="mobile_sheet_lnb_ex">
+
+                <nav>
+                    <ul class="mobile_sheet_lnb_box">
+
+                        <li>
+                            <label for="mobile_lnb_open01">
+                                <p>About</p> 
+                                <p class="rotate_mobile">▼</p>
+                            </label>
+    
+                            <ul>
+    
+                                <li>
+                                    <a href="../about/about.html">
+                                        <p>About Us</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="../question/question.html">
+                                        <p>FAQ</p>
+                                    </a>
+                                </li>
+    
+                                <li>
+                                    <a href="../questions_answers/questions_answers.html">
+                                        <p>Q&A</p>
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                        </li><!--01-->
+
+                        <li>
+                            <label for="mobile_lnb_open02">
+                                <p>Health Screening</p>
+                                <p class="rotate_mobile">▼</p>
+                            </label>
+
+                            <ul>
+    
+                                <li>
+                                    <a href="../healthscreening/healthscreening_seoul.html">
+                                        <p>Seoul</p>
+                                    </a>
+                                </li>
+    
+                                <li>
+                                    <a href="../healthscreening/healthscreening_busan.html">
+                                        <p>Busan</p>
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../healthscreening/healthscreening_jeju.html">
+                                        <p>Jeju</p>
+                                    </a>
+                                </li>
+                                
+                            </ul>
+
+                        </li><!--02-->
+
+                        <li>
+                            <label for="mobile_lnb_open03">
+                                <p>Wellness Programs</p> 
+                                <p class="rotate_mobile">▼</p>
+                            </label>
+    
+                            <ul>
+    
+                                <li>
+                                    <a href="../wellness_programs/beauty_cosmetology.html">
+                                        <p>Beauty / Cosmetology</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="../wellness_programs/marine_sports.html">
+                                        <p>Marine Sports, & Etc.</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="../wellness_programs/tour_programs.html">
+                                        <p>Sightseeing / Tour Programs</p>
+                                    </a>
+                                </li>
+
+                                
+                            </ul>
+
+                        </li><!--03-->
+
+                        <li>
+                            <label for="mobile_lnb_open04">
+                                <p>Concierge Services</p> 
+                                <p class="rotate_mobile">▼</p>
+                            </label>
+    
+                            <ul>
+
+                                <li>
+                                    <a href="../concierge/car.html">
+                                        <p>Cars</p>
+                                    </a>
+                                </li>
+    
+                                <li>
+                                    <a href="../concierge/hotels.html">
+                                        <p>Hotels</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="../concierge/restaurants.html">
+                                        <p>Restaurants</p>
+                                    </a>
+                                </li>
+    
+                            </ul>
+
+                        </li><!--04-->
+
+                        <li>
+                            <label for="mobile_lnb_open05">
+                                <p>Interpreter Service</p> 
+                                <p class="rotate_mobile">▼</p>
+                            </label>
+
+                            <ul>
+    
+                                <li>
+                                    <a href="../interpreter/interpreter.html">
+                                        <p>Interpretation</p>
+                                    </a>
+                                </li>
+    
+                                <li>
+                                    <a href="../translation/translation.html">
+                                        <p>Translation</p>
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                        </li><!--05-->
+
+                        <li>
+                            <label for="mobile_lnb_open06">
+                                <p>Media</p> 
+                                <p class="rotate_mobile">▼</p>
+                            </label>
+    
+                            <ul>
+    
+                                <li>
+                                    <a href="../media/featured_articles.html">
+                                        <p>Featured Articles</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="../media/regarding_health_check_up.html">
+                                        <p>Regarding Health Check-Ups</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="../media/statistics.html">
+                                        <p>Statistics</p>
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                        </li><!--06-->
+
+                    </ul>
+                </nav>
+            </div>
+
+        </div><!--mobile_menu_sheet-->
+
+        <div class="search_mobile_ex" style="display: none;">
+
+            <div class="search_mobile_box">
+
+                <div class="search_mobile_close_box">
+
+                    <label for="mobile_search_btn" class="close_search_mobile">
+                        <img src="../img/white_close_icon.png">
+                    </label>
+
+                </div><!--search_mobile_close_box-->
+
+                <div class="search_mobile_title">
+                    <p>Search Box</p>
+                    <p>Please enter what you want to search for.</p>
+                </div><!--search_mobile_title-->
+
+                <div class="search_mobile_contents_ex">
+
+                    <div class="search_mobile_contetns_box">
+
+                        <input type="text" id="search_mobile_txt_box" placeholder="Search">
+
+                        <input type="submit" id="search_mobile_submit_btn">
+
+                        <label for="search_mobile_submit_btn" class="search_submit_button_m">
+                            <img src="../img/search_icon_white.png">
+                        </label>
+
+                    </div><!--search_mobile_contetns_box-->
+
+                </div><!--search_mobile_contents_ex-->
+
+            </div><!--search_mobile_box-->
+
+        </div><!--search_mobile_ex-->
+
+    </header><!--mobile_header-->
+
+    <header class="web_header">
+
+        <div class="web_header_top">
+
+            <input type="checkbox" id="search_web_chk">
+
+            <a href="../index.html" class="header_web_logo">
+                <img id="header_web_logo_change" src="../img/white_logo.png">
+            </a>
+
+            <label for="search_web_chk" class="search_web">
+                <img id="search_change_icon" src="../img/search_icon_white.png">
+            </label><!--search_web-->
+
+        </div>
+
+        <div class="search_web_box_ex" style="display: none;">
+
+            <div class="search_web_box">
+
+                <div class="search_web_close_box">
+
+                    <label for="search_web_chk" class="close_search_web">
+                        <img src="../img/white_close_icon.png">
+                    </label>
+
+                </div><!--search_web_close_box-->
+
+                <div class="search_web_title">
+                    <p>Search Box</p>
+                    <p>Please enter what you want to search for.</p>
+                </div><!--search_web_title-->
+
+                <div class="search_web_contents_ex">
+
+                    <div class="search_web_contetns_box">
+
+                        <input type="text" id="search_web_txt_box" placeholder="Search">
+
+                        <input type="submit" id="search_web_submit_btn">
+
+                        <label for="search_web_submit_btn" class="search_submit_button">
+                            <img src="../img/search_icon_white.png">
+                        </label>
+
+                    </div><!--search_web_contetns_box-->
+
+                </div><!--search_web_contents_ex-->
+
+            </div><!--search_web_box-->
+
+        </div><!--search_web_box_ex-->
+    
+
+        <div class="lnb_web_box">
+
+            <nav>
+
+                <ul class="lnb_full_menu_box">
+
+                    <li>
+                        <a href="../about/about.html">
+                            <p class="lnb_text_color">About</p>
+                        </a>
+
+                        <ul class="dept01">
+
+                            <li id="nop">
+                                <a href="../about/about.html">
+                                    <p class="lnb_sub_text_color">About Us</p>
+                                </a>
+                            </li>
+
+                            <li id="nop">
+                                <a href="../question/question.html">
+                                    <p class="lnb_sub_text_color">FAQ</p>
+                                </a>
+                            </li>
+
+                            <li id="nop">
+                                <a href="../questions_answers/questions_answers.html">
+                                    <p class="lnb_sub_text_color">Q&A</p>
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+                    <li>
+                        <a href="../healthscreening/healthscreening_seoul.html">
+                            <p class="lnb_text_color">Health Screening</p>
+                        </a>
+
+                        <ul class="dept01">
+
+                            <li id="nop">
+                                <a href="../healthscreening/healthscreening_seoul.html">
+                                    <p class="lnb_sub_text_color">Seoul</p>
+                                </a>
+                            </li>
+
+                            <li id="nop">
+                                <a href="../healthscreening/healthscreening_busan.html">
+                                    <p class="lnb_sub_text_color">Busan</p>
+                                </a>
+                            </li>
+
+                            <li id="nop">
+                                <a href="../healthscreening/healthscreening_jeju.html">
+                                    <p class="lnb_sub_text_color">Jeju</p>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="../wellness_programs/beauty_cosmetology.html">
+                            <p class="lnb_text_color">Wellness Programs</p>
+                        </a>
+
+                        <ul class="dept01">
+
+                        
+                            <li id="nop">
+                                <a href="../wellness_programs/beauty_cosmetology.html">
+                                    <p class="lnb_sub_text_color">Beauty / Cosmetology</p>
+                                </a>
+                            </li>
+
+                            <li id="nop">
+                                <a href="../wellness_programs/marine_sports.html">
+                                    <p class="lnb_sub_text_color">Marine Sports, & Etc.</p>
+                                </a>
+                            </li>
+
+                            <li id="nop">
+                                <a href="../wellness_programs/tour_programs.html">
+                                    <p class="lnb_sub_text_color">Sightseeing / Tour Programs</p>
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+                    <li>
+                        <a href="../concierge/car.html">
+                            <p class="lnb_text_color">Concierge Services</p>
+                        </a>
+
+                        <ul class="dept01">
+
+                            <li id="nop">
+                                <a href="../concierge/car.html">
+                                    <p class="lnb_sub_text_color">Cars</p>
+                                </a>
+                            </li>
+
+                            <li id="nop">
+                                <a href="../concierge/hotels.html">
+                                    <p class="lnb_sub_text_color">Hotels</p>
+                                </a>
+                            </li>
+
+                            <li id="nop">
+                                <a href="../concierge/restaurants.html">
+                                    <p class="lnb_sub_text_color">Restaurants</p>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="../interpreter/interpreter.html">
+                            <p class="lnb_text_color">Interpreter Service</p>
+                        </a>
+
+                        <ul class="dept01">
+
+                            <li id="nop">
+                                <a href="../interpreter/interpreter.html">
+                                    <p class="lnb_sub_text_color">Interpretation</p>
+                                </a>
+                            </li>
+
+                            <li id="nop">
+                                <a href="../translation/translation.html">
+                                    <p class="lnb_sub_text_color">Translation</p>
+                                </a>
+                            </li>
+                            
+                        </ul>
+
+                    </li>
+
+                    <li>
+                        <a href="../media/featured_articles.html">
+                            <p class="lnb_text_color">Media</p>
+                        </a>
+
+                        <ul class="dept01">
+
+                            <li id="nop">
+                                <a href="../media/featured_articles.html">
+                                    <p class="lnb_sub_text_color">Featured Articles</p>
+                                </a>
+                            </li>
+
+                            <li id="nop">
+                                <a href="../media/regarding_health_check_up.html">
+                                    <p class="lnb_sub_text_color">Regarding Health Check-Ups</p>
+                                </a>
+                            </li>
+
+                            <li id="nop">
+                                <a href="../media/statistics.html">
+                                    <p class="lnb_sub_text_color">Statistics</p>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header><!--web_header-->
+
+    <div class="visual_sub_banner">
+
+        <img src="img/health_visual_banner.png" class="visual_animation">
+
+        <p class="visual_sub_text">Hospitals in Busan</p>
+
+    </div><!--visual_sub_banner-->
+    
+    <div class="nav_ex">
+
+        <nav class="nav_box">
+            <ul>
+                <li>
+                    <a href="../index.html">
+                        <img src="img/rout_home_icon.png">
+                    </a>
+                </li>
+
+                <li>
+                    <p>></p>
+                </li>
+
+                <li>
+                    <a href="../healthscreening/healthscreening_busan.html">
+                        <p>Hospitals in Busan</p>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+    </div><!--root_ex-->
+    
+
+    <div class="health_screening_detaile_ex">
+
+        <div class="health_screening_detaile_title_ex">
+            <p>Hospitals in Busan</p>
+            <p>Inje University, Haeundae PAIK Hospital (Health Promotion Center)</p>
+        </div><!--health_screening_detaile_title_ex-->
+
+        <div class="health_screening_detaile_visual_ex">
+
+            <div class="owl-carousel owl-theme health_screening_detaile_visual">
+
+                <div class="item health_screening_detaile_visual_img">
+                    <img src="img/hospital_product_01.png">
+                </div>
+    
+                <div class="item health_screening_detaile_visual_img">
+                    <img src="img/hospital_product_02.png">
+                </div>
+    
+                <div class="item health_screening_detaile_visual_img">
+                    <img src="img/hospital_product_03.png">
+                </div>
+    
+            </div><!--health_screening_detaile_visual-->
+
+            <script>
+
+                //슬라이드
+                var healthVisualCount = $ ('.health_screening_detaile_visual_img').length;
+                var autoplayHealthThree = (healthVisualCount > 3) ? true : false;
+                var autoplayHealthTwo = (healthVisualCount > 2) ? true : false;
+                var autoplayHealthOne = (healthVisualCount > 1) ? true : false;
+        
+                $('.health_screening_detaile_visual').owlCarousel({
+                    nav : false,
+                    dots: false,
+                    margin:0,
+                    responsive:{
+                        0:{
+                            loop: autoplayHealthOne,
+                            autoplay : autoplayHealthOne,
+                            autoplayHoverPause: true,
+                            items: 1
+                        },
+                        601:{
+                            loop: autoplayHealthTwo,
+                            autoplay : autoplayHealthTwo,
+                            autoplayHoverPause: true,
+                            items: 2,
+                            margin: 20
+                        },
+                        1024:{
+                            loop: autoplayHealthThree,
+                            autoplay : autoplayHealthThree,
+                            autoplayHoverPause: true,
+                            items: 3,
+                            margin: 20
+                        },
+                        1280:{
+                            loop: autoplayHealthThree,
+                            autoplay : autoplayHealthThree,
+                            autoplayHoverPause: true,
+                            items: 3,
+                            margin: 30
+                        },
+                        1420:{
+                            loop: autoplayHealthThree,
+                            autoplay : autoplayHealthThree,
+                            autoplayHoverPause: true,
+                            items: 3,
+                            margin: 30
+                        }
+        
+                    }
+                });
+        
+            </script>
+
+            <div class="health_visual_txt_box">
+                <p>Haeundae Paik Hospital General Examination Center provides the best medical services by the best medical staff based on "Baek Hospital's tradition and know-how."<br>
+                    Our Haeundae Paik Hospital General Examination Center is equipped with the best medical staff and the latest medical equipment in an independent and pleasant environment to conduct rapid and accurate medical examinations.<br>
+                    In addition, more accurate and detailed health examinations are possible by introducing state-of-the-art medical information systems such as medical imaging information systems (PACS), prescription delivery systems (OCS), electronic medical records (EMR), and clinical information systems (LIS).<br>
+                    The General Examination Center operates a specialized precision health examination program based on the basic comprehensive health examination program tailored to the daily life of busy modern people, and operates precision health examination programs such as silver and gold for VIP customers.
+                </p>
+            </div>
+
+        </div><!--health_screening_detaile_visual_ex // 비주얼 박스-->
+
+        <div class="health_screening_information_ex">
+
+            <div class="health_screening_information_box">
+
+                <div class="health_screening_information_title">
+
+                    <div class="health_screening_information_icon">
+                        <img src="img/location_icon.png">
+                    </div>
+
+                    <p class="health_screening_information_title_txt">Address</p>
+
+                </div><!--health_screening_information_title-->
+
+                <p class="health_screening_information_txt">Inje University Haeundae Paik Hospital General Examination Center, 875 Haeundae-ro, Haeundae-gu, Busan</p>
+
+            </div><!--health_screening_information_box-->
+
+            <div class="health_screening_information_box">
+
+                <div class="health_screening_information_title">
+
+                    <div class="health_screening_information_icon">
+                        <img src="img/call_icon.png">
+                    </div>
+
+                    <p class="health_screening_information_title_txt">Business Number</p>
+
+                </div><!--health_screening_information_title-->
+
+                <p class="health_screening_information_txt">051-797-3000, 0590</p>
+
+            </div><!--health_screening_information_box-->
+
+            <div class="health_screening_information_box">
+
+                <div class="health_screening_information_title">
+
+                    <div class="health_screening_information_icon">
+                        <img src="img/web_icon.png">
+                    </div>
+
+                    <p class="health_screening_information_title_txt">Homepage</p>
+
+                </div><!--health_screening_information_title-->
+
+                <a href="https://ilsan.paik.ac.kr/haeundae_hpc_eng/user/main/view.do" class="health_screening_information_link">
+                    <p>https://ilsan.paik.ac.kr/haeundae_hpc_eng/user/main/view.do</p>
+                </a>
+
+            </div><!--health_screening_information_box-->
+
+            <div class="health_screening_information_box">
+
+                <div class="health_screening_information_title">
+
+                    <div class="health_screening_information_icon">
+                        <img src="img/time_icon.png">
+                    </div>
+
+                    <p class="health_screening_information_title_txt">Business Hours</p>
+
+                </div><!--health_screening_information_title-->
+
+                <p class="health_screening_information_txt">08:00 AM ~ 05:00PM</p>
+
+            </div><!--health_screening_information_box-->
+
+        </div><!--health_screening_information_ex // 병원 공통된 폼-->
+
+        <div class="health_screening_detaile_button_ex">
+
+            <input type="checkbox" class="health_screening_btn" id="health_screening_btn_01">
+            <input type="checkbox" class="health_screening_btn" id="health_screening_btn_02">
+            <input type="checkbox" class="health_screening_btn" id="health_screening_btn_03">
+            <input type="checkbox" class="health_screening_btn" id="health_screening_btn_04">
+            <input type="checkbox" class="health_screening_btn" id="health_screening_btn_05">
+            <input type="checkbox" class="health_screening_btn" id="health_screening_btn_06">
+            <input type="checkbox" class="health_screening_btn" id="health_screening_btn_07">
+            <input type="checkbox" class="health_screening_btn" id="health_screening_btn_08">
+            <input type="checkbox" class="health_screening_btn" id="health_screening_btn_09">
+            <input type="checkbox" class="health_screening_btn" id="health_screening_btn_10">
+            <input type="checkbox" class="health_screening_btn" id="health_screening_btn_11">
+
+            <div class="health_screening_btn_label_box">
+
+                <label for="health_screening_btn_01" class="health_screening_btn_label">
+                    <p>Male</p>
+                </label>
+
+                <label for="health_screening_btn_02" class="health_screening_btn_label">
+                    <p>Female</p>
+                </label>
+
+                <label for="health_screening_btn_03" class="health_screening_btn_label">
+                    <p>Brain</p>
+                </label>
+
+                <label for="health_screening_btn_04" class="health_screening_btn_label">
+                    <p>Cardiopulmonary Function</p>
+                </label>
+
+                <label for="health_screening_btn_05" class="health_screening_btn_label">
+                    <p>Digestive System</p>
+                </label>
+
+                <label for="health_screening_btn_06" class="health_screening_btn_label">
+                    <p>Unmarried Women</p>
+                </label>
+
+                <label for="health_screening_btn_07" class="health_screening_btn_label">
+                    <p>Teenagers</p>
+                </label>
+
+                <label for="health_screening_btn_08" class="health_screening_btn_label">
+                    <p>Silver</p>
+                </label>
+
+                <label for="health_screening_btn_09" class="health_screening_btn_label">
+                    <p>Gold</p>
+                </label>
+
+                <label for="health_screening_btn_10" class="health_screening_btn_label">
+                    <p>Male VIP Accommodation Precision Health Checkup</p>
+                </label>
+
+                <label for="health_screening_btn_11" class="health_screening_btn_label">
+                    <p>Female VIP Accommodation Precision Health Checkup</p>
+                </label>
+
+            </div><!--health_screening_btn_label_box-->
+
+
+            <div class="health_screening_btn_sheet_ex">
+
+                <div class="health_screening_btn_sheet_box">
+
+                    <div class="health_screening_btn_sheet_title">
+
+                        <p>Male</p>
+
+                        <p>It is to examine the diseases such as pulmonary cancer, thyroid cancer, arteriosclerosis and the prostate disease which are mostly caused in male.</p>
+
+                    </div><!--health_screening_btn_sheet_title-->
+
+                    <div class="item_health_ex">
+
+                        <div class="item_health_title">
+
+                            <div class="item_health_icon">
+                                <img src="img/item_h_icon.png">
+                            </div>
+
+                            <p>Item</p>
+
+                        </div>
+
+                        <p class="item_health_contetns">
+                            <span>Best</span><br>
+                            Bronze + Chest CT / Abdomen & Pelvis CT / Prostate Ultrasonography / Thyroid Ultrasonography / Conscious sedation Gastroscopy · Conscious sedation Colonoscopy / Arteriosclerosis Test /Blood test (Homocystein) / Urine cytology / Biological Age measurement<br><br>
+                            <span>Noble</span><br>
+                            Bronze + Brain MRA / Carotid Ultrasonography / Prostate Ultrasonography / Thyroid Ultrasonography / Arteriosclerosis Test / Blood test(Homocystein) / Urine cytology / Biological Age measurement<br>
+                            ※ Optional Test (Choose 3 items) : Chest CT / Abdomen&Pelvis CT / Cardiac CT / Echocardiography / Conscious sedation Gastroscopy · Conscious sedation Colonoscopy
+                        </p>
+
+                    </div><!--item_health_ex-->
+
+                    <div class="cost_health_ex">
+
+                        <div class="cost_health_title">
+
+                            <div class="cost_health_icon">
+                                <img src="img/cost_icon_h.png">
+                            </div>
+
+                            <p>Cost</p>
+
+                        </div>
+
+                        <p class="cost_health_contetns">
+                            - Best : 1,450,000 won<br>
+                            - Noble : 1,950,000 won
+                        </p>
+
+                    </div><!--cost_health_ex-->
+
+                    <div class="other_guidance_health_ex">
+
+                        <div class="other_guidance_health_title">
+
+                            <div class="other_guidance_health_icon">
+                                <img src="img/other_guidance_icon.png">
+                            </div>
+
+                            <p>Other Guidance</p>
+
+                        </div>
+
+                        <p class="other_guidance_health_contetns">
+                            The time required for a medical examination is 4 hours. Please refer to this.
+                        </p>
+
+                    </div><!--other_guidance_health_ex-->
+
+                </div><!--health_screening_btn_sheet_box-->
+
+                <div class="health_screening_btn_sheet_box">
+
+                    <div class="health_screening_btn_sheet_title">
+
+                        <p>Female</p>
+
+                        <p>It is to examine the diseases such as breast cancer, thyroid cancer, cervical cancer and ovarian cancer which are mostly caused in female.</p>
+
+                    </div><!--health_screening_btn_sheet_title-->
+
+                    <div class="item_health_ex">
+
+                        <div class="item_health_title">
+
+                            <div class="item_health_icon">
+                                <img src="img/item_h_icon.png">
+                            </div>
+
+                            <p>Item</p>
+
+                        </div>
+
+                        <p class="item_health_contetns">
+                            <span>Best</span><br>
+                            Bronze + Chest CT / Abdomen & Pelvis CT / Breast Ultrasonography / Thyroid Ultrasonography / Transvaginal Sonography (TVS) / Conscious sedation Gastroscopy · Conscious sedation Colonoscopy / Human papillomavirus (HPV) / Female Hormones / Osteocalcin / Biological Age measurement<br><br>
+                            <span>Noble</span><br>
+                            Bronze + Brain MRA / Breast Ultrasonography / Thyroid Ultrasonography / Transvaginal Ultrasonography / Human papillomavirus(HPV) / Female Hormones / Osteocalcin / Biological Age measurement<br>
+                            ※ Optional Test (Choose 3 items) : Chest CT / Abdomen&Pelvis CT / Cardiac CT / Echocardiography / Conscious sedation Gastroscopy · Conscious sedation Colonoscopy
+                        </p>
+
+                    </div><!--item_health_ex-->
+
+                    <div class="cost_health_ex">
+
+                        <div class="cost_health_title">
+
+                            <div class="cost_health_icon">
+                                <img src="img/cost_icon_h.png">
+                            </div>
+
+                            <p>Cost</p>
+
+                        </div>
+
+                        <p class="cost_health_contetns">
+                            - Best : 1,600,000 won<br>
+                            - Noble : 1,980,000 won
+                        </p>
+
+                    </div><!--cost_health_ex-->
+
+                    <div class="other_guidance_health_ex">
+
+                        <div class="other_guidance_health_title">
+
+                            <div class="other_guidance_health_icon">
+                                <img src="img/other_guidance_icon.png">
+                            </div>
+
+                            <p>Other Guidance</p>
+
+                        </div>
+
+                        <p class="other_guidance_health_contetns">
+                            The time required for a medical examination is 4 hours. Please refer to this.
+                        </p>
+
+                    </div><!--other_guidance_health_ex-->
+
+                </div><!--health_screening_btn_sheet_box-->
+
+                <div class="health_screening_btn_sheet_box">
+
+                    <div class="health_screening_btn_sheet_title">
+
+                        <p>Brain</p>
+
+                        <p>As a program for preventing from cerebral infarction, cerebrovascular disease it is for early checkup and prevention in case you have family history of cerebral diseases or risk factors of cerebral infarction (hypertension, diabetes, hyperlipidemia).</p>
+
+                    </div><!--health_screening_btn_sheet_title-->
+
+                    <div class="item_health_ex">
+
+                        <div class="item_health_title">
+
+                            <div class="item_health_icon">
+                                <img src="img/item_h_icon.png">
+                            </div>
+
+                            <p>Item</p>
+
+                        </div>
+
+                        <p class="item_health_contetns">
+                            Bronze + Brain MRI + MRA / Carotid Ultrasonography / Arteriosclerosis Test
+                        </p>
+
+                    </div><!--item_health_ex-->
+
+                    <div class="cost_health_ex">
+
+                        <div class="cost_health_title">
+
+                            <div class="cost_health_icon">
+                                <img src="img/cost_icon_h.png">
+                            </div>
+
+                            <p>Cost</p>
+
+                        </div>
+
+                        <p class="cost_health_contetns">
+                            - Male 1,450,000 won<br>
+                            - Female 1,500,000 won
+                        </p>
+
+                    </div><!--cost_health_ex-->
+
+                    <div class="other_guidance_health_ex">
+
+                        <div class="other_guidance_health_title">
+
+                            <div class="other_guidance_health_icon">
+                                <img src="img/other_guidance_icon.png">
+                            </div>
+
+                            <p>Other Guidance</p>
+
+                        </div>
+
+                        <p class="other_guidance_health_contetns">
+                            The time required for a medical examination is 3 hours. Please refer to this.
+                        </p>
+
+                    </div><!--other_guidance_health_ex-->
+
+                </div><!--health_screening_btn_sheet_box-->
+
+                <div class="health_screening_btn_sheet_box">
+
+                    <div class="health_screening_btn_sheet_title">
+
+                        <p>Cardiopulmonary Function</p>
+
+                        <p>It is for early diagnosis and prevention by examine pulmonary disease and cardiac disease according to smoking.</p>
+
+                    </div><!--health_screening_btn_sheet_title-->
+
+                    <div class="item_health_ex">
+
+                        <div class="item_health_title">
+
+                            <div class="item_health_icon">
+                                <img src="img/item_h_icon.png">
+                            </div>
+
+                            <p>Item</p>
+
+                        </div>
+
+                        <p class="item_health_contetns">
+                            Bronze + Chest CT / Arteriosclerosis Test / Sputum Cytology / Specific blood tests (4items)<br>
+                            ※Option : Cardiac CT or Echocardiography
+                        </p>
+
+                    </div><!--item_health_ex-->
+
+                    <div class="cost_health_ex">
+
+                        <div class="cost_health_title">
+
+                            <div class="cost_health_icon">
+                                <img src="img/cost_icon_h.png">
+                            </div>
+
+                            <p>Cost</p>
+
+                        </div>
+
+                        <p class="cost_health_contetns">
+                            - Male 1,030,000 won<br>
+                            - Female 1,080,000 won
+                        </p>
+
+                    </div><!--cost_health_ex-->
+
+                    <div class="other_guidance_health_ex">
+
+                        <div class="other_guidance_health_title">
+
+                            <div class="other_guidance_health_icon">
+                                <img src="img/other_guidance_icon.png">
+                            </div>
+
+                            <p>Other Guidance</p>
+
+                        </div>
+
+                        <p class="other_guidance_health_contetns">
+                            The time required for a medical examination is 3 hours. Please refer to this.
+                        </p>
+
+                    </div><!--other_guidance_health_ex-->
+
+                </div><!--health_screening_btn_sheet_box-->
+
+                <div class="health_screening_btn_sheet_box">
+
+                    <div class="health_screening_btn_sheet_title">
+
+                        <p>Digestive System</p>
+
+                        <p>This program is for early diagnosis and prevention of most common digestive system problems and specially recommeded in case you have a immediate family history of a stomach or colorectal cancer.</p>
+
+                    </div><!--health_screening_btn_sheet_title-->
+
+                    <div class="item_health_ex">
+
+                        <div class="item_health_title">
+
+                            <div class="item_health_icon">
+                                <img src="img/item_h_icon.png">
+                            </div>
+
+                            <p>Item</p>
+
+                        </div>
+
+                        <p class="item_health_contetns">
+                            Bronze + Abdomen & Pelvic CT / Conscious sedation Gastroscopy · Conscious sedation Colonoscopy
+                        </p>
+
+                    </div><!--item_health_ex-->
+
+                    <div class="cost_health_ex">
+
+                        <div class="cost_health_title">
+
+                            <div class="cost_health_icon">
+                                <img src="img/cost_icon_h.png">
+                            </div>
+
+                            <p>Cost</p>
+
+                        </div>
+
+                        <p class="cost_health_contetns">
+                            - Male 830,000 won<br>
+                            - Female 1,080,000 won
+                        </p>
+
+                    </div><!--cost_health_ex-->
+
+                    <div class="other_guidance_health_ex">
+
+                        <div class="other_guidance_health_title">
+
+                            <div class="other_guidance_health_icon">
+                                <img src="img/other_guidance_icon.png">
+                            </div>
+
+                            <p>Other Guidance</p>
+
+                        </div>
+
+                        <p class="other_guidance_health_contetns">
+                            The time required for a medical examination is 3 hours. Please refer to this.
+                        </p>
+
+                    </div><!--other_guidance_health_ex-->
+
+                </div><!--health_screening_btn_sheet_box-->
+
+                <div class="health_screening_btn_sheet_box">
+
+                    <div class="health_screening_btn_sheet_title">
+
+                        <p>Unmarried Women</p>
+
+                        <p>This program is composed of the suitable examination items for unmarried women.</p>
+
+                    </div><!--health_screening_btn_sheet_title-->
+
+                    <div class="item_health_ex">
+
+                        <div class="item_health_title">
+
+                            <div class="item_health_icon">
+                                <img src="img/item_h_icon.png">
+                            </div>
+
+                            <p>Item</p>
+
+                        </div>
+
+                        <p class="item_health_contetns">
+                            <span>A</span><br>
+                            Bronze + Breast Ultrasonography / Transvaginal Sonography (TVS) / Rubella antibody / Varicella antibody<br>
+                            ※ Gynecology test, mammography and osteoporosis tests form the basic program (Bronze) are excluded for this program.<br><br>
+                            <span>B</span><br>
+                            Bronze + Breast Ultrasonography<br>
+                            ※ mammography and osteoporosis tests form the basic program (Bronze) are excluded for this program.
+                        </p>
+
+                    </div><!--item_health_ex-->
+
+                    <div class="cost_health_ex">
+
+                        <div class="cost_health_title">
+
+                            <div class="cost_health_icon">
+                                <img src="img/cost_icon_h.png">
+                            </div>
+
+                            <p>Cost</p>
+
+                        </div>
+
+                        <p class="cost_health_contetns">
+                            - A 660,000 won<br>
+                            - B 560,000 won
+                        </p>
+
+                    </div><!--cost_health_ex-->
+
+                    <div class="other_guidance_health_ex">
+
+                        <div class="other_guidance_health_title">
+
+                            <div class="other_guidance_health_icon">
+                                <img src="img/other_guidance_icon.png">
+                            </div>
+
+                            <p>Other Guidance</p>
+
+                        </div>
+
+                        <p class="other_guidance_health_contetns">
+                            The time required for a medical examination is 4 hours. Please refer to this.
+                        </p>
+
+                    </div><!--other_guidance_health_ex-->
+
+                </div><!--health_screening_btn_sheet_box-->
+
+                <div class="health_screening_btn_sheet_box">
+
+                    <div class="health_screening_btn_sheet_title">
+
+                        <p>Teenagers</p>
+
+                        <p>This program is composed of the suitable examination items for unmarried women.</p>
+
+                    </div><!--health_screening_btn_sheet_title-->
+
+                    <div class="item_health_ex">
+
+                        <div class="item_health_title">
+
+                            <div class="item_health_icon">
+                                <img src="img/item_h_icon.png">
+                            </div>
+
+                            <p>Item</p>
+
+                        </div>
+
+                        <p class="item_health_contetns">
+                            Bronze (Except a portion of the items) + Growth plate test / Allergy test / Stress test / Varicella antibody<br>
+                            Bronze (Except a portion of the items) + Rubella antibody(female) / Depression test<br>
+                            ※ Rheumatoid factor, Hepatitis C antibody, AIDS, syphilis, tumor markers, male hormones, vitamin D, gastroscopy, BMD test, gynecology test, abdominal x-ray, mammography(Bronze) are excluded for this program.
+                        </p>
+
+                    </div><!--item_health_ex-->
+
+                    <div class="cost_health_ex">
+
+                        <div class="cost_health_title">
+
+                            <div class="cost_health_icon">
+                                <img src="img/cost_icon_h.png">
+                            </div>
+
+                            <p>Cost</p>
+
+                        </div>
+
+                        <p class="cost_health_contetns">
+                            - Male 440,000 won<br>
+                            - Female 460,000 won
+                        </p>
+
+                    </div><!--cost_health_ex-->
+
+                    <div class="other_guidance_health_ex">
+
+                        <div class="other_guidance_health_title">
+
+                            <div class="other_guidance_health_icon">
+                                <img src="img/other_guidance_icon.png">
+                            </div>
+
+                            <p>Other Guidance</p>
+
+                        </div>
+
+                        <p class="other_guidance_health_contetns">
+                            The time required for a medical examination is 2 hours. Please refer to this.
+                        </p>
+
+                    </div><!--other_guidance_health_ex-->
+
+                </div><!--health_screening_btn_sheet_box-->
+
+                <div class="health_screening_btn_sheet_box">
+
+                    <div class="health_screening_btn_sheet_title">
+
+                        <p>Silver</p>
+
+                        <p></p>
+
+                    </div><!--health_screening_btn_sheet_title-->
+
+                    <div class="item_health_ex">
+
+                        <div class="item_health_title">
+
+                            <div class="item_health_icon">
+                                <img src="img/item_h_icon.png">
+                            </div>
+
+                            <p>Item</p>
+
+                        </div>
+
+                        <p class="item_health_contetns">
+                            <span>Male</span><br>
+                            PET-CT / Brain MRI & MRA + 3D Neck MRA / Chest CT / Conscious sedation Gastroscopy · Conscious sedation Colonoscopy / Prostate Ultrasonography / Thyroid Ultrasonography / Arteriosclerosis test / Specific blood tests (4 items) / Biological Age measurement / Osteoporosis test Prostate medical exam, Male sexuality medical exam<br>
+                            ※Option : Cardiac CT or Echocardiography<br><br>
+                            <span>Female</span><br>
+                            PET-CT / Brain MRI & MRA + 3D Neck MRA / Chest CT / Conscious sedation Gastroscopy · Conscious sedation Colonoscopy / Breast Ultrasonography / Thyroid Ultrasonography / Transvaginal Sonography (TVS) / Human papillomavirus (HPV) / Female Hormones / Osteocalcin / Biological Age measurement<br>
+                            ※Option : Cardiac CT or Echocardiography
+                        </p>
+
+                    </div><!--item_health_ex-->
+
+                    <div class="cost_health_ex">
+
+                        <div class="cost_health_title">
+
+                            <div class="cost_health_icon">
+                                <img src="img/cost_icon_h.png">
+                            </div>
+
+                            <p>Cost</p>
+
+                        </div>
+
+                        <p class="cost_health_contetns">
+                            - Male 2,600,000 won<br>
+                            - Female 2,700,000 won
+                        </p>
+
+                    </div><!--cost_health_ex-->
+
+                    <div class="other_guidance_health_ex">
+
+                        <div class="other_guidance_health_title">
+
+                            <div class="other_guidance_health_icon">
+                                <img src="img/other_guidance_icon.png">
+                            </div>
+
+                            <p>Other Guidance</p>
+
+                        </div>
+
+                        <p class="other_guidance_health_contetns">
+                            - The time required for a medical examination is 5 hours. Please refer to this.<br>
+                            - In order to proceed with the examination, you must visit the hospital from 8:00 a.m. to 11:30 a.m. and from 1:30 p.m. to 4:00 p.m. on weekdays.<br>
+                            - Through detailed examinations such as MRI and CT and ultrasound examinations, we perform detailed examinations for male and female-related diseases to precisely examine major cancers and diseases by organ.It is a health checkup program suitable for busy modern people who want a thorough examination because it performs a wide range of detailed examinations quickly and accurately in a short time.<br>
+                            
+                            <img src="img/silver_test_img_01.png">
+                        
+                        </p>
+
+                    </div><!--other_guidance_health_ex-->
+
+                </div><!--health_screening_btn_sheet_box-->
+
+                <div class="health_screening_btn_sheet_box">
+
+                    <div class="health_screening_btn_sheet_title">
+
+                        <p>Gold</p>
+
+                        <p></p>
+
+                    </div><!--health_screening_btn_sheet_title-->
+
+                    <div class="item_health_ex">
+
+                        <div class="item_health_title">
+
+                            <div class="item_health_icon">
+                                <img src="img/item_h_icon.png">
+                            </div>
+
+                            <p>Item</p>
+
+                        </div>
+
+                        <p class="item_health_contetns">
+                            <span>Male</span><br>
+                            PET-CT / Brain MRI & MRA + 3D Neck MRA / Chest CT / Conscious sedation Gastroscopy · Conscious sedation Colonoscopy / Prostate Ultrasonography / Thyroid Ultrasonography / Arteriosclerosis test / Specific blood tests (4 items) / Biological Age measurement / Osteoporosis test Prostate medical exam, Male sexuality medical exam<br>
+                            ※Option : Cardiac CT or Echocardiography<br><br>
+                            <span>Female</span><br>
+                            Basic Comprehensive Health Checkup + PET-CT / Brain MRI & MRA + 3D Neck MRA / Chest CT / Sleep Gastrointestinal Endoscopy / Breast Ultrasound / Thyroid Ultrasound / Gynecological (vaginal) Ultrasound / Human Papillomavirus (HPV) / Female Hormone / Bone Metabolic Marker / NK cell activity<br>
+                            ※Option : Cardiac CT or Echocardiography
+                        </p>
+
+                    </div><!--item_health_ex-->
+
+                    <div class="cost_health_ex">
+
+                        <div class="cost_health_title">
+
+                            <div class="cost_health_icon">
+                                <img src="img/cost_icon_h.png">
+                            </div>
+
+                            <p>Cost</p>
+
+                        </div>
+
+                        <p class="cost_health_contetns">
+                            - Male 3,600,000 won<br>
+                            - Female 3,700,000 won
+                        </p>
+
+                    </div><!--cost_health_ex-->
+
+                    <div class="other_guidance_health_ex">
+
+                        <div class="other_guidance_health_title">
+
+                            <div class="other_guidance_health_icon">
+                                <img src="img/other_guidance_icon.png">
+                            </div>
+
+                            <p>Other Guidance</p>
+
+                        </div>
+
+                        <p class="other_guidance_health_contetns">
+                            - The time required for a medical examination is 7 hours. Please refer to this.<br>
+                            - It is a specialized program for the purpose of early diagnosis and prevention of major cancers and diseases by organ by performing the most extensive and high-precision examination among health examinations conducted during the day.
+                            
+                            <img src="img/silver_test_img_01.png">
+                        
+                        </p>
+
+                    </div><!--other_guidance_health_ex-->
+
+                </div><!--health_screening_btn_sheet_box-->
+
+                <div class="health_screening_btn_sheet_box">
+
+                    <div class="health_screening_btn_sheet_title">
+
+                        <p>Male VIP Accommodation Precision Health Checkup</p>
+
+                        <p></p>
+
+                    </div><!--health_screening_btn_sheet_title-->
+
+                    <div class="item_health_ex">
+
+                        <div class="item_health_title">
+
+                            <div class="item_health_icon">
+                                <img src="img/item_h_icon.png">
+                            </div>
+
+                            <p>Item</p>
+
+                        </div>
+
+                        <p class="item_health_contetns">
+                            Basic Comprehensive Health Checkup + Chest CT / Abdominal & Pelvic CT / Carotid Ultrasound / Prostate Ultrasound / Thyroid Ultrasound / Bone Density Test / Sleep Gastrointestinal Endoscopy / Hair Mineral Test / Allergy Test / Arterial Vascular Elasticity / Autonomic Nerve Balance Test / Sputum Cancer Cell / Urine cytology / Special blood test (4 types) / Male sexual life and menopause questionnaire / NK cell activity<br><br>
+                            <span>Premium (3 days 2 nights)</span><br>
+                            PET-CT / Brain MRI & MRA + 3D Neck MRA / Lumbar-Thorax-Cervical MRI / Cardiac CT / Echocardiography & Echocardiography<br><br>
+                            <span>Special (2 Days 1 Night)</span><br>
+                            PET-CT / Brain MRI & MRA + 3D Neck MRA<br>
+                            ※ Optional examination: Select 1 among cardiac CT or echocardiography & exercise stress electrocardiogram<br><br>
+                            <span>Special (2 Days 1 Night)</span><br>
+                            Brain MRI & MRA + 3D Neck MRA<br>
+                            ※ 선택검사 1 : 경추, 요추 MRI 중 선택 1<br>
+                            ※ Optional examination 1 : Select 1 among cervical spine and lumbar spine MRI<br>
+                            ※ Optional test 2 : Select 1 among cardiac CT or echocardiography & exercise stress electrocardiogram<br>
+                        </p>
+
+                    </div><!--item_health_ex-->
+
+                    <div class="cost_health_ex">
+
+                        <div class="cost_health_title">
+
+                            <div class="cost_health_icon">
+                                <img src="img/cost_icon_h.png">
+                            </div>
+
+                            <p>Cost</p>
+
+                        </div>
+
+                        <p class="cost_health_contetns">
+                            - Premium: 6.7000.000 won<br>
+                            - Special : 5,100,000 won<br>
+                            - Classic: 4,500,000 won
+                        </p>
+
+                    </div><!--cost_health_ex-->
+
+                    <div class="other_guidance_health_ex">
+
+                        <div class="other_guidance_health_title">
+
+                            <div class="other_guidance_health_icon">
+                                <img src="img/other_guidance_icon.png">
+                            </div>
+
+                            <p>Other Guidance</p>
+
+                        </div>
+
+                        <p class="other_guidance_health_contetns">
+                            VIP Accommodation Precision Health Checkup<br>
+                            - You will be accommodated in a VIP room equipped with the finest facilities.<br>
+                            - When a couple (family) check-up, they stay in the same room, which reduces costs.<br>
+                            - A professional coordinator (nurse) will guide you through all examinations 1:1.
+                        </p>
+
+                    </div><!--other_guidance_health_ex-->
+
+                </div><!--health_screening_btn_sheet_box-->
+               
+                <div class="health_screening_btn_sheet_box">
+
+                    <div class="health_screening_btn_sheet_title">
+
+                        <p>Female VIP Accommodation Precision Health Checkup</p>
+
+                        <p></p>
+
+                    </div><!--health_screening_btn_sheet_title-->
+
+                    <div class="item_health_ex">
+
+                        <div class="item_health_title">
+
+                            <div class="item_health_icon">
+                                <img src="img/item_h_icon.png">
+                            </div>
+
+                            <p>Item</p>
+
+                        </div>
+
+                        <p class="item_health_contetns">
+                            Basic Comprehensive Health Checkup + Chest CT / Abdominal & Pelvic CT / Carotid Artery Ultrasound / Breast Ultrasound / Vaginal Ultrasound / Thyroid Ultrasound / Sleep Gastric Colonoscopy / Arterial Vascular Elasticity / Autonomic Neural Balance Test / Hair Mineral Test / Allergy Test / Human Papilloma Virus (HPV) / Female hormone / Bone metabolic marker / NK cell activity<br><br>
+                            <span>Premium (3 days 2 nights)</span><br>
+                            PET-CT / Brain MRI & MRA + 3D Neck MRA / Lumbar-Thorax-Cervical MRI / Cardiac CT / Echocardiography & Echocardiography<br><br>
+                            <span>Special (2 Days 1 Night)</span><br>
+                            PET-CT / Brain MRI & MRA + 3D Neck MRA<br>
+                            ※ Optional examination: Select 1 among cardiac CT or echocardiography & exercise stress electrocardiogram<br><br>
+                            <span>Special (2 Days 1 Night)</span><br>
+                            Brain MRI & MRA + 3D Neck MRA<br>
+                            ※ 선택검사 1 : 경추, 요추 MRI 중 선택 1<br>
+                            ※ Optional examination 1 : Select 1 among cervical spine and lumbar spine MRI<br>
+                            ※ Optional test 2 : Select 1 among cardiac CT or echocardiography & exercise stress electrocardiogram<br>
+                        </p>
+
+                    </div><!--item_health_ex-->
+
+                    <div class="cost_health_ex">
+
+                        <div class="cost_health_title">
+
+                            <div class="cost_health_icon">
+                                <img src="img/cost_icon_h.png">
+                            </div>
+
+                            <p>Cost</p>
+
+                        </div>
+
+                        <p class="cost_health_contetns">
+                            - Premium: 6.7000.000 won<br>
+                            - Special : 5,100,000 won<br>
+                            - Classic: 4,500,000 won
+                        </p>
+
+                    </div><!--cost_health_ex-->
+
+                    <div class="other_guidance_health_ex">
+
+                        <div class="other_guidance_health_title">
+
+                            <div class="other_guidance_health_icon">
+                                <img src="img/other_guidance_icon.png">
+                            </div>
+
+                            <p>Other Guidance</p>
+
+                        </div>
+
+                        <p class="other_guidance_health_contetns">
+                            VIP Accommodation Precision Health Checkup<br>
+                            - You will be accommodated in a VIP room equipped with the finest facilities.<br>
+                            - When a couple (family) check-up, they stay in the same room, which reduces costs.<br>
+                            - A professional coordinator (nurse) will guide you through all examinations 1:1.
+                        </p>
+
+                    </div><!--other_guidance_health_ex-->
+
+                </div><!--health_screening_btn_sheet_box-->
+
+            </div><!--health_screening_btn_sheet_ex-->
+
+
+            <a href="#" download="#" class="download_health">
+                <p>PDF Download</p>
+            </a><!--download_health-->
+
+        </div><!--health_screening_detaile_button_ex // 병원 프로젝트 정보-->
+
+        <div class="health_screening_cart_form_ex">
+
+            <form>
+
+                <div class="health_screening_cart_form_box">
+
+                    <div class="date_of_ues_ex">
+
+                        <div class="date_of_ues_title">
+
+                            <div class="date_of_ues_title_icon">
+                                <img src="img/date_of_ues_icon.png">
+                            </div>
+
+                            <p class="date_of_ues_title_icon_txt">Date of Use</p>
+
+                        </div><!--date_of_ues_title-->
+
+                        <div class="health_screening_calendar_ex">
+
+                            <input type="text" id="health_screening_calnedar_box" placeholder="Date of Use">
+
+                            <script>
+
+                                //달력 스크립트
+                                flatpickr("#health_screening_calnedar_box", {
+                                    // 여기에 옵션을 설정할 수 있습니다.
+                                    showMonths: 1,
+                                    inline: true, // 달력을 인라인으로 표시
+                                    locale: "en", // 영어로 설정
+                                    minDate: "today"
+                                
+                                });
+
+                            </script>
+
+                        </div><!--restaurant_calendar_ex-->
+                
+                    </div><!--이용일자 date_of_ues_ex-->
+
+                    <div class="personnel_ex">
+
+                        <div class="personnel_title">
+
+                            <div class="personnel_title_icon">
+                                <img src="img/check_ic_icon.png">
+                            </div>
+
+                            <p class="personnel_title_icon_txt">Examination Time / Personnel</p>
+
+                        </div><!--personnel_title-->
+
+
+                        <div class="personnel_form_ex">
+                            
+                            <select id="health_screening_time_select">
+                                <option value="10:00 AM">10:00 AM</option>
+                                <option value="11:00 AM">11:00 AM</option>
+                                <option value="12:00 PM">12:00 PM</option>
+                                <option value="01:00 PM">01:00 PM</option>
+                                <option value="02:00 PM">02:00 PM</option>
+                                <option value="03:00 PM">03:00 PM</option>
+                                <option value="04:00 PM">04:00 PM</option>
+                                <option value="05:00 PM">05:00 PM</option>
+                            </select>
+
+                            <select id="health_screening_product_select">
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Brain">Brain</option>
+                                <option value="Cardiopulmonary Function">Cardiopulmonary Function</option>
+                                <option value="Digestive System">Digestive System</option>
+                                <option value="Unmarried Women">Unmarried Women</option>
+                                <option value="Teenagers">Teenagers</option>
+                                <option value="Silver">Silver</option>
+                                <option value="Gold">Gold</option>
+                                <option value="Male VIP Accommodation Precision Health Checkup">Male VIP Accommodation Precision Health Checkup</option>
+                                <option value="Female VIP Accommodation Precision Health Checkup">Female VIP Accommodation Precision Health Checkup</option>
+                            </select>
+
+                            <div class="select_people_ex">
+
+                                <div class="adults_ex_h">
+
+                                    <p>Adults</p>
+
+                                    <select id="adults_select">
+                                        <option value="0 Person">0 Person</option>
+                                        <option value="1 Person">1 Person</option>
+                                        <option value="2 Person">2 Persons</option>
+                                        <option value="3 Person">3 Persons</option>
+                                        <option value="4 Person">4 Persons</option>
+                                        <option value="5 Person">5 Persons</option>
+                                        <option value="6 Person">6 Persons</option>
+                                    </select>
+
+                                </div><!--adults_ex_h-->
+
+                                <div class="teens_ex_h">
+
+                                    <div>
+                                        <p>Teens / Children</p>
+                                        <p>37 months or more and under 12 years of age</p>
+                                    </div>
+
+                                    <select id="teens_select">
+                                        <option value="0 Person">0 Person</option>
+                                        <option value="1 Person">1 Person</option>
+                                        <option value="2 Person">2 Persons</option>
+                                        <option value="3 Person">3 Persons</option>
+                                        <option value="4 Person">4 Persons</option>
+                                        <option value="5 Person">5 Persons</option>
+                                        <option value="6 Person">6 Persons</option>
+                                    </select>
+
+                                </div><!--teens_ex_h-->
+
+                                <div class="toddlers_ex_h">
+
+                                    <div>
+                                        <p>Toddlers / Infants (Babies)</p>
+                                        <p>Under 36 months</p>
+                                    </div>
+
+                                    <select id="toddlers_select">
+                                        <option value="0 Person">0 Person</option>
+                                        <option value="1 Person">1 Person</option>
+                                        <option value="2 Person">2 Persons</option>
+                                        <option value="3 Person">3 Persons</option>
+                                        <option value="4 Person">4 Persons</option>
+                                        <option value="5 Person">5 Persons</option>
+                                        <option value="6 Person">6 Persons</option>
+                                    </select>
+
+                                </div><!--toddlers_ex_h-->
+
+                            </div><!--select_people_ex-->
+
+                        </div><!--personnel_form_ex-->
+
+                    </div><!--personnel_ex // 인원-->
+
+                </div><!--health_screening_cart_form_box // 입력-->
+
+                <div class="health_screening_cart_form_btn_box">
+
+                    <input type="button" id="detaile_in_cart" value="Put in the Shopping Cart">
+
+                    <a href="../healthscreening/healthscreening_busan.html" class="health_screening_menu_btn">
+                        <p>List</p>
+                    </a>
+
+                </div><!--health_screening_cart_form_btn_box // 버튼 박스-->
+
+            </form>
+
+        </div><!--health_screening_cart_form_ex // 병원 카드 안에 담는 정보-->
+
+    </div><!--health_screening_detaile_ex-->
+
+    <div class="cart_submit_popup_ex" style="display: none;">
+
+        <div class="cart_submit_popup">
+
+            <div class="cart_submit_img_box">
+                <img src="../img/order.png">
+            </div>
+
+            <p class="cart_submit_title">The product has been placed well in the shopping cart.</p>
+
+            <div class="cart_link_box">
+
+                <a href="../cart/cart.html">
+                    <p>Move to Shopping Cart</p>
+                </a>
+
+                <p style="cursor: pointer;" class="close_cart_popup">Look Around More</p>
+
+            </div>
+
+        </div><!--cart_submit_popup-->
+
+    </div><!--cart_submit_popup_ex-->
+
+    <footer class="footer_medi_ex">
+
+        <div class="footer_top">
+
+            <div class="footer_logo_box">
+                <a href="../index.html" class="footer_logo">
+                    <img src="../img/white_logo.png">
+                </a> 
+            </div>
+    
+            <div class="footer_sns_ex">
+    
+                <a href="#">
+                    <img src="../img/insta.png">
+                </a>
+    
+                <a href="#">
+                    <img src="../img/facebook.png">
+                </a>
+    
+                <a href="#">
+                    <img src="../img/twiiter.png">
+                </a>
+    
+                <a href="#">
+                    <img src="../img/youtube.png">
+                </a>
+    
+            </div>
+    
+        </div><!--footer_top-->
+
+        <div class="footer_center">
+
+            <nav>
+                <ul class="footer_lnb">
+                    <li>
+                        <a href="../about/about.html">
+                            <p>Company Introduction</p>
+                        </a>
+                    </li>
+    
+                    <li>
+                        <a href="../terms_of_use/terms_of_use.html">
+                            <p>Terms of Use</p>
+                        </a>
+                    </li>
+    
+                    <li>
+                        <a href="../privacy_policy/privacy_policy.html">
+                            <p>Privacy Policy</p>
+                        </a>
+                    </li>
+    
+                    <li>
+                        <a href="../unauthorized_email_collection/unauthorized_email_collection.html">
+                            <p>Refusal of Unauthorized Collection of E-mail Address</p>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+    
+        </div><!--footer_center-->
+
+        <div class="footer_bottom">
+
+            <p>Our efforts for the health and happiness of our customers are shared with the best medical institutions in Korea.</p>
+            
+            <div class="footer_bottom_txt_box">
+                <p>Business License :</p>
+                <p>605-81-98797</p>
+            </div>
+
+            <!-- <div class="footer_bottom_txt_box">
+                <p>CEO :</p>
+                <p>Kim, Jae Hie</p>
+            </div>
+
+            <div class="footer_bottom_txt_box">
+                <p>Tel :</p>
+                <p>+82-51-807-8200</p>
+            </div> -->
+
+            <div class="footer_bottom_txt_box">
+                <p>Fax :</p>
+                <p>+82-51-807-6900</p>
+            </div>
+
+            <div class="footer_bottom_txt_box">
+                <p>E-MAIL :</p>
+                <p>info.medikiosk@gmail.com</p>
+            </div>
+
+            <div class="footer_bottom_txt_box">
+                <p>Address :</p>
+                <p>B1-10, 875 Haeundae-ro, Haeundae-gu, Busan, Republic of Korea</p>
+            </div>
+
+        </div>
+
+        <!-- <div class="footer_bottom_copy_right">
+            <p>COPYRIGHT ⓒ Korea Medical Tour Development, Inc. All Rights Reserved.</p>
+        </div> -->
+
+    </footer><!--footer_medi_ex-->
+
+    <div class="quickmenu_box">
+
+        <a href="https://www.visakorea.com/">
+            <div>
+                <img src="../img/visa_icon.png">
+            </div>
+        </a>
+
+        <a href="https://www.paypal.com/kr/home">
+            <div>
+                <img src="../img/paypal_icon.png">
+            </div>
+        </a>
+
+        <a href="#" class="reservation_web_cart">
+            <div>
+                <img src="../img/order.png">
+            </div>
+        </a>
+
+        <a href="http://www.koreatournet.kr/currencyconverter.php">
+            <div>
+                <img src="../img/currency_icon.png">
+            </div>
+        </a>
+
+        <a href="#">
+
+           <div class="weather_box">
+                <div>
+                    <div>
+                        <img src="../img/sunney.png">
+                    </div>
+
+                    <p>28°C</p>
+                </div>
+           </div>
+
+        </a>
+
+        <a href="#" id="top_web">
+            <div>
+                <p>TOP</p>
+            </div>
+        </a>
+
+    </div><!--quickmenu_box-->
+
+    <a href="#" class="top_mobile" id="top_mobile_btn">
+        <div>
+            <img src="../img/top_mobile_icon.png">
+        </div>
+    </a><!--top_mobile-->
+
+    <div class="reservation_cart_popup_ex" style="display: none;">
+
+        <div class="reservation_cart_popup">
+
+            <form>
+
+                <p class="reservation_cart_popup">Confirmation of Reservation</p>
+
+                <p class="cart_popup_txt">Please enter the e-mail and password you entered at the time of reservation.</p>
+
+                <div class="reservation_cart_popup_form_box">
+
+                    <input type="email" id="reservation_cart_email" placeholder="E-Mail" required>
+
+                    <input type="password" id="reservation_cart_pw" placeholder="Password" required>
+
+                </div>
+
+                <a href="../cart/cart.html" class="new_reservation_txt">
+                    <p>[Click] Is this a new reservation?</p>
+                </a>
+
+                <input type="button" id="reservation_cart_submit_btn" value="Confirmation of Reservation" onclick="location.href = '../reservation_list/reservation_list.html'">
+
+                <p class="close_reservation_cart_btn" style="cursor: pointer;">Return to Screen</p>
+            </form>
+
+        </div><!--reservation_cart_popup-->
+
+    </div><!--reservation_cart_popup_ex-->
+
+
+    <script>
+
+            //버튼 height 맞추기
+            function btnHeight() {
+
+                var HealthLabelMaxHeight = 0;
+    
+                $('.health_screening_btn_label').css('height', 'auto');
+    
+                $(".health_screening_btn_label").each(function () {
+
+                    var HealthLabelHeight = $(this).height();
+
+                    if (HealthLabelHeight > HealthLabelMaxHeight) {
+                        HealthLabelMaxHeight = HealthLabelHeight;
+                    }
+
+                });
+    
+                $(".health_screening_btn_label").css('height', HealthLabelMaxHeight + 'px');
+
+            }
+
+            // 시트 보여지게
+            function sheetOpen() {
+
+                $(".health_screening_btn_sheet_box").hide();
+
+                $(".health_screening_btn").change(function(){
+
+                    if($(this).is(":checked")) {
+
+                        $(".health_screening_btn").not(this).prop("checked", false);
+                        $(".health_screening_btn_label").css("border", "1px solid #51b8ff");
+                        $(".health_screening_btn_label").css("background-color", "transparent");
+                        $(".health_screening_btn_label > p").css("color", "#51b8ff");
+
+                        $(".health_screening_btn_sheet_box").hide();
+
+                        var checkedSheet = $(".health_screening_btn:checked").index();
+
+                        $(".health_screening_btn_sheet_box").eq(checkedSheet).show();
+                        $(".health_screening_btn_label").eq(checkedSheet).css("border", "none");
+                        $(".health_screening_btn_label").eq(checkedSheet).css("background-color", "#1f4e79");
+                        $(".health_screening_btn_label > p").eq(checkedSheet).css("color", "#fff");
+
+
+                    }
+
+
+                });
+
+                $(".health_screening_btn_label").eq(0).prop("checked", true);
+                $(".health_screening_btn_label").eq(0).css("border", "none");
+                $(".health_screening_btn_label").eq(0).css("background-color", "#1f4e79");
+                $(".health_screening_btn_label > p").eq(0).css("color", "#fff");
+                $(".health_screening_btn_sheet_box").eq(0).show();
+
+            }
+
+            //팝업창
+         function InCartPopup(){
+
+            $("#detaile_in_cart").click(function(){
+
+                $('body').addClass('scrollOff').on('scroll touchmove mousewheel', function(e){
+                e.preventDefault();});
+
+                const body = document.querySelector('body');
+                body.style.overflowY = 'hidden';
+
+                $(".cart_submit_popup_ex").fadeIn();
+
+            });
+
+            $(".close_cart_popup").click(function(){
+
+                $('body').removeClass('scrollOff').off('scroll touchmove mousewheel'); 
+
+                const body = document.querySelector('body');
+                body.style.overflowY = 'scroll';
+
+                $(".cart_submit_popup_ex").fadeOut();
+
+            });
+
+            }
+
+
+        $(document).ready(function(){
+
+            btnHeight();
+            sheetOpen();
+            InCartPopup();
+
+            $(window).on('resize', function(){
+
+            btnHeight();
+            InCartPopup();
+
+            });
+
+        });
+    </script>
+
+    <script src="../js/sub_header.js"></script>
+    <script src="../js/sub_visual.js"></script>
+    <script src="../js/wing_menu.js"></script>
+
+</body>
+</html>

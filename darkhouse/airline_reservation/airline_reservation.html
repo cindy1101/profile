@@ -1,0 +1,2011 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>항공권 예약하기</title>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/owl.carousel.js"></script>
+    
+    <link href="../css/owl.carousel.min.css" rel="stylesheet">
+    <link href="../css/owl.theme.default.min.css" rel="stylesheet">
+    <link href="../css/docs.theme.min.css" rel="stylesheet">
+    <link href="css/airline_reservation.css" rel="stylesheet">
+
+    <script>
+        $(function(){
+
+             //전체 동의 누르면 다 전체 동의 된다
+             $(document).on('click','#all_chk_re',function(){
+            if( $('#all_chk_re').is(':checked')){
+                $('#terms_01').prop('checked',true);
+                $('#terms_02').prop('checked',true);
+                $('#terms_03').prop('checked',true);
+                $('#terms_04').prop('checked',true);
+            }else{
+                $('#terms_01').prop('checked',false);
+                $('#terms_02').prop('checked',false);
+                $('#terms_03').prop('checked',false);
+                $('#terms_04').prop('checked',false);
+                }
+            });
+
+            //모든 거 다 체크 되면 전체동의 체크 된다
+            $(document).on('click','.re_terms_chk',function(){
+                if($('input[class=re_terms_chk]:checked').length==$('.re_terms_chk').length){
+                    $('#all_chk_re').prop('checked',true);
+                }else{
+                $('#all_chk_re').prop('checked',false);
+                }
+            });
+
+            //특별약관 내용 보기
+            $("#special_terms_more").click(function(){
+
+            $('body').addClass('scrollOff').on('scroll touchmove mousewheel', function(e){
+            e.preventDefault();});
+
+            $("#special_terms_popup").fadeIn(100);
+
+            const body = document.querySelector('body');
+            body.style.overflowY = 'hidden'
+
+            });
+
+            $("#close_special_terms").click(function(){
+
+            $('body').removeClass('scrollOff').off('scroll touchmove mousewheel'); 
+            SpecialTermsClose(); 
+
+            const body = document.querySelector('body');
+            body.style.overflowY = 'scroll'
+
+            });
+
+            function SpecialTermsClose(){
+            $("#special_terms_popup").fadeOut(100);}
+
+
+            //개인정보 내용 보기
+            $("#agreement_pricacy_more").click(function(){
+
+            $('body').addClass('scrollOff').on('scroll touchmove mousewheel', function(e){
+            e.preventDefault();});
+
+            $("#agreement_pricacy_popup").fadeIn(100);
+
+            const body = document.querySelector('body');
+            body.style.overflowY = 'hidden'
+
+            });
+
+            $("#agreement_pricacy_close").click(function(){
+
+            $('body').removeClass('scrollOff').off('scroll touchmove mousewheel'); 
+            AgreementClose(); 
+
+            const body = document.querySelector('body');
+            body.style.overflowY = 'scroll'
+
+            });
+
+            function AgreementClose(){
+            $("#agreement_pricacy_popup").fadeOut(100);}
+
+
+            //개인정보제3자 내용 보기
+            $("#onward_transfer_more").click(function(){
+
+            $('body').addClass('scrollOff').on('scroll touchmove mousewheel', function(e){
+            e.preventDefault();});
+
+            $("#onward_transfer_popup").fadeIn(100);
+
+            const body = document.querySelector('body');
+            body.style.overflowY = 'hidden'
+
+            });
+
+            $("#onward_transfer_close").click(function(){
+
+            $('body').removeClass('scrollOff').off('scroll touchmove mousewheel'); 
+            OnwardTransferClose(); 
+
+            const body = document.querySelector('body');
+            body.style.overflowY = 'scroll'
+
+            });
+
+            function OnwardTransferClose(){
+            $("#onward_transfer_popup").fadeOut(100);}
+
+
+            //국외여행 보기
+            $("#overseas_travel_more").click(function(){
+
+            $('body').addClass('scrollOff').on('scroll touchmove mousewheel', function(e){
+            e.preventDefault();});
+
+            $("#overseas_travel_popup").fadeIn(100);
+
+            const body = document.querySelector('body');
+            body.style.overflowY = 'hidden'
+
+            });
+
+            $("#overseas_travel_close").click(function(){
+
+            $('body').removeClass('scrollOff').off('scroll touchmove mousewheel'); 
+            OvereasTravleClose(); 
+
+            const body = document.querySelector('body');
+            body.style.overflowY = 'scroll'
+
+            });
+
+            function OvereasTravleClose(){
+            $("#overseas_travel_popup").fadeOut(100);}
+
+             //예약확인 팝업창
+             $("#airline_reservation_submit").click(function(){
+
+            $('body').addClass('scrollOff').on('scroll touchmove mousewheel', function(e){
+            e.preventDefault();});
+
+            $("#reservation_submit_popup").fadeIn();
+
+            const body = document.querySelector('body');
+            body.style.overflowY = 'hidden'
+
+            });
+
+        });
+    </script>
+</head>
+<body>
+
+    <input type="checkbox" id="menu_open_mobile">
+
+    <header class="mobile_header">
+        
+        <div class="header_top_mobile">
+
+            <a href="#">
+                <img src="../img/dark_logo.png">
+            </a>
+
+            <label for="menu_open_mobile">
+                <img src="../img/mobile_icon_open.png">
+            </label>
+
+        </div><!--header_top_mobile-->
+
+        <div class="mobile_header_sheet">
+
+            <div class="icon_header_m">
+
+                <div class="top_sheet_h">
+
+                    <a href="#">
+                        <img src="../img/home_icon.png">
+                    </a>
+
+                    <label for="menu_open_mobile">
+                        <img src="../img/close_btn.png">
+                    </label>
+
+                </div><!--top_sheet_h-->
+
+                <div class="gnb_mobile_header">
+
+                    <a href="#">
+                        <div>
+                            <img src="../img/login_icon.png">
+                        </div>
+                        <p>로그인</p>
+                    </a>
+    
+                    <a href="#">
+                        <div>
+                            <img src="../img/join_icon.png">
+                        </div>
+                        <p>회원가입</p>
+                    </a>
+    
+    
+                    <a href="#">
+                        <div>
+                            <img src="../img/reservation_icon.png">
+                        </div>
+                        <p>예약확인</p>
+                    </a>
+    
+    
+                    <a href="#">
+                        <div>
+                            <img src="../img/mypage_icon.png">
+                        </div>
+                        <p>마이페이지</p>
+                    </a>
+
+                </div><!--gnb_mobile_header-->
+
+            </div><!--icon_header_m-->
+
+            <div class="search_mobile_box">
+
+                <div>
+                    <input type="text" id="mobile_search" placeholder="검색어를 입력하세요">
+
+                    <input type="submit" id="mobile_search_btn">
+    
+                    <label for="mobile_search_btn">
+                        <img src="../img/search_icon.png">
+                    </label>
+                </div>
+
+            </div><!--search_mobile_box-->
+
+            <div class="lnb_menu_mobile">
+
+                <ul>
+                    <li>
+                        <a href="#">
+                            <p>다낭</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <p>나트랑</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <p>하노이</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <p>달랏</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <p>장가계</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <p>항공권</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <p>공지사항</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <p>이벤트/기획전</p>
+                        </a>
+                    </li>
+                </ul>
+
+            </div><!--lnb_menu_mobile-->
+
+        </div><!--mobile_header_sheet-->
+
+    </header><!--mobile_header-->
+    
+    <header class="erp_header">
+
+        <div class="erp_header_top">
+
+            <a href="#">
+                <img src="../img/dark_logo.png">
+            </a>
+
+            <div class="search_ex">
+
+                <input type="text" id="search_txt" placeholder="검색어를 입력하세요.">
+
+                <input type="submit" id="search_button">
+
+                <label for="search_button">
+                    <img src="../img/search_icon.png">
+                </label>
+
+            </div><!--search_ex-->
+
+            <div class="gnb_menu_erp">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <p>로그인</p>
+                        </a>
+                    </li>
+
+                    <li></li>
+
+                    <li>
+                        <a href="#">
+                            <p>회원가입</p>
+                        </a>
+                    </li>
+
+                    <li></li>
+
+                    <li>
+                        <a href="#">
+                            <p>예약확인</p>
+                        </a>
+                    </li>
+
+                    <li></li>
+
+                    <li>
+                        <a href="#">
+                            <p>마이페이지</p>
+                        </a>
+                    </li>
+                </ul>
+            </div><!--gnb_menu_erp-->
+
+        </div><!--erp_header_top-->
+
+        <div class="erp_header_bottom">
+
+            <ul>
+                <li>
+                    <a href="#">
+                        <p>다낭</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <p>나트랑</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <p>하노이</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <p>달랏</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <p>장가계</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <p>항공권</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <p>공지사항</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <p>이벤트/기획전</p>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="call_box">
+
+                <div>
+                    <img src="../img/call_icon_header.png">
+                </div>
+
+                <div>
+                    <p>고객센터</p>
+                    <p>1588-1588</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </header><!--erp_header-->
+
+    <div class="mobile_lnb_box">
+
+        <div class="owl-carousel owl-theme m_lnb_box">
+
+            <a href="#" class="item m_lnb">
+                <p>다낭</p>
+            </a>
+
+            <a href="#" class="item m_lnb">
+                <p>나트랑</p>
+            </a>
+
+            <a href="#" class="item m_lnb">
+                <p>하노이</p>
+            </a>
+
+            <a href="#" class="item m_lnb">
+                <p>달랏</p>
+            </a>
+
+            <a href="#" class="item m_lnb">
+                <p>장가계</p>
+            </a>
+
+            <a href="#" class="item m_lnb">
+                <p>항공권</p>
+            </a>
+            
+            <a href="#" class="item m_lnb">
+                <p>공지사항</p>
+            </a>
+
+            <a href="#" class="item m_lnb">
+                <p>기획전&이벤트</p>
+            </a>
+
+        </div>
+
+    </div><!--mobile_lnb_box-->
+
+    <div class="airline_reservation_visual_ex">
+
+        <img class="visual_animation" src="img/airline_visual_banner.png">
+        <p>항공권 예약</p>
+
+    </div>
+    
+    <div class="airline_reservation_ex">
+
+        <div class="airline_reservation_ex_title">
+
+            <div>
+                <img src="img/reservation_title_icon.png">
+            </div>
+
+            <p>항공권 예약하기</p>
+
+        </div><!--airline_reservation_ex_title-->
+
+
+        <div class="airline_race_ex">
+
+            <div class="airline_race_title">
+                <p>항공권 정보</p>
+            </div><!--airline_race_title-->
+
+            <table class="airline_race_table_mobile" cellpadding= "0" cellspacing= "0">
+
+                <tr>
+                    <td>
+                        <p>가는 편</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="airline_race_on_the_way_mobile">
+
+                            <div>
+                                <p>비에젯항공 / 무안 출발</p>
+                                <p>VJ8559</p>
+                                <p>2023.04.02(일) 08:30</p>
+                            </div>
+    
+                            <div>
+                                <picture>
+                                    <source media="(min-width: 601px)" srcset="img/airline_go_web_icon.png">
+                                    <img src="img/airline_mobile_icon.png">
+                                </picture>
+                            </div>
+    
+                            <div>
+                                <p>비에젯항공 / 다낭 도착</p>
+                                <p>VJ8559</p>
+                                <p>2023.04.02(일) 11:40</p>
+                            </div>
+    
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p>오는 편</p>
+                    </td>
+                </tr>
+
+                <tr>
+                   <td>
+                        <div class="airline_race_coming_way_mobile">
+
+                            <div>
+                                <p>비에젯항공 / 다낭 출발</p>
+                                <p>VJ8558</p>
+                                <p>2023.04.05(수) 12:50</p>
+                            </div>
+                            
+                            <div>
+                                <picture>
+                                    <source media="(min-width: 601px)" srcset="img/airline_go_web_icon.png">
+                                    <img src="img/airline_mobile_icon.png">
+                                </picture>
+                            </div>
+
+                            <div>
+                                <p>비에젯항공 / 무안 도착</p>
+                                <p>VJ8558</p>
+                                <p>2023.04.05(수) 19:00</p>
+                            </div>
+
+                        </div>
+                   </td>
+                </tr>
+
+            </table><!--airline_race_table_mobile-->
+
+            <table class="airline_race_table_web" cellpadding= "0" cellspacing= "0">
+
+                <tr>
+                    <td>
+                        <p>가는 편</p>
+                    </td>
+
+                    <td>
+                        <p>오는 편</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="airline_race_on_the_way">
+
+                            <div>
+                                <p>비에젯항공 / 무안 출발</p>
+                                <p>VJ8559</p>
+                                <p>2023.04.02(일) 08:30</p>
+                            </div>
+    
+                            <div>
+                                <p>비에젯항공 / 다낭 도착</p>
+                                <p>VJ8559</p>
+                                <p>2023.04.02(일) 11:40</p>
+                            </div>
+    
+                            <div>
+                                <picture>
+                                    <source media="(min-width: 1025px)" srcset="img/airline_go_web_icon.png">
+                                    <img src="img/airline_mobile_icon.png">
+                                </picture>
+                            </div>
+    
+                        </div><!--airline_race_on_the_way-->
+                    </td>
+
+                    <td>
+                        <div class="airline_race_coming_way">
+
+                            <div>
+                                <p>비에젯항공 / 다낭 출발</p>
+                                <p>VJ8558</p>
+                                <p>2023.04.05(수) 12:50</p>
+                            </div>
+    
+                            <div>
+                                <p>비에젯항공 / 무안 도착</p>
+                                <p>VJ8558</p>
+                                <p>2023.04.05(수) 19:00</p>
+                            </div>
+    
+                            <div>
+                                <picture>
+                                    <source media="(min-width: 1025px)" srcset="img/airline_go_web_icon.png">
+                                    <img src="img/airline_mobile_icon.png">
+                                </picture>
+                            </div>
+    
+                        </div><!--airline_race_coming_way-->
+                    </td>
+                </tr>
+
+            </table><!--airline_race_table_web-->
+
+        </div><!--airline_race_ex-->
+
+        <div class="airline_reservation_total_ex">
+
+            <div class="airline_reservation_total_title">
+                <p>항공권 상품 가격</p>
+            </div><!--airline_reservation_total_title-->
+
+            <table class="airline_reservation_total_table_tap" cellpadding= "0" cellspacing= "0">
+
+                <tr>
+                    <td>
+                        <p>성인 <span>(1명)</span></p>
+                    </td>
+
+                    <td>
+                        <p>아동 <span>(1명)</span></p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div>
+                            <p>668,600원</p>
+                            <p>1인 당 유류할증료/제세공과금 118,600원 포함<br>
+                                1인 당 서비스수수료 10,000원 포함</p>
+                        </div>
+                    </td>
+
+                    <td>
+                        <div>
+                            <p>668,600원</p>
+                            <p>1인 당 유류할증료/제세공과금 118,600원 포함<br>
+                            1인 당 서비스수수료 10,000원 포함</p>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p>유아 <span>(0명)</span></p>
+                    </td>
+
+                    <td>
+                        <p>총 가격</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div>
+                            <p>0원</p>
+                        </div>
+                    </td>
+
+                    <td>
+                        <p>1,321,500원</p>
+                    </td>
+                </tr>
+
+            </table><!--airline_reservation_total_table_tap-->
+
+            <table class="airline_reservation_total_table_web" cellpadding= "0" cellspacing= "0">
+
+                <tr>
+                    <td>
+                        <p>성인 <span>(1명)</span></p>
+                    </td>
+
+                    <td>
+                        <p>아동 <span>(1명)</span></p>
+                    </td>
+
+                    <td>
+                        <p>유아 <span>(0명)</span></p>
+                    </td>
+
+                    <td>
+                        <p>총 가격</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div>
+                            <p>668,600원</p>
+                            <p>1인 당 유류할증료/제세공과금 118,600원 포함<br>
+                                1인 당 서비스수수료 10,000원 포함</p>
+                        </div>
+                    </td>
+
+                    <td>
+                        <div>
+                            <p>668,600원</p>
+                            <p>1인 당 유류할증료/제세공과금 118,600원 포함<br>
+                            1인 당 서비스수수료 10,000원 포함</p>
+                        </div>
+                    </td>
+
+                    <td>
+                        <div>
+                            <p>0원</p>
+                        </div>
+                    </td>
+
+                    <td>
+                        <p>1,321,500원</p>
+                    </td>
+                </tr>
+                
+            </table><!--airline_reservation_total_table_web-->
+
+            <div class="airline_reservation_total_notic">
+                <p>정확한 요금은 예약 완료 후 확인 가능하며 항공사 규정에 따라 유류할증료, 제세공과금은 항공권료 결제일 기준의 유가 및 환율이 적용되어 변동될 수 있습니다.</p>
+            </div>
+
+        </div><!--airline_reservation_total_ex-->
+
+        <form>
+
+            <div class="reservation_chekbox_ex">
+
+                <div class="reservation_chekbox_title">
+                    <p>약관 동의</p>
+                </div><!--reservation_chekbox_title-->
+
+                <div class="all_chekbox_re">
+
+                    <div>
+                        <input type="checkbox" id="all_chk_re" required>
+
+                        <label for="all_chk_re">
+                            <p>모든 필수 약관에 동의합니다.</p>
+                        </label>
+                    </div>
+
+                </div><!--all_chekbox_re-->
+
+                <div class="reservation_chekbox">
+
+                    <div class="terms_ex">
+
+                        <div class="terms_box">
+                            <div>
+                                <input type="checkbox" id="terms_01" class="re_terms_chk" required>
+                                <label for="terms_01">
+                                    <p><span>[필수]</span>특별약관</p>
+                                </label>
+                            </div>
+
+                            <a href="javascript:void(0);" id="special_terms_more">
+                                <p>내용보기</p>
+                            </a>
+                        </div><!--terms_box-->
+
+                    </div><!--terms_ex-->
+
+                    <div class="terms_ex">
+
+                        <div class="terms_box">
+                            <div>
+                                <input type="checkbox" id="terms_02" class="re_terms_chk" required>
+                                <label for="terms_02">
+                                    <p><span>[필수]</span>개인정보수집 및 이용동의</p>
+                                </label>
+                            </div>
+
+                            <a href="javascript:void(0);" id="agreement_pricacy_more">
+                                <p>내용보기</p>
+                            </a>
+                        </div><!--terms_box-->
+
+                    </div><!--terms_ex-->
+
+                    <div class="terms_ex">
+
+                        <div class="terms_box">
+                            <div>
+                                <input type="checkbox" id="terms_03" class="re_terms_chk" required>
+                                <label for="terms_03">
+                                    <p><span>[필수]</span>개인정보 제3자 제공</p>
+                                </label>
+                            </div>
+
+                            <a href="javascript:void(0);" id="onward_transfer_more">
+                                <p>내용보기</p>
+                            </a>
+                        </div><!--terms_box-->
+
+                    </div><!--terms_ex-->
+
+                    <div class="terms_ex">
+
+                        <div class="terms_box">
+                            <div>
+                                <input type="checkbox" id="terms_04" class="re_terms_chk" required>
+                                <label for="terms_04">
+                                    <p><span>[필수]</span>국외여행 표준약관</p>
+                                </label>
+                            </div>
+
+                            <a href="javascript:void(0);" id="overseas_travel_more">
+                                <p>내용보기</p>
+                            </a>
+                        </div><!--terms_box-->
+
+                    </div><!--terms_ex-->
+
+                </div><!--reservation_chekbox-->
+
+            </div><!--reservation_chekbox_ex-->
+
+            <div class="airline_reservation_clerk_ex">
+
+                <div class="airline_reservation_clerk_title">
+                    <p>예약자 정보 입력</p>
+                </div><!--airline_reservation_clerk_title-->
+
+                <table class="airline_reservation_clerk_table_mobile" cellpadding= "0" cellspacing= "0">
+
+                    <tr>
+                        <td>
+                            <p><span>*</span> 이름</p>
+                        </td>
+
+                        <td>
+                            <input type="text" id="airline_reservation_clerk_name_m" placeholder="예약자 이름" required>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <p><span>*</span> 성별</p>
+                        </td>
+
+                        <td>
+                            <div class="airline_reservation_clerk_gender_mobile">
+
+                                <div>
+                                    <input type="radio" name="clerk_gender_m" id="clerk_man_m">
+                                    <label for="clerk_man_m">
+                                        <p>남성</p>
+                                    </label>
+                                </div>
+
+                                <div>
+                                    <input type="radio" name="clerk_gender_m" id="clerk_woman_m">
+                                    <label for="clerk_woman_m">
+                                        <p>여성</p>
+                                    </label>
+                                </div>
+
+                            </div><!--boarding_adult_name_box_gender_box-->
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <p><span>*</span> 이메일</p>
+                        </td>
+
+                        <td>
+                            <input type="email" placeholder="example@mail.com" id="clerk_emaile_m" required>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <p><span>*</span> 휴대폰</p>
+                        </td>
+
+                        <td>
+                            <input type="tel" placeholder="'-' 제외하고 입력" id="clerk_phone_m" required>
+                        </td>
+                    </tr>
+
+                </table><!--airline_reservation_clerk_table_mobile-->
+
+
+                <table class="airline_reservation_clerk_table_web" cellpadding= "0" cellspacing= "0">
+
+                    <tr>
+                        <td>
+                            <p><span>*</span> 이름</p>
+                        </td>
+
+                        <td>
+                            <input type="text" id="airline_reservation_clerk_name" placeholder="예약자 이름" required>
+                        </td>
+
+                        <td>
+                            <p><span>*</span> 성별</p>
+                        </td>
+
+                        <td>
+                            <div class="airline_reservation_clerk_gender_web">
+
+                                <div>
+                                    <input type="radio" name="clerk_gender" id="clerk_man">
+                                    <label for="clerk_man">
+                                        <p>남성</p>
+                                    </label>
+                                </div>
+
+                                <div>
+                                    <input type="radio" name="clerk_gender" id="clerk_woman">
+                                    <label for="clerk_woman">
+                                        <p>여성</p>
+                                    </label>
+                                </div>
+
+                            </div><!--boarding_adult_name_box_gender_box-->
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <p><span>*</span> 이메일</p>
+                        </td>
+
+                        <td>
+                            <input type="email" placeholder="example@mail.com" id="clerk_emaile" required>
+                        </td>
+
+                        <td>
+                            <p><span>*</span> 휴대폰</p>
+                        </td>
+
+                        <td>
+                            <input type="tel" placeholder="'-' 제외하고 입력" id="clerk_phone" required>
+                        </td>
+                    </tr>
+
+                </table><!--airline_reservation_clerk_table_web-->
+
+               
+            </div><!--airline_reservation_clerk_ex-->
+
+
+            <div class="airline_reservation_person_ex">
+
+                <div class="airline_reservation_person_title">
+                    <p>탑승자 정보 입력</p>
+                </div><!--airline_reservation_person_title--> 
+                
+                <div class="airline_reservation_person_mobile_table_box">
+
+                    <table class="boarding_adult_table_m" cellpadding= "0" cellspacing= "0">
+
+                        <tr>
+                            <td colspan="2">
+                                <p><span>(성인 1)</span> 탑승자</p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <p><span>*</span> 한글명(이름)</p>
+                            </td>
+
+                            <td>
+                                <div class="boarding_adult_name_box_m">
+                                    <input type="text" id="boarding_adult_family_name_m" placeholder="성" required>
+                                    <input type="text" id="boarding_adult_name_m" placeholder="이름" required>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <p><span>*</span> 영문명(이름)</p>
+                            </td>
+
+                            <td>
+                                <div class="boarding_adult_name_box_english_m">
+                                    <input type="text" id="boarding_adult_family_name_english_m" placeholder="영문 성" required>
+                                    <input type="text" id="boarding_adult_name_english_m" placeholder="영문 이름" required>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <p><span>*</span> 생년월일</p>
+                            </td>
+
+                            <td>
+                                <input type="text" id="boarding_adult_bridthday_m" placeholder="생년월일 입력(8자리)" required>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <p><span>*</span> 성별</p>
+                            </td>
+
+                            <td>
+                                <div class="boarding_adult_name_box_gender_box_m">
+    
+                                    <div>
+                                        <input type="radio" name="boarding_adult_gender_m" id="boarding_adult_man_m">
+                                        <label for="boarding_adult_man_m">
+                                            <p>남성</p>
+                                        </label>
+                                    </div>
+    
+                                    <div>
+                                        <input type="radio" name="boarding_adult_gender_m" id="boarding_adult_woman_m">
+                                        <label for="boarding_adult_woman_m">
+                                            <p>여성</p>
+                                        </label>
+                                    </div>
+    
+                                </div><!--boarding_adult_name_box_gender_box-->
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <p><span>*</span> 여권 번호</p>
+                            </td>
+    
+                            <td>
+                                <input type="text" id="adult_passport_number_m" placeholder="여권번호 입력" required>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <p><span>*</span> 여권 만료일</p>
+                            </td>
+    
+                            <td>
+                                <input type="text" id="adult_passport_expiration_m" placeholder="여권번호 입력" required>
+                            </td>
+                        </tr>
+
+                    </table><!--boarding_adult_table_m-->
+
+
+                    <table class="boarding_kids_table_m" cellpadding= "0" cellspacing= "0">
+
+                        <tr>
+                            <td colspan="2">
+                                <p><span>(유아 1)</span> 탑승자</p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <p><span>*</span> 한글명(이름)</p>
+                            </td>
+
+                            <td>
+                                <div class="boarding_kids_name_box_m">
+                                    <input type="text" id="boarding_kids_family_name_m" placeholder="성" required>
+                                    <input type="text" id="boarding_kids_name_m" placeholder="이름" required>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <p><span>*</span> 영문명(이름)</p>
+                            </td>
+
+                            <td>
+                                <div class="boarding_kids_name_box_english_m">
+                                    <input type="text" id="boarding_kids_family_name_english_m" placeholder="영문 성" required>
+                                    <input type="text" id="boarding_kids_name_english_m" placeholder="영문 이름" required>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <p><span>*</span> 생년월일</p>
+                            </td>
+
+                            <td>
+                                <input type="text" id="boarding_kids_bridthday_m" placeholder="생년월일 입력(8자리)" required>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <p><span>*</span> 성별</p>
+                            </td>
+
+                            <td>
+                                <div class="boarding_kids_name_box_gender_box_m">
+    
+                                    <div>
+                                        <input type="radio" name="boarding_kids_gender_m" id="boarding_kids_man_m">
+                                        <label for="boarding_kids_man_m">
+                                            <p>남성</p>
+                                        </label>
+                                    </div>
+    
+                                    <div>
+                                        <input type="radio" name="boarding_kids_gender_m" id="boarding_kids_woman_m">
+                                        <label for="boarding_kids_woman_m">
+                                            <p>여성</p>
+                                        </label>
+                                    </div>
+    
+                                </div><!--boarding_kids_name_box_gender_box_m-->
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <p><span>*</span> 여권 번호</p>
+                            </td>
+    
+                            <td>
+                                <input type="text" id="kids_passport_number_m" placeholder="여권번호 입력" required>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <p><span>*</span> 여권 만료일</p>
+                            </td>
+    
+                            <td>
+                                <input type="text" id="kids_passport_expiration_m" placeholder="여권번호 입력" required>
+                            </td>
+                        </tr>
+
+                    </table><!--boarding_kids_table_m-->
+
+
+                    <table class="boarding_child_table_m" cellpadding= "0" cellspacing= "0" style="display: none;">
+
+                        <tr>
+                            <td colspan="2">
+                                <p><span>(아동 1)</span> 탑승자</p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <p><span>*</span> 한글명(이름)</p>
+                            </td>
+
+                            <td>
+                                <div class="boarding_child_name_box_m">
+                                    <input type="text" id="boarding_child_family_name_m" placeholder="성" required>
+                                    <input type="text" id="boarding_child_name_m" placeholder="이름" required>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <p><span>*</span> 영문명(이름)</p>
+                            </td>
+
+                            <td>
+                                <div class="boarding_child_name_box_english_m">
+                                    <input type="text" id="boarding_child_family_name_english_m" placeholder="영문 성" required>
+                                    <input type="text" id="boarding_child_name_english_m" placeholder="영문 이름" required>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <p><span>*</span> 생년월일</p>
+                            </td>
+
+                            <td>
+                                <input type="text" id="boarding_child_bridthday_m" placeholder="생년월일 입력(8자리)" required>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <p><span>*</span> 성별</p>
+                            </td>
+
+                            <td>
+                                <div class="boarding_child_name_box_gender_box_m">
+    
+                                    <div>
+                                        <input type="radio" name="boarding_child_gender_m" id="boarding_child_man_m">
+                                        <label for="boarding_child_man_m">
+                                            <p>남성</p>
+                                        </label>
+                                    </div>
+    
+                                    <div>
+                                        <input type="radio" name="boarding_child_gender_m" id="boarding_child_woman_m">
+                                        <label for="boarding_child_woman_m">
+                                            <p>여성</p>
+                                        </label>
+                                    </div>
+    
+                                </div><!--boarding_child_name_box_gender_box_m-->
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <p><span>*</span> 여권 번호</p>
+                            </td>
+    
+                            <td>
+                                <input type="text" id="child_passport_number_m" placeholder="여권번호 입력" required>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <p><span>*</span> 여권 만료일</p>
+                            </td>
+    
+                            <td>
+                                <input type="text" id="child_passport_expiration_m" placeholder="여권번호 입력" required>
+                            </td>
+                        </tr>
+
+                    </table><!--boarding_child_table_m-->
+
+
+                </div><!--airline_reservation_person_mobile_table_box-->
+
+                <div class="airline_reservation_person_web_table_box">
+
+                    <table class="boarding_adult_table" cellpadding= "0" cellspacing= "0">
+
+                        <tr>
+                            <td colspan="4">
+                                <p><span>(성인 1)</span> 탑승자</p>
+                            </td>
+                        </tr>
+    
+                        <tr>
+                            <td>
+                                <p><span>*</span> 한글명(이름)</p>
+                            </td>
+    
+                            <td colspan="3">
+                                <div class="boarding_adult_name_box">
+                                    <input type="text" id="boarding_adult_family_name" placeholder="성" required>
+                                    <input type="text" id="boarding_adult_name" placeholder="이름" required>
+                                </div>
+                            </td>
+                        </tr>
+    
+                        <tr>
+                            <td>
+                                <p><span>*</span> 영문명(이름)</p>
+                            </td>
+    
+                            <td colspan="3">
+                                <div class="boarding_adult_name_box_english">
+                                    <input type="text" id="boarding_adult_family_name_english" placeholder="영문 성" required>
+                                    <input type="text" id="boarding_adult_name_english" placeholder="영문 이름" required>
+                                </div>
+                            </td>
+                        </tr>
+    
+                        <tr>
+    
+                            <td>
+                                <p><span>*</span> 생년월일</p>
+                            </td>
+    
+                            <td>
+                                <input type="text" id="boarding_adult_bridthday" placeholder="생년월일 입력(8자리)" required>
+                            </td>
+                        
+                            <td>
+                                <p><span>*</span> 성별</p>
+                            </td>
+    
+                            <td>
+                                <div class="boarding_adult_name_box_gender_box">
+    
+                                    <div>
+                                        <input type="radio" name="boarding_adult_gender" id="boarding_adult_man">
+                                        <label for="boarding_adult_man">
+                                            <p>남성</p>
+                                        </label>
+                                    </div>
+    
+                                    <div>
+                                        <input type="radio" name="boarding_adult_gender" id="boarding_adult_woman">
+                                        <label for="boarding_adult_woman">
+                                            <p>여성</p>
+                                        </label>
+                                    </div>
+    
+                                </div><!--boarding_adult_name_box_gender_box-->
+                            </td>
+                            
+                        </tr>
+    
+                        <tr>
+                            <td>
+                                <p><span>*</span> 여권번호</p>
+                            </td>
+    
+                            <td>
+                                <input type="text" id="adult_passport_number" placeholder="여권번호 입력" required>
+                            </td>
+    
+                            <td>
+                                <p><span>*</span> 여권만료일</p>
+                            </td>
+    
+                            <td>
+                                <input type="text" id="adult_passport_expiration" placeholder="여권번호 입력" required>
+                            </td>
+                        </tr>
+    
+                    
+                    </table><!--boarding_adult_table-->
+    
+                    <table class="boarding_kids_table" cellpadding= "0" cellspacing= "0">
+    
+                        <tr>
+                            <td colspan="4">
+                                <p><span>(유아 1)</span> 탑승자</p>
+                            </td>
+                        </tr>
+    
+                        <tr>
+                            <td>
+                                <p><span>*</span> 한글명(이름)</p>
+                            </td>
+    
+                            <td colspan="3">
+                                <div class="boarding_kids_name_box">
+                                    <input type="text" id="boarding_kids_family_name" placeholder="성" required>
+                                    <input type="text" id="boarding_kids_name" placeholder="이름" required>
+                                </div>
+                            </td>
+                        </tr>
+    
+                        <tr>
+                            <td>
+                                <p><span>*</span> 영문명(이름)</p>
+                            </td>
+    
+                            <td colspan="3">
+                                <div class="boarding_kids_name_box_english">
+                                    <input type="text" id="boarding_kids_family_name_english" placeholder="영문 성" required>
+                                    <input type="text" id="boarding_kids_name_english" placeholder="영문 이름" required>
+                                </div>
+                            </td>
+                        </tr>
+    
+                        <tr>
+    
+                            <td>
+                                <p><span>*</span> 생년월일</p>
+                            </td>
+    
+                            <td>
+                                <input type="text" id="boarding_kids_bridthday" placeholder="생년월일 입력(8자리)" required>
+                            </td>
+                        
+                            <td>
+                                <p><span>*</span> 성별</p>
+                            </td>
+    
+                            <td>
+                                <div class="boarding_kids_name_box_gender_box">
+    
+                                    <div>
+                                        <input type="radio" name="boarding_kids_gender" id="boarding_kids_man">
+                                        <label for="boarding_adult_man">
+                                            <p>남성</p>
+                                        </label>
+                                    </div>
+    
+                                    <div>
+                                        <input type="radio" name="boarding_kids_gender" id="boarding_kids_woman">
+                                        <label for="boarding_kids_woman">
+                                            <p>여성</p>
+                                        </label>
+                                    </div>
+    
+                                </div><!--boarding_kids_name_box_gender_box-->
+                            </td>
+                            
+                        </tr>
+    
+                        <tr>
+                            <td>
+                                <p><span>*</span> 여권번호</p>
+                            </td>
+    
+                            <td>
+                                <input type="text" id="kids_passport_number" placeholder="여권번호 입력" required>
+                            </td>
+    
+                            <td>
+                                <p><span>*</span> 여권만료일</p>
+                            </td>
+    
+                            <td>
+                                <input type="text" id="kids_passport_expiration" placeholder="여권번호 입력" required>
+                            </td>
+                        </tr>
+    
+                    
+                    </table><!--boarding_kids_table-->
+    
+    
+                    <table class="boarding_child_table" cellpadding= "0" cellspacing= "0" style="display: none;">
+    
+                        <tr>
+                            <td colspan="4">
+                                <p><span>(아동 1)</span> 탑승자</p>
+                            </td>
+                        </tr>
+    
+                        <tr>
+                            <td>
+                                <p><span>*</span> 한글명(이름)</p>
+                            </td>
+    
+                            <td colspan="3">
+                                <div class="boarding_child_name_box">
+                                    <input type="text" id="boarding_child_family_name" placeholder="성" required>
+                                    <input type="text" id="boarding_child_name" placeholder="이름" required>
+                                </div>
+                            </td>
+                        </tr>
+    
+                        <tr>
+                            <td>
+                                <p><span>*</span> 영문명(이름)</p>
+                            </td>
+    
+                            <td colspan="3">
+                                <div class="boarding_child_name_box_english">
+                                    <input type="text" id="boarding_child_family_name_english" placeholder="영문 성" required>
+                                    <input type="text" id="boarding_child_name_english" placeholder="영문 이름" required>
+                                </div>
+                            </td>
+                        </tr>
+    
+                        <tr>
+    
+                            <td>
+                                <p><span>*</span> 생년월일</p>
+                            </td>
+    
+                            <td>
+                                <input type="text" id="boarding_child_bridthday" placeholder="생년월일 입력(8자리)" required>
+                            </td>
+                        
+                            <td>
+                                <p><span>*</span> 성별</p>
+                            </td>
+    
+                            <td>
+                                <div class="boarding_child_name_box_gender_box">
+    
+                                    <div>
+                                        <input type="radio" name="boarding_child_gender" id="boarding_child_man">
+                                        <label for="boarding_adult_man">
+                                            <p>남성</p>
+                                        </label>
+                                    </div>
+    
+                                    <div>
+                                        <input type="radio" name="boarding_child_gender" id="boarding_child_woman">
+                                        <label for="boarding_kids_woman">
+                                            <p>여성</p>
+                                        </label>
+                                    </div>
+    
+                                </div><!--boarding_child_name_box_gender_box-->
+                            </td>
+                            
+                        </tr>
+    
+                        <tr>
+                            <td>
+                                <p><span>*</span> 여권번호</p>
+                            </td>
+    
+                            <td>
+                                <input type="text" id="child_passport_number" placeholder="여권번호 입력" required>
+                            </td>
+    
+                            <td>
+                                <p><span>*</span> 여권만료일</p>
+                            </td>
+    
+                            <td>
+                                <input type="text" id="child_passport_expiration" placeholder="여권번호 입력" required>
+                            </td>
+                        </tr>
+    
+                    
+                    </table><!--boarding_child_table-->
+
+                </div><!--airline_reservation_person_web_table_box-->
+
+                <div class="airline_reservation_person_notic">
+                    <p>신분증상의 이름과 같지 않으면 탑승이 거부되거나 서비스를 이용하실 수 없습니다. (신분증 : 주민등록증, 운전자 면허증, 여권 등)</p>
+                </div><!--airline_reservation_person_notic-->
+              
+
+            </div><!--airline_reservation_person_ex-->
+
+
+            <div class="airline_reservation_btn_ex">
+                <input type="submit" id="airline_reservation_submit" value="예약완료">
+            </div>
+
+
+        </form>
+
+    </div><!--airline_reservation_ex-->
+
+    <footer class="footer_dark">
+
+        <div class="footer_line_01"></div>
+
+        <div class="footer_top">
+            
+            <div class="footer_top_menu">
+
+                <ul>
+                    <li>
+                        <a href="#">
+                            <p>여행약관</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <p>개인정보처리방침</p>
+                        </a>
+                    </li>
+
+                    <li id="open_emaile">
+                        <a href="javascript:void(0);">
+                            <p>이메일주소무단수집</p>
+                        </a>
+                    </li>
+                </ul>
+
+            </div><!--footer_top_menu-->
+
+            <div class="footer_sns">
+
+                <a href="#">
+                    <img src="../img/instar_icon.png">
+                </a>
+
+                <a href="#">
+                    <img src="../img/kakao_icon.png">
+                </a>
+
+                <a href="#">
+                    <img src="../img/blog_icon.png">
+                </a>
+
+            </div><!--footer_sns-->
+
+        </div><!--footer_top-->
+
+        <div class="footer_line_02"></div>
+
+        <div class="footer_bottom">
+            <p>다크호스투어(주)</p>
+            <p>대표이사 : 황윤석 | 주소 : 광주광역시 서구 상무중앙로 114, 219호(치평동 랜드피아오피스텔)<br>
+            사업자등록번호 : (주)다크호스투어(DARKHORSE TOUR) | 통신판매업신고번호 : 제 2017-광주 서구-0466호 | 대표전화 : 062-228-1119<br>
+            Copyright ⓒ(주)다크호스투어 All Rights Reserved</p>
+        </div>
+        
+    </footer><!--footer_dark-->
+
+    <div class="emaile_no_ex" id="emale_no_ex" style="display: none;">
+
+        <div class="emaile_no_box">
+
+            <div class="emaile_no_title">
+                <p>이메일 무단 수집 거부</p>
+            </div><!--emaile_no_title-->
+
+            <div class="emaile_contents">
+                <p>
+                    본 웹사이트에 게시된 이메일 주소가 전자우편 수집 프로그램이나 그 밖의 기술적 장치 를 이용하여 무단으로 수집되는 것을 거부하며,<br>
+                    이를 위반시 정보통신망법에 의해 형사 처벌됨을 유념하시기 바랍니다.<br><br>
+
+
+                    정보통신망 이용촉진 및 정보보호 등에 관한 법률<br>
+
+                    제50조의2 (전자우편주소의 무단 수집행위 등 금지)<br>
+
+                    누구든지 인터넷 홈페이지 운영자 또는 관리자의 사전 동의 없이 인터넷 홈페이지에서 자동으로 전자우편주소를 수집 하는 프로그램 그 밖의 기술적 장치를 이용하여 전자우편주소를 수집하여서는 아니된다.<br>
+                    누구든지 제1항의 규정을 위반하여 수집된 전자우편주소를 판매ㆍ유통하여서는 아니된다.<br>
+                    누구든지 제1항 및 제2항의 규정에 의하여 수집ㆍ판매 및 유통이 금지된 전자우편주소임을 알고 이를 정보 전송에 이용하여서는 아니된다.<br><br>
+
+
+                    제74조 (벌칙) 다음 각호의 1에 해당하는 자는 1천만원 이하의 벌금에 처한다.<br>
+
+                    제8조제4항의 규정을 위반하여 표시ㆍ판매 또는 판매할 목적으로 진열한 자<br>
+                    제44조의7제1항제1호의 규정을 위반하여 음란한 부호ㆍ문언ㆍ음향ㆍ화상 또는 영상을 배포ㆍ판매ㆍ임대하거나 공연히 전시한 자<br>
+                    제44조의7제1항제3호의 규정을 위반하여 공포심이나 불안감을 유발하는 부호ㆍ문언ㆍ음향ㆍ화상 또는 영상을 반복적으로 상대방에게 도달하게 한 자<br>
+                    제50조제6항의 규정을 위반하여 기술적 조치를 한 자<br>
+                    제50조의8의 규정을 위반하여 광고성 정보를 전송한 자 제50조의2의 규정을 위반하여 전자우편 주소를 수집ㆍ판매ㆍ유통 또는 정보전송에 이용한 자<br>
+                    제50조의8의 규정을 위반하여 광고성 정보를 전송한 자<br>
+                    제53조제4항을 위반하여 등록사항의 변경등록 또는 사업의 양도ㆍ양수 또는 합병ㆍ상속의 신고를 하지 아니한 자<br>
+                </p>
+            </div><!--emaile_contents-->
+
+            <div class="emaile_box_line_01"></div>
+
+            <div class="emaile_close" id="emaile_close_btn">
+                <p style="cursor: pointer;">확인</p>
+            </div>
+
+        </div><!--emaile_no_box-->
+
+    </div><!--emaile_no_ex-->
+
+    <div class="special_terms_ex" id="special_terms_popup" style="display: none;">
+
+        <div class="special_terms_box">
+
+            <div class="special_terms_title">
+                <p>특별약관</p>
+            </div>
+
+            <div class="special_terms_txt">
+
+                <p>
+                    <span>■ 약관</span><br>
+                    상기 상품은 국외여행표준약관(소비자분쟁해결기준)과 달리 [특별약관]이 적용되며 별도로 아래와 같은 취소수수료 특약이 적용되며, 별도의 동의 절차를 거치게 됩니다.<br><br>
+                    <span>■ 예약금 규정</span><br>
+                    ① 여행 확정 후 익일 오전까지 예약금을 입금하셔야 하며, 미입금 시 예약은 확정되지 않습니다.<br>
+                    ② 예약금은 항공좌석 확보나 호텔 및 리조트 확보를 위하여 지불되는 비용입니다.<br>
+                    ③ 예약금 입금 후 개인사정으로 인한 취소 시에는 출발일 관계없이 예약금 전액 및 ‘기간에 따른 환불규정’ 에 따른 패널티가 발생합니다.<br>
+                    ④ 기간별 취소료 규정과 상관없이 항공사 및 호텔의 자체 규정에 따라 별도의 취소료가 적용될 수 있습니다 (호텔 Surcharge 및 항공사 취소료규정 우선적용)<br>
+                    ⑤ 일부 그룹항공권 이용 상품의 경우 항공데파짓 비용을 선납하므로 취소 시 계약금과 별도로 환불이 불가합니다. 항공권 발권 이후 변경 및 취소 시 항공권 패널티가 추가 부가됩니다.<br><br>
+                    <span>■ 항공 규정</span><br>
+                    ① 전세기 및 일부 특가 항공권은 예약 확정 또는 항공권 발권 후 취소 시 100%  비용이 부과됩니다.<br>
+                    ② 전세기 항공권은 정부 인허가 조건으로 항공편의 취소, 지연, 기종의 변경 등으로 인해 부득이한 사유로 인하여 예고없이 변경 될 수 있습니다.<br><br>
+                    <span>■ 기간에 따른 취소 환불 규정</span><br>
+                    아시아나/대한항공 전세기 , 중국 민항기 이용상품<br>
+                    ☞ 예약 후 여행을 취소할 경우 국외여행 표준약관 제 5조 특약(전세기, 중국 민항기 이용 상품)에 근거하여 소비자 피해보상 규정에 따라 아래의 비율로 취소료를 부과하오니 이점 양지하여 주시기 바랍니다. 아울러 당사의 귀책사유로 여행 출발이 취소되는 경우에도 동일한 규정이 적용됩니다.<br>
+                    ★ 예약과 동시에 예약금 입금 후 취소 시 예약금 환불 불가 ★<br>
+                    ★ 출발 일주일 전 완납 후 취소 시 여행경비 전액 환불 불가 ★<br>
+                    - 개런티예약의 경우는 예약담당자가 사전공지하며, ‘기간에 따른 취소환불규정’과 무관하게 취소료가 징수될수 있습니다.<br><br>
+                    <span>■ 최저 출발 인원 미충족시 계약해제</span><br>
+                    ① 당사는 최저행사인원이 충족되지 아니하여 여행계약을 해제하는 경우 여행출발 7일전까지 여행자에게 통지하여야 합니다.<br>
+                    ② 당사는 여행참가자 수 미달로 전항의 기일내 통지를 하지 아니하고 계약을 해제하는 경우 이미 지급 받은 계약금 환급 외에 다음 각 항목의 1의 금액을 여행자에게 배상하여야 합니다.<br>
+                    가. 여행개시 7일전까지 여행계약 해제 통지시 : 계약금 환급<br>
+                    나. 여행출발 1일전까지 통지시 : 여행요금의 30% 배상<br>
+                    다. 여행출발 당일 통지시 : 여행요금의 50% 배상<br><br>
+                    <span>■ 취소 위약금 증빙제공 및 계약해제</span><br>
+                    고객은 계약취소와 관련하여 취소수수료(여행사 인건비 포함) 부과내역에 대한 구체적인 증빙과 설명을 여행사에 요구할 수 있으며, 여행사는 관련 설명과 증빙을 제시하고 취소수수료 규정과 차액이 있는 경우 환급합니다.<br>
+                    ※ 행사 진행 중 천재지변 및 불가피한 상황 발생으로 소요되는 비용은 고객님께서 부담하셔야 합니다.<br>
+                    ※ 취소기준일은 취소를 통지한 날로 여행사와 항공사의 업무특성 상 영업일(월~금-09:00~18:00, 공휴일 제외) 기준입니다.<br>
+
+                </p>
+
+            </div>
+
+            <div class="special_terms_line"></div>
+
+            <a href="javascript:void(0);" id="close_special_terms">
+                <p>확인</p>
+            </a>
+            
+
+        </div><!--special_terms_box-->
+
+    </div><!--special_terms_ex-->
+
+    <div class="agreement_pricacy_ex" id="agreement_pricacy_popup" style="display: none;">
+
+        <div class="agreement_pricacy_box">
+
+            <div class="agreement_pricacy_title">
+                <p>개인정보수집 및 이용동의</p>
+            </div>
+
+            <div class="agreement_pricacy_txt">
+
+                <p>
+                    <span>■ 서비스</span><br>
+                    패키지 여행<br><br>
+                    <span>■ 수집목적</span><br>
+                    국내 외 패키지 여행 상품 상담 및 예약, 제공, 여행 고객 관리, 항공권 예약, 발권, 입력 여권 정보 검수, (필요시) 비자 발급 신청 지원<br><br>
+                    <span>■ 수집항목</span><br>
+                    [예약자] 이름, 생년월일, 성별, 이메일, 휴대폰번호<br>
+                    [여행자] 이름, 생년월일, 성별<br>
+                    ※ 상품별 추가 수집하는 필수 항목 ※<br>
+                    국외 여행 상품 예약시 여행자의 여권정보(여권번호, 여권만료일), 여권 사본<br><br>
+                    <span>■ 보유기간</span><br>
+                    회원 탈퇴 완료시까지 전자상거래 등에서의 소비자보호에 관한 법률 등에 의해 보관
+                </p>
+
+            </div>
+
+            <div class="agreement_pricacy_line"></div>
+
+            <a href="javascript:void(0);" id="agreement_pricacy_close">
+                <p>확인</p>
+            </a>
+            
+        </div><!--agreement_pricacy_box-->
+
+    </div><!--agreement_pricacy_ex-->
+
+    <div class="onward_transfer_ex" id="onward_transfer_popup" style="display: none;">
+
+        <div class="onward_transfer_box">
+
+            <div class="onward_transfer_title">
+                <p>개인정보 제3자 제공</p>
+            </div>
+
+            <div class="onward_transfer_txt">
+
+                <p>
+                    다음과 같이 개인정보를 제 3자에게 제공하고 있습니다.<br><br>
+                    <span>■ 개인정보를 제공받는 자</span><br>
+                    다크호스 투어<br><br>
+                    <span>■ 제공받는 자의 개인정보 이용 목적</span><br>
+                    국내외 항공권 예약, 발권, 결제 서비스 제공<br><br>
+                    <span>■ 제공하는 개인정보 항목</span><br>
+                    이름, 성별, 휴대폰<br><br>
+                    <span>■ 보유 및 이용 기간</span><br>
+                    회원탈퇴시 또는 개인정보 제3자 제공 철회시까지<br><br>
+                    <span>■ 동의를 거부할 권리 미 동의 거부에 따른 불이익</span><br>
+                    귀하는 위의 (필수) 개인정보 제3자 제공 동의를 거부할 권리가 있습니다.<br>
+                    그러나 동의를 거부할 경우 예약 서비스 이용이 제한됩니다.
+
+                </p>
+
+            </div>
+
+            <div class="onward_transfer_line"></div>
+
+            <a href="javascript:void(0);" id="onward_transfer_close">
+                <p>확인</p>
+            </a>
+            
+        </div><!--onward_transfer_box-->
+
+    </div><!--onward_transfer_ex-->
+
+
+    <div class="overseas_travel_ex" id="overseas_travel_popup"  style="display: none;">
+
+        <div class="overseas_travel_box">
+
+            <div class="overseas_travel_title">
+                <p>국외여행 표준약관</p>
+            </div>
+
+            <div class="overseas_travel_txt">
+
+                <p>
+                    <span>제1조(목적)</span><br>
+                    이 약관은 (주)다크호스 투어와 여행자가 체결한 국외여행 계약의 세부 이행 및 준수사항을 정함을 목적으로 합니다.<br><br>
+                    
+                    <span>제2조 (용어의 정의)</span><br>
+                    여행의 종류 및 정의, 해외여행수속대행업의 정의는 다음과 같습니다.<br>
+                    1.기획여행 : ‘당사’가 미리 여행 목적지 및 관광 일정, 여행자에게 제공될 운송 및 숙식 서비스 내용(이하 ‘여행서비스’라 함), 여행 요금을 정하여 광고 또는 기타 방법으로 여행자를 모집하여 실시하는 여행.<br>
+                    2.희망여행 : 여행자(개인 또는 단체)가 희망하는 여행 조건에 따라 ‘당사’가 운송, 숙식, 관광 등 여행에 관한 전반적인 계획을 수립하여 실시하는 여행.<br>
+                    3.해외여행 수속대행(이하 수속대행 계약이라 함) : ‘당사’가 여행자로부터 소정의 수속대행 요금을 받기로 약정하고, 여행자의 위탁에 따라 다음에 열거하는 업무(이하 수속대행 업무라 함)를 대행하는 것<br>
+                    1) 사증, 재입국 허가 및 각종 증명서 취득에 관한 수속<br>
+                    2) 출입국 수속 서류 작성 및 기타 관련 업무<br><br>
+                    
+                    <span>제3조 (‘당사’와 여행자 의무)</span><br>
+                    ① ‘당사’는 여행자에게 안전하고 만족스러운 여행서비스를 제공하기 위하여 여행알선 및 안내, 운송, 숙박 등 여행 계획의 수립 및 실행 과정에서 맡은 바 임무를 충실히 수행하여야 합니다.<br>
+                    ② 여행자는 안전하고 즐거운 여행을 위하여 여행자간 화합도모 및 ‘당사’의 여행질서 유지에 적극 협조하여야 합니다.<br><br>
+                    
+                    <span>제4조 (계약의 구성)</span><br>
+                    ① 여행계약은 여행 계약서(붙임)와 여행약관, 여행일정표(또는 여행설명서)를 계약내용으로 합니다.<br>
+                    ② 여행계약서에는 ‘당사’의 상호, 소재지 및 관광진흥법 제9조에 따른 보증 보험 등의 가입(또는 영업보증금의 예치 현황) 내용이 포함되어야 합니다.<br>
+                    ③ 여행일정표(또는 여행설명서)에는 여행일자별 여행지와 관광 내용, 교통수단, 쇼핑 횟수, 숙박장소, 식사 등 여행실시일정 및 여행사 제공 서비스 내용과 여행자 유의사항이 포함되어야 합니다.<br><br>
+                    
+                    <span>제5조 (계약체결의 거절)</span><br>
+                    '당사'는 여행자에게 다음 각 호의 1에 해당하는 사유가 있을 경우에는 여행자와의 계약체결을 거절할 수 있습니다.<br>
+                    ① 질병, 신체이상 등의 사유로 개별관리가 필요하거나, 단체여행(다른 여행자의 여행에 지장을 초래하는 등)의 원활한 실시에 지장이 있다고 인정되는 경우<br>
+                    ② 계약서에 명시한 최대행사인원이 초과된 경우<br>
+                    ③ 일정표에 명시한 최저행사인원이 미달된 경우<br><br>
+
+                    <span>제6조 (특약)</span><br>
+                    ‘당사’와 여행자는 관련법규에 위반되지 않는 범위 내에서 서면(전자문서를 포함한다. 이하 같다)으로 특약을 맺을 수 있습니다. 이 경우 ‘당사’는 특약의 내용이 표준약관과 다르고 표준약관보다 우선 적용됨을 여행자에게 설명하고 별도의 확인을 받아야 합니다.<br><br>
+                    
+                    <span>제7조 (계약서 등 교부 및 안전정보 제공)</span><br>
+                    ‘당사’는 여행자와 여행계약을 체결한 경우 계약서와 약관 및 여행일정표(또는 여행설명서)를 각 1부씩 여행자에게 교부하고, 여행목적지에 관한 안전정보를 제공하여야 합니다. 또한 여행 출발 전 해당 여행지에 대한 안전정보가 변경된 경우에도 변경된 안전정보를 제공하여야 합니다.<br><br>
+
+                    <span>제8조 (계약서 및 약관 등 교부 간주)</span><br>
+                    다음 각 호의 경우 여행계약서와 여행약관 및 여행일정표(또는 여행설명서)가 교부된 것으로 간주합니다.<br>
+                    ① 여행자가 인터넷 등 전자정보망으로 제공된 여행계약서, 약관 및 여행일정표(또는 여행설명서)의 내용에 동의하고 여행계약의 체결을 신청한 데 대해 ‘당사’가 전자 정보망 내지 기계적 장치 등을 이용하여 여행자에게 승낙의 의사를 통지한 경우<br>
+                    ② ‘당사’가 팩시밀리 등 기계적 장치를 이용하여 제공한 여행 계약서, 약관 및 여행일정표(또는 여행설명서)의 내용에 대하여 여행자가 동의하고 여행계약의 체결을 신청하는 서면을 송부한 데 대해 ‘당사’가 전자정보망 내지 기계적 장치 등을 이용하여 여행자에게 승낙의 의사를 통지한 경우<br><br>
+
+                    <span>제9조 (‘당사’의 책임)</span><br>
+                    ‘당사’는 여행 출발시부터 도착시까지 ‘당사’ 본인 또는 그 고용인, 현지여행업자 또는 그 고용인 등(이하 ‘사용인’이라 함)이 제3조 제1항에서 규정한 ‘당사’ 임무와 관련하여 여행자에게 고의 또는 과실로 손해를 가한 경우 책임을 집니다.<br><br>
+
+                    <span>제10조 (여행요금)</span><br>
+                    여행의 종류 및 정의, 해외여행수속대행업의 정의는 다음과 같습니다.<br>
+                    ① 여행 계약서의 여행요금에는 다음 각 호가 포함됩니다. 다만, 희망여행은 당사자간 합의에 따르며, 다음의 1~9호는 여행자 본인이 직접 여행지에서 지불하여야 할 금액이나 ‘당사’가 여행자 편의를 위하여 수탁 받아 이를 대신 지불합니다.<br>
+                    ①-1. 항공기, 선박, 철도 등 이용 운송 기관의 운임(보통운임기준)<br>
+                    ①-2. 공항, 역, 부두와 호텔 사이 등 송영버스요금<br>
+                    ①-3. 숙박요금 및 식사 요금<br>
+                    ①-4. 안내자 경비<br>
+                    ①-5. 여행 중 필요한 각종 세금<br>
+                    ①-6. 국내외 공항, 항만세<br>
+                    ①-7. 관광진흥개발기금<br>
+                    ①-8. 일정표 내 관광지 입장료<br>
+                    ①-9. 기타 개별 계약에 따른 비용<br>
+                    ①-10. 여행 알선 수수료<br>
+                    ② 제1항에도 불구하고 반드시 현지에서 지불해야 하는 경비가 있는 경우 그 내역과 금액을 여행계약서에 별도로 구분하여 표시하고, ‘당사’는 그 사유를 안내하여야 합니다.<br>
+                    ③ 여행자는 계약 체결시 계약금(여행요금 중 계약금으로 별도 고지된 금액)을 ‘당사’에게 지급하여야 하며, 계약금은 여행요금 또는 손해배상액의 전부 또는 일부로 취급합니다.<br>
+                    ④ 여행자는 제1항의 여행요금 중 계약금을 제외한 잔금을 여행 출발 7일전까지 ‘당사’에게 지급하여야 합니다.<br>
+                    ⑤ 여행자는 제1항의 여행요금을 당사자가 약정한 바에 따라 카드, 계좌이체, 또는 무통장입금 등의 방법으로 지급하여야 합니다.<br>
+                    ⑥ 희망여행요금에 여행자 보험료가 포함되는 경우 ‘당사’는 보험 회사명, 보상 내용 등을 여행자에게 설명하여야 합니다.<br><br>
+
+                    <span>제11조 (여행요금의 변경)</span><br>
+                    ① 국외여행을 실시함에 있어서 이용운송, 숙박기관에 지급 하여야 할 요금이 계약 체결시보다 5% 이상 증감하거나 여행요금에 적용된 외화 환율이 계약 체결시보다 2% 이상 증감한 경우 ‘당사’ 또는 여행자는 그 증감된 금액 범위 내에서 여행요금의 증감을 상대방에게 청구할 수 있습니다.<br>
+                    ② ‘당사’는 제1항의 규정에 따라 여행요금을 증액하였을 때에는 여행 출발일 15일 전에 여행자에게 통지하여야 합니다.<br><br>
+
+                    <span>제12조 (여행 조건의 변경요건 및 요금 등의 정산)</span><br>
+                    ① 계약서 등에 명시된 여행 조건은 다음 각 호의 1의 경우에 한하여 변경될 수 있습니다.<br>
+                    ①-1. 여행자의 안전과 보호를 위하여 여행자의 요청 또는 현지 사정에 의하여 부득이하다고 쌍방이 합의한 경우<br>
+                    ①-2. 천재지변, 전란, 정부의 명령, 운송, 숙박기관 등의 파업, 휴업 등으로 여행의 목적을 달성할 수 없는 경우<br>
+                    ② ‘당사’가 계약서 등에 명시된 여행일정을 변경하는 경우에는 해당 날짜의 일정이 시작되기 전에 여행자의 서면 동의를 받아야 합니다. 이때 서면동의서에는 변경일시, 변경내용, 변경으로 발생하는 비용이 포함되어야 합니다.<br>
+                    ③ 천재지변, 사고, 납치 등 긴급한 사유가 발생하여 여행자로부터 여행일정 변경 동의를 받기 어렵다고 인정되는 경우에는 제2항에 따른 일정변경 동의서를 받지 아니할 수 있습니다. 다만, ‘당사’는 사후에 서면으로 그 변경 사유 및 비용 등을 설명하여야 합니다.<br>
+                    ④ 제1항의 여행 조건 변경 및 제11조의 여행요금 변경으로 인하여 제10조 제1항의 여행요금에 증감이 생기는 경우에는 여행 출발 전 변경 분은 여행 출발 이전에, 여행 중 변경 분은 여행 종료 후 10일 이내에 각각 정산(환급)하여야 합니다.<br>
+                    ⑤ 제1항의 규정에 의하지 아니하고 여행 조건이 변경되거나 제16조 또는 제18조의 규정에 의한 계약의 해제. 해지로 인하여 손해배상액이 발생한 경우에는 여행 출발 전 발생 분은 여행 출발 이전에, 여행 중 발생 분은 여행 종료 후 10일 이내에 각각 정산(환급)하여야 합니다.<br>
+                    ⑥ 여행자는 여행 출발 후 자기의 사정으로 숙박, 식사, 관광 등 여행 요금에 포함된 서비스를 제공받지 못한 경우 ‘당사’에게 그에 상응하는 요금의 환급을 청구할 수 없습니다. 다만, 여행이 중도에 종료된 경우에는 제18조에 준하여 처리합니다.<br><br>
+
+                    <span>제13조 (여행자 지위의 양도)</span><br>
+                    ① 여행자가 개인사정 등으로 여행자의 지위를 양도하기 위해서는 ‘당사’의 승낙을 받아야 합니다. 이때 ‘당사’는 여행자 또는 여행자의 지위를 양도 받으려는 자가 양도로 발생하는 비용을 지급할 것을 조건으로 양도를 승낙할 수 있습니다.<br>
+                    ② 전항의 양도로 발생하는 비용이 있을 경우 ‘당사’는 기한을 정하여 그 비용의 지급을 청구하여야 합니다.<br>
+                    ③ ‘당사’는 계약조건 또는 양도하기 어려운 불가피한 사정 등을 이유로 제1항의 양도를 승낙하지 않을 수 있습니다.<br>
+                    ④ 제1항의 양도는 ‘당사’가 승낙한 때 효력이 발생합니다. 다만, ‘당사’가 양도로 인해 발생한 비용의 지급을 조건으로 승낙한 경우에는 정해진 기한 내에 비용이 지급되는 즉시 효력이 발생합니다.<br>
+                    ⑤ 여행자의 지위가 양도되면, 여행계약과 관련한 여행자의 모든 권리 및 의무도 그 지위를 양도 받는 자에게 승계됩니다.<br><br>
+
+                    <span>제14조 (‘당사’의 하자담보 책임)</span><br>
+                    ① 여행자는 여행에 하자가 있는 경우에 ‘당사’에게 하자의 시정 또는 대금의 감액을 청구할 수 있습니다. 다만, 그 시정에 지나치게 많은 비용이 들거나 그 밖에 시정을 합리적으로 기대할 수 없는 경우에는 시정을 청구할 수 없습니다.<br>
+                    ② 여행자는 시정 청구, 감액 청구를 갈음하여 손해배상을 청구하거나 시정 청구, 감액 청구와 함께 손해배상을 청구할 수 있습니다.<br>
+                    ③ 제1항 및 제2항의 권리는 여행기간 중에도 행사할 수 있으며, 여행종료일부터 6개월 내에 행사하여야 합니다.<br><br>
+
+                    <span>제15조 (손해배상)</span><br>
+                    ① ‘당사’는 현지 여행업자 등의 고의 또는 과실로 여행자에게 손해를 가한 경우 ‘당사’는 여행자에게 손해를 배상하여야 합니다.<br>
+                    ② ‘당사’의 귀책사유로 여행자의 국외여행에 필요한 사증, 재입국 허가 또는 각종 증명서 등을 취득하지 못하여 여행자의 여행 일정에 차질이 생긴 경우 ‘당사’는 여행자로부터 절차대행을 위하여 받은 금액 전부 및 그 금액의 100% 상당액을 여행자에게 배상하여야 합니다.<br>
+                    ③ ‘당사’는 항공기, 기차, 선박 등 교통기관의 연발착 또는 교통체증 등으로 인하여 여행자가 입은 손해를 배상하여야 합니다. 단, ‘당사’가 고의 또는 과실이 없음을 입증한 때에는 그러하지 아니합니다.<br>
+                    ④ ‘당사’는 자기나 그 사용인이 여행자의 수하물 수령, 인도, 보관 등에 관하여 주의를 해태(懈怠) 하지 아니하였음을 증명하지 아니하면 여행자의 수하물 멸실, 훼손 또는 연착으로 인한 손해를 배상할 책임을 면하지 못합니다.<br><br>
+
+                    <span>제16조 (여행 출발 전 계약해제)</span><br>
+                    ① ‘당사’ 또는 여행자는 여행 출발 전 이 여행계약을 해제할 수 있습니다. 이 경우 발생하는 손해액은 ‘소비자 분쟁 해결기준’(공정거래 위원회 고시)에 따라 배상합니다.<br>
+                    ①-1. 여행자의 여행계약 해제 요청이 있는 경우 (여행자의 취소 요청 시)<br>
+                    - 여행 개시 30일 전까지(~30) 통보 시 : 계약금 환급<br>
+                    - 여행 개시 20일 전까지(29~20) 통보 시 : 여행요금의 10% 배상<br>
+                    - 여행 개시 10일 전까지(19~10) 통보 시 : 여행요금의 15% 배상<br>
+                    - 여행 개시 8일 전까지(9~8) 통보 시 : 여행요금의 20% 배상<br>
+                    - 여행 개시 1일 전까지7(~1) 통보 시 : 여행요금의 30% 배상<br>
+                    - 여행 당일 통보 시 : 여행요금의 50% 배상<br>
+                    ①-2. ‘당사’의 귀책사유로 취소 통보하는 경우<br>
+                    - 여행 개시 30일 전까지(~30) 통보 시 : 계약금 환급<br>
+                    - 여행 개시 20일 전까지(29~20) 통보 시 : 여행요금의 10% 배상<br>
+                    - 여행 개시 10일 전까지(19~10) 통보 시 : 여행요금의 15% 배상<br>
+                    - 여행 개시 8일 전까지(9~8) 통보 시 : 여행요금의 20% 배상<br>
+                    - 여행 개시 1일 전까지7(~1) 통보 시 : 여행요금의 30% 배상<br>
+                    - 여행 당일 통보 시 : 여행요금의 50% 배상<br>
+                    단, 최저 행사 인원이 충족되지 않아 불가피하게 기획여행을 실시할 수 없는 경우에는 제17조(최저 행사인원 미충족 시 계약해제)의 조항에 의거하여 ‘당사’가 여행자에게 배상한다. ( * 여행요금이란 일정표상 명시된 총 상품 가격을 의미한다.)<br>
+                    ② 여행자가 해제할 수 있는 경우<br>
+                    ②-1. ‘당사’가 해제할 수 있는 경우<br>
+                    - 제12조 제1항 제1호 및 제2호의 사유가 있는 경우<br>
+                    - 여행자가 다른 여행자에게 폐를 끼치거나 여행의 원활한 실시에 현저한 지장이 있다고 인정될 때<br>
+                    - 질병 등 여행자의 신체에 이상이 발생하여 여행에의 참가가 불가능한 경우<br>
+                    - 여행자가 계약서에 기재된 기일까지 여행요금을 납입하지 아니한 경우<br>
+                    ②-2. ‘당사’의 귀책사유로 취소 통보하는 경우<br>
+                    제12조 제1항 제1호 및 제2호의 사유가 있는 경우<br>
+                    - ‘당사’가 제21조에 따른 공제 또는 보증보험에 가입하지 아니 하였거나 영업보증금을 예치하지 않은 경우<br>
+                    - 여행자의 3촌 이내 친족이 사망한 경우 (단, 여행자는 아래와 같은 입증서류를 ‘당사’에 제출하여야 한다.)<br>
+                    가.친족을 확인할 수 있는 서류(가족관계증명서 등)<br>
+                    나.진단서 또는 사체검안서(사망진단서)<br>
+                    다.그 밖에 필요한 자료<br>
+                    - 질병 등 여행자의 신체에 이상이 발생하여 여행에의 참가가 불가능한 경우 (단, 여행자는 아래와 같은 입증서류를 ‘당사’에 제출하여야 한다.)<br>
+                    가.진단서<br>
+                    나.그밖에 필요한 자료<br>
+                    - 배우자 또는 직계존비속이 신체 이상으로 3일 이상 병원(의원)에 입원하여 여행 출발 전까지 퇴원이 곤란한 경우 그 배우자 또는 보호자 1인 (단, 여행자는 아래와 같은 입증 서류를 ‘당사’에 제출하여야 한다.)<br>
+                    가.친족을 확인할 수 있는 서류(가족관계증명서 등)<br>
+                    나.진단서 또는 사체검안서(사망진단서)<br>
+                    다.그 밖에 필요한 자료<br>
+                    - ‘당사’의 귀책사유로 계약서 또는 여행일정표(여행설명서)에 기재된 여행 일정대로의 여행 실시가 불가능해진 경우<br>
+                    - 제11조 제1항의 규정에 의한 여행요금의 증액으로 인하여 여행 계속이 어렵다고 인정될 경우<br><br>
+
+
+                    <span>제17조 - 1 (최저 행사 인원 미 충족 시 계약해제)</span><br>
+                    ① ‘당사’는 최저 행사 인원이 충족되지 아니하여 여행계약을 해제하는 경우 여행출발 7일 전까지 여행자에게 통지하여야 합니다.<br>
+                    ② ‘당사’가 여행 참가자 수 미달로 전항의 기일 내 통지를 하지 아니하고 계약을 해제하는 경우 이미 지급받은 계약금 환급 외에 다음 각 목의 1의 금액을 여행자에게 배상하여야 합니다.<br>
+                    ②-1. 여행개시 1일전까지 통지 시 : 여행요금의 30%<br>
+                    ②-2. 여행 당일 통지 시 : 여행요금의 50% (* 여행요금이란 일정표상 명시된 총 상품 가격을 의미한다)<br><br>
+
+                    <span>제17조 - 2 (감염병의 발생으로 당사 또는 여행자의 계약해제)</span><br>
+                    ① 감염병 등의 발생으로 아래 각 호의 1에 해당하는 사유가 있는 경우 ‘당사’ 또는 여행자는 제 16조 제 1항의 손해배상액을 지급하지 아니하고 계약해제를 할 수 있습니다.<br>
+                    ①-1. 외국정부가 우리 국민에 대해 입국금지‧격리조치 등 이에 준하는 명령을 발령하여 계약을 이행할 수 없는 경우<br>
+                    ①-2. 계약체결 이후 외교부가 여행지역·국가에 여행경보 3단계(철수권고)‧4단계(여행금지)를 발령하여 계약을 이행할 수 없는 경우<br>
+                    ①-3. 항공‧철도‧선박 등의 운항이 중단되어 계약을 이행할 수 없는 경우<br>
+                    계약체결 이후 외교부가 여행지역·국가에 특별여행주의보를 발령하거나 세계보건기구(WHO)가 감염병 경보 5단계 또는 6단계(세계적 대유행, 펜데믹)를 선언하여 계약을 이행하기 상당히 어려운 경우에는 ‘당사’ 또는 ‘여행자’는 계약해제를 할 수 있으며, 제 16조 제 1항의 손해배상액의 50%를 감경합니다. (단, 세계보건기구(WHO)가 감염병 경보 5단계를 선언한 경우는 감염병이 발생한 해당지역에 한함)<br><br>
+                    
+                    <span>제18조 (여행 출발 후 계약 해지)</span><br>
+                    ① ‘당사’ 또는 여행자는 여행 출발 후 부득이한 사유가 있는 경우 이 여행계약을 해지할 수 있습니다. 다만, 그 사유가 당사자 한쪽의 과실로 인하여 생긴 경우에는 상대방에게 손해를 배상하여야 합니다.<br>
+                    ② 제1항에 따라 여행계약이 해지된 경우 귀환운송 의무가 있는 ‘당사’는 여행자를 귀환운송 할 의무가 있습니다.<br>
+                    ③ 제1항의 계약해지로 인하여 발생하는 추가비용은 그 해지사유가 어느 당사자의 사정에 속하는 경우에는 그 당사자가 부담하고, 양 당사자 누구의 사정에도 속하지 아니하는 경우에는 각 당사자가 추가비용의 50%씩을 부담합니다.<br>
+                    ④ 여행자는 여행에 중대한 하자가 있는 경우에 그 시정이 이루어지지 아니하거나 계약의 내용에 따른 이행을 기대할 수 없는 경우에는 계약을 해지할 수 있습니다.<br>
+                    ⑤ 제4항에 따라 계약이 해지된 경우 ‘당사’는 대금청구권을 상실합니다. 다만, 여행자가 실행된 여행으로 이익을 얻은 경우에는 그 이익을 ‘당사’에게 상환하여야 합니다.<br>
+                    ⑥ 제4항에 따라 계약이 해지된 경우 ‘당사’는 계약의 해지로 인하여 필요하게된 조치를 할 의무를 지며, 계약상 귀환운송 의무가 있으면 여행자를 귀환운송하여야 합니다. 이 경우 귀환운송비용은 원칙적으로 ‘당사’가 부담하여야 하나, 상당한 이유가 있는 때에는 ‘당사’는 여행자에게 그 비용의 일부를 청구할 수 있습니다.<br><br>
+
+                    <span>제19조 (여행의 시작과 종료)</span><br>
+                    여행의 시작은 탑승수속(선박인 경우 승선 수속)을 마친 시점으로 하며, 여행의 종료는 여행자가 입국장 보세구역을 벗어나는 시점으로 합니다. 다만, 계약 내용 상 국내 이동이 있을 경우에는 최초 출발지에서 이용하는 운송수단의 출발시각과 도착시각으로 합니다.<br><br>
+
+                    <span>제20조 (설명의무)</span><br>
+                    ‘당사’는 계약서에 정하여져 있는 중요한 내용 및 그 변경 사항을 여행자가 이해할 수 있도록 설명하여야 합니다.<br><br>
+
+                    <span>제21조 (보험 가입 등)</span><br>
+                    ‘당사’는 이 여행과 관련하여 여행자에게 손해가 발생한 경우 여행자에게 보험금을 지급하기 위한 보험 또는 공제에 가입하거나 영업 보증금을 예치하여야 합니다.<br><br>
+
+                    <span>제22조 (기타 사항)</span><br>
+                    ① 이 계약에 명시되지 아니한 사항 또는 이 계약의 해석에 관하여 다툼이 있는 경우에는 ‘당사’ 또는 여행자가 합의하여 결정하되, 합의가 이루어지지 아니한 경우에는 관계법령 및 일반 관례에 따릅니다.<br>
+                    ② 특수 지역에의 여행으로서 정당한 사유가 있는 경우에는 이 표준약관의 내용과 달리 정할 수 있습니다.<br>
+                    ③ 이 약관은 기획여행 상품을 기준으로 적용합니다.<br>
+
+                </p>
+
+            </div>
+
+            <div class="overseas_travel_line"></div>
+
+            <a href="javascript:void(0);" id="overseas_travel_close">
+                <p>확인</p>
+            </a>
+            
+        </div><!--overseas_travel_box-->
+
+    </div><!--overseas_travel_ex-->
+
+    <div class="reservation_submit_popup_ex" id="reservation_submit_popup" style="display: none;">
+
+        <div class="reservation_submit_popup_box">
+
+            <div>
+
+                <div>
+                    <img src="img/join_chk_icon_02.png">
+                </div>
+
+                <p><span>예약</span>이 <span>완료</span>되었습니다.</p>
+
+                <p>상품을 예약해주셔서 감사합니다.<br>
+                담당자 확인 후 연락 드리겠습니다.<br>
+                예약 확정 후 <span>예약확인</span> 페이지에서 해당 상품을 <span>전자결제</span>를 진행하실 수 있습니다.</p>
+            
+                <a href="../reservation_list/reservation_list.html" class="reservation_link_btn">
+                    <p>확인</p>
+                </a>
+
+               
+            </div>
+
+        </div><!--reservation_submit_popup_box-->
+
+    </div><!--reservation_submit_popup_ex-->
+
+    <script src="../js/total.js"></script>
+</body>
+</html>

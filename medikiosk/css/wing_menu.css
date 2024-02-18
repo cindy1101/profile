@@ -1,0 +1,453 @@
+* {margin: 0; padding: 0;}
+li {list-style: none;}
+a {text-decoration: none;}
+img {display: block;}
+
+*::-webkit-scrollbar {
+    display: none; /* 크롬, 사파리, 오페라, 엣지 */
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'min_bold';
+    font-weight: 600;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'bold';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.ttf') format("truetype");
+    font-display: swap;
+}
+
+body {font-family: 'Pretendard'; line-height: 16px;}
+
+p {margin-bottom: 0;}
+
+ul {margin: 0; padding: 0;}
+
+input:not([type]), input[type="text"], input[type="password"], 
+input[type="date"], input[type="datetime"], 
+input[type="datetime-local"], input[type="month"], 
+input[type="week"], input[type="email"], input[type="number"], 
+input[type="search"], input[type="tel"], input[type="time"], 
+input[type="url"], input[type="color"], textarea
+{box-shadow: none;
+background-color: #fff;
+padding: 0;
+margin-bottom: 0;
+outline: none;}
+
+input[type="checkbox"]
+{margin-bottom: 0;}
+
+input[type="checkbox"]+label, input[type="radio"]+label 
+{margin: 0;}
+
+
+@media all and (max-width: 600px)
+{
+    /*퀵메뉴*/
+    div.quickmenu_box
+    {display: none;}
+
+    /*탑 버튼*/
+    a.top_mobile
+    {width: 40px; height: 40px;
+    border-radius: 20px;
+    background-color: #007eff;
+    position: fixed;
+    right: 10px; bottom: 160px;
+    z-index: 3;
+    display: block;
+    overflow: hidden;}
+
+    a.top_mobile>div
+    {width: 100%; height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+
+    a.top_mobile>div img
+    {width: 15px; height: auto;}
+
+}
+
+@media all and (min-width: 601px) and (max-width: 768px)
+{
+    /*퀵메뉴*/
+    div.quickmenu_box
+    {display: none;}
+
+    /*탑 버튼*/
+    a.top_mobile
+    {width: 40px; height: 40px;
+    border-radius: 20px;
+    background-color: #007eff;
+    position: fixed;
+    right: 10px; bottom: 160px;
+    z-index: 3;
+    display: block;
+    overflow: hidden;}
+
+    a.top_mobile>div
+    {width: 100%; height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+
+    a.top_mobile>div img
+    {width: 15px; height: auto;}
+
+}
+
+@media all and (min-width: 769px) and (max-width: 1024px)
+{
+    /*퀵메뉴*/
+    div.quickmenu_box {display: none;}
+
+    /*탑 버튼*/
+    a.top_mobile
+    {width: 40px; height: 40px;
+    border-radius: 20px;
+    background-color: #007eff;
+    position: fixed;
+    right: 20px; bottom: 160px;
+    z-index: 3;
+    display: block;
+    overflow: hidden;}
+
+    a.top_mobile>div
+    {width: 100%; height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+
+    a.top_mobile>div img
+    {width: 15px; height: auto;}
+
+}
+
+@media all and (min-width: 1025px) and (max-width: 1279px)
+{
+    /*퀵메뉴*/
+    div.quickmenu_box
+    {width: 65px; height: 390px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    position: fixed;
+    top: calc(50% - 162.5px); right: 10px;
+    z-index: 4;}
+
+    div.quickmenu_box>a
+    {width: 100%; height: 65px;
+    display: block;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc; box-sizing: border-box;
+    transition: all 0.5s;}
+
+    div.quickmenu_box>a:hover
+    {background-color: #f3f3f3;}
+
+    div.quickmenu_box>a:nth-child(1)>div
+    {width: 100%; height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+
+    div.quickmenu_box>a:nth-child(2)>div
+    {width: 100%; height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+
+    div.quickmenu_box>a:nth-child(3)>div
+    {width: 100%; height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+
+    div.quickmenu_box>a:nth-child(4)>div
+    {width: 100%; height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+
+    div.quickmenu_box>a:nth-child(6)>div
+    {width: 100%; height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+
+    div.quickmenu_box>a>div img
+    {width: 55px; height: auto;}
+
+    div.quickmenu_box>a:nth-child(3)>div img
+    {width: 50px; height: auto;}
+    
+    /*날씨*/
+    div.weather_box
+    {width: 90%; height: 65px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+
+    div.weather_box>div
+    {width: 100%;}
+
+    div.weather_box>div>div:nth-child(1)
+    {width: 30px; height: 30px;
+    margin: 0 auto;
+    margin-bottom: 5px;}
+
+    div.weather_box>div>div:nth-child(1) img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    div.weather_box>div>p:nth-child(2)
+    {width: 100%;
+    text-align: center; line-height: 20px; font-size: 14px;
+    color: #222;}
+    
+    /*top*/
+    div.quickmenu_box>a:last-child
+    {border-bottom: none;
+    background-color: #007eff;}
+
+    div.quickmenu_box>a:last-child>div>p
+    {font-size: 15px; line-height: 20px;
+    color: #fff;}
+
+    div.quickmenu_box>a:last-child:hover
+    {background-color: #222;}
+
+    /*모바일*/
+    a.top_mobile {display: none;}
+
+}
+
+@media all and (min-width: 1280px) and (max-width: 1419px)
+{
+    /*퀵메뉴*/
+    div.quickmenu_box
+    {width: 65px; height: 390px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    position: fixed;
+    top: calc(50% - 162.5px); right: 10px;
+    z-index: 4;}
+
+    div.quickmenu_box>a
+    {width: 100%; height: 65px;
+    display: block;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc; box-sizing: border-box;
+    transition: all 0.5s;}
+
+    div.quickmenu_box>a:hover
+    {background-color: #f3f3f3;}
+
+    div.quickmenu_box>a:nth-child(1)>div
+    {width: 100%; height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+
+    div.quickmenu_box>a:nth-child(2)>div
+    {width: 100%; height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+
+    div.quickmenu_box>a:nth-child(3)>div
+    {width: 100%; height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+
+    div.quickmenu_box>a:nth-child(4)>div
+    {width: 100%; height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+
+    div.quickmenu_box>a:nth-child(6)>div
+    {width: 100%; height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+
+    div.quickmenu_box>a>div img
+    {width: 55px; height: auto;}
+
+    div.quickmenu_box>a:nth-child(3)>div img
+    {width: 50px; height: auto;}
+    
+    /*날씨*/
+    div.weather_box
+    {width: 90%; height: 65px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;}
+
+    div.weather_box>div
+    {width: 100%;}
+
+    div.weather_box>div>div:nth-child(1)
+    {width: 30px; height: 30px;
+    margin: 0 auto;
+    margin-bottom: 5px;}
+
+    div.weather_box>div>div:nth-child(1) img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    div.weather_box>div>p:nth-child(2)
+    {width: 100%;
+    text-align: center; line-height: 20px; font-size: 14px;
+    color: #222;}
+    
+    /*top*/
+    div.quickmenu_box>a:last-child
+    {border-bottom: none;
+    background-color: #007eff;}
+
+    div.quickmenu_box>a:last-child>div>p
+    {font-size: 15px; line-height: 20px;
+    color: #fff;}
+
+    div.quickmenu_box>a:last-child:hover
+    {background-color: #222;}
+
+    /*모바일*/
+    a.top_mobile {display: none;}
+
+}
+
+@media all and (min-width: 1420px)
+{
+    /*퀵메뉴*/
+    div.quickmenu_box
+    {width: 70px; height: 420px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    position: fixed;
+    top: calc(50% - 175px); right: 10px;
+    z-index: 4;}
+
+    div.quickmenu_box>a
+    {width: 100%; height: 70px;
+    display: block;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc; box-sizing: border-box;
+    transition: all 0.5s;}
+
+    div.quickmenu_box>a:hover
+    {background-color: #f3f3f3;}
+
+    div.quickmenu_box>a:nth-child(1)>div
+    {width: 100%; height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+
+    div.quickmenu_box>a:nth-child(2)>div
+    {width: 100%; height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+
+    div.quickmenu_box>a:nth-child(3)>div
+    {width: 100%; height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+
+    div.quickmenu_box>a:nth-child(4)>div
+    {width: 100%; height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+
+    div.quickmenu_box>a:nth-child(6)>div
+    {width: 100%; height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+
+    div.quickmenu_box>a>div img
+    {width: 55px; height: auto;}
+
+    div.quickmenu_box>a:nth-child(3)>div img
+    {width: 50px; height: auto;}
+    
+    /*날씨*/
+    div.weather_box
+    {width: 90%; height: 70px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+
+    div.weather_box>div
+    {width: 100%;}
+
+    div.weather_box>div>div:nth-child(1)
+    {width: 35px; height: 35px;
+    margin: 0 auto;
+    margin-bottom: 5px;}
+
+    div.weather_box>div>div:nth-child(1) img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    div.weather_box>div>p:nth-child(2)
+    {width: 100%;
+    text-align: center; line-height: 20px; font-size: 14px;
+    color: #222;}
+    
+    /*top*/
+    div.quickmenu_box>a:last-child
+    {border-bottom: none;
+    background-color: #007eff;}
+
+    div.quickmenu_box>a:last-child>div>p
+    {font-size: 15px; line-height: 20px;
+    color: #fff;}
+
+    div.quickmenu_box>a:last-child:hover
+    {background-color: #222;}
+
+    /*모바일*/
+    a.top_mobile {display: none;}
+    
+}

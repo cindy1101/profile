@@ -1,0 +1,1388 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>항공권</title>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/owl.carousel.js"></script>   
+
+    <!--페이징버튼-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link href="../css/owl.carousel.min.css" rel="stylesheet">
+    <link href="../css/owl.theme.default.min.css" rel="stylesheet">
+    <link href="../css/docs.theme.min.css" rel="stylesheet">
+    <link href="css/airline.css" rel="stylesheet">
+
+   
+</head>
+<body>
+
+    <input type="checkbox" id="menu_open_mobile">
+
+    <header class="mobile_header">
+        
+        <div class="header_top_mobile">
+
+            <a href="../index.html">
+                <img src="../img/dark_logo.png">
+            </a>
+
+            <label for="menu_open_mobile">
+                <img src="../img/mobile_icon_open.png">
+            </label>
+
+        </div><!--header_top_mobile-->
+
+        <div class="mobile_header_sheet">
+
+            <div class="icon_header_m">
+
+                <div class="top_sheet_h">
+
+                    <a href="../index.html">
+                        <img src="../img/home_icon.png">
+                    </a>
+
+                    <label for="menu_open_mobile">
+                        <img src="../img/close_btn.png">
+                    </label>
+
+                </div><!--top_sheet_h-->
+
+                <div class="gnb_mobile_header">
+
+                    <a href="../login/login.html">
+                        <div>
+                            <img src="../img/login_icon.png">
+                        </div>
+                        <p>로그인</p>
+                    </a>
+    
+                    <a href="../join/join.html">
+                        <div>
+                            <img src="../img/join_icon.png">
+                        </div>
+                        <p>회원가입</p>
+                    </a>
+    
+    
+                    <a href="../reservation_list/reservation_list.html">
+                        <div>
+                            <img src="../img/reservation_icon.png">
+                        </div>
+                        <p>예약확인</p>
+                    </a>
+    
+    
+                    <a href="../mypage/mypage.html">
+                        <div>
+                            <img src="../img/mypage_icon.png">
+                        </div>
+                        <p>마이페이지</p>
+                    </a>
+
+                </div><!--gnb_mobile_header-->
+
+            </div><!--icon_header_m-->
+
+            <div class="search_mobile_box">
+
+                <div>
+                    <input type="text" id="mobile_search" placeholder="검색어를 입력하세요">
+
+                    <input type="submit" id="mobile_search_btn">
+    
+                    <label for="mobile_search_btn">
+                        <img src="../img/search_icon.png">
+                    </label>
+                </div>
+
+            </div><!--search_mobile_box-->
+
+            <div class="lnb_menu_mobile">
+
+                <ul>
+                    <li>
+                        <a href="../sub/sub.html">
+                            <p>다낭</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../sub/sub.html">
+                            <p>나트랑</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../sub/sub.html">
+                            <p>하노이</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../sub/sub.html">
+                            <p>달랏</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../sub/sub.html">
+                            <p>장가계</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="airline.html">
+                            <p>항공권</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../notic/notic.html">
+                            <p>공지사항</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../event/event.html">
+                            <p>이벤트/기획전</p>
+                        </a>
+                    </li>
+                </ul>
+
+            </div><!--lnb_menu_mobile-->
+
+        </div><!--mobile_header_sheet-->
+
+    </header><!--mobile_header-->
+    
+    <header class="erp_header">
+
+        <div class="erp_header_top">
+
+            <a href="../index.html">
+                <img src="../img/dark_logo.png">
+            </a>
+
+            <div class="search_ex">
+
+                <input type="text" id="search_txt" placeholder="검색어를 입력하세요.">
+
+                <input type="submit" id="search_button">
+
+                <label for="search_button">
+                    <img src="../img/search_icon.png">
+                </label>
+
+            </div><!--search_ex-->
+
+            <div class="gnb_menu_erp">
+                <ul>
+                    <li>
+                        <a href="../login/login.html">
+                            <p>로그인</p>
+                        </a>
+                    </li>
+
+                    <li></li>
+
+                    <li>
+                        <a href="../join/join.html">
+                            <p>회원가입</p>
+                        </a>
+                    </li>
+
+                    <li></li>
+
+                    <li>
+                        <a href="../reservation_list/reservation_list.html">
+                            <p>예약확인</p>
+                        </a>
+                    </li>
+
+                    <li></li>
+
+                    <li>
+                        <a href="../mypage/mypage.html">
+                            <p>마이페이지</p>
+                        </a>
+                    </li>
+                </ul>
+            </div><!--gnb_menu_erp-->
+
+        </div><!--erp_header_top-->
+
+        <div class="erp_header_bottom">
+
+            <ul>
+                <li>
+                    <a href="../sub/sub.html">
+                        <p>다낭</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../sub/sub.html">
+                        <p>나트랑</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../sub/sub.html">
+                        <p>하노이</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../sub/sub.html">
+                        <p>달랏</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../sub/sub.html">
+                        <p>장가계</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="airline.html">
+                        <p>항공권</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../notic/notic.html">
+                        <p>공지사항</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../event/event.html">
+                        <p>이벤트/기획전</p>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="call_box">
+
+                <div>
+                    <img src="../img/call_icon_header.png">
+                </div>
+
+                <div>
+                    <p>고객센터</p>
+                    <p>1588-1588</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </header><!--erp_header-->
+
+    <div class="mobile_lnb_box">
+
+        <div class="owl-carousel owl-theme m_lnb_box">
+
+            <a href="../sub/sub.html" class="item m_lnb">
+                <p>다낭</p>
+            </a>
+
+            <a href="../sub/sub.html" class="item m_lnb">
+                <p>나트랑</p>
+            </a>
+
+            <a href="../sub/sub.html" class="item m_lnb">
+                <p>하노이</p>
+            </a>
+
+            <a href="../sub/sub.html" class="item m_lnb">
+                <p>달랏</p>
+            </a>
+
+            <a href="../sub/sub.html" class="item m_lnb">
+                <p>장가계</p>
+            </a>
+
+            <a href="airline.html" class="item m_lnb">
+                <p>항공권</p>
+            </a>
+            
+            <a href="../notic/notic.html" class="item m_lnb">
+                <p>공지사항</p>
+            </a>
+
+            <a href="../event/event.html" class="item m_lnb">
+                <p>기획전&이벤트</p>
+            </a>
+
+        </div>
+
+    </div><!--mobile_lnb_box-->
+
+    <div class="airline_visual">
+
+        <img class="visual_animation" src="img/airline_visual_banner.png">
+
+        <p>항공권</p>
+
+    </div><!--airline_visual-->
+
+
+    <div class="airline_select_ex">
+
+        <form>
+
+          <div class="airline_show_box clearfix">
+
+            <div class="airline_select_box">
+
+                <div class="start_airline_box">
+                    <div>
+                        <p>출발지</p>
+                        <input type="text" id="start_airline" placeholder="무안(MWX)" readonly onclick="StartAirlineOpen();">
+                    </div>
+                </div>
+
+                <div class="arrive_airline_box">
+
+                    <div>
+                        <p>도착지</p>
+                        <input type="text" id="arrive_airline" placeholder="도시명 또는 공항명" readonly onclick="ArriveAirlineOpen();">
+                    </div>
+
+                </div>
+
+                <div class="day_airline_box">
+
+                   <div>
+                        <div>
+                            <p>가는 날</p>
+                            <input type="date" id="day_start_airline" onclick="DayOpen();">
+                        </div>
+
+                        <div>
+                            <p>오는 날</p>
+                            <input type="date" id="day_arrive_airline" onclick="DayOpen();">
+                        </div>
+                   </div>
+
+                </div>
+
+                <div class="person_airline_box">
+                    <div>
+                        <p>여행인원</p>
+                        <input type="text" id="person_airline" placeholder="탑승인원을 선택하세요" readonly onclick="PersonAirlineOpen();">
+                        <input type="text" id="person_airline_seat" placeholder="탑승좌석을 선택하세요" readonly onclick="PersonAirlineOpen();">
+                    </div>
+                </div>
+
+           </div><!--airline_select_box-->
+
+            <input type="submit" id="search_airline_btn" value="검색">
+
+          </div><!--airline_show_box-->
+
+
+          <div class="start_airline_sheet">
+
+            <p>출발지 도시 바로 선택</p>
+
+            <div class="korea_start_airline">
+
+                <p>국내</p>
+            
+                <ul>
+                    <li>
+                        <p>무안(MWX)</p>
+                    </li>
+
+                    <li>
+                        <p>부산(PUS)</p>
+                    </li>
+                </ul>
+
+            </div><!--korea_start_airline-->
+
+            <div class="southeast_asia_start_airline">
+
+                <p>동남아</p>
+        
+                <ul>
+                    <li>
+                        <p>다낭(DAD)</p>
+                    </li>
+
+                    <li>
+                        <p>나트랑(NHA)</p>
+                    </li>
+
+                    <li>
+                        <p>하노이(HAN)</p>
+                    </li>
+
+                    <li>
+                        <p>달랏(DLI)</p>
+                    </li>
+
+                </ul>
+
+            </div><!--southeast_asia_start_airline-->
+
+            <a href="javascript:void(0);" class="mobile_close_start_sheet" onclick="StartAirlineCloseMobile();">
+                <p>닫기</p>
+            </a>
+
+          </div><!--start_airline_sheet-->
+
+          <div class="arrive_airline_sheet">
+
+            <p>도착지 도시 바로 선택</p>
+
+            <div class="korea_arrive_airline">
+
+                <p>국내</p>
+            
+                <ul>
+                    <li>
+                        <p>무안(MWX)</p>
+                    </li>
+
+                    <li>
+                        <p>부산(PUS)</p>
+                    </li>
+                </ul>
+
+            </div><!--korea_arrive_airline-->
+
+            <div class="southeast_asia_arrive_airline">
+
+                <p>동남아</p>
+        
+                <ul>
+                    <li>
+                        <p>다낭(DAD)</p>
+                    </li>
+
+                    <li>
+                        <p>나트랑(NHA)</p>
+                    </li>
+
+                    <li>
+                        <p>하노이(HAN)</p>
+                    </li>
+
+                    <li>
+                        <p>달랏(DLI)</p>
+                    </li>
+
+                </ul>
+
+            </div><!--southeast_asia_arrive_airline-->
+
+            <a href="javascript:void(0);" class="mobile_close_arrive_sheet" onclick="ArriveAirlineCloseMobile();">
+                <p>닫기</p>
+            </a>
+
+          </div><!--arrive_airline_sheet-->
+
+
+          <div class="person_airline_sheet clearfix">
+
+                <div class="person_airline_box">
+
+                    <p>좌석등급</p>
+
+                    <ul>
+                        <li>
+                            <p>일반석</p>
+                        </li>
+    
+                        <li>
+                            <p>프리미엄 일반석</p>
+                        </li>
+    
+                        <li>
+                            <p>비즈니스석</p>
+                        </li>
+    
+                        <li>
+                            <p>일등석</p>
+                        </li>
+                    </ul>
+
+                </div><!--person_airline_box-->
+
+                <div class="person_airline_select_box"> 
+                    
+                    <div>
+
+                        <p><span>성인</span><br>
+                        국내선 : 만 13세 이상<br>
+                        국제선 : 만 12세 이상</p>
+
+                        <select id="adult_select_f">
+                            <option value="성인 0명">0명</option>
+                            <option value="성인 1명">1명</option>
+                            <option value="성인 2명">2명</option>
+                            <option value="성인 3명">3명</option>
+                            <option value="성인 4명">4명</option>
+                            <option value="성인 5명">5명</option>
+                            <option value="성인 5명">6명</option>
+                        </select>
+
+                    </div>   
+
+                    <div>
+
+                         <p><span>아동</span><br>
+                        국내선 : 만 2세 ~ 13세 미만<br>
+                        국제선 : 만 2세 ~ 12세 미만</p>
+
+                        <select id="child_select_f">
+                            <option value="아동 0명">0명</option>
+                            <option value="아동 1명">1명</option>
+                            <option value="아동 2명">2명</option>
+                            <option value="아동 3명">3명</option>
+                            <option value="아동 4명">4명</option>
+                            <option value="아동 5명">5명</option>
+                            <option value="아동 6명">6명</option>
+                        </select>
+
+                    </div>  
+
+                    <div>
+
+                        <p><span>유아</span><br>
+                        만 2세 미만</p>
+
+                        <select id="infant_select_f">
+                            <option value="유아 0명">0명</option>
+                            <option value="유아 1명">1명</option>
+                            <option value="유아 2명">2명</option>
+                            <option value="유아 3명">3명</option>
+                            <option value="유아 4명">4명</option>
+                            <option value="유아 5명">5명</option>
+                            <option value="유아 6명">6명</option>
+                        </select>
+
+                    </div> 
+
+                </div><!--person_airline_select_box-->
+
+                <a href="javascript:void(0);" class="close_person_airline_sheet" onclick="PersonAirlineClose();">
+                    <p>완료</p>
+                </a>
+
+            </div><!--person_airline_sheet-->
+
+        </form>
+
+    </div><!--airline_select_ex-->
+
+
+    <div class="airline_title">
+        <p>항공권 프로모션</p>
+    </div><!--airline_title-->
+
+
+    <p class="no_search_airline">검색하신 항공권이 없습니다.</p>
+
+
+    <div class="airline_product_ex">
+
+        <div class="airline_product_box">
+
+            <a href="../airline_detaile/airline_detaile.html" class="airline_product">
+
+                <div>
+                    <img src="img/airline_product.png">
+
+                    <div class="hover_show_airline">
+                        <p>베트남 다낭 항공권</p>
+                    </div>
+                </div>
+
+                <div class="airline_product_txt">
+
+                    <p>비엣젯항공 블록 다량 보유</p>
+
+                    <p>베트남 다낭 항공권</p>
+
+                    <table class="airline_product_table" cellpadding= "0" cellspacing= "0">
+
+                        <tr>
+                            <td>
+                                <p>출발일</p>
+                            </td>
+
+                            <td>
+                                <p>무안출발 08:30 ~ 다낭도착 11:40 <span>VJ8559</span></p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <p>도착일</p>
+                            </td>
+
+                            <td>
+                                <p>다낭출발 12:50 ~ 무안도착 19:00 <span>VJ8559</span></p>
+                            </td>
+                        </tr>
+
+                    </table>
+
+                </div>
+                
+            </a><!--airline_product-->
+
+            <a href="../airline_detaile/airline_detaile.html" class="airline_product">
+
+                <div>
+                    <img src="img/airline_product.png">
+
+                    <div class="hover_show_airline">
+                        <p>베트남 다낭 항공권</p>
+                    </div>
+                </div>
+
+                <div class="airline_product_txt">
+
+                    <p>제주항공 블록 다량 보유</p>
+
+                    <p>베트남 다낭 항공권</p>
+
+                    <table class="airline_product_table" cellpadding= "0" cellspacing= "0">
+
+                        <tr>
+                            <td>
+                                <p>출발일</p>
+                            </td>
+
+                            <td>
+                                <p>무안출발 08:30 ~ 다낭도착 11:40 <span>7C528</span></p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <p>도착일</p>
+                            </td>
+
+                            <td>
+                                <p>다낭출발 12:50 ~ 무안도착 19:00 <span>7C529</span></p>
+                            </td>
+                        </tr>
+
+                    </table>
+
+                </div>
+                
+            </a><!--airline_product-->
+
+            <a href="../airline_detaile/airline_detaile.html" class="airline_product">
+
+                <div>
+                    <img src="img/airline_product.png">
+
+                    <div class="hover_show_airline">
+                        <p>베트남 다낭 항공권</p>
+                    </div>
+                </div>
+
+                <div class="airline_product_txt">
+
+                    <p>비엣젯항공 블록 다량 보유</p>
+
+                    <p>베트남 다낭 항공권</p>
+
+                    <table class="airline_product_table" cellpadding= "0" cellspacing= "0">
+
+                        <tr>
+                            <td>
+                                <p>출발일</p>
+                            </td>
+
+                            <td>
+                                <p>무안출발 08:30 ~ 다낭도착 11:40 <span>VJ8559</span></p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <p>도착일</p>
+                            </td>
+
+                            <td>
+                                <p>다낭출발 12:50 ~ 무안도착 19:00 <span>VJ8559</span></p>
+                            </td>
+                        </tr>
+
+                    </table>
+
+                </div>
+                
+            </a><!--airline_product-->
+
+            <a href="../airline_detaile/airline_detaile.html" class="airline_product">
+
+                <div>
+                    <img src="img/airline_product.png">
+
+                    <div class="hover_show_airline">
+                        <p>베트남 다낭 항공권</p>
+                    </div>
+                </div>
+
+                <div class="airline_product_txt">
+
+                    <p>제주항공 블록 다량 보유</p>
+
+                    <p>베트남 다낭 항공권</p>
+
+                    <table class="airline_product_table" cellpadding= "0" cellspacing= "0">
+
+                        <tr>
+                            <td>
+                                <p>출발일</p>
+                            </td>
+
+                            <td>
+                                <p>무안출발 08:30 ~ 다낭도착 11:40 <span>7C528</span></p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <p>도착일</p>
+                            </td>
+
+                            <td>
+                                <p>다낭출발 12:50 ~ 무안도착 19:00 <span>7C529</span></p>
+                            </td>
+                        </tr>
+
+                    </table>
+
+                </div>
+                
+            </a><!--airline_product-->
+
+            <a href="../airline_detaile/airline_detaile.html" class="airline_product">
+
+                <div>
+                    <img src="img/airline_product.png">
+
+                    <div class="hover_show_airline">
+                        <p>베트남 다낭 항공권</p>
+                    </div>
+                </div>
+
+                <div class="airline_product_txt">
+
+                    <p>비엣젯항공 블록 다량 보유</p>
+
+                    <p>베트남 다낭 항공권</p>
+
+                    <table class="airline_product_table" cellpadding= "0" cellspacing= "0">
+
+                        <tr>
+                            <td>
+                                <p>출발일</p>
+                            </td>
+
+                            <td>
+                                <p>무안출발 08:30 ~ 다낭도착 11:40 <span>VJ8559</span></p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <p>도착일</p>
+                            </td>
+
+                            <td>
+                                <p>다낭출발 12:50 ~ 무안도착 19:00 <span>VJ8559</span></p>
+                            </td>
+                        </tr>
+
+                    </table>
+
+                </div>
+                
+            </a><!--airline_product-->
+
+            <a href="../airline_detaile/airline_detaile.html" class="airline_product">
+
+                <div>
+                    <img src="img/airline_product.png">
+
+                    <div class="hover_show_airline">
+                        <p>베트남 다낭 항공권</p>
+                    </div>
+                </div>
+
+                <div class="airline_product_txt">
+
+                    <p>제주항공 블록 다량 보유</p>
+
+                    <p>베트남 다낭 항공권</p>
+
+                    <table class="airline_product_table" cellpadding= "0" cellspacing= "0">
+
+                        <tr>
+                            <td>
+                                <p>출발일</p>
+                            </td>
+
+                            <td>
+                                <p>무안출발 08:30 ~ 다낭도착 11:40 <span>7C528</span></p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <p>도착일</p>
+                            </td>
+
+                            <td>
+                                <p>다낭출발 12:50 ~ 무안도착 19:00 <span>7C529</span></p>
+                            </td>
+                        </tr>
+
+                    </table>
+
+                </div>
+                
+            </a><!--airline_product-->
+
+            <a href="../airline_detaile/airline_detaile.html" class="airline_product">
+
+                <div>
+                    <img src="img/airline_product.png">
+
+                    <div class="hover_show_airline">
+                        <p>베트남 다낭 항공권</p>
+                    </div>
+                </div>
+
+                <div class="airline_product_txt">
+
+                    <p>비엣젯항공 블록 다량 보유</p>
+
+                    <p>베트남 다낭 항공권</p>
+
+                    <table class="airline_product_table" cellpadding= "0" cellspacing= "0">
+
+                        <tr>
+                            <td>
+                                <p>출발일</p>
+                            </td>
+
+                            <td>
+                                <p>무안출발 08:30 ~ 다낭도착 11:40 <span>VJ8559</span></p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <p>도착일</p>
+                            </td>
+
+                            <td>
+                                <p>다낭출발 12:50 ~ 무안도착 19:00 <span>VJ8559</span></p>
+                            </td>
+                        </tr>
+
+                    </table>
+
+                </div>
+                
+            </a><!--airline_product-->
+
+            <a href="../airline_detaile/airline_detaile.html" class="airline_product">
+
+                <div>
+                    <img src="img/airline_product.png">
+
+                    <div class="hover_show_airline">
+                        <p>베트남 다낭 항공권</p>
+                    </div>
+                </div>
+
+                <div class="airline_product_txt">
+
+                    <p>제주항공 블록 다량 보유</p>
+
+                    <p>베트남 다낭 항공권</p>
+
+                    <table class="airline_product_table" cellpadding= "0" cellspacing= "0">
+
+                        <tr>
+                            <td>
+                                <p>출발일</p>
+                            </td>
+
+                            <td>
+                                <p>무안출발 08:30 ~ 다낭도착 11:40 <span>7C528</span></p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <p>도착일</p>
+                            </td>
+
+                            <td>
+                                <p>다낭출발 12:50 ~ 무안도착 19:00 <span>7C529</span></p>
+                            </td>
+                        </tr>
+
+                    </table>
+
+                </div>
+                
+            </a><!--airline_product-->
+
+            <a href="../airline_detaile/airline_detaile.html" class="airline_product">
+
+                <div>
+                    <img src="img/airline_product.png">
+
+                    <div class="hover_show_airline">
+                        <p>베트남 다낭 항공권</p>
+                    </div>
+                </div>
+
+                <div class="airline_product_txt">
+
+                    <p>비엣젯항공 블록 다량 보유</p>
+
+                    <p>베트남 다낭 항공권</p>
+
+                    <table class="airline_product_table" cellpadding= "0" cellspacing= "0">
+
+                        <tr>
+                            <td>
+                                <p>출발일</p>
+                            </td>
+
+                            <td>
+                                <p>무안출발 08:30 ~ 다낭도착 11:40 <span>VJ8559</span></p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <p>도착일</p>
+                            </td>
+
+                            <td>
+                                <p>다낭출발 12:50 ~ 무안도착 19:00 <span>VJ8559</span></p>
+                            </td>
+                        </tr>
+
+                    </table>
+
+                </div>
+                
+            </a><!--airline_product-->
+
+            <a href="../airline_detaile/airline_detaile.html" class="airline_product">
+
+                <div>
+                    <img src="img/airline_product.png">
+
+                    <div class="hover_show_airline">
+                        <p>베트남 다낭 항공권</p>
+                    </div>
+                </div>
+
+                <div class="airline_product_txt">
+
+                    <p>제주항공 블록 다량 보유</p>
+
+                    <p>베트남 다낭 항공권</p>
+
+                    <table class="airline_product_table" cellpadding= "0" cellspacing= "0">
+
+                        <tr>
+                            <td>
+                                <p>출발일</p>
+                            </td>
+
+                            <td>
+                                <p>무안출발 08:30 ~ 다낭도착 11:40 <span>7C528</span></p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <p>도착일</p>
+                            </td>
+
+                            <td>
+                                <p>다낭출발 12:50 ~ 무안도착 19:00 <span>7C529</span></p>
+                            </td>
+                        </tr>
+
+                    </table>
+
+                </div>
+                
+            </a><!--airline_product-->
+
+            <a href="../airline_detaile/airline_detaile.html" class="airline_product">
+
+                <div>
+                    <img src="img/airline_product.png">
+
+                    <div class="hover_show_airline">
+                        <p>베트남 다낭 항공권</p>
+                    </div>
+                </div>
+
+                <div class="airline_product_txt">
+
+                    <p>비엣젯항공 블록 다량 보유</p>
+
+                    <p>베트남 다낭 항공권</p>
+
+                    <table class="airline_product_table" cellpadding= "0" cellspacing= "0">
+
+                        <tr>
+                            <td>
+                                <p>출발일</p>
+                            </td>
+
+                            <td>
+                                <p>무안출발 08:30 ~ 다낭도착 11:40 <span>VJ8559</span></p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <p>도착일</p>
+                            </td>
+
+                            <td>
+                                <p>다낭출발 12:50 ~ 무안도착 19:00 <span>VJ8559</span></p>
+                            </td>
+                        </tr>
+
+                    </table>
+
+                </div>
+                
+            </a><!--airline_product-->
+
+            <a href="../airline_detaile/airline_detaile.html" class="airline_product">
+
+                <div>
+                    <img src="img/airline_product.png">
+
+                    <div class="hover_show_airline">
+                        <p>베트남 다낭 항공권</p>
+                    </div>
+                </div>
+
+                <div class="airline_product_txt">
+
+                    <p>제주항공 블록 다량 보유</p>
+
+                    <p>베트남 다낭 항공권</p>
+
+                    <table class="airline_product_table" cellpadding= "0" cellspacing= "0">
+
+                        <tr>
+                            <td>
+                                <p>출발일</p>
+                            </td>
+
+                            <td>
+                                <p>무안출발 08:30 ~ 다낭도착 11:40 <span>7C528</span></p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <p>도착일</p>
+                            </td>
+
+                            <td>
+                                <p>다낭출발 12:50 ~ 무안도착 19:00 <span>7C529</span></p>
+                            </td>
+                        </tr>
+
+                    </table>
+
+                </div>
+                
+            </a><!--airline_product-->
+
+        </div><!--airline_product_box-->
+
+        <div class="airline_page_btn">
+ 
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+                </ul>
+            </nav>
+
+       </div><!--airline_page_btn-->
+
+    </div><!--airline_product_ex-->
+
+    <footer class="footer_dark">
+
+        <div class="footer_line_01"></div>
+
+        <div class="footer_top">
+            
+            <div class="footer_top_menu">
+
+                <ul>
+                    <li>
+                        <a href="../travel_terms/travel_terms.html">
+                            <p>여행약관</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../privacy_policy/privacy_policy.html">
+                            <p>개인정보처리방침</p>
+                        </a>
+                    </li>
+
+                    <li id="open_emaile">
+                        <a href="javascript:void(0);">
+                            <p>이메일주소무단수집</p>
+                        </a>
+                    </li>
+                </ul>
+
+            </div><!--footer_top_menu-->
+
+            <div class="footer_sns">
+
+                <a href="#">
+                    <img src="../img/instar_icon.png">
+                </a>
+
+                <a href="#">
+                    <img src="../img/kakao_icon.png">
+                </a>
+
+                <a href="#">
+                    <img src="../img/blog_icon.png">
+                </a>
+
+            </div><!--footer_sns-->
+
+        </div><!--footer_top-->
+
+        <div class="footer_line_02"></div>
+
+        <div class="footer_bottom">
+            <p>다크호스투어(주)</p>
+            <p>대표이사 : 황윤석 | 주소 : 광주광역시 서구 상무중앙로 114, 219호(치평동 랜드피아오피스텔)<br>
+            사업자등록번호 : (주)다크호스투어(DARKHORSE TOUR) | 통신판매업신고번호 : 제 2017-광주 서구-0466호 | 대표전화 : 062-228-1119<br>
+            Copyright ⓒ(주)다크호스투어 All Rights Reserved</p>
+        </div>
+    </footer><!--footer_dark-->
+
+    <div class="emaile_no_ex" id="emale_no_ex" style="display: none;">
+
+        <div class="emaile_no_box">
+
+            <div class="emaile_no_title">
+                <p>이메일 무단 수집 거부</p>
+            </div><!--emaile_no_title-->
+
+            <div class="emaile_contents">
+                <p>
+                    본 웹사이트에 게시된 이메일 주소가 전자우편 수집 프로그램이나 그 밖의 기술적 장치 를 이용하여 무단으로 수집되는 것을 거부하며,<br>
+                    이를 위반시 정보통신망법에 의해 형사 처벌됨을 유념하시기 바랍니다.<br><br>
+
+
+                    정보통신망 이용촉진 및 정보보호 등에 관한 법률<br>
+
+                    제50조의2 (전자우편주소의 무단 수집행위 등 금지)<br>
+
+                    누구든지 인터넷 홈페이지 운영자 또는 관리자의 사전 동의 없이 인터넷 홈페이지에서 자동으로 전자우편주소를 수집 하는 프로그램 그 밖의 기술적 장치를 이용하여 전자우편주소를 수집하여서는 아니된다.<br>
+                    누구든지 제1항의 규정을 위반하여 수집된 전자우편주소를 판매ㆍ유통하여서는 아니된다.<br>
+                    누구든지 제1항 및 제2항의 규정에 의하여 수집ㆍ판매 및 유통이 금지된 전자우편주소임을 알고 이를 정보 전송에 이용하여서는 아니된다.<br><br>
+
+
+                    제74조 (벌칙) 다음 각호의 1에 해당하는 자는 1천만원 이하의 벌금에 처한다.<br>
+
+                    제8조제4항의 규정을 위반하여 표시ㆍ판매 또는 판매할 목적으로 진열한 자<br>
+                    제44조의7제1항제1호의 규정을 위반하여 음란한 부호ㆍ문언ㆍ음향ㆍ화상 또는 영상을 배포ㆍ판매ㆍ임대하거나 공연히 전시한 자<br>
+                    제44조의7제1항제3호의 규정을 위반하여 공포심이나 불안감을 유발하는 부호ㆍ문언ㆍ음향ㆍ화상 또는 영상을 반복적으로 상대방에게 도달하게 한 자<br>
+                    제50조제6항의 규정을 위반하여 기술적 조치를 한 자<br>
+                    제50조의8의 규정을 위반하여 광고성 정보를 전송한 자 제50조의2의 규정을 위반하여 전자우편 주소를 수집ㆍ판매ㆍ유통 또는 정보전송에 이용한 자<br>
+                    제50조의8의 규정을 위반하여 광고성 정보를 전송한 자<br>
+                    제53조제4항을 위반하여 등록사항의 변경등록 또는 사업의 양도ㆍ양수 또는 합병ㆍ상속의 신고를 하지 아니한 자<br>
+                </p>
+            </div><!--emaile_contents-->
+
+            <div class="emaile_box_line_01"></div>
+
+            <div class="emaile_close" id="emaile_close_btn">
+                <p style="cursor: pointer;">확인</p>
+            </div>
+
+        </div><!--emaile_no_box-->
+
+    </div><!--emaile_no_ex-->
+
+  
+
+    <script>
+
+
+        function adjustTableSize(){
+
+            var maxHeight = 0;
+
+            if($(window).innerWidth() >= 601){
+                $(".airline_product_table").each(function(){
+
+                var tableHeight = $(this).height();
+
+                if(tableHeight > maxHeight){
+                    maxHeight = tableHeight;
+                }
+
+                });
+
+                $('.airline_product_table').height(maxHeight);
+            }else{
+                $('.airline_product_table').css('height','auto');
+            }
+        }
+
+        //출발지 시트 오픈 함수
+        function StartAirlineOpen(){
+            $('.start_airline_sheet').fadeIn();
+            $('.arrive_airline_sheet').fadeOut();
+            $('.person_airline_sheet').fadeOut();
+        }
+
+        function StartAirlineCloseMobile(){
+            $('.start_airline_sheet').fadeOut();
+        }
+
+        //도착지 시트 오픈 함수
+        function ArriveAirlineOpen(){
+            $('.start_airline_sheet').fadeOut();
+            $('.arrive_airline_sheet').fadeIn();
+            $('.person_airline_sheet').fadeOut();
+        }
+
+        function ArriveAirlineCloseMobile(){
+            $('.arrive_airline_sheet').fadeOut();
+        }
+        
+
+        //가는 날, 오는 날 함수
+        function DayOpen(){
+            $('.start_airline_sheet').fadeOut();
+            $('.arrive_airline_sheet').fadeOut();
+            $('.person_airline_sheet').fadeOut();
+        }
+
+
+        //탑승인원, 탑승좌석 오픈 함수
+        function PersonAirlineOpen(){
+            $('.start_airline_sheet').fadeOut();
+            $('.arrive_airline_sheet').fadeOut();
+            $('.person_airline_sheet').fadeIn();
+        }
+
+        function PersonAirlineClose(){
+            $('.person_airline_sheet').fadeOut();
+        }
+
+        $(document).ready(function() {
+
+    
+            
+            // 페이지 로드 시 테이블 크기 조정 함수 호출
+            adjustTableSize();
+            
+            // 윈도우 크기 변경 시 테이블 크기 조정 함수 호출
+            $(window).resize(function() {
+                adjustTableSize();
+            });
+
+            //input date 오늘 날짜 외 이전 날짜 선택 안 되게
+            const 오늘 = new Date().toISOString().split('T')[0];
+            document.getElementById('day_start_airline').min = 오늘;
+            document.getElementById('day_arrive_airline').min = 오늘;
+
+            //출발지 시트 li p 클릭시 value 값 받고 사라지는 것
+            $(".start_airline_sheet li p").click(function() {
+                    var StartAirlineText = $(this).text();
+                    $("#start_airline").val(StartAirlineText);
+                    $(".start_airline_sheet").fadeOut();
+            });
+
+            //도착지 시트 li p 클릭시 value 값 받고 사라지는 것
+            $('.arrive_airline_sheet li p').click(function() {
+                var ArriveAirlineText = $(this).text();
+                $('#arrive_airline').val(ArriveAirlineText);
+                $(".arrive_airline_sheet").fadeOut();
+            });
+                    
+           // 성인 유아 아동 선택
+            $('#adult_select_f, #child_select_f, #infant_select_f').change(function() {
+            updatePersonAirline();
+            });
+
+            function updatePersonAirline() {
+            const adultValue = $('#adult_select_f').val();
+            const childValue = $('#child_select_f').val();
+            const infantValue = $('#infant_select_f').val();
+
+            const personAirlineValue = `${adultValue}, ${childValue}, ${infantValue}`;
+            $('#person_airline').val(personAirlineValue);
+            }
+
+
+            $('.person_airline_box li p').click(function() {
+                var PersonAirlineText = $(this).text();
+                $('#person_airline_seat').val(PersonAirlineText);
+            });
+
+        });
+
+    </script>
+
+
+
+    <script src="../js/total.js"></script>
+
+      
+</body>
+</html>

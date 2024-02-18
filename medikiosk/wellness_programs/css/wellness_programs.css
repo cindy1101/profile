@@ -1,0 +1,819 @@
+* {margin: 0; padding: 0;}
+li {list-style: none;}
+a {text-decoration: none;}
+img {display: block;}
+
+*::-webkit-scrollbar {
+    display: none; /* 크롬, 사파리, 오페라, 엣지 */
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'min_bold';
+    font-weight: 600;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'bold';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.ttf') format("truetype");
+    font-display: swap;
+}
+
+body {font-family: 'Pretendard'; line-height: 16px;}
+
+p {margin-bottom: 0;}
+
+ul {margin: 0; padding: 0;}
+
+input:not([type]), input[type="text"], input[type="password"], 
+input[type="date"], input[type="datetime"], 
+input[type="datetime-local"], input[type="month"], 
+input[type="week"], input[type="email"], input[type="number"], 
+input[type="search"], input[type="tel"], input[type="time"], 
+input[type="url"], input[type="color"], textarea
+{box-shadow: none;
+background-color: #fff;
+padding: 0;
+margin-bottom: 0;
+outline: none;}
+
+input[type="checkbox"]
+{margin-bottom: 0;}
+
+input[type="checkbox"]+label, input[type="radio"]+label 
+{margin: 0;}
+
+/*페이징버튼 제어*/
+ul.pagination
+{margin-left: 0;}
+
+ul.pagination li
+{height: fit-content;
+margin-left: 0;
+font-size: 16px;}
+
+ul.pagination li a
+{color: #222;
+padding: 5px 10px;
+border: none;
+border-radius: 0;
+text-align: center; line-height: 20px;}
+
+.page-item:not(:first-child) .page-link
+{margin-left: 0;}
+
+/*부트스트랩 클릭시 생기는 선 삭제*/
+.page-link:focus, .page-link:active 
+{outline: none;
+box-shadow: none;
+background-color: transparent !important;}
+
+.page-link:focus, .page-link:hover 
+{background-color: transparent !important;
+color: #51b8ff !important;}
+
+.page-link:focus, .page-link:active 
+{color: #51b8ff !important;
+font-family: bold;}
+
+@media all and (min-width: 1420px)
+{
+    /*비주얼베너*/
+    div.visual_sub_banner
+    {width: 100%; height: 350px;
+    margin-top: 139.44px;
+    overflow: hidden;
+    position: relative;}
+
+    div.visual_sub_banner img
+    {width: 100%; height: 100%;
+    object-fit: cover;
+    transition: all 2s;
+    transform: scale(1.2);}
+
+    p.visual_sub_text
+    {width: 100%;
+    position: absolute;
+    top: calc(50% - 25px); left: 0;
+    text-align: center;
+    opacity: 0;
+    transition: all 2s;
+    font-family: bold; color: #fff;
+    font-size: 42px; line-height: 50px;}
+
+    /*루트*/
+    div.nav_ex
+    {width: 100%;
+    background-color: #51b8ff;}
+
+    nav.nav_box
+    {width: 1400px;
+    margin: 0 auto;
+    overflow: hidden;}
+
+    nav.nav_box>ul
+    {width: 100%;
+    overflow: hidden;}
+
+    nav.nav_box>ul>li
+    {float: left;}
+
+    nav.nav_box>ul>li:nth-child(1)
+    {width: 20px; height: 20px;
+    margin-top: 10px; margin-bottom: 10px;}
+    
+    nav.nav_box>ul>li:nth-child(1) img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    nav.nav_box>ul>li>p
+    {line-height: 40px;
+    color: #fff;
+    margin-left: 10px; margin-right: 10px;}
+
+    nav.nav_box>ul>li>a>p
+    {line-height: 40px;
+    color: #fff;}
+
+    /*전체 박스*/
+    div.wellness_programs_ex
+    {width: 1400px;
+    margin: 100px auto;
+    margin-bottom: 150px;}
+
+    /*타이틀*/
+    div.wellness_programs_title
+    {width: 100%;
+    margin-bottom: 50px;}
+
+    div.wellness_programs_title>p:nth-child(1)
+    {width: 100%;
+    text-align: center; line-height: 30px;
+    font-size: 28px; color: #222;
+    font-family: 'min_bold';
+    margin-bottom: 20px;}
+
+    div.wellness_programs_title>p:nth-child(2)
+    {width: 100%;
+    text-align: center; line-height: 20px;
+    color: #8e8e8e;}
+
+    /*토탈*/
+    div.wellness_programs_total_ex
+    {width: 100%;
+    overflow: hidden;
+    margin-bottom: 50px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd; box-sizing: border-box;}
+
+    div.wellness_programs_total_ex>p:nth-child(1)
+    {width: fit-content;
+    line-height: 35px; color: #222;
+    float: left;}
+
+    div.wellness_programs_total_ex>p>span
+    {color: red;}
+
+    #wellness_location
+    {width: 150px; height: 35px;
+    margin: 0; padding: 0 25px 0 10px;
+    background-color: #fff;
+    background: url('../img/select_dowm_icon.png') no-repeat 97% 50%/15px auto;
+    outline: none;
+    color: #222; font-size: 15px;
+    font-family: 'Pretendard' !important;
+    border: 1px solid #222; box-sizing: border-box;
+    -webkit-appearance: none; /* for chrome */
+    -moz-appearance: none; /*for firefox*/
+    appearance: none;
+    float: right;}
+
+    #wellness_location::-ms-expand
+    {display: none;}
+
+
+    /*상품이 없을 때*/
+    p.no_wellness_programs_product_txt
+    {width: 100%;
+    padding-top: 100px; padding-bottom: 100px;
+    text-align: center; line-height: 20px;
+    color: #333;}
+
+    /*상품*/
+    div.wellness_programs_list_box
+    {width: 100%;
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    margin-bottom: 50px;}
+
+    /*상품*/
+    a.wellness_programs_product
+    {width: 312.5px;
+    margin-right: 50px;
+    margin-bottom: 30px;
+    display: block;}
+
+    a.wellness_programs_product:nth-child(4n+4)
+    {margin-right: 0;}
+
+    /*이미지*/
+    div.wellness_programs_product_img_box
+    {width: 100%; height: 0;
+    position: relative;
+    padding-bottom: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    overflow: hidden;}
+
+    div.wellness_programs_product_img_box img
+    {width: 100%; height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0; left: 0;
+    transition: all 0.3s;}
+
+    a.wellness_programs_product:hover .wellness_programs_product_img_box img
+    {transform: scale(1.05);}
+
+    /*글*/
+    div.wellness_programs_product_txt_box
+    {width: 100%;}
+
+    p.wellness_programs_location
+    {width: fit-content;
+    padding: 5px 10px;
+    line-height: 20px;
+    font-size: 15px;
+    border: 1px solid #51b8ff; box-sizing: border-box;
+    margin-bottom: 10px;
+    color: #51b8ff;
+    transition: all 0.3s;}
+
+    a.wellness_programs_product:hover .wellness_programs_location
+    {background-color: #51b8ff; color: #fff;}
+
+    p.wellness_programs_product_title_txt
+    {width: 100%;
+    font-size: 17px; line-height: 22px;
+    font-family: bold;
+    color: #222;
+    transition: all 0.5s;}
+
+    a.wellness_programs_product:hover .wellness_programs_product_title_txt
+    {color: #51b8ff;}
+
+    /*버튼*/
+    div.page_btn
+    {width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+
+}
+
+@media all and (min-width: 769px) and (max-width : 1419px)
+{
+    /*비주얼베너*/
+    div.visual_sub_banner
+    {width: 100%; height: 350px;
+    margin-top: 139.44px;
+    overflow: hidden;
+    position: relative;}
+
+    div.visual_sub_banner img
+    {width: 100%; height: 100%;
+    object-fit: cover;
+    transition: all 2s;
+    transform: scale(1.2);}
+
+    p.visual_sub_text
+    {width: 100%;
+    position: absolute;
+    top: calc(50% - 25px); left: 0;
+    text-align: center;
+    opacity: 0;
+    transition: all 2s;
+    font-family: bold; color: #fff;
+    font-size: 42px; line-height: 50px;}
+
+     /*루트*/
+    div.nav_ex
+    {width: 100%;
+    background-color: #51b8ff;}
+
+    nav.nav_box
+    {width: 90%;
+    margin: 0 auto;}
+
+    nav.nav_box>ul
+    {width: 100%;
+    overflow: hidden;}
+
+    nav.nav_box>ul>li
+    {width: fit-content;
+    float: left;
+    margin-right: 10px;}
+
+    nav.nav_box>ul>li:nth-child(1)
+    {width: 20px; height: 20px;
+    margin-top: 10px; margin-bottom: 10px;}
+
+    nav.nav_box>ul>li:nth-child(1)>a
+    {width: 100%; height: 100%;
+    display: block;}
+
+    nav.nav_box>ul>li:nth-child(1)>a img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    nav.nav_box>ul>li>p
+    {line-height: 40px; color: #fff;}
+
+    nav.nav_box>ul>li:last-child>a>p
+    {line-height: 40px; color: #fff;}
+
+    nav.nav_box>ul>li:last-child
+    {margin-right: 0;}
+
+    /*전체 박스*/
+    div.wellness_programs_ex
+    {width: 90%;
+    margin: 100px auto;
+    margin-bottom: 150px;}
+
+    /*타이틀*/
+    div.wellness_programs_title
+    {width: 100%;
+    margin-bottom: 50px;}
+
+    div.wellness_programs_title>p:nth-child(1)
+    {width: 100%;
+    text-align: center; line-height: 30px;
+    font-size: 28px; color: #222;
+    font-family: 'min_bold';
+    margin-bottom: 20px;}
+
+    div.wellness_programs_title>p:nth-child(2)
+    {width: 100%;
+    margin: 0 auto;
+    word-break: keep-all;
+    text-align: center; line-height: 25px;
+    color: #8e8e8e;}
+    
+    /*토탈*/
+    div.wellness_programs_total_ex
+    {width: 100%;
+    overflow: hidden;
+    margin-bottom: 50px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd; box-sizing: border-box;}
+
+    div.wellness_programs_total_ex>p:nth-child(1)
+    {width: fit-content;
+    line-height: 35px; color: #222;
+    float: left;}
+
+    div.wellness_programs_total_ex>p>span
+    {color: red;}
+
+    #wellness_location
+    {width: 150px; height: 35px;
+    margin: 0; padding: 0 25px 0 10px;
+    background-color: #fff;
+    background: url('../img/select_dowm_icon.png') no-repeat 97% 50%/15px auto;
+    outline: none;
+    color: #222; font-size: 15px;
+    font-family: 'Pretendard' !important;
+    border: 1px solid #222; box-sizing: border-box;
+    -webkit-appearance: none; /* for chrome */
+    -moz-appearance: none; /*for firefox*/
+    appearance: none;
+    float: right;}
+
+    #wellness_location::-ms-expand
+    {display: none;}
+
+    /*상품이 없을 때*/
+    p.no_wellness_programs_product_txt
+    {width: 100%;
+    padding-top: 100px; padding-bottom: 100px;
+    text-align: center; line-height: 20px;
+    color: #333;}
+
+    /*전체 박스*/
+    div.wellness_programs_list_ex
+    {width: 100%;
+    margin: 0 auto;}
+
+    /*상품 리스트*/
+    div.wellness_programs_list_box
+    {width: 100%;
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    overflow: hidden;}
+    
+    /*상품*/
+    a.wellness_programs_product
+    {width: 23.5%;
+    margin-right: 2%;
+    margin-bottom: 30px;}
+
+    a.wellness_programs_product:nth-child(4n+4)
+    {margin-right: 0;}
+
+    /*이미지*/
+    div.wellness_programs_product_img_box
+    {width: 100%; height: 0;
+    position: relative;
+    padding-bottom: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    overflow: hidden;}
+
+    div.wellness_programs_product_img_box img
+    {width: 100%; height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0; left: 0;
+    transition: all 0.3s;}
+
+    a.wellness_programs_product:hover .wellness_programs_product_img_box img
+    {transform: scale(1.05);}
+    
+    /*글*/
+    div.wellness_programs_product_txt_box
+    {width: 100%;}
+
+    p.wellness_programs_location
+    {width: fit-content;
+    padding: 5px 10px;
+    line-height: 20px;
+    font-size: 15px;
+    border: 1px solid #51b8ff; box-sizing: border-box;
+    margin-bottom: 10px;
+    color: #51b8ff;
+    transition: all 0.3s;}
+
+    a.wellness_programs_product:hover .wellness_programs_location
+    {background-color: #51b8ff; color: #fff;}
+
+    p.wellness_programs_product_title_txt
+    {width: 100%;
+    font-size: 17px; line-height: 22px;
+    font-family: bold;
+    color: #222;
+    transition: all 0.5s;}
+
+    a.wellness_programs_product:hover .wellness_programs_product_title_txt
+    {color: #51b8ff;}
+
+    /*페이지버튼*/
+    div.page_btn
+    {width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+}
+
+@media all and (min-width: 769px) and (max-width: 1279px)
+{
+    /*비주얼배너*/
+    div.visual_sub_banner
+    {margin-top: 0;}
+
+    /*상품*/
+    div.wellness_programs_list_box
+    {width: 100%;
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    overflow: hidden;
+    margin-bottom: 40px;}
+
+    a.wellness_programs_product
+    {width: 30.6666666%;
+    margin-right: 4%;
+    margin-bottom: 40px;}
+
+    a.wellness_programs_product:nth-child(4n+4)
+    {margin-right: 4%;}
+
+    a.wellness_programs_product:nth-child(3n+3)
+    {margin-right: 0;}
+
+    /*위치*/
+    p.wellness_programs_location
+    {width: fit-content;
+    padding: 5px 10px;
+    line-height: 20px;
+    font-size: 14px;
+    border: 1px solid #51b8ff; box-sizing: border-box;
+    margin-bottom: 10px;
+    color: #51b8ff;
+    transition: all 0.3s;}
+
+}
+
+@media all and (min-width: 769px) and (max-width: 1024px)
+{
+    /*상품*/
+    div.wellness_programs_list_box
+    {width: 100%;
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    overflow: hidden;
+    margin-bottom: 50px;}
+
+    a.wellness_programs_product
+    {width: 32%;
+    margin-right: 2%;
+    margin-bottom: 30px;}
+
+    a.wellness_programs_product:nth-child(4n+4)
+    {margin-right: 2%;}
+
+    a.wellness_programs_product:nth-child(3n+3)
+    {margin-right: 0;}
+}
+
+@media all and (max-width : 768px)
+{
+    /*비주얼베너*/
+    div.visual_sub_banner
+    {width: 100%; height: 250px;
+    overflow: hidden;
+    position: relative;}
+
+    div.visual_sub_banner img
+    {width: 100%; height: 100%;
+    object-fit: cover;
+    transition: all 2s;
+    transform: scale(1.2);}
+
+    p.visual_sub_text
+    {width: 100%;
+    position: absolute;
+    top: calc(50% - 20px); left: 0;
+    text-align: center;
+    opacity: 0;
+    transition: all 2s;
+    font-family: bold; color: #fff;
+    font-size: 32px; line-height: 40px;}
+    
+    /*루트*/
+    div.nav_ex
+    {width: 100%;
+    background-color: #51b8ff;}
+
+    nav.nav_box
+    {width: 90%;
+    margin: 0 auto;}
+
+    nav.nav_box>ul
+    {width: 100%;
+    overflow: hidden;}
+
+    nav.nav_box>ul>li
+    {float: left;}
+
+    nav.nav_box>ul>li:nth-child(1)
+    {width: 20px; height: 20px;
+    margin-top: 10px; margin-bottom: 10px;
+    margin-right: 10px;}
+
+    nav.nav_box>ul>li:nth-child(1)>a img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    nav.nav_box>ul>li:nth-child(2)
+    {width: fit-content;
+    margin-right: 10px;}
+
+    nav.nav_box>ul>li:nth-child(2)>p
+    {font-size: 15px; line-height: 40px; color: #fff;}
+
+    nav.nav_box>ul>li:nth-child(3)
+    {width: fit-content;
+    max-width: calc(100% - 50px);}
+
+    nav.nav_box>ul>li:nth-child(3)>a>p
+    {font-size: 15px; line-height: 40px; 
+    color: #fff;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;}
+
+    /*전체 박스*/
+    div.wellness_programs_ex
+    {width: 90%;
+    margin: 50px auto;
+    margin-bottom: 80px;}
+
+    /*타이틀*/
+    div.wellness_programs_title
+    {width: 100%;
+    margin-bottom: 30px;}
+
+    div.wellness_programs_title>p:nth-child(1)
+    {width: 100%;
+    text-align: center; line-height: 30px;
+    font-size: 24px; color: #222;
+    font-family: 'min_bold';
+    word-break: keep-all;
+    margin-bottom: 10px;}
+
+    div.wellness_programs_title>p:nth-child(2)
+    {width: 90%;
+    margin: 0 auto;
+    font-size: 15px; line-height: 20px; text-align: center;
+    color: #555; word-break: keep-all;}
+
+    /*토탈*/
+    div.wellness_programs_total_ex
+    {width: 100%;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ddd; box-sizing: border-box;
+    overflow: hidden;}
+
+    div.wellness_programs_total_ex>p:nth-child(1)
+    {width: 100%;
+    font-size: 15px; color: #222; line-height: 20px;
+    margin-bottom: 5px;}
+
+    div.wellness_programs_total_ex>p>span
+    {color: red;}
+
+    #wellness_location
+    {width: 150px; height: 35px;
+    margin: 0; padding: 0 25px 0 10px;
+    background-color: #fff;
+    background: url('../img/select_dowm_icon.png') no-repeat 97% 50%/15px auto;
+    outline: none;
+    color: #222; font-size: 15px;
+    font-family: 'Pretendard' !important;
+    border: 1px solid #222; box-sizing: border-box;
+    -webkit-appearance: none; /* for chrome */
+    -moz-appearance: none; /*for firefox*/
+    appearance: none;
+    float: right;}
+
+    #wellness_location::-ms-expand
+    {display: none;}
+
+    /*상품 없을 때*/
+    p.no_wellness_programs_product_txt
+    {width: 100%;
+    padding-top: 100px; padding-bottom: 100px;
+    font-size: 15px; line-height: 20px; color: #333;
+    text-align: center;}
+
+    /*상품*/
+    div.wellness_programs_list_ex
+    {width: 100%;}
+
+    div.wellness_programs_list_box
+    {width: 100%;
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    overflow: hidden;
+    margin-bottom: 30px;}
+
+    a.wellness_programs_product
+    {width: 49%;
+    margin-right: 2%;
+    margin-bottom: 20px;}
+
+    a.wellness_programs_product:nth-child(2n+2)
+    {margin-right: 0;}
+
+    /*이미지*/
+    div.wellness_programs_product_img_box
+    {width: 100%; height: 0;
+    position: relative;
+    padding-bottom: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    overflow: hidden;}
+
+    div.wellness_programs_product_img_box img
+    {width: 100%; height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0; left: 0;}
+    
+    /*글*/
+    div.wellness_programs_product_txt_box
+    {width: 100%;}
+
+    p.wellness_programs_location
+    {width: fit-content;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    color: #fff;
+    background-color: #51b8ff;
+    font-size: 14px; line-height: 20px;}
+
+    p.wellness_programs_product_title_txt
+    {width: 100%;
+    font-size: 17px; line-height: 22px;
+    font-family: bold;
+    color: #222;
+    word-break: break-all;}
+
+    /*페이지버튼*/
+    div.page_btn
+    {width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+}
+
+@media all and (max-width: 600px)
+{   
+    /*비주얼배너*/
+    div.visual_sub_banner
+    {width: 100%; height: 200px;
+    overflow: hidden;
+    position: relative;}
+
+    /*비주얼 배너*/
+    div.visual_sub_banner img
+    {width: 100%; height: 100%;
+    object-fit: cover;
+    transition: all 2s;
+    transform: scale(1.2);}
+
+    p.visual_sub_text
+    {width: 90%;
+    position: absolute;
+    top: calc(50% + 5px); left: 5%;
+    text-align: center;
+    opacity: 0;
+    transition: all 2s;
+    word-break: keep-all;
+    font-family: bold; color: #fff;
+    font-size: 24px; line-height: 30px;}
+
+    /*상품*/
+    div.wellness_programs_list_box
+    {width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    overflow: hidden;
+    margin-bottom: 30px;}
+
+    a.wellness_programs_product
+    {width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;}
+
+    a.wellness_programs_product:nth-child(2n+2)
+    {margin-right: 0;}
+}
+
+@media all and (max-width: 356px)
+{
+    p.visual_sub_text_long
+    {width: 90%;
+    position: absolute;
+    top: calc(50% - 15px); left: 5%;
+    text-align: center;
+    opacity: 0;
+    transition: all 2s;
+    word-break: keep-all;
+    font-family: bold; color: #fff;
+    font-size: 24px; line-height: 30px;}
+}
+

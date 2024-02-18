@@ -1,0 +1,287 @@
+/*이미지 스크롤 막기*/
+.scrollOff
+{width: 100%; height: 100vh;
+position: fixed;
+top: 0; left: 0;
+overflow : hidden !important;}
+
+
+@media all and (min-width: 1420px)
+{   
+    header.tplus_mobile_header {display: none;}
+
+    /*헤더*/
+    header.tplus_header
+    {width: 100%;
+    position: fixed;
+    top: 0; left: 0;
+    padding-top: 20px; padding-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(63, 24, 24, 0.25);
+    z-index: 99;
+    background: #fff;
+    transition: all 0.2s;}
+
+    header.tplus_header.on
+    {background-color: transparent;
+    box-shadow : none;}
+
+    div.header_wrap
+    {width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;}
+
+    a.header_logo
+    {width: 151px; 
+    display: block;}
+
+    a.header_logo img
+    {width: 100%; height: auto;}
+
+    nav.header_gnb
+    {width: fit-content;
+    overflow: hidden;}
+
+    nav.header_gnb ul li
+    {width: fit-content;
+    float: left;
+    padding-left: 15px; padding-right: 15px;}
+
+    nav.header_gnb ul li a p
+    {color: #000;
+    font-weight: 600;
+    transition: all 0.2s;}
+
+    nav.header_gnb ul li a p.on
+    {color: #fff;}
+
+    nav.header_gnb ul li a:hover p
+    {color: #ff2022;}
+    
+}
+
+
+@media all and (min-width: 769px) and (max-width : 1419px)
+{   
+    /*헤더*/
+    header.tplus_header
+    {width: 100%;
+    position: fixed;
+    top: 0; left: 0;
+    padding-top: 20px; padding-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+    z-index: 99;
+    background: #fff;
+    transition: all 0.2s;}
+
+    header.tplus_header.on
+    {background-color: transparent;
+    box-shadow : none;}
+
+    div.header_wrap
+    {width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;}
+
+    a.header_logo
+    {width: 151px; 
+    display: block;}
+
+    a.header_logo img
+    {width: 100%; height: auto;}
+
+    nav.header_gnb
+    {width: fit-content;
+    overflow: hidden;}
+
+    nav.header_gnb ul li
+    {width: fit-content;
+    float: left;
+    padding-left: 15px; padding-right: 15px;}
+
+    nav.header_gnb ul li a p
+    {color: #000;
+    font-weight: 600;
+    transition: all 0.2s;}
+
+    nav.header_gnb ul li a p.on
+    {color: #fff;}
+
+    nav.header_gnb ul li a:hover p
+    {color: #ff2022;}
+
+    /*모바일 헤더*/
+    header.tplus_mobile_header {display: none;}
+    
+}
+
+
+@media all and (min-width: 769px) and (max-width : 1024px)
+{
+    header.tplus_header
+    {display: none;}
+
+    header.tplus_mobile_header
+    {display: block;
+    width: 100%;
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 99;
+    padding-top: 15px; padding-bottom: 15px;
+    background: #fff;
+    box-shadow: 1px 0px 5px rgba(0, 0, 0, 0.25);}
+
+    div.tplus_mobile_header_top
+    {width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;}
+
+    a.mobile_header_logo
+    {width: 150px;
+    display: block;}
+
+    a.mobile_header_logo img
+    {width: 100%; height: auto;}
+
+    div.menu_open_m
+    {width: 30px; height: 30px;
+    cursor: pointer;}
+
+    div.menu_open_m img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    div.tplus_mobile_header_sheet
+    {width: 100%; height: 100vh;
+    background-color: #fff;
+    position: absolute;
+    top: 0; right: -100%;
+    z-index: 9;
+    transition: all 0.3s;}
+
+    div.tplus_mobile_header_sheet_cont
+    {width: 90%;
+    margin: 0 auto;
+    padding: 5% 0;
+    overflow: hidden;}
+
+    div.menu_close_m
+    {width: 30px; height: 30px;
+    margin-left: calc(100% - 30px);
+    margin-bottom: 50px;}
+
+    div.menu_close_m img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    nav.tplus_mobile_lnb
+    {width: 100%;}
+
+    nav.tplus_mobile_lnb ul li
+    {width: 100%;
+    border-bottom: 1px solid #ddd; box-sizing: border-box;}
+
+    nav.tplus_mobile_lnb ul li a p
+    {font-size: 22px;
+    font-weight: 600; color: #000;
+    padding: 30px 0; line-height: 28px;
+    transition: all 0.3s;}
+
+    nav.tplus_mobile_lnb ul li a:hover p
+    {transform: translateY(-5px);
+    color: #ff2022;}
+
+}
+
+
+@media all and (max-width: 768px)
+{   
+    header.tplus_header
+    {display: none;}
+
+    header.tplus_mobile_header
+    {width: 100%;
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 99;
+    padding-top: 15px; padding-bottom: 15px;
+    background: #fff;
+    box-shadow: 1px 0px 5px rgba(0, 0, 0, 0.25);}
+
+    div.tplus_mobile_header_top
+    {width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;}
+
+    a.mobile_header_logo
+    {display: block;
+    width: 130px;}
+
+    a.mobile_header_logo img
+    {width: 100%; height: auto;}
+
+    div.menu_open_m
+    {width: 30px; height: 30px;
+    cursor: pointer;}
+
+    div.menu_open_m img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    div.tplus_mobile_header_sheet
+    {width: 100%; height: 100vh;
+    background: #fff;
+    position: absolute;
+    top: 0; right: -100%;
+    z-index: 9;
+    transition: all 0.3s;}
+
+    div.tplus_mobile_header_sheet_cont
+    {width: 90%;
+    margin: 0 auto;
+    padding: 5% 0;
+    overflow: hidden;}
+
+    div.menu_close_m
+    {width: 30px; height: 30px;
+    margin-left: calc(100% - 30px);
+    margin-bottom: 50px;}
+
+    div.menu_close_m img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    nav.tplus_mobile_lnb
+    {width: 100%;}
+
+    nav.tplus_mobile_lnb ul li
+    {width: 100%;
+    border-bottom: 1px solid #ddd; box-sizing: border-box;}
+
+    nav.tplus_mobile_lnb ul li a p
+    {font-size: 18px;
+    font-weight: 700; color: #000;
+    padding: 25px 0; line-height: 25px;}
+}
+
+@media all and (max-width: 600px)
+{
+    a.mobile_header_logo
+    {display: block;
+    width: 110px;}
+
+    div.menu_close_m
+    {width: 30px; height: 30px;
+    margin-left: calc(100% - 30px);
+    margin-bottom: 30px;}
+}
+

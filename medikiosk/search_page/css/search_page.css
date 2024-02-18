@@ -1,0 +1,2146 @@
+* {margin: 0; padding: 0;}
+li {list-style: none;}
+a {text-decoration: none;}
+img {display: block;}
+
+*::-webkit-scrollbar {
+    display: none; /* 크롬, 사파리, 오페라, 엣지 */
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'min_bold';
+    font-weight: 600;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'bold';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.ttf') format("truetype");
+    font-display: swap;
+}
+
+body {font-family: 'Pretendard'; line-height: 16px;}
+
+p {margin-bottom: 0;}
+
+ul {margin: 0; padding: 0;}
+
+input:not([type]), input[type="text"], input[type="password"], 
+input[type="date"], input[type="datetime"], 
+input[type="datetime-local"], input[type="month"], 
+input[type="week"], input[type="email"], input[type="number"], 
+input[type="search"], input[type="tel"], input[type="time"], 
+input[type="url"], input[type="color"], textarea
+{box-shadow: none;
+background-color: #fff;
+padding: 0;
+margin-bottom: 0;
+outline: none;}
+
+input[type="checkbox"]
+{margin-bottom: 0;}
+
+input[type="checkbox"]+label, input[type="radio"]+label 
+{margin: 0;}
+
+@media all and (min-width: 1420px)
+{   
+    /*비주얼베너*/
+    div.visual_sub_banner
+    {width: 100%; height: 350px;
+    margin-top: 139.44px;
+    overflow: hidden;
+    position: relative;}
+
+    div.visual_sub_banner img
+    {width: 100%; height: 100%;
+    object-fit: cover;
+    transition: all 2s;
+    transform: scale(1.2);}
+
+    p.visual_sub_text
+    {width: 100%;
+    position: absolute;
+    top: calc(50% - 25px); left: 0;
+    text-align: center;
+    opacity: 0;
+    transition: all 2s;
+    font-family: bold; color: #fff;
+    font-size: 42px; line-height: 50px;}
+
+    /*검색 결과*/
+    div.search_ex
+    {width: 1400px;
+    margin: 100px auto;
+    margin-bottom: 150px;}
+
+    /*검색 결과 타이틀*/
+    div.search_title
+    {width: 100%;
+    margin-bottom: 30px;}
+
+    div.search_title>p
+    {width: 100%;
+    font-size: 24px; color: #222; line-height: 30px;
+    word-break: keep-all;}
+
+    div.search_title>p>span
+    {font-family: 'min_bold'; color: #51b8ff;}
+
+    /*체크박스*/
+    input[type="checkbox"].search_product_box
+    {display: none;}
+
+    /*라벨 박스*/
+    div.search_label_ex
+    {width: 100%; height: 60px;
+    border: 1px solid #51b8ff; box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 5px;
+    margin-bottom: 50px;}
+
+    div.search_label_ex>label
+    {width: 25%; height: 60px;
+    display: block;
+    float: left;
+    transition: all 0.3s;
+    background-color: #fff;}
+
+    div.search_label_ex>label>p
+    {width: 100%;
+    color: #51b8ff;
+    text-align: center; line-height: 60px;
+    transition: all 0.3s;}
+
+    div.search_label_ex>label:nth-child(1)
+    {border-radius: 0 5px 5px 0;}
+
+    div.search_label_ex>label:nth-child(2)
+    {border-radius: 5px 5px 5px 5px;}
+
+    div.search_label_ex>label:nth-child(3)
+    {border-radius: 5px 5px 5px 5px;}
+
+    div.search_label_ex>label:nth-child(4)
+    {border-radius: 5px 0 0 5px;}
+
+
+    /*검색 결과 시트*/
+    div.search_product_sheet
+    {width: 100%;}
+    
+    /*검색 결과 타이틀*/
+    div.search_product_title
+    {width: 100%;
+    padding-bottom: 15px; margin-bottom: 30px;
+    border-bottom: 1px solid #222; box-sizing: border-box;
+    overflow: hidden;}
+
+    div.search_product_title>p:nth-child(1)
+    {width: fit-content;
+    line-height: 45px;
+    font-size: 22px; font-family: 'min_bold'; color: #222;
+    float: left;}
+
+    a.more_btn_search
+    {width: 120px; height: 45px;
+    border-radius: 22.5px;
+    border: 1px solid #222; box-sizing: border-box;
+    display: block;
+    float: right;
+    transition: all 0.3s;}
+
+    a.more_btn_search>p
+    {width: 100%;
+    text-align: center; line-height: 45px; color: #222;
+    transition: all 0.3s;}
+
+    a.more_btn_search:hover {background-color: #51b8ff; border: none;}
+
+    a.more_btn_search:hover>p {color: #fff;}
+
+    /*검색 결과 없을 때*/
+    p.no_search_txt
+    {width: 100%;
+    text-align: center; line-height: 25px;
+    color: #222;
+    padding-top: 100px; padding-bottom: 100px;}
+
+    /*검색 결과 - 병원, 웰니스, 컨시어징*/
+    div.search_product_list_ex
+    {width: 100%;
+    display: flex;
+    align-items: stretch;
+    overflow: hidden;}
+
+    /*검색 결과 상품*/
+    a.search_product
+    {display: block;
+    width: 312.5px;
+    margin-right: 50px;}
+
+    a.search_product:nth-child(4n+4)
+    {margin-right: 0;}
+    
+    /*이미지*/
+    div.search_product_img
+    {width: 100%; height: 0;
+    position: relative;
+    padding-bottom: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    overflow: hidden;}
+
+    div.search_product_img img
+    {width: 100%; height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0; left: 0;
+    transition: all 0.3s;}
+
+    a.search_product:hover .search_product_img img
+    {transform: scale(1.05);}
+
+     
+    /*병원 리스트*/
+    p.hospital_product_name
+    {width: 100%;
+    font-size: 17px; line-height: 22px;
+    font-family: bold;
+    color: #222;
+    margin-bottom: 15px;
+    transition: all 0.5s;}
+
+    a.hospital_product:hover .hospital_product_name
+    {color: #51b8ff;}
+
+    p.hospital_product_price
+    {width: 100%;
+    line-height: 25px; color: red;
+    text-align: right;}
+
+    p.hospital_product_price>span
+    {font-family: bold; font-size: 17px;}
+
+
+
+    /*웰니스 마진*/
+    div.buauty_product_list
+    {width: 100%;
+    margin-bottom: 50px;}
+
+    div.marine_product_list
+    {width: 100%;
+    margin-bottom: 50px;}
+
+    div.tour_product_list
+    {width: 100%;
+    margin-bottom: 50px;}
+
+    /*글*/
+    div.wellness_programs_product_txt_box
+    {width: 100%;}
+
+    p.wellness_programs_location
+    {width: fit-content;
+    padding: 5px 10px;
+    line-height: 20px;
+    font-size: 15px;
+    border: 1px solid #51b8ff; box-sizing: border-box;
+    margin-bottom: 10px;
+    color: #51b8ff;
+    transition: all 0.3s;}
+
+    a.search_product:hover .wellness_programs_location
+    {background-color: #51b8ff; color: #fff;}
+
+    p.wellness_programs_product_title_txt
+    {width: 100%;
+    font-size: 17px; line-height: 22px;
+    font-family: bold;
+    color: #222;
+    transition: all 0.5s;}
+
+    a.search_product:hover .wellness_programs_product_title_txt
+    {color: #51b8ff;}
+
+
+
+    /*자동차*/
+    div.car_product_list
+    {width: 100%;
+    margin-bottom: 50px;}
+
+    /*호텔*/
+    div.hotel_product_list
+    {width: 100%;
+    margin-bottom: 50px;}
+
+    /*레스토랑*/
+    div.restaurants_product_list
+    {width: 100%;
+    margin-bottom: 50px;}
+
+    /*글*/
+    div.concierge_product_txt_box
+    {width: 100%;}
+
+    /*호텔 위치, 몇 성인지*/
+    div.hotels_location_box
+    {width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;}
+
+    div.hotels_location_box>p
+    {width: fit-content;
+    padding: 5px 10px; line-height: 20px;
+    font-size: 15px;
+    transition: all 0.3s;}
+
+    div.hotels_location_box>p:nth-child(1)
+    {margin-right: 5px;
+    border: 1px solid #51b8ff; box-sizing: border-box;
+    color: #51b8ff;}
+
+    div.hotels_location_box>p:nth-child(2)
+    {border: 1px solid #ff9600; box-sizing: border-box;
+    color: #ff9600;}
+
+    a.search_product:hover .hotels_location_box>p:nth-child(1)
+    {background-color: #51b8ff; color: #fff;}
+
+    a.search_product:hover .hotels_location_box>p:nth-child(2)
+    {background-color: #ff9600; color: #fff;}
+
+
+    /*자동차 위치, 차량 종류*/
+    div.cars_location_box
+    {width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;}
+
+    div.cars_location_box>p
+    {width: fit-content;
+    padding: 5px 10px; line-height: 20px;
+    font-size: 15px;
+    transition: all 0.3s;}
+
+    div.cars_location_box>p:nth-child(1)
+    {margin-right: 5px;
+    border: 1px solid #51b8ff; box-sizing: border-box;
+    color: #51b8ff;}
+
+    div.cars_location_box>p:nth-child(2)
+    {border: 1px solid #222; box-sizing: border-box;
+    color: #222;}
+
+    a.search_product:hover .cars_location_box>p:nth-child(1)
+    {background-color: #51b8ff; color: #fff;}
+
+    a.search_product:hover .cars_location_box>p:nth-child(2)
+    {background-color: #222; color: #fff;}
+
+
+    /*레스토랑 위치*/
+    p.restaurants_location
+    {width: fit-content;
+    padding: 5px 10px; line-height: 20px;
+    font-size: 15px;
+    transition: all 0.3s;
+    border: 1px solid #51b8ff; box-sizing: border-box;
+    color: #51b8ff;
+    margin-bottom: 10px;}
+
+    a.search_product:hover .restaurants_location
+    {background-color: #51b8ff; color: #fff;}
+
+    /*타이틀*/
+    p.concierge_product_title
+    {width: 100%;
+    font-size: 17px; line-height: 22px;
+    font-family: bold;
+    color: #222;
+    transition: all 0.3s;
+    margin-bottom: 15px;}
+
+    a.search_product:hover .concierge_product_title
+    {color: #51b8ff;}
+
+    /*가격*/
+    div.concierge_fee_box
+    {width: fit-content;
+    float: right;}
+
+    div.concierge_fee_box>p
+    {width: 100%;
+    line-height: 25px;
+    text-align: right;}
+
+    div.concierge_fee_box>p:nth-child(1)
+    {color: #555; font-size: 15px;}
+
+    div.concierge_fee_box>p:nth-child(2)
+    {font-size: 18px; color: red; font-family: 'min_bold';}
+
+    /*가격 - 레스토랑*/
+    p.restaurants_fee
+    {width: 100%;
+    line-height: 25px; color: red;
+    text-align: right;}
+
+    p.restaurants_fee>span
+    {font-family: bold; font-size: 17px;}
+
+ 
+
+    /*통역/번역마진*/
+    div.interpreter_product_list
+    {width: 100%;
+    margin-bottom: 50px;}
+
+    div.translation_product_list
+    {width: 100%;}
+
+    /*통역*/
+    div.interpreter_product_list_ex
+    {width: 100%;}
+
+    a.interpreter_contents_ex
+    {width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    padding-top: 20px; padding-bottom: 20px;
+    display: block;
+    margin-bottom: 20px;}
+
+    a.interpreter_contents_ex:last-child {margin-bottom: 0;}
+
+    div.interpreter_contents_box
+    {width: calc(100% - 40px);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;}
+
+    /*이미지*/
+    div.interpreter_contents_img_box
+    {width: 300px; height: 0;
+    padding-bottom: 25.908%;
+    border-radius: 5px;
+    margin-right: 30px;
+    position: relative;
+    overflow: hidden;}
+
+    div.interpreter_contents_img_box img
+    {width: 100%; height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0; left: 0;}
+
+    div.interpreter_contents_txt_box
+    {width: calc(100% - 330px);
+    overflow: hidden;}
+
+    p.interpreter_contents_name
+    {width: 100%;
+    font-size: 22px; line-height: 30px; font-family: bold;
+    color: #222; word-break: keep-all;
+    margin-bottom: 10px;}
+
+    /*사용가능 언어*/
+    div.available_languages_ex
+    {width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+    overflow: hidden;}
+    
+    div.available_languages_ex>p
+    {width: fit-content;
+    padding-left: 5px; padding-right: 5px;
+    font-size: 15px;
+    margin-right: 10px; line-height: 25px;
+    margin-bottom: 5px;
+    word-break: break-all;}
+
+    div.available_languages_ex>p:last-child
+    {margin-right: 0;}
+
+    p.available_languages_e
+    {border: 1px solid #793FDF; box-sizing: border-box;
+    color: #793FDF;}
+
+    p.available_languages_j
+    {border: 1px solid #7091F5; box-sizing: border-box;
+    color: #7091F5;}
+
+    p.available_languages_c
+    {border: 1px solid #BB2525; box-sizing: border-box;
+    color: #BB2525;}
+
+    p.available_languages_r
+    {border: 1px solid #EA1179; box-sizing: border-box;
+    color: #EA1179;}
+
+    p.available_languages_m
+    {border: 1px solid #3F2E3E; box-sizing: border-box;
+    color: #3F2E3E;}
+
+    p.available_languages_v
+    {border: 1px solid #FF6666; box-sizing: border-box;
+    color: #FF6666;}
+
+    /*설명*/
+    p.interpreter_contents_introduction
+    {width: 100%;
+    font-size: 15px; color: #555; line-height: 20px;
+    margin-bottom: 20px;
+    word-break: keep-all;}
+
+    /*총가격*/
+    div.interpreter_pay_ex
+    {width: 100%;                                                                                                                                                            
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;}
+
+    div.interpreter_pay_box
+    {width: fit-content;
+    max-width: 100%;}
+
+    div.meet_pay_box
+    {width: fit-content;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    overflow: hidden;}
+
+    div.meet_pay_box>p:nth-child(1)
+    {width: 130px;
+    line-height: 30px; color: red;
+    margin-right: 20px;}
+
+    div.meet_pay_box>p:nth-child(2)
+    {width: fit-content;
+    max-width: calc(100% - 150px);
+    font-size: 22px; line-height: 30px; text-align: right;
+    font-family: bold; color: red;}
+
+    div.meet_pay_box>p:nth-child(2)>span 
+    {font-family: 'Pretendard';
+    font-size: 15px;}
+
+    div.not_meet_pay_box
+    {width: fit-content;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;}
+
+    div.not_meet_pay_box>p:nth-child(1)
+    {width: 130px;
+    line-height: 20px; color: red;
+    margin-right: 20px;}
+
+    div.not_meet_pay_box>p:nth-child(2)
+    {width: fit-content;
+    max-width: calc(100% - 150px);
+    font-size: 22px; line-height: 30px; text-align: right;
+    font-family: bold; color: red;}
+
+    div.not_meet_pay_box>p:nth-child(2)>span 
+    {font-family: 'Pretendard';
+    font-size: 15px;}
+
+    /*더보기 버튼*/                  
+    p.more_interpreter_btn
+    {width: 200px; height: 50px;
+    border-radius: 5px;
+    float: right;
+    text-align: center; line-height: 50px;
+    background-color: #51b8ff; color: #fff;
+    transition: all 0.3s;}
+
+    p.more_interpreter_btn:hover
+    {background-color: #1f4e79;}
+
+    /*번역*/
+    div.translation_product_list_ex
+    {width: 100%;}
+
+    a.translation_contents_ex
+    {width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    padding-top: 20px; padding-bottom: 20px;
+    display: block;
+    margin-bottom: 20px;}
+
+    a.translation_contents_ex:last-child {margin-bottom: 0;}
+
+    div.translation_contents_box
+    {width: calc(100% - 40px);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;}
+
+    /*이미지*/
+    div.translation_contents_img_box
+    {width: 300px; height: 0;
+    padding-bottom: 25.908%;
+    border-radius: 5px;
+    margin-right: 30px;
+    position: relative;
+    overflow: hidden;}
+
+    div.translation_contents_img_box img
+    {width: 100%; height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0; left: 0;}
+
+    /*텍스트 박스*/
+    div.translation_contents_txt_box
+    {width: calc(100% - 330px);
+    overflow: hidden;}
+
+    p.translation_contents_name
+    {width: 100%;
+    font-size: 22px; line-height: 30px; font-family: bold;
+    color: #222; word-break: keep-all;
+    margin-bottom: 10px;}
+
+    /*설명*/
+    p.translation_contents_introduction
+    {width: 100%;
+    font-size: 15px; color: #555; line-height: 20px;
+    margin-bottom: 20px;
+    word-break: keep-all;}
+
+    /*가격*/
+    div.translation_contents_pay_box
+    {width: 100%;
+    margin-bottom: 30px;
+    overflow: hidden;}
+
+    div.translation_contents_pay_box>div
+    {width: fit-content;
+    float: right;
+    display: flex;
+    align-items: center;}
+
+    div.translation_contents_pay_box>div>p:nth-child(1)
+    {width: 65px;
+    color: red; line-height: 30px;
+    margin-right: 10px;}
+
+    div.translation_contents_pay_box>div>p:nth-child(2)
+    {width: fit-content;
+    max-width: calc(100% - 75px);
+    color: red; font-size: 22px; font-family: bold; line-height: 30px;}
+
+    div.translation_contents_pay_box>div>p:nth-child(2)>span 
+    {font-family: 'Pretendard';
+    font-size: 15px;}
+
+    /*더보기 버튼*/                  
+    p.more_translation_btn
+    {width: 200px; height: 50px;
+    border-radius: 5px;
+    float: right;
+    text-align: center; line-height: 50px;
+    background-color: #51b8ff; color: #fff;
+    transition: all 0.3s;}
+
+    p.more_translation_btn:hover
+    {background-color: #1f4e79;}
+
+ 
+}
+
+@media all and (min-width: 769px) and (max-width : 1419px)
+{   
+    /*비주얼베너*/
+    div.visual_sub_banner
+    {width: 100%; height: 350px;
+    margin-top: 139.44px;
+    overflow: hidden;
+    position: relative;}
+
+    div.visual_sub_banner img
+    {width: 100%; height: 100%;
+    object-fit: cover;
+    transition: all 2s;
+    transform: scale(1.2);}
+
+    p.visual_sub_text
+    {width: 100%;
+    position: absolute;
+    top: calc(50% - 25px); left: 0;
+    text-align: center;
+    opacity: 0;
+    transition: all 2s;
+    font-family: bold; color: #fff;
+    font-size: 42px; line-height: 50px;}
+
+    /*검색 결과*/
+    div.search_ex
+    {width: 90%;
+    margin: 100px auto;
+    margin-bottom: 150px;}
+
+    /*검색 결과 타이틀*/
+    div.search_title
+    {width: 100%;
+    margin-bottom: 30px;}
+
+    div.search_title>p
+    {width: 100%;
+    font-size: 24px; color: #222; line-height: 30px;
+    word-break: keep-all;}
+
+    div.search_title>p>span
+    {font-family: 'min_bold'; color: #51b8ff;}
+
+    /*체크박스*/
+    input[type="checkbox"].search_product_box
+    {display: none;}
+
+    /*라벨 박스*/
+    div.search_label_ex
+    {width: 100%; height: 60px;
+    border: 1px solid #51b8ff; box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 5px;
+    margin-bottom: 50px;}
+
+    div.search_label_ex>label
+    {width: 25%; height: 60px;
+    display: block;
+    float: left;
+    transition: all 0.3s;
+    background-color: #fff;}
+
+    div.search_label_ex>label>p
+    {width: 100%;
+    color: #51b8ff;
+    text-align: center; line-height: 60px;
+    transition: all 0.3s;}
+
+    div.search_label_ex>label:nth-child(1)
+    {border-radius: 0 5px 5px 0;}
+
+    div.search_label_ex>label:nth-child(2)
+    {border-radius: 5px 5px 5px 5px;}
+
+    div.search_label_ex>label:nth-child(3)
+    {border-radius: 5px 5px 5px 5px;}
+
+    div.search_label_ex>label:nth-child(4)
+    {border-radius: 5px 0 0 5px;}
+
+    /*검색 결과 타이틀*/
+    div.search_product_title
+    {width: 100%;
+    padding-bottom: 15px; margin-bottom: 30px;
+    border-bottom: 1px solid #222; box-sizing: border-box;
+    overflow: hidden;}
+
+    div.search_product_title>p:nth-child(1)
+    {width: fit-content;
+    line-height: 45px;
+    font-size: 22px; font-family: 'min_bold'; color: #222;
+    float: left;}
+
+    a.more_btn_search
+    {width: 120px; height: 45px;
+    border-radius: 22.5px;
+    border: 1px solid #222; box-sizing: border-box;
+    display: block;
+    float: right;
+    transition: all 0.3s;}
+
+    a.more_btn_search>p
+    {width: 100%;
+    text-align: center; line-height: 45px; color: #222;
+    transition: all 0.3s;}
+
+    a.more_btn_search:hover {background-color: #51b8ff; border: none;}
+
+    a.more_btn_search:hover>p {color: #fff;}
+
+    /*검색 결과 없을 때*/
+    p.no_search_txt
+    {width: 100%;
+    text-align: center; line-height: 25px;
+    color: #222;
+    padding-top: 100px; padding-bottom: 100px;}
+
+    /*검색 결과 - 병원, 웰니스, 컨시어징*/
+    div.search_product_list_ex
+    {width: 100%;
+    display: flex;
+    align-items: stretch;
+    overflow: hidden;}
+
+    /*검색 결과 상품*/
+    a.search_product
+    {display: block;
+    width: 23.5%;
+    margin-right: 2%;}
+
+    a.search_product:nth-child(4n+4)
+    {margin-right: 0;}
+    
+    /*이미지*/
+    div.search_product_img
+    {width: 100%; height: 0;
+    position: relative;
+    padding-bottom: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    overflow: hidden;}
+
+    div.search_product_img img
+    {width: 100%; height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0; left: 0;
+    transition: all 0.3s;}
+
+    a.search_product:hover .search_product_img img
+    {transform: scale(1.05);}
+
+    /*병원 관련*/
+    p.hospital_product_name
+    {width: 100%;
+    font-size: 17px; line-height: 22px;
+    font-family: bold;
+    color: #222;
+    margin-bottom: 15px;
+    transition: all 0.5s;}
+
+    a.hospital_product:hover .hospital_product_name
+    {color: #51b8ff;}
+
+    p.hospital_product_price
+    {width: 100%;
+    line-height: 25px; color: red;
+    text-align: right;}
+
+    p.hospital_product_price>span
+    {font-family: bold; font-size: 17px;}
+
+    /*웰니스 관련 → 웰니스 마진*/
+    div.buauty_product_list
+    {width: 100%;
+    margin-bottom: 50px;}
+
+    div.marine_product_list
+    {width: 100%;
+    margin-bottom: 50px;}
+
+    div.tour_product_list
+    {width: 100%;}
+
+    /*글*/
+    div.wellness_programs_product_txt_box
+    {width: 100%;}
+
+    p.wellness_programs_location
+    {width: fit-content;
+    padding: 5px 10px;
+    line-height: 20px;
+    font-size: 15px;
+    border: 1px solid #51b8ff; box-sizing: border-box;
+    margin-bottom: 10px;
+    color: #51b8ff;
+    transition: all 0.3s;}
+
+    a.search_product:hover .wellness_programs_location
+    {background-color: #51b8ff; color: #fff;}
+
+    p.wellness_programs_product_title_txt
+    {width: 100%;
+    font-size: 17px; line-height: 22px;
+    font-family: bold;
+    color: #222;
+    transition: all 0.5s;}
+
+    a.search_product:hover .wellness_programs_product_title_txt
+    {color: #51b8ff;}
+
+
+    /*컨시어지 관련 → 컨시어지 마진*/
+    div.car_product_list
+    {width: 100%;
+    margin-bottom: 50px;}
+
+    div.hotel_product_list
+    {width: 100%;
+    margin-bottom: 50px;}
+
+    div.restaurants_product_list
+    {width: 100%;}
+
+    div.concierge_product_txt_box
+    {width: 100%;}
+
+    /*호텔 위치, 몇 성인지*/
+    div.hotels_location_box
+    {width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;}
+
+    div.hotels_location_box>p
+    {width: fit-content;
+    padding: 5px 10px; line-height: 20px;
+    font-size: 15px;
+    transition: all 0.3s;}
+
+    div.hotels_location_box>p:nth-child(1)
+    {margin-right: 5px;
+    border: 1px solid #51b8ff; box-sizing: border-box;
+    color: #51b8ff;}
+
+    div.hotels_location_box>p:nth-child(2)
+    {border: 1px solid #ff9600; box-sizing: border-box;
+    color: #ff9600;}
+
+    a.search_product:hover .hotels_location_box>p:nth-child(1)
+    {background-color: #51b8ff; color: #fff;}
+
+    a.search_product:hover .hotels_location_box>p:nth-child(2)
+    {background-color: #ff9600; color: #fff;}
+
+    /*차량 위치, 종류*/
+    div.cars_location_box
+    {width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;}
+
+    div.cars_location_box>p
+    {width: fit-content;
+    padding: 5px 10px; line-height: 20px;
+    font-size: 15px;
+    transition: all 0.3s;}
+
+    div.cars_location_box>p:nth-child(1)
+    {margin-right: 5px;
+    border: 1px solid #51b8ff; box-sizing: border-box;
+    color: #51b8ff;}
+
+    div.cars_location_box>p:nth-child(2)
+    {border: 1px solid #222; box-sizing: border-box;
+    color: #222;}
+
+    a.search_product:hover .cars_location_box>p:nth-child(1)
+    {background-color: #51b8ff; color: #fff;}
+
+    a.search_product:hover .cars_location_box>p:nth-child(2)
+    {background-color: #222; color: #fff;}
+
+    /*레스토랑 위치*/
+    p.restaurants_location
+    {width: fit-content;
+    padding: 5px 10px; line-height: 20px;
+    font-size: 15px;
+    transition: all 0.3s;
+    border: 1px solid #51b8ff; box-sizing: border-box;
+    color: #51b8ff;
+    margin-bottom: 10px;}
+
+    a.search_product:hover .restaurants_location
+    {background-color: #51b8ff; color: #fff;}
+
+    /*타이틀*/
+    p.concierge_product_title
+    {width: 100%;
+    font-size: 17px; line-height: 22px;
+    font-family: bold;
+    color: #222;
+    transition: all 0.3s;
+    margin-bottom: 15px;}
+
+    a.search_product:hover .concierge_product_title
+    {color: #51b8ff;}
+
+    /*가격*/
+    div.concierge_fee_box
+    {width: fit-content;
+    float: right;}
+
+    div.concierge_fee_box>p
+    {width: 100%;
+    line-height: 25px;
+    text-align: right;}
+
+    div.concierge_fee_box>p:nth-child(1)
+    {color: #555; font-size: 15px;}
+
+    div.concierge_fee_box>p:nth-child(2)
+    {font-size: 18px; color: red; font-family: 'min_bold';}
+
+    /*레스토랑 - 가격*/
+    p.restaurants_fee
+    {width: 100%;
+    line-height: 25px; color: red;
+    text-align: right;}
+
+    p.restaurants_fee>span
+    {font-family: bold; font-size: 17px;}
+
+
+    /*통역 번역*/
+    div.interpreter_product_list
+    {width: 100%;
+    margin-bottom: 50px;}
+
+    div.translation_product_list
+    {width: 100%;}
+
+    /*통역*/
+    div.interpreter_product_list_ex
+    {width: 100%;}
+
+    a.interpreter_contents_ex
+    {width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    display: block;
+    padding-top: 20px; padding-bottom: 20px;
+    margin-bottom: 20px;}
+
+    a.interpreter_contents_ex:last-child
+    {margin-bottom: 0;}
+
+    div.interpreter_contents_box
+    {width: calc(100% - 40px);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    overflow: hidden;}
+
+    /*이미지*/
+    div.interpreter_contents_img_box
+    {width: 30%; height: 0;
+    padding-bottom: 30%;
+    border-radius: 5px;
+    margin-right: 3%;
+    position: relative;
+    overflow: hidden;}
+
+    div.interpreter_contents_img_box img
+    {width: 100%; height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0; left: 0;}
+
+    /*글*/
+    div.interpreter_contents_txt_box
+    {width: 67%;
+    overflow: hidden;}
+
+    p.interpreter_contents_name
+    {width: 100%;
+    font-size: 22px; line-height: 30px; font-family: bold;
+    color: #222; word-break: keep-all;
+    margin-bottom: 10px;}
+
+    /*사용가능 언어*/
+    div.available_languages_ex
+    {width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    overflow: hidden;}
+    
+    div.available_languages_ex>p
+    {width: fit-content;
+    padding-left: 5px; padding-right: 5px;
+    font-size: 15px;
+    margin-right: 10px; line-height: 25px;
+    margin-bottom: 10px;
+    word-break: break-all;}
+
+    div.available_languages_ex>p:last-child
+    {margin-right: 0;}
+
+    p.available_languages_e
+    {border: 1px solid #793FDF; box-sizing: border-box;
+    color: #793FDF;}
+
+    p.available_languages_j
+    {border: 1px solid #7091F5; box-sizing: border-box;
+    color: #7091F5;}
+
+    p.available_languages_c
+    {border: 1px solid #BB2525; box-sizing: border-box;
+    color: #BB2525;}
+
+    p.available_languages_r
+    {border: 1px solid #EA1179; box-sizing: border-box;
+    color: #EA1179;}
+
+    p.available_languages_m
+    {border: 1px solid #3F2E3E; box-sizing: border-box;
+    color: #3F2E3E;}
+
+    p.available_languages_v
+    {border: 1px solid #FF6666; box-sizing: border-box;
+    color: #FF6666;}
+
+    /*설명*/
+    p.interpreter_contents_introduction
+    {width: 100%;
+    font-size: 15px; color: #555; line-height: 20px;
+    margin-bottom: 15px;
+    word-break: keep-all;}
+
+    /*총가격*/
+    div.interpreter_pay_ex
+    {width: 100%;                                                                                                                                                            
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;}
+
+    div.interpreter_pay_box
+    {width: fit-content;
+    max-width: 100%;}
+
+    div.meet_pay_box
+    {width: fit-content;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    overflow: hidden;}
+
+    div.meet_pay_box>p:nth-child(1)
+    {width: 130px;
+    line-height: 30px; color: red;
+    margin-right: 20px;}
+
+    div.meet_pay_box>p:nth-child(2)
+    {width: fit-content;
+    max-width: calc(100% - 150px);
+    font-size: 18px; line-height: 30px; 
+    font-family: bold; color: red;}
+
+    div.meet_pay_box>p:nth-child(2)>span 
+    {font-family: 'Pretendard';
+    font-size: 15px;}
+
+    div.not_meet_pay_box
+    {width: fit-content;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;}
+
+    div.not_meet_pay_box>p:nth-child(1)
+    {width: 130px;
+    font-size: 15px;
+    line-height: 20px; color: red;
+    margin-right: 20px;}
+
+    div.not_meet_pay_box>p:nth-child(2)
+    {width: fit-content;
+    max-width: calc(100% - 150px);
+    font-size: 18px; line-height: 30px; 
+    font-family: bold; color: red;}
+
+    div.not_meet_pay_box>p:nth-child(2)>span 
+    {font-family: 'Pretendard';
+    font-size: 15px;}
+
+    /*더보기 버튼*/                  
+    p.more_interpreter_btn
+    {width: 200px; height: 50px;
+    border-radius: 5px;
+    float: right;
+    text-align: center; line-height: 50px;
+    background-color: #51b8ff; color: #fff;
+    transition: all 0.3s;}
+
+    p.more_interpreter_btn:hover
+    {background-color: #1f4e79;}
+
+     /*번역*/
+    div.translation_product_list_ex
+    {width: 100%;}
+
+    a.translation_contents_ex
+    {width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    display: block;
+    padding-top: 20px; padding-bottom: 20px;
+    margin-bottom: 20px;}
+
+    a.translation_contents_ex:last-child
+    {margin-bottom: 0;}
+
+    div.translation_contents_box
+    {width: calc(100% - 40px);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    overflow: hidden;}
+
+    /*이미지*/
+    div.translation_contents_img_box
+    {width: 30%; height: 0;
+    padding-bottom: 30%;
+    border-radius: 5px;
+    margin-right: 3%;
+    position: relative;
+    overflow: hidden;}
+
+    div.translation_contents_img_box img
+    {width: 100%; height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0; left: 0;}
+
+    /*글*/
+    div.translation_contents_txt_box
+    {width: 67%;
+    overflow: hidden;}
+
+    p.translation_contents_name
+    {width: 100%;
+    font-size: 22px; line-height: 30px; font-family: bold;
+    color: #222; word-break: keep-all;
+    margin-bottom: 10px;}
+
+     /*설명*/
+    p.translation_contents_introduction
+    {width: 100%;
+    font-size: 15px; color: #555; line-height: 20px;
+    margin-bottom: 15px;
+    word-break: keep-all;}
+
+     /*가격*/
+    div.translation_contents_pay_box
+    {width: 100%;
+    margin-bottom: 30px;
+    overflow: hidden;}
+
+    div.translation_contents_pay_box>div
+    {width: fit-content;
+    float: right;
+    display: flex;
+    align-items: center;}
+
+    div.translation_contents_pay_box>div>p:nth-child(1)
+    {width: 65px;
+    color: red; line-height: 30px;
+    margin-right: 10px;}
+
+    div.translation_contents_pay_box>div>p:nth-child(2)
+    {width: fit-content;
+    max-width: calc(100% - 75px);
+    color: red; font-size: 22px; font-family: bold; line-height: 30px;}
+
+    div.translation_contents_pay_box>div>p:nth-child(2)>span 
+    {font-family: 'Pretendard';
+    font-size: 15px;}
+
+     /*더보기 버튼*/                  
+    p.more_translation_btn
+    {width: 200px; height: 50px;
+    border-radius: 5px;
+    float: right;
+    text-align: center; line-height: 50px;
+    background-color: #51b8ff; color: #fff;
+    transition: all 0.3s;}
+
+    p.more_translation_btn:hover
+    {background-color: #1f4e79;}
+}
+
+@media all and (min-width: 769px) and (max-width: 1279px)
+{   
+    /*비주얼배너*/
+    div.visual_sub_banner
+    {margin-top: 0;}
+
+    /*상품*/
+    div.search_product_list_ex
+    {width: 100%;
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    overflow: hidden;}
+
+    a.search_product
+    {width: 30.6666666%;
+    margin-right: 4%;
+    margin-bottom: 40px;}
+
+    a.search_product:nth-child(4n+4)
+    {margin-right: 4%;}
+
+    a.search_product:nth-child(3n+3)
+    {margin-right: 0;}
+
+    a.search_product:last-child
+    {margin-bottom: 0;}
+
+    /*웰니스 위치*/
+    p.wellness_programs_location
+    {width: fit-content;
+    padding: 5px 10px;
+    line-height: 20px;
+    font-size: 14px;
+    border: 1px solid #51b8ff; box-sizing: border-box;
+    margin-bottom: 10px;
+    color: #51b8ff;
+    transition: all 0.3s;}
+
+
+    /*---------컨시어지 관련---------*/
+
+    /*호텔 위치, 몇 성인지*/
+    div.hotels_location_box>p
+    {width: fit-content;
+    padding: 5px 10px; line-height: 20px;
+    font-size: 14px;
+    transition: all 0.3s;}
+
+     /*차량 위치, 차량 종류*/
+    div.cars_location_box>p
+    {width: fit-content;
+    padding: 5px 10px; line-height: 20px;
+    font-size: 14px;
+    transition: all 0.3s;}
+
+    /*레스토랑 위치*/
+    p.restaurants_location
+    {font-size: 14px;}
+
+    /*가격*/
+    div.concierge_fee_box>p:nth-child(1)
+    {color: #555; font-size: 14px;}
+}
+
+@media all and (min-width: 769px) and (max-width: 1024px)
+{   
+    /*라벨박스*/
+    div.search_label_ex>label>p
+    {width: 100%;
+    color: #51b8ff;
+    text-align: center; line-height: 60px;
+    font-size: 15px;
+    transition: all 0.3s;}
+
+    /*상품*/
+    div.search_product_list_ex
+    {width: 100%;
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    overflow: hidden;}
+
+    a.search_product
+    {width: 32%;
+    margin-right: 2%;
+    margin-bottom: 30px;}
+
+    a.search_product:nth-child(4n+4)
+    {margin-right: 2%;}
+
+    a.search_product:nth-child(3n+3)
+    {margin-right: 0;}
+
+    a.search_product:last-child
+    {margin-bottom: 0;}
+
+    /*통역 이미지*/
+    div.interpreter_contents_img_box
+    {width: 35%; height: 0;
+    padding-bottom: 35%;
+    border-radius: 5px;
+    margin-right: 3%;
+    position: relative;
+    overflow: hidden;}
+
+    div.interpreter_contents_img_box img
+    {width: 100%; height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0; left: 0;}
+
+    /*글*/
+    div.interpreter_contents_txt_box
+    {width: 62%;
+    overflow: hidden;}
+
+    /*번역 이미지*/
+    div.translation_contents_img_box
+    {width: 35%; height: 0;
+    padding-bottom: 35%;
+    border-radius: 5px;
+    margin-right: 3%;
+    position: relative;
+    overflow: hidden;}
+
+    div.translation_contents_img_box img
+    {width: 100%; height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0; left: 0;}
+
+    /*글*/
+    div.translation_contents_txt_box
+    {width: 62%;
+    overflow: hidden;}
+
+}
+
+@media all and (max-width: 768px)
+{   
+    /*비주얼베너*/
+    div.visual_sub_banner
+    {width: 100%; height: 250px;
+    overflow: hidden;
+    position: relative;}
+
+    div.visual_sub_banner img
+    {width: 100%; height: 100%;
+    object-fit: cover;
+    transition: all 2s;
+    transform: scale(1.2);}
+
+    p.visual_sub_text
+    {width: 100%;
+    position: absolute;
+    top: calc(50% - 20px); left: 0;
+    text-align: center;
+    opacity: 0;
+    transition: all 2s;
+    font-family: bold; color: #fff;
+    font-size: 32px; line-height: 40px;}
+
+    /*전체박스*/
+    div.search_ex
+    {width: 90%;
+    margin: 50px auto;
+    margin-bottom: 80px;}
+
+    /*검색 전체 타이틀*/
+    div.search_title
+    {width: 100%;
+    margin-bottom: 15px;}
+
+    div.search_title>p
+    {width: 100%;
+    word-break: keep-all;
+    font-size: 22px; line-height: 28px; color: #222;}
+
+    div.search_title>p>span
+    {color: #51b8ff; font-family: 'min_bold';}
+
+    /*라벨 박스*/
+    input[type="checkbox"].search_product_box {display: none;}
+
+    div.search_label_ex
+    {width: 100%;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-radius: 5px;
+    border: 1px solid #51b8ff; box-sizing: border-box;
+    overflow: hidden;
+    margin-bottom: 30px;}
+
+    div.search_label_ex>label
+    {width: 50%;
+    padding-top: 15px; padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+
+    div.search_label_ex>label:nth-child(1)
+    {border-right: 1px solid #51b8ff; 
+    border-bottom: 1px solid #51b8ff;
+    box-sizing: border-box;}
+
+    div.search_label_ex>label:nth-child(2)
+    {border-bottom: 1px solid #51b8ff; box-sizing: border-box;}
+
+    div.search_label_ex>label:nth-child(3)
+    {border-right: 1px solid #51b8ff; box-sizing: border-box;}
+
+    div.search_label_ex>label>p
+    {width: 90%;
+    margin: 0 auto; text-align: center;
+    color: #51b8ff;
+    word-break: keep-all;
+    line-height: 25px; font-size: 15px;}
+
+    /*전체 시트*/
+    div.search_product_sheet
+    {width: 100%;}
+
+    div.search_product_ex
+    {width: 100%;}
+
+    /*전체 타이틀*/
+    div.search_product_title
+    {width: 100%;
+    overflow: hidden;
+    padding-bottom: 15px; margin-bottom: 30px;
+    border-bottom: 1px solid #222; box-sizing: border-box;}
+
+    div.search_product_title>p:nth-child(1)
+    {width: fit-content;
+    max-width: calc(100% - 90px);
+    margin-right: 10px;
+    float: left;
+    word-break: keep-all;
+    font-size: 18px; line-height: 40px; color: #222;
+    font-family: 'min_bold';}
+
+    a.more_btn_search
+    {width: 80px; height: 40px;
+    border-radius: 20px;
+    display: block;
+    float: right;
+    border: 1px solid #222; box-sizing: border-box;}
+
+    a.more_btn_search>p
+    {text-align: center;
+    font-size: 15px; line-height: 40px; color: #222;}
+
+    /*상품이 없을 때*/
+    p.no_search_txt
+    {width: 100%;
+    text-align: center; font-size: 15px;
+    color: #333; line-height: 25px;
+    padding-top: 100px; padding-bottom: 100px;}
+
+    /*상품 - 병원, 컨시어징, 웰니스 프로그램*/
+    div.search_product_list_ex
+    {width: 100%;
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    overflow: hidden;}
+
+    a.search_product
+    {width: 49%;
+    margin-right: 2%;
+    margin-bottom: 20px;}
+
+    a.search_product:nth-child(2n+2)
+    {margin-right: 0;}
+
+    a.search_product:nth-child(1n+3)
+    {margin-bottom: 0;}
+
+    /*이미지*/
+    div.search_product_img
+    {width: 100%; height: 0;
+    position: relative;
+    padding-bottom: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    overflow: hidden;}
+
+    div.search_product_img img
+    {width: 100%; height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0; left: 0;}
+
+    /*병원*/
+    p.hospital_product_name
+    {width: 100%;
+    font-size: 17px; line-height: 22px;
+    font-family: bold;
+    color: #222;
+    word-break: break-all;
+    margin-bottom: 10px;}
+
+    p.hospital_product_price
+    {width: 100%;
+    line-height: 25px; color: red;
+    text-align: right;}
+
+    p.hospital_product_price>span
+    {font-family: bold; font-size: 17px;}
+
+    /*웰니스 마진*/
+    div.buauty_product_list
+    {width: 100%;
+    margin-bottom: 30px;}
+
+    div.marine_product_list
+    {width: 100%;
+    margin-bottom: 30px;}
+
+    div.tour_product_list
+    {width: 100%;}
+
+    /*글*/
+    div.wellness_programs_product_txt_box
+    {width: 100%;}
+
+    p.wellness_programs_location
+    {width: fit-content;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    color: #fff;
+    background-color: #51b8ff;
+    font-size: 14px; line-height: 20px;}
+
+    p.wellness_programs_product_title_txt
+    {width: 100%;
+    font-size: 17px; line-height: 22px;
+    font-family: bold;
+    color: #222;
+    word-break: break-all;}
+
+    /*컨시어징 마진*/
+    div.car_product_list
+    {width: 100%;
+    margin-bottom: 30px;}
+
+    div.hotel_product_list
+    {width: 100%;
+    margin-bottom: 30px;}
+
+    div.restaurants_product_list
+    {width: 100%;}
+
+    /*컨시어징 관련 글*/
+    div.concierge_product_txt_box
+    {width: 100%;}
+
+    /*호텔 위치*/
+    div.hotels_location_box
+    {width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;}
+
+    div.hotels_location_box>p
+    {width: fit-content;
+    padding: 5px 10px;
+    font-size: 14px; line-height: 20px;
+    max-width: 49%;}
+
+    div.hotels_location_box>p:nth-child(1)
+    {margin-right: 2%;
+    background-color: #51b8ff; color: #fff;}
+
+    div.hotels_location_box>p:nth-child(2)
+    {background-color: #ff9600; color: #fff;}
+
+    /*차량 위치*/
+    div.cars_location_box
+    {width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;}
+
+    div.cars_location_box>p
+    {width: fit-content;
+    padding: 5px 10px;
+    font-size: 14px; line-height: 20px;
+    max-width: 49%;}
+
+    div.cars_location_box>p:nth-child(1)
+    {margin-right: 2%;
+    background-color: #51b8ff; color: #fff;}
+
+    div.cars_location_box>p:nth-child(2)
+    {background-color: #222; color: #fff;}
+    
+    /*레스토랑 위치*/
+    p.restaurants_location
+    {width: fit-content;
+    padding: 5px 10px; line-height: 20px;
+    font-size: 14px;
+    background-color: #51b8ff; color: #fff;
+    margin-bottom: 10px;}
+    
+    /*타이틀*/
+    p.concierge_product_title
+    {width: 100%;
+    font-size: 17px; line-height: 22px;
+    font-family: bold;
+    color: #222;
+    word-break: break-all;
+    margin-bottom: 15px;}
+
+    /*가격*/
+    div.concierge_fee_box
+    {width: 100%;}
+
+    div.concierge_fee_box>p
+    {text-align: right;}
+
+    div.concierge_fee_box>p:nth-child(1)
+    {width: 100%;
+    word-break: keep-all;
+    margin-bottom: 5px;
+    font-size: 14px; line-height: 20px; color: #555;}
+
+    div.concierge_fee_box>p:nth-child(2)
+    {width: 100%;
+    font-size: 17px; line-height: 22px;
+    font-family: 'min_bold'; color: red;}
+    
+    /*레스토랑 가격*/
+    p.restaurants_fee
+    {width: 100%;
+    line-height: 25px; color: red;
+    text-align: right;}
+
+    p.restaurants_fee>span
+    {font-family: bold; font-size: 17px;}
+
+    /*통역 번역*/
+    div.interpreter_product_list
+    {width: 100%;
+    margin-bottom: 30px;}
+
+    div.translation_product_list
+    {width: 100%;}
+
+    /*통역*/
+    div.interpreter_product_list_ex
+    {width: 100%;}
+
+    a.interpreter_contents_ex
+    {width: 100%;
+    display: block;
+    border: 1px solid #ddd; box-sizing: border-box;
+    margin-bottom: 20px;}
+
+    a.interpreter_contents_ex:last-child {margin-bottom: 0;}
+
+    div.interpreter_contents_box
+    {width: calc(100% - 20px);
+    margin: 0 auto;
+    padding-top: 10px; padding-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;}
+
+    /*이미지*/
+    div.interpreter_contents_img_box
+    {width: 45%; height: 0;
+    padding-bottom: 45%;
+    margin-right: 2%;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;}
+
+    div.interpreter_contents_img_box img
+    {width: 100%; height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0; left: 0;}
+
+    /*글*/
+    div.interpreter_contents_txt_box
+    {width: 53%;}
+
+    /*타이틀*/
+    p.interpreter_contents_name
+    {width: 100%;
+    font-family: bold; color: #222; line-height: 25px;
+    font-size: 20px; word-break: keep-all;
+    margin-bottom: 10px;}
+
+    /*사용가능 언어*/
+    div.available_languages_ex
+    {width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;}
+    
+    div.available_languages_ex>p
+    {width: fit-content;
+    padding-left: 5px; padding-right: 5px;
+    font-size: 14px;
+    margin-right: 10px; line-height: 25px;
+    margin-bottom: 10px;
+    word-break: break-all;}
+
+    div.available_languages_ex>p:last-child
+    {margin-right: 0;}
+
+    p.available_languages_e
+    {border: 1px solid #793FDF; box-sizing: border-box;
+    color: #793FDF;}
+
+    p.available_languages_j
+    {border: 1px solid #7091F5; box-sizing: border-box;
+    color: #7091F5;}
+
+    p.available_languages_c
+    {border: 1px solid #BB2525; box-sizing: border-box;
+    color: #BB2525;}
+
+    p.available_languages_r
+    {border: 1px solid #EA1179; box-sizing: border-box;
+    color: #EA1179;}
+
+    p.available_languages_m
+    {border: 1px solid #3F2E3E; box-sizing: border-box;
+    color: #3F2E3E;}
+
+    p.available_languages_v
+    {border: 1px solid #FF6666; box-sizing: border-box;
+    color: #FF6666;}
+
+    /*설명*/
+    p.interpreter_contents_introduction
+    {width: 100%;
+    font-size: 14px; color: #555; line-height: 20px;
+    margin-bottom: 10px;
+    word-break: keep-all;}
+
+    /*가격*/
+    div.interpreter_pay_ex
+    {width: 100%;
+    margin-bottom: 10px;}
+
+    div.meet_pay_box
+    {width: 100%;
+    margin-bottom: 5px;}
+
+    div.meet_pay_box>p:nth-child(1)
+    {width: 100%;
+    word-break: keep-all;
+    font-size: 14px; color: red; line-height: 20px;}
+
+    div.meet_pay_box>p:nth-child(2)
+    {width: 100%;
+    font-size: 18px; line-height: 25px;
+    font-family: bold; color: red;}
+
+    div.meet_pay_box>p:nth-child(2)>span
+    {font-family: 'Pretendard';
+    font-size: 14px;}
+
+    div.not_meet_pay_box
+    {width: 100%;}
+
+    div.not_meet_pay_box>p:nth-child(1)
+    {width: 100%;
+    word-break: keep-all;
+    font-size: 14px; color: red; line-height: 20px;}
+
+    div.not_meet_pay_box>p:nth-child(2)
+    {width: 100%;
+    font-size: 18px; line-height: 25px; 
+    font-family: bold; color: red;}
+
+    div.not_meet_pay_box>p:nth-child(2)>span
+    {font-family: 'Pretendard';
+    font-size: 14px;}
+
+    /*더보기*/
+    p.more_interpreter_btn
+    {width: 100%; height: 45px;
+    border-radius: 5px;
+    background-color: #1f4e79; line-height: 45px;
+    text-align: center;
+    font-size: 15px; color: #fff;}
+
+    /*번역*/
+    div.translation_product_list_ex
+    {width: 100%;}
+
+     /*상품 리스트*/
+    a.translation_contents_ex
+    {width: 100%;
+    display: block;
+    border: 1px solid #ddd; box-sizing: border-box;
+    margin-bottom: 20px;}
+
+    a.translation_contents_ex:last-child {margin-bottom: 0;}
+
+    div.translation_contents_box
+    {width: calc(100% - 20px);
+    margin: 0 auto;
+    padding-top: 10px; padding-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;}
+
+     /*이미지*/
+    div.translation_contents_img_box
+    {width: 45%; height: 0;
+    padding-bottom: 45%;
+    margin-right: 2%;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;}
+
+    div.translation_contents_img_box img
+    {width: 100%; height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0; left: 0;}
+
+    /*글*/
+    div.translation_contents_txt_box
+    {width: 53%;}
+
+     /*타이틀*/
+    p.translation_contents_name
+    {width: 100%;
+    font-family: bold; color: #222; line-height: 25px;
+    font-size: 20px; word-break: keep-all;
+    margin-bottom: 10px;}
+
+     /*설명*/
+    p.translation_contents_introduction
+    {width: 100%;
+    font-size: 14px; color: #555; line-height: 20px;
+    margin-bottom: 10px;
+    word-break: keep-all;}
+
+    /*가격*/
+    div.translation_contents_pay_box
+    {width: 100%;
+    margin-bottom: 10px;
+    overflow: hidden;}
+
+    div.translation_contents_pay_box>div
+    {width: fit-content;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    float: right;}
+
+    div.translation_contents_pay_box>div>p:nth-child(1)
+    {width: 61px;
+    margin-right: 10px;
+    color: red; line-height: 25px;
+    font-size: 15px;}
+
+    div.translation_contents_pay_box>div>p:nth-child(2)
+    {width: fit-content;
+    max-width: calc(100% - 71px);
+    color: red;
+    font-size: 18px; line-height: 25px; 
+    font-family: bold; color: red;}
+
+    div.translation_contents_pay_box>div>p:nth-child(2)>span
+    {font-family: 'Pretendard';
+    font-size: 14px;}
+
+     /*더보기*/
+    p.more_translation_btn
+    {width: 100%; height: 45px;
+    border-radius: 5px;
+    background-color: #1f4e79; line-height: 45px;
+    text-align: center;
+    font-size: 15px; color: #fff;}
+
+}
+
+@media all and (max-width: 600px)
+{   
+    /*비주얼배너*/
+    div.visual_sub_banner
+    {width: 100%; height: 200px;
+    overflow: hidden;
+    position: relative;}
+
+    /*비주얼 배너*/
+    div.visual_sub_banner img
+    {width: 100%; height: 100%;
+    object-fit: cover;
+    transition: all 2s;
+    transform: scale(1.2);}
+
+    p.visual_sub_text
+    {width: 90%;
+    position: absolute;
+    top: calc(50% + 5px); left: 5%;
+    text-align: center;
+    opacity: 0;
+    transition: all 2s;
+    word-break: keep-all;
+    font-family: bold; color: #fff;
+    font-size: 24px; line-height: 30px;}
+
+    /*라벨*/
+    div.search_label_ex>label>p
+    {width: 90%;
+    margin: 0 auto; text-align: center;
+    color: #51b8ff;
+    line-height: 20px; font-size: 14px;}
+    
+    /*검색 타이틀*/
+    div.search_title>p
+    {width: 100%;
+    word-break: keep-all;
+    font-size: 20px; line-height: 25px; color: #222;}
+
+    /*전체 타이틀*/
+    div.search_product_title
+    {width: 100%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding-bottom: 15px; margin-bottom: 30px;
+    border-bottom: 1px solid #222; box-sizing: border-box;}
+
+    div.search_product_title>p:nth-child(1)
+    {width: calc(100% - 90px);
+    max-width: none;
+    margin-right: 10px;
+    float: inherit;
+    font-size: 18px; line-height: 25px; color: #222;
+    font-family: 'min_bold';}
+
+    a.more_btn_search
+    {width: 80px; height: 40px;
+    border-radius: 20px;
+    display: block;
+    float: inherit;
+    border: 1px solid #222; box-sizing: border-box;}
+
+    a.more_btn_search>p
+    {text-align: center;
+    font-size: 15px; line-height: 40px; color: #222;}
+
+    /*상품 - 병원, 컨시어징*/
+    div.search_product_list_ex
+    {width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    overflow: hidden;
+    margin-bottom: 30px;}
+
+    a.search_product
+    {width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;}
+
+    a.search_product:nth-child(2n+2)
+    {margin-right: 0;}
+
+    a.search_product:nth-child(1n+3)
+    {margin-bottom: 20px;}
+
+    a.search_product:last-child
+    {margin-bottom: 0;}
+
+    /*통역 개별 상품*/
+    a.interpreter_contents_ex
+    {width: 90%;
+    margin: 0 auto;
+    display: block;
+    border: 1px solid #ddd; box-sizing: border-box;
+    margin-bottom: 20px;}
+
+    div.interpreter_contents_box
+    {width: 90%;
+    margin: 0 auto;
+    padding-top: 5%; padding-bottom: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;}
+
+    /*이미지*/
+    div.interpreter_contents_img_box
+    {width: 90%; height: 0;
+    padding-bottom: 90%;
+    margin-right: 0%;
+    margin: 0 auto;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 10px;}
+
+    div.interpreter_contents_img_box img
+    {width: 100%; height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0; left: 0;}
+
+    /*글*/
+    div.interpreter_contents_txt_box
+    {width: 100%;}
+
+    /*번역 개별 상품*/
+    a.translation_contents_ex
+    {width: 90%;
+    margin: 0 auto;
+    display: block;
+    border: 1px solid #ddd; box-sizing: border-box;
+    margin-bottom: 20px;}
+
+    div.translation_contents_box
+    {width: 90%;
+    margin: 0 auto;
+    padding-top: 5%; padding-bottom: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;}
+
+    /*이미지*/
+    div.translation_contents_img_box
+    {width: 90%; height: 0;
+    padding-bottom: 90%;
+    margin-right: 0%;
+    margin: 0 auto;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 10px;}
+
+    div.translation_contents_img_box img
+    {width: 100%; height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0; left: 0;}
+
+    /*글*/
+    div.translation_contents_txt_box
+    {width: 100%;}
+}

@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, minimum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>Now Detaile</title>
+
+    <script src="lib/code.jquery.com_jquery-3.7.1.min.js"></script>
+
+     <!--owl-->
+    <link rel="stylesheet" href="css/docs.theme.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    
+    <script src="lib/owl.carousel.js"></script>
+
+    <script src="lib/header.js"></script>
+    
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/index.css">
+
+</head>
+<body>
+
+    <header class="tplus_header">
+
+        <div class="header_wrap">
+
+            <a href="index.html" class="header_logo">
+                <img src="img/color_logo.png">
+            </a>
+
+            <nav class="header_gnb">
+
+                <ul>
+                    <li>
+                        <a href="about.html">
+                            <p>ABOUT US</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="business.html">
+                            <p>BUSINESS</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="portfolio.html">
+                            <p>PORTFOLIO</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="now.html">
+                            <p>NOW</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="community.html">
+                            <p>COMMUNITY</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="inquiry.html">
+                            <p>INQUIRY</p>
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header><!--tplus_header end-->
+
+    <header class="tplus_mobile_header">
+
+        <div class="tplus_mobile_header_top">
+
+            <a href="index.html" class="mobile_header_logo">
+                <img src="img/color_logo.png">
+            </a>
+
+            <div class="menu_open_m">
+                <img src="img/menu_open_btn.png">
+            </div>
+
+        </div><!--tplus_mobile_header_top end-->
+
+
+        <div class="tplus_mobile_header_sheet">
+
+            <div class="tplus_mobile_header_sheet_cont">
+
+                <div class="menu_close_m">
+                    <img src="img/menu_close_icon.png">
+                </div>
+
+                <nav class="tplus_mobile_lnb">
+
+                    <ul>
+                        <li>
+                            <a href="about.html">
+                                <p>ABOUT US</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="business.html">
+                                <p>BUSINESS</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="portfolio.html">
+                                <p>PORTFOLIO</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="now.html">
+                                <p>NOW</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="community.html">
+                                <p>COMMUNITY</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="inquiry.html">
+                                <p>INQUIRY</p>
+                            </a>
+                        </li>
+                    </ul>
+
+                </nav><!--tplus_mobile_lnb end-->
+                
+
+            </div><!--tplus_mobile_header_sheet_cont end-->
+
+        </div><!--tplus_mobile_header_sheet end-->
+
+        
+
+    </header><!--tplus_mobile_header end-->
+
+    <div class="now_detaile_page_ex">
+
+        <div class="sub_root_box">
+
+            <a href="index.html">
+                <img src="img/home_icon.png" alt="">
+            </a>
+
+            <p>></p>
+
+            <a href="now.html">
+                <p>NOW</p>
+            </a>
+
+        </div><!--sub_root_box end-->
+
+        <div class="now_detaile_form_ex">
+
+            <div class="now_title_box">
+
+                <p>2023</p>
+    
+                <p>제 27회 기장 멸치 축제</p>
+    
+                <p>2023.04.21 ~ 2023.04.23</p>
+    
+            </div><!--now_title_box end-->
+    
+            <div class="owl-carousel owl-theme now_detaile_slide_box">
+    
+                <div class="item now_detaile_slide_cont">
+                  
+                    <img src="img/portfolio_img_01.png" alt="">
+    
+                </div><!--now_detaile_slide_cont end-->
+    
+                <div class="item now_detaile_slide_cont">
+                  
+                    <img src="img/now_detaile_slide_01.png" alt="">
+    
+                </div><!--now_detaile_slide_cont end-->
+    
+                <div class="item now_detaile_slide_cont">
+                  
+                    <img src="img/now_detaile_slide_02.png" alt="">
+    
+                </div><!--now_detaile_slide_cont end-->
+    
+                <div class="item now_detaile_slide_cont">
+                  
+                    <img src="img/now_detaile_slide_03.png" alt="">
+    
+                </div><!--now_detaile_slide_cont end-->
+    
+    
+            </div><!--now_detaile_slide_box end-->
+    
+            <script>
+    
+                var nowSlideCount = $(".now_detaile_slide_cont").length;
+                var nowSlideCountThree = (nowSlideCount > 3) ? true : false;
+                var nowSlideCountTwo = (nowSlideCount > 2) ? true : false;
+      
+                $('.now_detaile_slide_box').owlCarousel({
+                  dots : false,
+                  margin: 0,
+                  nav: false,
+                  autoplayTimeout:5000,
+                  responsive:{
+                      0:{
+                          items:2,
+                          margin: 5,
+                          loop: nowSlideCountThree,
+                          autoplay : nowSlideCountThree,
+                          autoplayHoverPause: true,
+                      },
+                      601:{
+                          items:2,
+                          margin : 15,
+                          loop: nowSlideCountThree,
+                          autoplay : nowSlideCountThree,
+                          autoplayHoverPause: true,
+                      },
+                      1025:{
+                          items:3,
+                          margin : 20,
+                          loop: nowSlideCountThree,
+                          autoplay : nowSlideCountThree,
+                          autoplayHoverPause: true,
+                      },
+                      1400:{
+                          items:3,
+                          margin : 30,
+                          loop: nowSlideCountThree,
+                          autoplay : nowSlideCountThree,
+                          autoplayHoverPause: true,
+                      }
+                  }
+              });
+        
+            </script>
+    
+            <div class="now_detaile_total_txt_box">
+    
+                <p>풍요로운 기장 앞바다의 맛을 맘껏 즐기려면?</p>
+                <p>기장멸치의 신선함을 있는 그대로 보여주는 기장멸치축제로 가면 된다!</p>
+                <p>봄이 되면 오동통통 살이 올라 씹는 맛이 일품인 기장멸치를 새콤달콤 입맛 돋우는 회무침으로도, 튀김옷 얇게 입힌 고소한 튀김으로도, 된장과 시래기 넣고 끓인 구수한 찌개로도 맛 볼 수 있다.</p>
+                <p>기장멸치축제의 인기 프로그램 맨손활어잡기 도전도 하고 공연의 압권인 플라잉보드 쇼도 보며 시간 가는 줄 모른다.</p>
+                <p>깜짝 경매에 참가해 기장멸치를 저렴한 가격으로 구입할 수도 있다.</p>
+    
+            </div><!--now_detaile_total_txt_box end-->
+
+            <div class="now_detaile_cont_01_ex">
+
+                <div class="now_detaile_cont_01_title">
+                    <div></div>
+                    <p>상세정보</p>
+                </div><!--now_detaile_cont_01_title end-->
+
+                <div class="now_detaile_cont_01_box">
+
+                    <div class="now_detaile_cont_01_image_box">
+                        <div class="now_detaile_cont_01_image">
+                            <img src="img/now_detaile_post.png">
+                        </div>
+                    </div>
+
+                    <div class="now_detaile_cont_01_text_box">
+
+                        <div class="now_detaile_cont_01_detaile_01">
+                            <div>
+                                <img src="img/now_detaile_icon_01.gif" alt="">
+                            </div>
+
+                            <p>2023.04.21 ~ 2023.04.23</p>
+                        </div>
+
+                        <div class="now_detaile_cont_01_detaile_01">
+                            <div>
+                                <img src="img/now_detaile_icon_02.gif" alt="">
+                            </div>
+
+                            <p>기장군 기장읍 대변향 일원</p>
+                        </div>
+
+                        <div class="now_detaile_cont_01_detaile_01">
+                            <div>
+                                <img src="img/now_detaile_icon_03.gif" alt="">
+                            </div>
+
+                            <p>무료</p>
+                        </div>
+
+                        <div class="now_detaile_cont_01_detaile_01">
+                            <div>
+                                <img src="img/now_detaile_icon_04.gif" alt="">
+                            </div>
+
+                            <a href="tel:051-709-4502">051-709-4502</p>
+                        </div>
+
+                        <div class="now_detaile_cont_01_detaile_02">
+
+                            <div>
+                                <img src="img/now_detaile_icon_05.gif" alt="">
+                            </div>
+
+                            <div>
+                                <p>길놀이퍼레이드, 개막식, 개막축하공연</p>
+                                <p>워터보드쇼, 인기가수 축하공연</p>
+                                <p>공연프로그램 : 기장 은빛콘서트, 기장 멸치 가요쇼 등</p>
+                                <p>체험프로그램 : 어린이체험, 맨손활어잡기, 포토존 등</p>
+                                <p>특별프로그램 : 기장멸치가요제, 멸치회무료시식회 등</p>
+                            </div>
+
+                        </div>
+
+                        <a href="https://www.gijang.go.kr/tour/index.gijang" class="now_detaile_link_btn">
+                            <p>공식 홈페이지</p>
+                        </a>
+
+
+
+                    </div><!--now_detaile_cont_01_text_box end-->
+
+                </div><!--now_detaile_cont_01_box end-->
+
+            </div><!--now_detaile_cont_01_ex end-->
+
+            <div class="now_detaile_cont_02_ex">
+
+                <div class="now_detaile_cont_02_title">
+                    <div></div>
+                    <p>위치안내</p>
+                </div><!--now_detaile_cont_02_title end-->
+
+                <div class="now_detaile_map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13037.055459640262!2d129.2283203!3d35.224801!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35688ed0b9aed04b%3A0x7e72b39472af57e1!2z64yA67OA7ZWt!5e0!3m2!1sko!2skr!4v1698813099401!5m2!1sko!2skr" width="100%" height="550" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+            </div><!--now_detaile_cont_02_ex end-->
+
+        </div><!--now_detaile_form_ex end-->
+
+        <a href="now.html" class="back_list_btn">
+            <p>목록</p>
+        </a>
+
+        <div class="prev_next_btn_box">
+
+            <a href="#" class="prev_btn">
+                <div>
+                    <p>PREV</p>
+                    <p>이전 글이 없습니다.</p>
+                </div>
+            </a>
+
+            <a href="#" class="next_btn">
+                <div>
+                    <p>NEXT</p>
+                    <p>2023 국제크루즈 부산항 입항 기념 환대행사</p>
+                </div>
+            </a>
+
+        </div><!--prev_next_btn_box-->
+
+    </div><!--now_detaile_page_ex end-->
+
+    
+    <footer class="tplus_footer_ex">
+
+        <div class="footer_box">
+
+            <a href="#" class="footer_logo">
+                <img src="img/white_logo.png" alt="">
+            </a>
+
+            <div class="footer_cont">
+
+                <p>대표자 : 이기형</p>
+                <p>주소 : 부산광역시 동래구 사직로 7 (사직동, 포스카빌딩 7층)</p>
+                <p>사업자 등록번호 : 607-81-97964</p>
+                <p>전화문의 : 051-503-0882</p>
+                <p>이메일 : tplus@tplusmice.co.kr</p>
+                <p>Copyright ⓒ 2023 T Plus. All right reserved.</p>
+
+            </div><!--footer_cont-->
+
+        </div><!--footer_box-->
+
+    </footer><!--tplus_footer_ex-->
+    
+</body>
+</html>

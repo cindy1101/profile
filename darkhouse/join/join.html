@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/owl.carousel.js"></script>
+    <link href="../css/owl.carousel.min.css" rel="stylesheet">
+    <link href="../css/owl.theme.default.min.css" rel="stylesheet">
+    <link href="../css/docs.theme.min.css" rel="stylesheet">
+    <link href="css/join.css" rel="stylesheet">
+    <script>
+        $(function(){
+
+
+            //전체 동의 누르면 다 전체 동의 된다
+            $(document).on('click','#all_terms',function(){
+            if( $('#all_terms').is(':checked')){
+                $('#terms_chk_01').prop('checked',true);
+                $('#terms_chk_02').prop('checked',true);
+            }else{
+                $('#terms_chk_01').prop('checked',false);
+                $('#terms_chk_02').prop('checked',false);
+                }
+            });
+
+            //모든 거 다 체크 되면 전체동의 체크 된다
+            $(document).on('click','.all_no_chk',function(){
+                if($('input[class=all_no_chk]:checked').length==$('.all_no_chk').length){
+                    $('#all_terms').prop('checked',true);
+                }else{
+                $('#all_terms').prop('checked',false);
+                }
+            });
+
+             //개인정보 레이어 팝업
+             $("#open_privacy").click(function(){
+
+                $('body').addClass('scrollOff').on('scroll touchmove mousewheel', function(e){
+                e.preventDefault();});
+
+                $("#privacy_box").fadeIn(100);
+
+                const body = document.querySelector('body');
+                body.style.overflowY = 'hidden'
+
+                });
+
+                $("#privacy_close").click(function(){
+
+                $('body').removeClass('scrollOff').off('scroll touchmove mousewheel'); 
+                PrivacyClose(); 
+
+                const body = document.querySelector('body');
+                body.style.overflowY = 'scroll'
+
+                });
+
+                function PrivacyClose(){
+                $("#privacy_box").fadeOut(100);}
+
+                 //회원가입 완료 레이어 팝업
+                $("#join_submit_btn").click(function(){
+
+                $('body').addClass('scrollOff').on('scroll touchmove mousewheel', function(e){
+                e.preventDefault();});
+
+                $("#join_submit_popup").fadeIn(100);
+
+                const body = document.querySelector('body');
+                body.style.overflowY = 'hidden'
+
+                });
+
+                $("#close_join_submit_popup").click(function(){
+
+                $('body').removeClass('scrollOff').off('scroll touchmove mousewheel'); 
+                JoinSubmitClose(); 
+
+                const body = document.querySelector('body');
+                body.style.overflowY = 'scroll'
+
+                });
+
+                function JoinSubmitClose(){
+                $("#join_submit_popup").fadeOut(100);}
+
+        });
+    </script>
+</head>
+<body>
+
+    <input type="checkbox" id="menu_open_mobile">
+
+    <header class="mobile_header">
+        
+        <div class="header_top_mobile">
+
+            <a href="../index.html">
+                <img src="../img/dark_logo.png">
+            </a>
+
+            <label for="menu_open_mobile">
+                <img src="../img/mobile_icon_open.png">
+            </label>
+
+        </div><!--header_top_mobile-->
+
+        <div class="mobile_header_sheet">
+
+            <div class="icon_header_m">
+
+                <div class="top_sheet_h">
+
+                    <a href="../index.html">
+                        <img src="../img/home_icon.png">
+                    </a>
+
+                    <label for="menu_open_mobile">
+                        <img src="../img/close_btn.png">
+                    </label>
+
+                </div><!--top_sheet_h-->
+
+                <div class="gnb_mobile_header">
+
+                    <a href="../login/login.html">
+                        <div>
+                            <img src="../img/login_icon.png">
+                        </div>
+                        <p>로그인</p>
+                    </a>
+    
+                    <a href="join.html">
+                        <div>
+                            <img src="../img/join_icon.png">
+                        </div>
+                        <p>회원가입</p>
+                    </a>
+    
+    
+                    <a href="../reservation_list/reservation_list.html">
+                        <div>
+                            <img src="../img/reservation_icon.png">
+                        </div>
+                        <p>예약확인</p>
+                    </a>
+    
+    
+                    <a href="../mypage/mypage.html">
+                        <div>
+                            <img src="../img/mypage_icon.png">
+                        </div>
+                        <p>마이페이지</p>
+                    </a>
+
+                </div><!--gnb_mobile_header-->
+
+            </div><!--icon_header_m-->
+
+            <div class="search_mobile_box">
+
+                <div>
+                    <input type="text" id="mobile_search" placeholder="검색어를 입력하세요">
+
+                    <input type="submit" id="mobile_search_btn">
+    
+                    <label for="mobile_search_btn">
+                        <img src="../img/search_icon.png">
+                    </label>
+                </div>
+
+            </div><!--search_mobile_box-->
+
+            <div class="lnb_menu_mobile">
+
+                <ul>
+                    <li>
+                        <a href="../sub/sub.html">
+                            <p>다낭</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../sub/sub.html">
+                            <p>나트랑</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../sub/sub.html">
+                            <p>하노이</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../sub/sub.html">
+                            <p>달랏</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../sub/sub.html">
+                            <p>장가계</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../airline/airline.html">
+                            <p>항공권</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../notic/notic.html">
+                            <p>공지사항</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../event/event.html">
+                            <p>이벤트/기획전</p>
+                        </a>
+                    </li>
+                </ul>
+
+            </div><!--lnb_menu_mobile-->
+
+        </div><!--mobile_header_sheet-->
+
+    </header><!--mobile_header-->
+    
+    <header class="erp_header">
+
+        <div class="erp_header_top">
+
+            <a href="../index.html">
+                <img src="../img/dark_logo.png">
+            </a>
+
+            <div class="search_ex">
+
+                <input type="text" id="search_txt" placeholder="검색어를 입력하세요.">
+
+                <input type="submit" id="search_button">
+
+                <label for="search_button">
+                    <img src="../img/search_icon.png">
+                </label>
+
+            </div><!--search_ex-->
+
+            <div class="gnb_menu_erp">
+                <ul>
+                    <li>
+                        <a href="../login/login.html">
+                            <p>로그인</p>
+                        </a>
+                    </li>
+
+                    <li></li>
+
+                    <li>
+                        <a href="join.html">
+                            <p>회원가입</p>
+                        </a>
+                    </li>
+
+                    <li></li>
+
+                    <li>
+                        <a href="../reservation_list/reservation_list.html">
+                            <p>예약확인</p>
+                        </a>
+                    </li>
+
+                    <li></li>
+
+                    <li>
+                        <a href="../mypage/mypage.html">
+                            <p>마이페이지</p>
+                        </a>
+                    </li>
+                </ul>
+            </div><!--gnb_menu_erp-->
+
+        </div><!--erp_header_top-->
+
+        <div class="erp_header_bottom">
+
+            <ul>
+                <li>
+                    <a href="../sub/sub.html">
+                        <p>다낭</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../sub/sub.html">
+                        <p>나트랑</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../sub/sub.html">
+                        <p>하노이</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../sub/sub.html">
+                        <p>달랏</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../sub/sub.html">
+                        <p>장가계</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../airline/airline.html">
+                        <p>항공권</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../notic/notic.html">
+                        <p>공지사항</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../event/event.html">
+                        <p>이벤트/기획전</p>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="call_box">
+
+                <div>
+                    <img src="../img/call_icon_header.png">
+                </div>
+
+                <div>
+                    <p>고객센터</p>
+                    <p>1588-1588</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </header><!--erp_header-->
+
+    <div class="mobile_lnb_box">
+
+        <div class="owl-carousel owl-theme m_lnb_box">
+
+            <a href="../sub/sub.html" class="item m_lnb">
+                <p>다낭</p>
+            </a>
+
+            <a href="../sub/sub.html" class="item m_lnb">
+                <p>나트랑</p>
+            </a>
+
+            <a href="../sub/sub.html" class="item m_lnb">
+                <p>하노이</p>
+            </a>
+
+            <a href="../sub/sub.html" class="item m_lnb">
+                <p>달랏</p>
+            </a>
+
+            <a href="../sub/sub.html" class="item m_lnb">
+                <p>장가계</p>
+            </a>
+
+            <a href="../airline/airline.html" class="item m_lnb">
+                <p>항공권</p>
+            </a>
+            
+            <a href="../notic/notic.html" class="item m_lnb">
+                <p>공지사항</p>
+            </a>
+
+            <a href="../event/event.html" class="item m_lnb">
+                <p>기획전&이벤트</p>
+            </a>
+
+        </div>
+
+    </div><!--mobile_lnb_box-->
+    
+    <div class="join_ex">
+
+        <div class="join_line"></div>
+
+        <div class="join_title">
+            <p>회원가입</p>
+            <p>함께 해요, 다크호스 투어와 함께 떠나는 지금<i>!</i></p>
+        </div>
+
+        <div class="join_form">
+
+            <form>
+
+                <div class="id_join_box">
+
+                    <div class="id_txt_box_j">
+                        <p>아이디</p>
+                        <p class="use_reset_id">사용할 수 없는 아이디입니다.</p>
+                        <p class="use_submit_id">사용할 수 있는 아이디입니다.</p>
+                    </div>
+
+                    <div>
+                        <input type="text" id="join_id" placeholder="아이디 혹은 이메일 아이디 입력" required>
+                        <input type="button" id="join_id_re_chk" value="중복확인">
+                    </div>
+                </div>
+
+                <div class="password_join_box">
+                    <p>비밀번호</p>
+                    <p>비밀번호는 문자,숫자,특수문자 포함 8~20글자이여야 합니다.</p>
+                    <input type="password" id="join_pw" placeholder="비밀번호 입력" required>
+                    <input type="password" id="join_pw_re" placeholder="비밀번호 재입력" required>
+                </div>
+
+                <div class="tourism_join_box">
+                    <p>여행사명</p>
+                    <input type="text" id="join_tour" placeholder="여행사명 입력" required>
+                </div>
+
+                <div class="phone_join_box">
+                    <p>휴대전화</p>
+                    <input type="tel" id="join_phone" placeholder="휴대전화 입력 (숫자만 입력)" required> 
+                </div>
+
+                <div class="join_check_box">
+
+                    <input type="checkbox" id="all_terms">
+                    <input type="checkbox" id="terms_chk_01" class="all_no_chk" required>
+                    <input type="checkbox" id="terms_chk_02" class="all_no_chk">
+
+                    <div class="all_terms_box">
+
+                        <div>
+                            <label for="all_terms"></label>
+
+                            <label for="all_terms">
+                                <p>전체동의</p>
+                            </label>
+                        </div>
+
+                    </div><!--all_terms_box-->
+
+                    <div class="terms_chkbox_01">
+
+                       <div>
+                            <label for="terms_chk_01"></label>
+
+                            <label for="terms_chk_01">
+                                <p><span>[필수]</span>개인정보수집/이용/취급방침</p>
+                            </label>
+                       </div>
+
+                        <a href="javascript:void(0);" id="open_privacy">
+                            <p>▶</p>
+                        </a>
+
+                    </div>
+
+                    <div class="terms_chkbox_02">
+
+                        <label for="terms_chk_02"></label>
+
+                        <label for="terms_chk_02">
+                            <p>이메일/문자메시지 소식 받기</p>
+                        </label>
+
+                    </div>
+
+                </div><!--join_check_box-->
+
+                <input type="submit" id="join_submit_btn" value="회원가입">
+
+            </form>
+
+        </div>
+
+    </div><!--join_ex-->
+
+    <footer class="footer_dark">
+
+        <div class="footer_line_01"></div>
+
+        <div class="footer_top">
+            
+            <div class="footer_top_menu">
+
+                <ul>
+                    <li>
+                        <a href="../travel_terms/travel_terms.html">
+                            <p>여행약관</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../privacy_policy/privacy_policy.html">
+                            <p>개인정보처리방침</p>
+                        </a>
+                    </li>
+
+                    <li id="open_emaile">
+                        <a href="javascript:void(0);">
+                            <p>이메일주소무단수집</p>
+                        </a>
+                    </li>
+                </ul>
+
+            </div><!--footer_top_menu-->
+
+            <div class="footer_sns">
+
+                <a href="#">
+                    <img src="../img/instar_icon.png">
+                </a>
+
+                <a href="#">
+                    <img src="../img/kakao_icon.png">
+                </a>
+
+                <a href="#">
+                    <img src="../img/blog_icon.png">
+                </a>
+
+            </div><!--footer_sns-->
+
+        </div><!--footer_top-->
+
+        <div class="footer_line_02"></div>
+
+        <div class="footer_bottom">
+            <p>다크호스투어(주)</p>
+            <p>대표이사 : 황윤석 | 주소 : 광주광역시 서구 상무중앙로 114, 219호(치평동 랜드피아오피스텔)<br>
+            사업자등록번호 : (주)다크호스투어(DARKHORSE TOUR) | 통신판매업신고번호 : 제 2017-광주 서구-0466호 | 대표전화 : 062-228-1119<br>
+            Copyright ⓒ(주)다크호스투어 All Rights Reserved</p>
+        </div>
+    </footer><!--footer_dark-->
+
+    <div class="emaile_no_ex" id="emale_no_ex" style="display: none;">
+
+        <div class="emaile_no_box">
+
+            <div class="emaile_no_title">
+                <p>이메일 무단 수집 거부</p>
+            </div><!--emaile_no_title-->
+
+            <div class="emaile_contents">
+                <p>
+                    본 웹사이트에 게시된 이메일 주소가 전자우편 수집 프로그램이나 그 밖의 기술적 장치 를 이용하여 무단으로 수집되는 것을 거부하며,<br>
+                    이를 위반시 정보통신망법에 의해 형사 처벌됨을 유념하시기 바랍니다.<br><br>
+
+
+                    정보통신망 이용촉진 및 정보보호 등에 관한 법률<br>
+
+                    제50조의2 (전자우편주소의 무단 수집행위 등 금지)<br>
+
+                    누구든지 인터넷 홈페이지 운영자 또는 관리자의 사전 동의 없이 인터넷 홈페이지에서 자동으로 전자우편주소를 수집 하는 프로그램 그 밖의 기술적 장치를 이용하여 전자우편주소를 수집하여서는 아니된다.<br>
+                    누구든지 제1항의 규정을 위반하여 수집된 전자우편주소를 판매ㆍ유통하여서는 아니된다.<br>
+                    누구든지 제1항 및 제2항의 규정에 의하여 수집ㆍ판매 및 유통이 금지된 전자우편주소임을 알고 이를 정보 전송에 이용하여서는 아니된다.<br><br>
+
+
+                    제74조 (벌칙) 다음 각호의 1에 해당하는 자는 1천만원 이하의 벌금에 처한다.<br>
+
+                    제8조제4항의 규정을 위반하여 표시ㆍ판매 또는 판매할 목적으로 진열한 자<br>
+                    제44조의7제1항제1호의 규정을 위반하여 음란한 부호ㆍ문언ㆍ음향ㆍ화상 또는 영상을 배포ㆍ판매ㆍ임대하거나 공연히 전시한 자<br>
+                    제44조의7제1항제3호의 규정을 위반하여 공포심이나 불안감을 유발하는 부호ㆍ문언ㆍ음향ㆍ화상 또는 영상을 반복적으로 상대방에게 도달하게 한 자<br>
+                    제50조제6항의 규정을 위반하여 기술적 조치를 한 자<br>
+                    제50조의8의 규정을 위반하여 광고성 정보를 전송한 자 제50조의2의 규정을 위반하여 전자우편 주소를 수집ㆍ판매ㆍ유통 또는 정보전송에 이용한 자<br>
+                    제50조의8의 규정을 위반하여 광고성 정보를 전송한 자<br>
+                    제53조제4항을 위반하여 등록사항의 변경등록 또는 사업의 양도ㆍ양수 또는 합병ㆍ상속의 신고를 하지 아니한 자<br>
+                </p>
+            </div><!--emaile_contents-->
+
+            <div class="emaile_box_line_01"></div>
+
+            <div class="emaile_close" id="emaile_close_btn">
+                <p style="cursor: pointer;">확인</p>
+            </div>
+
+        </div><!--emaile_no_box-->
+
+    </div><!--emaile_no_ex-->
+
+
+    <div class="privacy_ex" id="privacy_box" style="display: none;">
+
+        <div class="privacy_contents" id="privacy_txt_box">
+
+            <div class="privacy_title">
+                <p>개인정보수집 이용 · 취급방침</p>
+            </div>
+
+            <div class="privacy_txt">
+                <p>사이트가 취급하는 모든 개인정보는 관련법령에 근거하거나 정보주체의 동의에 의하여 수집ㆍ보유 및 처리되고 있습니다.<br><br>
+
+                    「개인정보보호법률」은 이러한 개인정보의 취급에 대한 일반적 규범을 제시하고 있으며, 사이트는 이러한 법령의 규정에 따라 개인정보의 처리목적에 필요한 최소한의 개인정보를 수집ㆍ보유 및 처리하는 개인정보를 공공업무의 적절한 수행과 국민의 권익을 보호하기 위해 적법하고 적정하게 취급할 것입니다.<br><br>
+                    
+                    또한, 사이트는 관련 법령에서 규정한 바에 따라 사이트에서 보유하고 있는 개인정보에 대한 열람청구권 및 정정청구권 등 이용자 여러분의 권익을 존중하며, 이용자 여러분은 이러한 법령상 권익의 침해 등에 대하여 법률이 정하는 바에 따라 정보주체의 권익을 보호 받을 수 있습니다.<br><br>
+                    
+                    사이트의 개인정보처리방침은 사이트가 운영하는 여러 홈페이지에서 이용자 여러분의 개인정보를 보호하기 위한 [홈페이지 이용자의 개인정보보호]와 소관업무를 수행하는데 필요한 개인정보 취급에 관한 [컴퓨터에 의해 처리되는 개인정보보호] 두 가지로 구성되어 있습니다.<br><br>
+                    
+                    위와 같이 자동 수집ㆍ저장되는 정보는 이용자 여러분에게 보다 나은 서비스를 제공하기 위해 홈페이지의 개선과 보완을 위한 통계분석, 이용자와 홈페이지 간의 원활한 의사소통, 보안 침해 대응 등을 위해 이용될 수 있으며, 이러한 정보는 관계법령의 규정에 따라 제출될 수 있음을 유념하시기 바랍니다.<br><br>
+                    
+                    사이트가 운영하는 홈페이지에서 이메일 주소 등 식별할 수 있는 개인정보를 취득하여서는 아니 됩니다. 적법하지 아니한 방법으로 이러한 개인정보를 열람 또는 제공받은 자는 [개인정보보호법률]에 의하여 처벌을 받을 수 있습니다.</p>
+            </div>
+
+            <div class="privacy_line"></div>
+
+            <a href="#" onclick="return false;" id="privacy_close" class="privacy_close_box">
+                <p>확인</p>
+            </a>
+
+        </div><!--privacy_contents-->
+
+    </div><!--privacy_ex-->
+
+
+    <div class="join_submit_ex" id="join_submit_popup" style="display: none;">
+
+        <div class="join_submit_box">
+
+            <div>
+                <div>
+                    <img src="img/join_chk_icon_02.png">
+                </div>
+
+                <p><span>회원가입</span>이 완료되었습니다.</p>
+
+                <p>지금 바로 다양한 여행을 만나보세요!</p>
+
+                <a href="../login/login.html" id="close_join_submit_popup">
+                    <p>확인</p>
+                </a>
+            </div>
+
+        </div><!--join_submit_box-->
+
+    </div><!--join_submit_ex-->
+
+
+    <script src="../js/total.js"></script>
+</body>
+</html>

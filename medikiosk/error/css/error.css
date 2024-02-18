@@ -1,0 +1,364 @@
+* {margin: 0; padding: 0;}
+li {list-style: none;}
+a {text-decoration: none;}
+img {display: block;}
+
+*::-webkit-scrollbar {
+    display: none; /* 크롬, 사파리, 오페라, 엣지 */
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'min_bold';
+    font-weight: 600;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'bold';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.ttf') format("truetype");
+    font-display: swap;
+}
+
+body {font-family: 'Pretendard'; line-height: 16px; height: auto !important;}
+
+p {margin-bottom: 0;}
+
+ul {margin: 0; padding: 0;}
+
+input:not([type]), input[type="text"], input[type="password"], 
+input[type="date"], input[type="datetime"], 
+input[type="datetime-local"], input[type="month"], 
+input[type="week"], input[type="email"], input[type="number"], 
+input[type="search"], input[type="tel"], input[type="time"], 
+input[type="url"], input[type="color"], textarea
+{box-shadow: none;
+background-color: #fff;
+padding: 0;
+margin-bottom: 0;
+outline: none;}
+
+input[type="checkbox"]
+{margin-bottom: 0;}
+
+input[type="checkbox"]+label, input[type="radio"]+label 
+{margin: 0;}
+
+@media all and (min-width: 1420px)
+{
+    div.error_ex
+    {width: fit-content;
+    margin: 150px auto;
+    margin-top: 239.44px;}
+
+    div.error_box
+    {width: fit-content;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    overflow: hidden;}
+
+    div.error_icon_img
+    {width: 350px;
+    margin-right: 50px;}
+
+    div.error_icon_img img
+    {width: 100%; height: auto;}
+
+    div.error_txt_box
+    {width: fit-content;
+    max-width: calc(100% - 400px);}
+
+    div.error_txt_box>p:nth-child(1)
+    {width: 100%;
+    font-size: 42px; font-family: bold; color: #222;
+    line-height: 50px;
+    margin-bottom: 10px;}
+
+    div.error_txt_box>p:nth-child(1)>span
+    {color: #71bec0;}
+
+    div.error_txt_box>p:nth-child(2)
+    {width: 100%;
+    margin-bottom: 30px;
+    font-size: 32px; font-family: 'min_bold'; color: #222; line-height: 40px;}
+
+    div.error_txt_box>p:nth-child(3)
+    {width: 100%;
+    line-height: 25px; color: #555;
+    word-break: keep-all;
+    margin-bottom: 50px;}
+
+    div.error_btn_box
+    {width: fit-content;
+    max-width: 100%;
+    overflow: hidden;}
+
+    a.error_prev_btn
+    {width: 140px; height: 50px;
+    display: block;
+    border: 1px solid #333; box-sizing: border-box;
+    margin-right: 10px;
+    float: left;
+    transition: all 0.3s;}
+
+    a.error_prev_btn:hover {border: none; background-color: #1f4e79;}
+
+    a.error_prev_btn>p
+    {text-align: center;
+    line-height: 50px; color: #222;
+    transition: all 0.3s;}
+
+    a.error_prev_btn:hover>p {color: #fff;}
+
+    a.error_home_btn
+    {width: 140px; height: 50px;
+    display: block;
+    border: 1px solid #333; box-sizing: border-box;
+    float: left;
+    transition: all 0.3s;}
+
+    a.error_home_btn:hover {border: none; background-color: #1f4e79;}
+
+    a.error_home_btn>p
+    {text-align: center;
+    line-height: 50px; color: #222;
+    transition: all 0.3s;}
+
+    a.error_home_btn:hover>p {color: #fff;}
+}
+
+@media all and (min-width: 769px) and (max-width: 1419px)
+{
+    div.error_ex
+    {width: fit-content;
+    max-width: 90%;
+    margin: 150px auto;
+    margin-top: 239.44px;}
+
+    div.error_box
+    {width: fit-content;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    overflow: hidden;}
+
+    div.error_icon_img
+    {width: 350px;
+    margin-right: 50px;}
+
+    div.error_icon_img img
+    {width: 100%; height: auto;}
+
+    div.error_txt_box
+    {width: fit-content;
+    max-width: calc(100% - 400px);}
+
+    div.error_txt_box>p:nth-child(1)
+    {width: 100%;
+    font-size: 42px; font-family: bold; color: #222;
+    line-height: 50px;
+    margin-bottom: 10px;}
+
+    div.error_txt_box>p:nth-child(1)>span
+    {color: #71bec0;}
+
+    div.error_txt_box>p:nth-child(2)
+    {width: 100%;
+    margin-bottom: 30px;
+    font-size: 32px; font-family: 'min_bold'; color: #222; line-height: 40px;}
+
+    div.error_txt_box>p:nth-child(3)
+    {width: 100%;
+    line-height: 25px; color: #555;
+    word-break: keep-all;
+    margin-bottom: 50px;}
+
+    div.error_btn_box
+    {width: fit-content;
+    max-width: 100%;
+    overflow: hidden;}
+
+    a.error_prev_btn
+    {width: 150px; height: 50px;
+    display: block;
+    border: 1px solid #333; box-sizing: border-box;
+    margin-right: 10px;
+    float: left;
+    transition: all 0.3s;}
+
+    a.error_prev_btn:hover {border: none; background-color: #1f4e79;}
+
+    a.error_prev_btn>p
+    {text-align: center;
+    line-height: 50px; color: #222;
+    transition: all 0.3s;}
+
+    a.error_prev_btn:hover>p {color: #fff;}
+
+    a.error_home_btn
+    {width: 150px; height: 50px;
+    display: block;
+    border: 1px solid #333; box-sizing: border-box;
+    float: left;
+    transition: all 0.3s;}
+
+    a.error_home_btn:hover {border: none; background-color: #1f4e79;}
+
+    a.error_home_btn>p
+    {text-align: center;
+    line-height: 50px; color: #222;
+    transition: all 0.3s;}
+
+    a.error_home_btn:hover>p {color: #fff;}
+}
+
+@media all and (min-width: 769px) and (max-width: 1279px)
+{
+    div.error_ex
+    {margin: 150px auto;
+    margin-top: 175px;}
+}
+
+@media all and (min-width: 769px) and (max-width: 1024px)
+{
+    div.error_icon_img
+    {width: 45%;
+    margin-right: 5%;
+    float: left;}
+
+    div.error_icon_img img
+    {width: 100%; height: auto;}
+
+    div.error_txt_box
+    {width: 50%;
+    float: left;}
+
+    div.error_btn_box
+    {width: 100%;
+    overflow: hidden;}
+
+    a.error_prev_btn
+    {width: 49%;
+    margin-right: 2%;}
+
+    a.error_home_btn
+    {width: 49%;}
+}
+
+@media all and (max-width: 768px)
+{
+    div.error_ex
+    {width: 90%;
+    margin: 0 auto;
+    margin-top: 120px;
+    margin-bottom: 80px;}
+
+    div.error_box
+    {width: 100%;}
+
+    div.error_icon_img
+    {width: 50%;
+    margin: 0 auto;
+    margin-bottom: 30px;}
+
+    div.error_icon_img img
+    {width: 100%; height: auto;}
+
+    div.error_txt_box
+    {width: 100%;}
+
+    div.error_txt_box>p:nth-child(1)
+    {width: 100%;
+    line-height: 30px;
+    font-size: 28px; font-family: bold; color: #222;
+    margin-bottom: 10px;}
+
+    div.error_txt_box>p:nth-child(1)>span
+    {color: #71bec0;}
+
+    div.error_txt_box>p:nth-child(2)
+    {width: 100%;
+    line-height: 30px;
+    font-size: 28px; font-family: 'min_bold'; color: #222;
+    margin-bottom: 20px;}
+
+    div.error_txt_box>p:nth-child(3)
+    {width: 100%;
+    line-height: 25px; color: #555;
+    word-break: keep-all;
+    margin-bottom: 50px;}
+
+    div.error_btn_box
+    {width: 100%;
+    overflow: hidden;}
+
+    div.error_btn_box>a
+    {width: 49%; height: 50px;
+    border-radius: 5px;
+    display: block;
+    float: left;}
+
+    div.error_btn_box>a:nth-child(1)
+    {margin-right: 2%;
+    background-color: #1f4e79;}
+
+    div.error_btn_box>a:nth-child(2)
+    {background-color: #333;}
+
+    div.error_btn_box>a>p
+    {text-align: center; line-height: 50px; color: #fff;}
+
+
+}
+
+@media all and (max-width: 600px)
+{
+    div.error_txt_box>p:nth-child(1)
+    {width: 100%;
+    line-height: 30px;
+    font-size: 24px; font-family: bold; color: #222;
+    margin-bottom: 5px;}
+
+    div.error_txt_box>p:nth-child(1)>span
+    {color: #71bec0;}
+
+    div.error_txt_box>p:nth-child(2)
+    {width: 100%;
+    line-height: 30px;
+    font-size: 24px; font-family: 'min_bold'; color: #222;
+    margin-bottom: 15px;}
+
+    div.error_btn_box>a
+    {width: 100%; height: 50px;
+    border-radius: 5px;
+    display: block;
+    float: inherit;}
+
+    div.error_btn_box>a:nth-child(1)
+    {margin-right: 0;
+    margin-bottom: 10px;}
+}

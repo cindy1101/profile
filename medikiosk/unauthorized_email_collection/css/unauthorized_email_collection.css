@@ -1,0 +1,249 @@
+* {margin: 0; padding: 0;}
+li {list-style: none;}
+a {text-decoration: none;}
+img {display: block;}
+
+*::-webkit-scrollbar {
+    display: none; /* 크롬, 사파리, 오페라, 엣지 */
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'min_bold';
+    font-weight: 600;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'bold';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.ttf') format("truetype");
+    font-display: swap;
+}
+
+body {font-family: 'Pretendard'; line-height: 16px;}
+
+p {margin-bottom: 0;}
+
+ul {margin: 0; padding: 0;}
+
+input:not([type]), input[type="text"], input[type="password"], 
+input[type="date"], input[type="datetime"], 
+input[type="datetime-local"], input[type="month"], 
+input[type="week"], input[type="email"], input[type="number"], 
+input[type="search"], input[type="tel"], input[type="time"], 
+input[type="url"], input[type="color"], textarea
+{box-shadow: none;
+background-color: #fff;
+padding: 0;
+margin-bottom: 0;
+outline: none;}
+
+input[type="checkbox"]
+{margin-bottom: 0;}
+
+input[type="checkbox"]+label, input[type="radio"]+label 
+{margin: 0;}
+
+@media all and (min-width: 1420px)
+{   
+    
+    /*이메일 무단 수집 거부*/
+    div.unauthorized_email_collection_ex
+    {width: 1400px;
+    margin: 150px auto;
+    margin-top: 239.44px;}
+
+    div.unauthorized_email_collection_title
+    {width: 100%;
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #ddd; box-sizing: border-box;}
+
+    div.unauthorized_email_collection_title>p
+    {width: 100%;
+    text-align: center;
+    font-size: 28px; font-family: bold; color: #000; line-height: 30px;}
+
+    /*콘텐츠*/
+    div.unauthorized_email_collection_contets_box
+    {width: 100%;}
+    
+    p.unauthorized_email_collection_contets_title
+    {width: 100%;
+    word-break: keep-all;
+    line-height: 25px; color: #222;
+    margin-bottom: 20px;}
+
+    p.unauthorized_email_collection_contets_title_01
+    {width: 100%;
+    color: #333; line-height: 25px; font-family: 'min_bold';
+    margin-bottom: 10px;
+    word-break: keep-all;}
+
+    p.unauthorized_email_collection_contets_txt_01
+    {width: 100%;
+    color: #777; line-height: 25px;
+    margin-bottom: 20px;
+    word-break: keep-all;}
+
+    p.unauthorized_email_collection_contets_title_02
+    {width: 100%;
+    color: #333; line-height: 25px; font-family: 'min_bold';
+    margin-bottom: 10px;
+    word-break: keep-all;}
+
+    p.unauthorized_email_collection_contets_txt_02
+    {width: 100%;
+    color: #777; line-height: 25px;
+    word-break: keep-all;}
+    
+}
+
+@media all and (min-width: 769px) and (max-width : 1419px)
+{
+    /*이메일 무단 수집 거부*/
+    div.unauthorized_email_collection_ex
+    {width: 90%;
+    margin: 150px auto;
+    margin-top: 239.44px;}
+
+    div.unauthorized_email_collection_title
+    {width: 100%;
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #ddd; box-sizing: border-box;}
+
+    div.unauthorized_email_collection_title>p
+    {width: 100%;
+    text-align: center;
+    font-size: 28px; font-family: bold; color: #000; line-height: 30px;}
+
+    /*콘텐츠*/
+    div.unauthorized_email_collection_contets_box
+    {width: 100%;}
+    
+    p.unauthorized_email_collection_contets_title
+    {width: 100%;
+    word-break: keep-all;
+    line-height: 25px; color: #222;
+    margin-bottom: 20px;}
+
+    p.unauthorized_email_collection_contets_title_01
+    {width: 100%;
+    color: #333; line-height: 25px; font-family: 'min_bold';
+    margin-bottom: 10px;
+    word-break: keep-all;}
+
+    p.unauthorized_email_collection_contets_txt_01
+    {width: 100%;
+    color: #777; line-height: 25px;
+    margin-bottom: 20px;
+    word-break: keep-all;}
+
+    p.unauthorized_email_collection_contets_title_02
+    {width: 100%;
+    color: #333; line-height: 25px; font-family: 'min_bold';
+    margin-bottom: 10px;
+    word-break: keep-all;}
+
+    p.unauthorized_email_collection_contets_txt_02
+    {width: 100%;
+    color: #777; line-height: 25px;
+    word-break: keep-all;}
+    
+}
+
+@media all and (min-width: 769px) and (max-width: 1279px)
+{
+    /*이메일 무단 수집 거부*/
+    div.unauthorized_email_collection_ex
+    {width: 90%;
+    margin: 175px auto;
+    margin-bottom: 150px;}
+}
+
+@media all and (max-width : 768px)
+{
+    /*이메일 무단 수집 거부*/
+    div.unauthorized_email_collection_ex
+    {width: 90%;
+    margin: 50px auto;
+    margin-top: 120px;
+    margin-bottom: 80px;}
+
+    div.unauthorized_email_collection_title
+    {width: 100%;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ddd; box-sizing: border-box;}
+
+    div.unauthorized_email_collection_title>p
+    {width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    word-break: keep-all;
+    font-size: 22px; font-family: bold; color: #000; line-height: 30px;}
+
+    div.unauthorized_email_collection_contets_box
+    {width: 100%;}
+
+    p.unauthorized_email_collection_contets_title
+    {width: 100%;
+    line-height: 20px; color: #000;
+    font-size: 15px;
+    word-break: keep-all;
+    margin-bottom: 20px;}
+
+    p.unauthorized_email_collection_contets_title_01
+    {width: 100%;
+    word-break: keep-all;
+    color: #222;
+    margin-bottom: 10px;
+    font-size: 15px; font-family: 'min_bold'; line-height: 20px;}
+
+    p.unauthorized_email_collection_contets_txt_01
+    {width: 100%;
+    word-break: keep-all; font-size: 14px; color: #777; line-height: 20px;
+    margin-bottom: 20px;}
+
+    p.unauthorized_email_collection_contets_title_02
+    {width: 100%;
+    word-break: keep-all;
+    color: #222;
+    margin-bottom: 10px;
+    font-size: 15px; font-family: 'min_bold'; line-height: 20px;}
+
+    p.unauthorized_email_collection_contets_txt_02
+    {width: 100%;
+    word-break: keep-all; font-size: 14px; color: #777; line-height: 20px;}
+}
+
+@media all and (max-width : 600px)
+{
+    /*이메일 무단 수집 거부*/
+    div.unauthorized_email_collection_ex
+    {margin-top: 110px;}
+}

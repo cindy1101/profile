@@ -1,0 +1,5414 @@
+* {margin: 0; padding: 0;}
+li {list-style: none;}
+a {text-decoration: none;}
+img {display: block;}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'min_bold';
+    font-weight: 600;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'bold';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.ttf') format("truetype");
+    font-display: swap;
+}
+
+body 
+{font-family: 'Pretendard'; line-height: 16px;}
+
+p {margin-bottom: 0;}
+
+ul {margin: 0;}
+
+input:not([type]), input[type="text"], input[type="password"], 
+input[type="date"], input[type="datetime"], 
+input[type="datetime-local"], input[type="month"], 
+input[type="week"], input[type="email"], input[type="number"], 
+input[type="search"], input[type="tel"], input[type="time"], 
+input[type="url"], input[type="color"], textarea
+{box-shadow: none;
+background-color: #fff;
+padding: 0;
+margin-bottom: 0;}
+
+input[type="checkbox"]
+{margin-bottom: 0;}
+
+input[type="checkbox"]+label, input[type="radio"]+label 
+{margin: 0;}
+
+select
+{margin-bottom: 0;
+outline: none;}
+
+input[type="file"], input[type="checkbox"], input[type="radio"], select 
+{margin: 0;}
+
+/*테이블 제어*/
+table
+{margin-bottom: 0;
+border: none;}
+
+table tr td
+{padding: 0;
+background-color: #fff;}
+
+select {margin: 0;}
+
+
+@media all and (min-width: 1430px)
+{   
+    /*모바일 헤더*/
+    .mobile_header {display: none;}
+
+    #menu_open_mobile {display: none;}
+
+    .mobile_lnb_box {display: none;}
+
+    /*헤더*/
+    .erp_header
+    {width: 100%;
+    box-shadow: 1px 0px 5px rgba(0, 0, 0, 0.25);
+    z-index: 2;}
+
+    div.erp_header_top
+    {width: 1420px;
+    margin: 0 auto;
+    padding-top: 15px; padding-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;}
+
+    div.erp_header_top>a:nth-child(1)
+    {width: fit-content;}
+    
+    /*검색 박스*/
+    div.search_ex
+    {width: 350px;
+    position: relative;}
+
+    #search_txt
+    {width: 100%; height: 50px;
+    border: none;
+    border-bottom: 1px solid #ccc; box-sizing: border-box;
+    outline: none; background: transparent;
+    font-family: 'Pretendard';
+    font-size: 15px;
+    box-shadow: 0 0 0 0;
+    margin-bottom: 0;}
+
+    #search_button
+    {display: none;}
+
+    div.search_ex>label:nth-child(3)
+    {display: block;
+    width: 25px; height: 25px;
+    position: absolute;
+    top: 12.5px; right: 0;}
+
+    div.search_ex>label:nth-child(3) img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    /*gnb*/
+    div.gnb_menu_erp
+    {width: fit-content;}
+
+    div.gnb_menu_erp>ul
+    {width: fit-content;}
+
+    div.gnb_menu_erp>ul>li:nth-child(odd)
+    {display: inline-block;
+    padding-left: 5px; padding-right: 5px;}
+
+    div.gnb_menu_erp>ul>li:nth-child(odd)>a>p
+    {line-height: 50px;
+    color: #303030;
+    font-size: 15px;}
+
+    div.gnb_menu_erp>ul>li:nth-child(even)
+    {width: 1px; height: 10px;
+    background-color: #ccc;
+    display: inline-block;}
+
+    /*하단*/
+    div.erp_header_bottom
+    {width: 1420px;
+    margin: 0 auto;
+    padding-bottom: 15px;
+    overflow: hidden;}
+
+    div.erp_header_bottom>ul:nth-child(1)
+    {width: fit-content;
+    float: left;}
+
+    div.erp_header_bottom>ul:nth-child(1)>li
+    {display: inline-block;
+    padding-left: 10px; padding-right: 10px;}
+
+    div.erp_header_bottom>ul:nth-child(1)>li>a>p
+    {line-height: 40px;
+    color: #222;
+    transition: all 0.3s;
+    font-family: 'min_bold';}
+
+    div.erp_header_bottom>ul:nth-child(1)>li>a:hover>p
+    {color: #0096ff;}
+
+    div.call_box
+    {width: fit-content;
+    float: right;
+    display: flex;
+    align-items: center;}
+
+    div.call_box>div:nth-child(1)
+    {width: 30px; height: 30px;
+    margin-right: 10px;}
+
+    div.call_box>div:nth-child(1) img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    div.call_box>div:nth-child(2)>p
+    {line-height: 20px;}
+
+    div.call_box>div:nth-child(2)>p:nth-child(2)
+    {font-size: 20px;
+    font-family: 'min_bold';}
+
+
+    /*비주얼 이미지*/
+    div.airline_visual
+    {width: 100%; height: 350px;
+    overflow: hidden;
+    position: relative;}
+
+    div.airline_visual img
+    {width: 100%; height: 100%;
+    object-fit: cover;
+    transition: all 3s;
+    transform: scale(1.2);}
+
+    div.airline_visual>p:nth-child(2)
+    {width: 100%;
+    text-align: center;
+    font-family: bold; color: #fff;
+    font-size: 32px; line-height: 40px;
+    position: absolute;
+    top: calc(50% - 20px); left: 0;}
+
+     /*항공권*/
+    div.airline_select_ex
+    {width: 1420px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 5;
+    top: -50px;}
+
+    div.airline_show_box
+    {width: 100%;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
+    background-color: #fff;
+    display: flex;
+    align-items: stretch;
+    overflow: hidden;}
+
+    div.airline_select_box
+    {width: calc(100% - 100px);
+    display: flex;
+    align-items: stretch;}
+
+    div.airline_select_box>div
+    {width: 25%;
+    padding-top: 30px; padding-bottom: 30px;
+    border-right: 1px solid #ccc;
+    box-sizing: border-box;}
+
+    div.airline_select_box>div:last-child
+    {border-right: none;}
+
+    #search_airline_btn
+    {width: 100px; 
+    line-height: 230px;
+    border: none; outline: none;
+    background-color: #0053d4;
+    text-align: center; color: #fff;}
+
+    div.start_airline_box>div
+    {width: calc(100% - 60px);
+    margin: 0 auto;}
+
+    div.start_airline_box>div>p:nth-child(1)
+    {width: 100%;
+    color: #777; line-height: 30px;
+    margin-bottom: 5px;}
+
+    div.arrive_airline_box>div
+    {width: calc(100% - 60px);
+    margin: 0 auto;}
+
+    div.arrive_airline_box>div>p:nth-child(1)
+    {width: 100%;
+    color: #777; line-height: 30px;
+    margin-bottom: 5px;}
+
+    div.day_airline_box>div
+    {width: calc(100% - 60px);
+    margin: 0 auto;}
+
+    div.day_airline_box>div>div:nth-child(1)
+    {margin-bottom: 10px;}
+
+    div.day_airline_box>div>div>p
+    {width: 100%;
+    color: #777; line-height: 30px;
+    margin-bottom: 5px;}
+
+    div.person_airline_box>div
+    {width: calc(100% - 60px);
+    margin: 0 auto;}
+    
+    div.person_airline_box>div>p:nth-child(1)
+    {width: 100%;
+    color: #777; line-height: 30px;
+    margin-bottom: 5px;}
+
+    #start_airline, #arrive_airline, #person_airline, #person_airline_seat
+    {width: 100%; height: 45px;
+    border: none;
+    background: transparent;
+    color: #222; font-family: 'min_bold'; font-size: 16px;}
+    
+    /*달력*/
+    #day_start_airline, #day_arrive_airline
+    {width: 100%; height: 45px;
+    border: 1px solid #ccc; box-sizing: border-box;
+    background: transparent;
+    text-indent: 5px;
+    line-height: 45px;
+    color: #222; font-family: 'min_bold'; font-size: 16px;
+    position: relative;}
+
+    ::-webkit-calendar-picker-indicator {
+        position: absolute;
+        right: 0; top: 0;
+        opacity: 0;
+        padding-left: 100%;
+        height: 100%;
+    }
+
+
+
+    #start_airline::placeholder {color: #222;}
+
+    #arrive_airline::placeholder {color: #222;}
+
+    #person_airline::placeholder {color: #222;}
+
+    #person_airline_seat::placeholder {color: #222;}
+
+    /*출발지 시트*/
+    div.start_airline_sheet 
+    {width: 750px; 
+    background-color: #fff;
+    margin-top: 10px;
+    overflow: hidden;
+    display: none;
+    border: 1px solid #ccc; box-sizing: border-box;
+    padding-top: 20px; padding-bottom: 20px;
+    position: absolute;
+    top: 230px; left: 0;}
+
+    div.start_airline_sheet>p:nth-child(1)
+    {width: calc(100% - 40px);
+    margin: 0 auto;
+    line-height: 20px;
+    font-family: 'min_bold'; color: #222;
+    margin-bottom: 20px;}
+
+    div.korea_start_airline
+    {width: calc(100% - 40px);
+    margin: 0 auto;
+    overflow: hidden;
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #ddd; box-sizing: border-box;}
+
+    div.korea_start_airline>p:nth-child(1)
+    {width: 118px; height: 50px;
+    float: left;
+    background-color: #f3f3f3;
+    font-family: 'min_bold'; color: #222;
+    text-align: center; line-height: 50px;
+    border-right: 1px solid #ddd; box-sizing: border-box;}
+
+    div.korea_start_airline>ul:nth-child(2)
+    {width: calc(100% - 120px);
+    float: left;}
+
+    div.korea_start_airline>ul:nth-child(2)>li
+    {width: 147px; height: 50px;
+    float: left;}
+
+    div.korea_start_airline>ul:nth-child(2)>li>p
+    {text-align: center; line-height: 50px;
+    cursor : pointer;}
+
+    div.southeast_asia_start_airline
+    {width: calc(100% - 40px);
+    margin: 0 auto;
+    overflow: hidden;
+    border-bottom: 1px solid #ddd; box-sizing: border-box;}
+
+    div.southeast_asia_start_airline>p:nth-child(1)
+    {width: 118px; height: 50px;
+    float: left;
+    background-color: #f3f3f3;
+    font-family: 'min_bold'; color: #222;
+    text-align: center; line-height: 50px;
+    border-right: 1px solid #ddd; box-sizing: border-box;}
+
+    div.southeast_asia_start_airline>ul:nth-child(2)
+    {width: calc(100% - 120px);
+    float: left;}
+
+    div.southeast_asia_start_airline>ul:nth-child(2)>li
+    {width: 25%; height: 50px;
+    float: left;}
+
+    div.southeast_asia_start_airline>ul:nth-child(2)>li>p
+    {text-align: center; line-height: 50px;
+    cursor : pointer;}
+
+
+    /*도착지 시트*/
+    div.arrive_airline_sheet 
+    {width: 750px; 
+    background-color: #fff;
+    margin-top: 10px;
+    overflow: hidden;
+    display: none;
+    border: 1px solid #ccc; box-sizing: border-box;
+    padding-top: 20px; padding-bottom: 20px;
+    position: absolute;
+    top: 230px; left: 330px;}
+
+    div.arrive_airline_sheet>p:nth-child(1)
+    {width: calc(100% - 40px);
+    margin: 0 auto;
+    line-height: 20px;
+    font-family: 'min_bold'; color: #222;
+    margin-bottom: 20px;}
+
+    div.korea_arrive_airline
+    {width: calc(100% - 40px);
+    margin: 0 auto;
+    overflow: hidden;
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #ddd; box-sizing: border-box;}
+
+    div.korea_arrive_airline>p:nth-child(1)
+    {width: 118px; height: 50px;
+    float: left;
+    background-color: #f3f3f3;
+    font-family: 'min_bold'; color: #222;
+    text-align: center; line-height: 50px;
+    border-right: 1px solid #ddd; box-sizing: border-box;}
+
+    div.korea_arrive_airline>ul:nth-child(2)
+    {width: calc(100% - 120px);
+    float: left;}
+
+    div.korea_arrive_airline>ul:nth-child(2)>li
+    {width: 147px; height: 50px;
+    float: left;}
+
+    div.korea_arrive_airline>ul:nth-child(2)>li>p
+    {text-align: center; line-height: 50px;
+    cursor : pointer;}
+
+    div.southeast_asia_arrive_airline
+    {width: calc(100% - 40px);
+    margin: 0 auto;
+    overflow: hidden;
+    border-bottom: 1px solid #ddd; box-sizing: border-box;}
+
+    div.southeast_asia_arrive_airline>p:nth-child(1)
+    {width: 118px; height: 50px;
+    float: left;
+    background-color: #f3f3f3;
+    font-family: 'min_bold'; color: #222;
+    text-align: center; line-height: 50px;
+    border-right: 1px solid #ddd; box-sizing: border-box;}
+
+    div.southeast_asia_arrive_airline>ul:nth-child(2)
+    {width: calc(100% - 120px);
+    float: left;}
+
+    div.southeast_asia_arrive_airline>ul:nth-child(2)>li
+    {width: 25%; height: 50px;
+    float: left;}
+
+    div.southeast_asia_arrive_airline>ul:nth-child(2)>li>p
+    {text-align: center; line-height: 50px;
+    cursor : pointer;}
+
+
+    /*여행인원 시트*/
+    div.person_airline_sheet
+    {width: 360px;
+    border: 1px solid #ccc; box-sizing: border-box;
+    background-color: #fff;
+    padding-top: 20px; padding-bottom: 20px;
+    position: absolute;
+    top: 240px; right: 70px;
+    display: none;}
+
+    div.person_airline_box
+    {width: calc(100% - 40px);
+    margin: 0 auto;
+    margin-bottom: 20px;}
+
+    div.person_airline_box>p:nth-child(1)
+    {width: 100%;
+    line-height: 20px;
+    font-family: 'min_bold'; color: #222;
+    margin-bottom: 20px;}
+
+    div.person_airline_box>ul:nth-child(2)
+    {width: 100%;
+    overflow: hidden;}
+
+    div.person_airline_box>ul:nth-child(2)>li
+    {width: calc(50% - 10px); height: 45px;
+    border-radius: 22.5px;
+    background-color: #f3f3f3;
+    float: left;
+    transition: all 0.4s;}
+
+    div.person_airline_box>ul:nth-child(2)>li:nth-child(1),  div.person_airline_box>ul:nth-child(2)>li:nth-child(2)
+    {margin-bottom: 10px;}
+
+    div.person_airline_box>ul:nth-child(2)>li:nth-child(odd)
+    {margin-right: 20px;}
+
+    div.person_airline_box>ul:nth-child(2)>li>p
+    {text-align: center; line-height: 45px;
+    color: #222;
+    cursor : pointer;}
+
+    div.person_airline_box>ul:nth-child(2)>li:hover
+    {background-color: #0053d4;}
+
+    div.person_airline_box>ul:nth-child(2)>li:hover>p
+    {color: #fff;}
+
+    /*선택*/
+    div.person_airline_select_box
+    {width: calc(100% - 40px);
+    margin: 0 auto;}
+
+    div.person_airline_select_box>div
+    {width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;}
+
+    div.person_airline_select_box>div>p:nth-child(1)
+    {width: calc(100% - 90px);
+    margin-right: 10px;
+    line-height: 25px; font-size: 15px;
+    color: #777;}
+
+    div.person_airline_select_box>div>p:nth-child(1)>span
+    {font-family: 'min_bold';
+    color: #222; font-size: 16px;}
+
+    #adult_select_f, #child_select_f, #infant_select_f
+    {width: 90px; height: 45px;
+    border: 1px solid #ccc; box-sizing: border-box;
+    background-color: #fff; font-size: 15px;
+    outline: none;}
+
+    div.person_airline_select_box>div:nth-child(2)
+    {margin-top: 10px; margin-bottom: 10px;}
+
+    a.close_person_airline_sheet
+    {width: calc(100% - 20px); height: 45px;
+    margin: 0 auto;
+    background-color: #0053d4;
+    display: block;
+    margin-top: 30px;}
+
+    a.close_person_airline_sheet>p
+    {text-align: center; color: #fff;
+    line-height: 45px;}
+
+    /*시트관련*/
+    a.mobile_close_start_sheet {display: none;}
+    a.mobile_close_arrive_sheet {display: none;}
+
+
+    /*항공 요금 안내*/
+    div.airline_mobile_ex
+    {display: none;}
+
+    table.airline_information_tabel_mobile {display: none;}
+
+    /*항공권 탑 타이틀*/
+    div.airline_detaile_top
+    {width: 1420px;
+    margin: 50px auto;}
+
+    div.airline_detaile_top_title
+    {width: 100%;
+    margin-bottom: 30px;}
+
+    div.airline_detaile_top_title>p
+    {width: 100%;
+    font-size: 28px; font-family: bold; color: #222; line-height: 32px;}
+
+    div.airline_detaile_top_line
+    {width: 100%; height: 1px;
+    background-color: #ccc;}
+
+    /*항공권 디테일*/
+    div.airline_detaile_ex
+    {width: 1420px;
+    margin: 50px auto;
+    margin-bottom: 150px;
+    overflow: hidden;}
+    
+    /*왼쪽*/
+    div.airline_detaile_txt_ex
+    {width: calc(100% - 300px);
+    margin-right: 30px;
+    float: left;}
+
+    /*항공권 상세 타이틀*/
+    div.airline_information_title
+    {width: 100%;
+    margin-bottom: 30px;}
+
+    div.airline_information_title>p
+    {width: 100%;
+    font-size: 20px; font-family: bold; color: #222;
+    line-height: 20px;}
+
+    div.airline_information_title>p::after
+    {content: "";
+    display: block;
+    width: 25px; height: 2px;
+    background-color: #0096ff;
+    margin-top: 10px;}
+
+    /*항공권 상세*/
+    table.airline_information_tabel
+    {width: 100%;
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-bottom: 50px;
+    table-layout: fixed;}
+
+    table.airline_information_tabel tr td
+    {border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;}
+
+    table.airline_information_tabel tr td:last-child
+    {border-right: none;}
+
+    table.airline_information_tabel tr:last-child td
+    {border-bottom: none;}
+
+    table.airline_information_tabel tr:nth-child(1) td:nth-child(1)
+    {width: 150px;}
+
+    table.airline_information_tabel tr:nth-child(1) td:nth-child(2)
+    {width: calc(50% - 150px);}
+
+    table.airline_information_tabel tr:nth-child(1) td:nth-child(3)
+    {width: 150px;}
+
+    table.airline_information_tabel tr:nth-child(1) td:nth-child(4)
+    {width: calc(50% - 150px);}
+
+    table.airline_information_tabel tr td:nth-child(1)>p
+    {width: calc(100% - 30px);
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'min_bold'; color: #222;
+    line-height: 25px;
+    padding-top: 15px; padding-bottom: 15px;}
+
+    table.airline_information_tabel tr td:nth-child(1)
+    {background-color: #f6f9ff;}
+
+    table.airline_information_tabel tr:nth-child(1) td:nth-child(odd)>p 
+    {width: calc(100% - 30px);
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'min_bold'; color: #222;
+    line-height: 25px;
+    padding-top: 15px; padding-bottom: 15px;}
+
+    table.airline_information_tabel tr:nth-child(2) td:nth-child(odd)>p 
+    {width: calc(100% - 30px);
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'min_bold'; color: #222;
+    line-height: 25px;
+    padding-top: 15px; padding-bottom: 15px;}
+
+    table.airline_information_tabel tr:nth-child(1) td:nth-child(odd)
+    {background-color: #f6f9ff;}
+
+    table.airline_information_tabel tr:nth-child(2) td:nth-child(odd)
+    {background-color: #f6f9ff;}
+
+    table.airline_information_tabel tr:nth-child(1) td:nth-child(even)>p
+    {width: calc(100% - 30px);
+    margin: 0 auto;
+    padding-top: 15px; padding-bottom: 15px;
+    color: #555; line-height: 25px;} 
+
+    table.airline_information_tabel tr:nth-child(2) td:nth-child(even)>p
+    {width: calc(100% - 30px);
+    margin: 0 auto;
+    padding-top: 15px; padding-bottom: 15px;
+    color: #555; line-height: 25px;
+    word-break: keep-all;} 
+    
+    /*편명*/
+    div.flight_txt_box_w
+    {width: calc(100% - 30px);
+    margin: 0 auto;
+    padding-top: 15px; padding-bottom: 15px;
+    overflow: hidden;}
+
+    div.flight_txt_box_w>p
+    {float: left;
+    line-height: 25px;
+    color: #555;
+    word-wrap: break-word;
+    word-break: break-all;}
+
+    div.flight_txt_box_w>p:nth-child(2)
+    {margin-right: 5px; margin-left: 5px;}
+
+    /*항공 안내*/
+    div.flight_guide_ex
+    {width: calc(100% - 30px);
+    margin: 0 auto;
+    padding-top: 15px; padding-bottom: 15px;}
+    
+    /*가는편*/
+    div.depart_ex_fly
+    {width: 100%;
+    margin-bottom: 20px;
+    overflow: hidden;}
+
+    div.depart_ex_fly>p:nth-child(1)
+    {width: 60px; height: 30px;
+    background-color: #0053d4;
+    border-radius: 15px;
+    float: left;
+    line-height: 30px; text-align: center;
+    font-size: 15px; color: #fff; font-size: 15px;}
+
+    div.depart_box_fly
+    {width: calc(100% - 70px);
+    margin-left: 10px;
+    float: left;
+    display: flex;
+    align-items: center;
+    overflow: hidden;}
+
+    div.depart_box_fly>div:nth-child(1)
+    {width: calc(50% - 25px);}
+
+    div.depart_box_fly>div:nth-child(1)>p
+    {width: 100%;
+    text-align: center;}
+
+    div.depart_box_fly>div:nth-child(1)>p:nth-child(1)
+    {font-family: 'min_bold';
+    color: #222; line-height: 20px;}
+
+    div.depart_box_fly>div:nth-child(1)>p:nth-child(2)
+    {font-family: 'min_bold';
+    color: #e5004f; line-height: 20px;
+    margin-bottom: 5px;}
+
+    div.depart_box_fly>div:nth-child(1)>p:nth-child(3)
+    {font-size: 15px; color: #777;}
+    
+    /*이미지*/
+    div.depart_box_fly>div:nth-child(2)
+    {width: 30px; height: 30px;
+    margin-left: 10px; margin-right: 10px;}
+
+    div.depart_box_fly>div:nth-child(2) img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    div.depart_box_fly>div:nth-child(3)
+    {width: calc(50% - 25px);}
+
+    div.depart_box_fly>div:nth-child(3)>p
+    {width: 100%;
+    text-align: center;}
+
+    div.depart_box_fly>div:nth-child(3)>p:nth-child(1)
+    {font-family: 'min_bold';
+    color: #222; line-height: 20px;}
+
+    div.depart_box_fly>div:nth-child(3)>p:nth-child(2)
+    {font-family: 'min_bold';
+    color: #e5004f; line-height: 20px;
+    margin-bottom: 5px;}
+
+    div.depart_box_fly>div:nth-child(3)>p:nth-child(3)
+    {font-size: 15px; color: #777;}
+
+
+    /*오는편*/
+    div.arrive_ex_fly
+    {width: 100%;
+    overflow: hidden;}
+
+    div.arrive_ex_fly>p:nth-child(1)
+    {width: 60px; height: 30px;
+    background-color: #0053d4;
+    border-radius: 15px;
+    float: left;
+    line-height: 30px; text-align: center;
+    font-size: 15px; color: #fff; font-size: 15px;}
+
+    div.arrive_box_fly
+    {width: calc(100% - 70px);
+    margin-left: 10px;
+    float: left;
+    display: flex;
+    align-items: center;
+    overflow: hidden;}
+
+    div.arrive_box_fly>div:nth-child(1)
+    {width: calc(50% - 25px);}
+
+    div.arrive_box_fly>div:nth-child(1)>p
+    {width: 100%;
+    text-align: center;}
+
+    div.arrive_box_fly>div:nth-child(1)>p:nth-child(1)
+    {font-family: 'min_bold';
+    color: #222; line-height: 20px;}
+
+    div.arrive_box_fly>div:nth-child(1)>p:nth-child(2)
+    {font-family: 'min_bold';
+    color: #e5004f; line-height: 20px;
+    margin-bottom: 5px;}
+
+    div.arrive_box_fly>div:nth-child(1)>p:nth-child(3)
+    {font-size: 15px; color: #777;}
+
+    div.arrive_box_fly>div:nth-child(2)
+    {width: 30px; height: 30px;
+    margin-left: 10px; margin-right: 10px;}
+
+    div.arrive_box_fly>div:nth-child(2) img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    div.arrive_box_fly>div:nth-child(3)
+    {width: calc(50% - 25px);}
+
+    div.arrive_box_fly>div:nth-child(3)>p
+    {width: 100%;
+    text-align: center;}
+
+    div.arrive_box_fly>div:nth-child(3)>p:nth-child(1)
+    {font-family: 'min_bold';
+    color: #222; line-height: 20px;}
+
+    div.arrive_box_fly>div:nth-child(3)>p:nth-child(2)
+    {font-family: 'min_bold';
+    color: #e5004f; line-height: 20px;
+    margin-bottom: 5px;}
+
+    div.arrive_box_fly>div:nth-child(3)>p:nth-child(3)
+    {font-size: 15px; color: #777;}
+
+    /*항공 요금 안내 타이틀*/
+    div.airline_money_title
+    {width: 100%;
+    margin-bottom: 30px;}
+
+    div.airline_money_title>p
+    {width: 100%;
+    font-size: 20px; font-family: bold; color: #222;
+    line-height: 20px;}
+
+    div.airline_money_title>p::after
+    {content: "";
+    display: block;
+    width: 25px; height: 2px;
+    background-color: #0096ff;
+    margin-top: 10px;}
+
+    /*항공 요금 안내 테이블*/
+    table.airline_money_tabel
+    {width: 100%;
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;}
+
+    table.airline_money_tabel tr td
+    {border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;}
+
+    table.airline_money_tabel tr:last-child td
+    {border-bottom: none;}
+
+    table.airline_money_tabel tr td:last-child
+    {border-right: none;}
+
+    table.airline_money_tabel tr td
+    {width: 33.333333%;}
+
+    table.airline_money_tabel tr:nth-child(1) td
+    {background-color: #f6f9ff;}
+
+    table.airline_money_tabel tr:nth-child(1) td>p
+    {width: calc(100% - 20px);
+    margin: 0 auto;
+    padding-top: 15px; padding-bottom: 15px;
+    line-height: 20px;
+    text-align: center; font-family: 'min_bold'; color: #222;}
+
+    table.airline_money_tabel tr:nth-child(1) td>p>span
+    {font-size: 14px;
+    font-family: 'Pretendard';
+    color: #555;}
+
+    table.airline_money_tabel tr:nth-child(2) td>div
+    {width: calc(100% - 20px);
+    margin: 0 auto;
+    padding-top: 30px; padding-bottom: 30px;}
+
+    table.airline_money_tabel tr:nth-child(2) td>div>p:nth-child(1)
+    {width: 100%;
+    text-align: center; line-height: 25px;
+    margin-bottom: 5px;
+    font-size: 18px; font-family: 'min_bold'; color: #222;}
+
+    table.airline_money_tabel tr:nth-child(2) td>div>p:nth-child(1n+2)
+    {width: 100%;
+    font-size: 14px; text-align: center; line-height: 20px;
+    word-break: keep-all;
+    color: #777;}
+
+    /*예약하기 오른쪽*/
+    div.airline_reservation_right_ex
+    {width: 270px; 
+    float: right;
+    border: 1px solid #222; box-sizing: border-box;
+    padding-top: 20px; padding-bottom: 20px;}
+
+    /*선택*/
+    div.select_airline_box
+    {width: calc(100% - 40px);
+    margin: 0 auto;}
+    
+    /*성인*/
+    div.adult_airline_box
+    {width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 15px;}
+
+    div.adult_airline_box>div:nth-child(1)
+    {width: calc(100% - 90px);
+    margin-right: 10px;}
+
+    div.adult_airline_box>div:nth-child(1)>p:nth-child(1)
+    {width: 100%;
+    font-size: 15px;
+    color: #555; line-height: 15px;
+    margin-bottom: 5px;}
+
+    div.adult_airline_box>div:nth-child(1)>p:nth-child(2)
+    {width: 100%;
+    font-size: 18px; font-family: 'min_bold'; line-height: 25px;
+    color: #222; word-break: keep-all;}
+
+    #adult_flight_select
+    {width: 80px; height: 35px;
+    border: 1px solid #ccc; box-sizing: border-box;
+    background-color: #fff;
+    outline: none;
+    font-family: 'Pretendard' !important; font-size: 15px;}
+
+
+    /*유아*/
+    div.child_airline_box
+    {width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 15px;}
+
+    div.child_airline_box>div:nth-child(1)
+    {width: calc(100% - 90px);
+    margin-right: 10px;}
+
+    div.child_airline_box>div:nth-child(1)>p:nth-child(1)
+    {width: 100%;
+    font-size: 15px;
+    color: #555; line-height: 15px;
+    margin-bottom: 5px;}
+
+    div.child_airline_box>div:nth-child(1)>p:nth-child(2)
+    {width: 100%;
+    font-size: 18px; font-family: 'min_bold'; line-height: 25px;
+    color: #222; word-break: keep-all;}
+
+    #child_flight_select
+    {width: 80px; height: 35px;
+    border: 1px solid #ccc; box-sizing: border-box;
+    background-color: #fff;
+    outline: none;
+    font-family: 'Pretendard' !important; font-size: 15px;}
+
+
+    /*아동*/
+    div.kids_airline_box
+    {width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 20px;}
+
+    div.kids_airline_box>div:nth-child(1)
+    {width: calc(100% - 90px);
+    margin-right: 10px;}
+
+    div.kids_airline_box>div:nth-child(1)>p:nth-child(1)
+    {width: 100%;
+    font-size: 15px;
+    color: #555; line-height: 15px;
+    margin-bottom: 5px;}
+
+    div.kids_airline_box>div:nth-child(1)>p:nth-child(2)
+    {width: 100%;
+    font-size: 18px; font-family: 'min_bold'; line-height: 25px;
+    color: #222; word-break: keep-all;}
+
+    #kids_flight_select
+    {width: 80px; height: 35px;
+    border: 1px solid #ccc; box-sizing: border-box;
+    background-color: #fff;
+    outline: none;
+    font-family: 'Pretendard' !important; font-size: 15px;}
+
+
+    /*선*/
+    div.airline_reservation_right_line
+    {width: 100%; height: 1px;
+    background-color: #ccc;
+    margin-bottom: 20px;}
+
+    #airline_reservation_btn
+    {width: 100%; height: 45px;
+    border: none; outline: none;
+    font-family: 'Pretendard' !important;
+    background-color: #0053d4; font-size: 16px;
+    text-align: center; line-height: 45px; color: #fff;
+    margin-bottom: 10px;}
+
+    a.open_detaile_airfare
+    {width: 100%; height: 45px;
+    display: block;
+    background-color: #ccc;}
+
+    a.open_detaile_airfare>p
+    {width: 100%;
+    text-align: center; line-height: 45px; color: #222;}
+
+    .fixed_right
+    {position: fixed;
+    top: 30px; right: calc(50% - 710px);}
+
+    /*footer*/
+    .footer_dark
+    {width: 100%;
+    background-color: #222;}
+
+    .footer_dark .footer_top
+    {width: 1420px;
+    margin: 0 auto;
+    padding-top: 10px; padding-bottom: 10px;
+    overflow: hidden;}
+
+    .footer_top .footer_top_menu
+    {width: fit-content;
+    float: left;}
+
+    .footer_top_menu>ul
+    {width: fit-content;
+    margin: 0;
+    line-height: 0;}
+
+    .footer_top_menu>ul>li
+    {display: inline-block;
+    font-size: 16px; color: #ddd;
+    margin-right: 5px;}
+
+    .footer_top_menu>ul>li:last-child
+    {margin-right: 0;}
+
+    .footer_top_menu>ul>li>a>p
+    {line-height: 30px;
+    color: #ddd;}
+
+    /*선*/
+    .footer_dark .footer_line_01
+    {width: 100%; height: 1px;
+    background-color: #ddd;}
+    
+    .footer_top .footer_sns
+    {width: fit-content;
+    float: right;}
+
+    .footer_sns>a
+    {display: inline-block;
+    width: 30px; height: 30px;
+    margin-right: 5px;}
+
+    .footer_sns>a:last-child
+    {margin-right: 0;}
+
+    .footer_sns>a img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    /*선*/
+    .footer_dark .footer_line_02
+    {width: 100%; height: 1px;
+    background-color: #ddd;}
+
+    .footer_dark .footer_bottom
+    {width: 1420px;
+    margin: 0 auto;
+    padding-top: 20px; padding-bottom: 20px;}
+
+    .footer_bottom>p
+    {font-size: 14px; line-height: 25px;
+    color: #ddd;}
+
+    /*총 가격 팝업*/
+    div.detaile_fee_airline_popup_ex
+    {width: 100%; height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    z-index: 99;
+    backdrop-filter: blur(1px);}
+
+    div.detaile_fee_airline_popup_content
+    {width: 600px; max-height: 70vh;
+    overflow-y: auto;
+    background-color: #fff;
+    margin: 0 auto;
+    border-radius: 5px;}
+
+    .detaile_fee_airline_popup_content::-webkit-scrollbar
+    {width: 0px;}
+
+    /*타이틀*/
+    div.detaile_fee_title
+    {width: 100%; height: 50px;
+    background-color: #0053d4;}
+
+    div.detaile_fee_title>p
+    {width: 100%; 
+    font-size: 18px; color: #fff;
+    line-height: 50px;
+    font-family: 'min_bold'; text-align: center;}
+    
+    /*내용 박스*/
+    div.detaile_fee_txt_box
+    {width: calc(100% - 30px);
+    margin: 0 auto;
+    padding-top: 15px; padding-bottom: 15px;}
+    
+    /*전체 박스*/
+    div.detaile_fee_total
+    {width: 100%;
+    overflow: hidden;}
+
+    div.detaile_fee_total>p:nth-child(1)
+    {width: 90px;
+    margin-right: 10px;
+    font-family: 'min_bold';
+    color: #222; line-height: 25px;
+    float: left;}
+
+    div.detaile_fee_total>p:nth-child(2)
+    {width: calc(100% - 100px);
+    font-family: bold;
+    color: #e5004f; font-size: 18px;
+    text-align: right; line-height: 25px;
+    float: right;}
+
+    /*테이블*/
+    div.detaile_fee_table_ex
+    {width: 100%;
+    margin-bottom: 20px;}
+
+    /*성인*/
+    table.detaile_fee_adult_table
+    {width: 100%;
+    margin-top: 20px; margin-bottom: 10px;
+    border-top: 1px solid #222; border-bottom: 1px solid #ccc;
+    box-sizing: border-box;}
+
+    table.detaile_fee_adult_table tr:nth-child(1) td
+    {border-bottom: 1px solid #ccc; box-sizing: border-box;}
+
+    table.detaile_fee_adult_table tr td:nth-child(1)
+    {width: 170px;}
+
+    table.detaile_fee_adult_table tr td:nth-child(1)>p
+    {width: calc(100% - 20px);
+    margin: 0 auto;
+    line-height: 25px; font-size: 15px;
+    padding-top: 10px; padding-bottom: 10px;
+    color: #555;}
+
+    table.detaile_fee_adult_table tr td:nth-child(2)
+    {width: calc(100% - 170px);}
+
+    table.detaile_fee_adult_table tr td:nth-child(2)>p
+    {width: calc(100% - 20px);
+    margin: 0 auto;
+    line-height: 25px; 
+    padding-top: 5px; padding-bottom: 5px;
+    text-align: right;
+    color: #222;}
+
+    table.detaile_fee_adult_table tr:nth-child(1) td>p
+    {color: #222;}
+
+
+    /*유아*/
+    table.detaile_fee_child_table
+    {width: 100%;
+    margin-bottom: 10px;
+    border-top: 1px solid #222; border-bottom: 1px solid #ccc;
+    box-sizing: border-box;}
+
+    table.detaile_fee_child_table tr:nth-child(1) td
+    {border-bottom: 1px solid #ccc; box-sizing: border-box;}
+
+    table.detaile_fee_child_table tr td:nth-child(1)
+    {width: 170px;}
+
+    table.detaile_fee_child_table tr td:nth-child(1)>p
+    {width: calc(100% - 20px);
+    margin: 0 auto;
+    line-height: 25px; font-size: 15px;
+    padding-top: 10px; padding-bottom: 10px;
+    color: #555;}
+
+    table.detaile_fee_child_table tr td:nth-child(2)
+    {width: calc(100% - 170px);}
+
+    table.detaile_fee_child_table tr td:nth-child(2)>p
+    {width: calc(100% - 20px);
+    margin: 0 auto;
+    line-height: 25px;
+    padding-top: 5px; padding-bottom: 5px;
+    text-align: right;
+    color: #222;}
+
+    table.detaile_fee_child_table tr:nth-child(1) td>p
+    {color: #222;}
+
+
+    /*유아*/
+    table.detaile_fee_infant_table
+    {width: 100%;
+    border-top: 1px solid #222; border-bottom: 1px solid #ccc;
+    box-sizing: border-box;}
+
+    table.detaile_fee_infant_table tr:nth-child(1) td
+    {border-bottom: 1px solid #ccc; box-sizing: border-box;}
+
+    table.detaile_fee_infant_table tr td:nth-child(1)
+    {width: 170px;}
+
+    table.detaile_fee_infant_table tr td:nth-child(1)>p
+    {width: calc(100% - 20px);
+    margin: 0 auto;
+    line-height: 25px; font-size: 15px;
+    padding-top: 10px; padding-bottom: 10px;
+    color: #555;}
+
+    table.detaile_fee_infant_table tr td:nth-child(2)
+    {width: calc(100% - 170px);}
+
+    table.detaile_fee_infant_table tr td:nth-child(2)>p
+    {width: calc(100% - 20px);
+    margin: 0 auto;
+    line-height: 25px;
+    padding-top: 5px; padding-bottom: 5px;
+    text-align: right;
+    color: #222;}
+
+    table.detaile_fee_infant_table tr:nth-child(1) td>p
+    {color: #222;}
+
+    /*항공요금 상세내역 글 박스*/
+    div.detaile_fee_notic_box
+    {width: 100%;
+    margin-bottom: 20px;}
+
+    div.detaile_fee_notic_box>p
+    {width: calc(100% - 15px);
+    margin-left: 15px;
+    line-height: 25px;
+    font-size: 15px; color: #555;
+    position: relative;}
+
+    div.detaile_fee_notic_box>p::before
+    {content: "※";
+    position: absolute;
+    left: -15px; 
+    line-height: 25px;
+    display: block;}
+
+    a.close_detaile_fee
+    {display: block;
+    width: 100%; height: 50px;
+    border: 1px solid #ccc; box-sizing: border-box;}
+
+    a.close_detaile_fee>p
+    {width: 100%;
+    text-align: center; color: #555; line-height: 50px;}
+
+    /*이메일무단수집거부*/
+    div.emaile_no_ex
+    {width: 100%; height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    z-index: 99;
+    backdrop-filter: blur(1px);}
+
+    div.emaile_no_box
+    {width: 600px;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;}
+
+    div.emaile_no_title
+    {width: 100%; height: 50px;
+    background-color: #0053d4;
+    margin-bottom: 10px;}
+
+    div.emaile_no_title>p
+    {width: 100%;
+    text-align: center; line-height: 50px; color: #fff; font-size: 18px;
+    font-family: 'min_bold';}
+
+    div.emaile_contents
+    {width: 560px; height: 300px;
+    overflow-y: scroll;
+    margin: 20px auto;}
+
+    div.emaile_contents>p
+    {width: 98%;
+    margin: 0 auto;
+    font-size: 15px; line-height: 24px; color: #707070;}
+    
+    /*스크롤바 바꾸기*/
+    .emaile_contents::-webkit-scrollbar
+    {width: 2px;}
+
+    .emaile_contents::-webkit-scrollbar-thumb
+    {background-color: #0053d4;
+    border-radius: 10px;}
+
+    .emaile_contents::-webkit-scrollbar-track
+    {background-color: #ddd;}
+
+    /*라인*/
+    div.emaile_box_line_01
+    {width: 100%; height: 1px;
+    background-color: #ddd;}
+
+    div.emaile_close
+    {width: 100%; height: 50px;}
+
+    div.emaile_close>p
+    {width: 100%;
+    color: #707070;
+    text-align: center; line-height: 50px; font-size: 16px;}
+
+}
+
+@media all and (min-width: 769px) and (max-width : 1429px)
+{   
+    /*모바일 헤더*/
+    .mobile_header {display: none;}
+
+    #menu_open_mobile {display: none;}
+
+    .mobile_lnb_box {display: none;}
+
+    /*헤더*/
+    .erp_header
+    {width: 100%;
+    box-shadow: 1px 0px 5px rgba(0, 0, 0, 0.25);
+    z-index: 2;}
+
+    div.erp_header_top
+    {width: 95%;
+    margin: 0 auto;
+    padding-top: 15px; padding-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;}
+
+    div.erp_header_top>a:nth-child(1)
+    {width: fit-content;}
+    
+    /*검색 박스*/
+    div.search_ex
+    {width: 350px;
+    position: relative;}
+
+    #search_txt
+    {width: 100%; height: 50px;
+    border: none;
+    border-bottom: 1px solid #ccc; box-sizing: border-box;
+    outline: none; background: transparent;
+    font-family: 'Pretendard';
+    font-size: 15px;
+    box-shadow: 0 0 0 0;
+    margin-bottom: 0;}
+
+    #search_button
+    {display: none;}
+
+    div.search_ex>label:nth-child(3)
+    {display: block;
+    width: 25px; height: 25px;
+    position: absolute;
+    top: 12.5px; right: 0;}
+
+    div.search_ex>label:nth-child(3) img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    /*gnb*/
+    div.gnb_menu_erp
+    {width: fit-content;}
+
+    div.gnb_menu_erp>ul
+    {width: fit-content;}
+
+    div.gnb_menu_erp>ul>li:nth-child(odd)
+    {display: inline-block;
+    padding-left: 5px; padding-right: 5px;}
+
+    div.gnb_menu_erp>ul>li:nth-child(odd)>a>p
+    {line-height: 50px;
+    color: #303030;
+    font-size: 15px;}
+
+    div.gnb_menu_erp>ul>li:nth-child(even)
+    {width: 1px; height: 10px;
+    background-color: #ccc;
+    display: inline-block;}
+
+    /*하단*/
+    div.erp_header_bottom
+    {width: 95%;
+    margin: 0 auto;
+    padding-bottom: 15px;
+    overflow: hidden;}
+
+    div.erp_header_bottom>ul:nth-child(1)
+    {width: fit-content;
+    float: left;}
+
+    div.erp_header_bottom>ul:nth-child(1)>li
+    {display: inline-block;
+    padding-left: 10px; padding-right: 10px;}
+
+    div.erp_header_bottom>ul:nth-child(1)>li>a>p
+    {line-height: 40px;
+    color: #222;
+    transition: all 0.3s;
+    font-family: 'min_bold';}
+
+    div.erp_header_bottom>ul:nth-child(1)>li>a:hover>p
+    {color: #0096ff;}
+
+    div.call_box
+    {width: fit-content;
+    float: right;
+    display: flex;
+    align-items: center;}
+
+    div.call_box>div:nth-child(1)
+    {width: 30px; height: 30px;
+    margin-right: 10px;}
+
+    div.call_box>div:nth-child(1) img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    div.call_box>div:nth-child(2)>p
+    {line-height: 20px;}
+
+    div.call_box>div:nth-child(2)>p:nth-child(2)
+    {font-size: 20px;
+    font-family: 'min_bold';}
+
+    /*비주얼 이미지*/
+    div.airline_visual
+    {width: 100%; height: 350px;
+    overflow: hidden;
+    position: relative;}
+
+    div.airline_visual img
+    {width: 100%; height: 100%;
+    object-fit: cover;
+    transition: all 3s;
+    transform: scale(1.2);}
+
+    div.airline_visual>p:nth-child(2)
+    {width: 100%;
+    text-align: center;
+    font-family: bold; color: #fff;
+    font-size: 32px; line-height: 40px;
+    position: absolute;
+    top: calc(50% - 20px); left: 0;}
+
+    /*항공 요금 안내*/
+    div.airline_mobile_ex
+    {display: none;}
+
+    table.airline_information_tabel_mobile {display: none;}
+
+    /*항공권 디테일 탑*/
+    div.airline_detaile_top
+    {width: 90%;
+    margin: 50px auto;}
+
+    /*타이틀*/
+    div.airline_detaile_top_title
+    {width: 100%;
+    margin-bottom: 30px;}
+
+    div.airline_detaile_top_title>p
+    {width: 100%;
+    font-size: 28px; font-family: bold; color: #222; line-height: 32px;}
+
+    div.airline_detaile_top_line
+    {width: 100%; height: 1px;
+    background-color: #ccc;}
+
+    /*항공권 디테일*/
+    div.airline_detaile_ex
+    {width: 90%;
+    margin: 50px auto;
+    margin-bottom: 150px;
+    overflow: hidden;}
+    
+    /*왼쪽*/
+    div.airline_detaile_txt_ex
+    {width: calc(100% - 300px);
+    margin-right: 30px;
+    float: left;}
+
+    /*항공권 상세 타이틀*/
+    div.airline_information_title
+    {width: 100%;
+    margin-bottom: 30px;}
+
+    div.airline_information_title>p
+    {width: 100%;
+    font-size: 20px; font-family: bold; color: #222;
+    line-height: 20px;}
+
+    div.airline_information_title>p::after
+    {content: "";
+    display: block;
+    width: 25px; height: 2px;
+    background-color: #0096ff;
+    margin-top: 10px;}
+
+    /*항공권 상세*/
+    table.airline_information_tabel
+    {width: 100%;
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-bottom: 50px;
+    table-layout: fixed;}
+
+    table.airline_information_tabel tr td
+    {border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;}
+
+    table.airline_information_tabel tr td:last-child
+    {border-right: none;}
+
+    table.airline_information_tabel tr:last-child td
+    {border-bottom: none;}
+
+    table.airline_information_tabel tr:nth-child(1) td:nth-child(1)
+    {width: 15%;}
+
+    table.airline_information_tabel tr:nth-child(1) td:nth-child(2)
+    {width: 35%;}
+
+    table.airline_information_tabel tr:nth-child(1) td:nth-child(3)
+    {width: 15%;}
+
+    table.airline_information_tabel tr:nth-child(1) td:nth-child(4)
+    {width: 35%;}
+
+    table.airline_information_tabel tr td:nth-child(1)>p
+    {width: calc(100% - 20px);
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'min_bold'; color: #222;
+    line-height: 25px;
+    font-size: 15px;
+    padding-top: 15px; padding-bottom: 15px;}
+
+    table.airline_information_tabel tr td:nth-child(1)
+    {background-color: #f6f9ff;}
+
+    table.airline_information_tabel tr:nth-child(1) td:nth-child(odd)>p 
+    {width: calc(100% - 20px);
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'min_bold'; color: #222;
+    line-height: 25px; font-size: 15px;
+    padding-top: 15px; padding-bottom: 15px;}
+
+    table.airline_information_tabel tr:nth-child(2) td:nth-child(odd)>p 
+    {width: calc(100% - 20px);
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'min_bold'; color: #222;
+    line-height: 25px; font-size: 15px;
+    padding-top: 15px; padding-bottom: 15px;}
+
+    table.airline_information_tabel tr:nth-child(1) td:nth-child(odd)
+    {background-color: #f6f9ff;}
+
+    table.airline_information_tabel tr:nth-child(2) td:nth-child(odd)
+    {background-color: #f6f9ff;}
+
+    table.airline_information_tabel tr:nth-child(1) td:nth-child(even)>p
+    {width: calc(100% - 20px);
+    margin: 0 auto;
+    padding-top: 15px; padding-bottom: 15px;
+    font-size: 15px;
+    color: #555; line-height: 25px;
+    word-break: keep-all;} 
+
+    table.airline_information_tabel tr:nth-child(2) td:nth-child(even)>p
+    {width: calc(100% - 20px);
+    margin: 0 auto;
+    font-size: 15px;
+    padding-top: 15px; padding-bottom: 15px;
+    color: #555; line-height: 25px;} 
+    
+    /*편명*/
+    div.flight_txt_box_w
+    {width: calc(100% - 20px);
+    margin: 0 auto;
+    padding-top: 15px; padding-bottom: 15px;
+    overflow: hidden;}
+
+    div.flight_txt_box_w>p
+    {float: left;
+    word-wrap: break-word;
+    word-break: break-all;
+    line-height: 25px; font-size: 15px;
+    color: #555;}
+
+    div.flight_txt_box_w>p:nth-child(2)
+    {margin-right: 5px; margin-left: 5px;}
+
+
+    /*항공 안내*/
+    div.flight_guide_ex
+    {width: calc(100% - 30px);
+    margin: 0 auto;
+    padding-top: 15px; padding-bottom: 15px;}
+    
+    /*가는편*/
+    div.depart_ex_fly
+    {width: 100%;
+    margin-bottom: 20px;
+    overflow: hidden;}
+
+    div.depart_ex_fly>p:nth-child(1)
+    {width: 60px; height: 30px;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    background-color: #0053d4;
+    border-radius: 15px;
+    line-height: 30px; text-align: center;
+    font-size: 15px; color: #fff; font-size: 15px;}
+
+    div.depart_box_fly
+    {width: 100%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;}
+
+    div.depart_box_fly>div:nth-child(1)
+    {width: calc(50% - 25px);}
+
+    div.depart_box_fly>div:nth-child(1)>p
+    {width: 100%;
+    text-align: center;}
+
+    div.depart_box_fly>div:nth-child(1)>p:nth-child(1)
+    {font-family: 'min_bold';
+    color: #222; line-height: 20px;}
+
+    div.depart_box_fly>div:nth-child(1)>p:nth-child(2)
+    {font-family: 'min_bold';
+    color: #e5004f; line-height: 20px;
+    margin-bottom: 5px;}
+
+    div.depart_box_fly>div:nth-child(1)>p:nth-child(3)
+    {font-size: 15px; color: #777;}
+
+    div.depart_box_fly>div:nth-child(2)
+    {width: 30px; height: 30px;
+    margin-left: 10px; margin-right: 10px;}
+
+    div.depart_box_fly>div:nth-child(2) img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    div.depart_box_fly>div:nth-child(3)
+    {width: calc(50% - 25px);}
+
+    div.depart_box_fly>div:nth-child(3)>p
+    {width: 100%;
+    text-align: center;}
+
+    div.depart_box_fly>div:nth-child(3)>p:nth-child(1)
+    {font-family: 'min_bold';
+    color: #222; line-height: 20px;}
+
+    div.depart_box_fly>div:nth-child(3)>p:nth-child(2)
+    {font-family: 'min_bold';
+    color: #e5004f; line-height: 20px;
+    margin-bottom: 5px;}
+
+    div.depart_box_fly>div:nth-child(3)>p:nth-child(3)
+    {font-size: 15px; color: #777;}
+
+
+    /*오는편*/
+    div.arrive_ex_fly
+    {width: 100%;
+    overflow: hidden;}
+
+    div.arrive_ex_fly>p:nth-child(1)
+    {width: 60px; height: 30px;
+    margin: 0 auto;
+    background-color: #0053d4;
+    border-radius: 15px;
+    margin-bottom: 5px;
+    line-height: 30px; text-align: center;
+    font-size: 15px; color: #fff; font-size: 15px;}
+
+    div.arrive_box_fly
+    {width: 100%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;}
+
+    div.arrive_box_fly>div:nth-child(1)
+    {width: calc(50% - 25px);}
+
+    div.arrive_box_fly>div:nth-child(1)>p
+    {width: 100%;
+    text-align: center;}
+
+    div.arrive_box_fly>div:nth-child(1)>p:nth-child(1)
+    {font-family: 'min_bold';
+    color: #222; line-height: 20px;}
+
+    div.arrive_box_fly>div:nth-child(1)>p:nth-child(2)
+    {font-family: 'min_bold';
+    color: #e5004f; line-height: 20px;
+    margin-bottom: 5px;}
+
+    div.arrive_box_fly>div:nth-child(1)>p:nth-child(3)
+    {font-size: 15px; color: #777;}
+
+    div.arrive_box_fly>div:nth-child(2)
+    {width: 30px; height: 30px;
+    margin-left: 10px; margin-right: 10px;}
+
+    div.arrive_box_fly>div:nth-child(2) img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    div.arrive_box_fly>div:nth-child(3)
+    {width: calc(50% - 25px);}
+
+    div.arrive_box_fly>div:nth-child(3)>p
+    {width: 100%;
+    text-align: center;}
+
+    div.arrive_box_fly>div:nth-child(3)>p:nth-child(1)
+    {font-family: 'min_bold';
+    color: #222; line-height: 20px;}
+
+    div.arrive_box_fly>div:nth-child(3)>p:nth-child(2)
+    {font-family: 'min_bold';
+    color: #e5004f; line-height: 20px;
+    margin-bottom: 5px;}
+
+    div.arrive_box_fly>div:nth-child(3)>p:nth-child(3)
+    {font-size: 15px; color: #777;}
+
+    /*항공 요금 안내 타이틀*/
+    div.airline_money_title
+    {width: 100%;
+    margin-bottom: 30px;}
+
+    div.airline_money_title>p
+    {width: 100%;
+    font-size: 20px; font-family: bold; color: #222;
+    line-height: 20px;}
+
+    div.airline_money_title>p::after
+    {content: "";
+    display: block;
+    width: 25px; height: 2px;
+    background-color: #0096ff;
+    margin-top: 10px;}
+
+    /*항공 요금 안내 테이블*/
+    table.airline_money_tabel
+    {width: 100%;
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;}
+
+    table.airline_money_tabel tr td
+    {border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;}
+
+    table.airline_money_tabel tr:last-child td
+    {border-bottom: none;}
+
+    table.airline_money_tabel tr td:last-child
+    {border-right: none;}
+
+    table.airline_money_tabel tr td
+    {width: 33.333333%;}
+
+    table.airline_money_tabel tr:nth-child(1) td
+    {background-color: #f6f9ff;}
+
+    table.airline_money_tabel tr:nth-child(1) td>p
+    {width: calc(100% - 20px);
+    margin: 0 auto;
+    padding-top: 15px; padding-bottom: 15px;
+    line-height: 20px; font-size: 15px;
+    text-align: center; font-family: 'min_bold'; color: #222;}
+
+    table.airline_money_tabel tr:nth-child(1) td>p>span
+    {font-size: 14px;
+    font-family: 'Pretendard';
+    color: #555;}
+
+    table.airline_money_tabel tr:nth-child(2) td>div
+    {width: calc(100% - 20px);
+    margin: 0 auto;
+    padding-top: 30px; padding-bottom: 30px;}
+
+    table.airline_money_tabel tr:nth-child(2) td>div>p:nth-child(1)
+    {width: 100%;
+    text-align: center; line-height: 25px;
+    margin-bottom: 5px;
+    font-size: 18px; font-family: 'min_bold'; color: #222;}
+
+    table.airline_money_tabel tr:nth-child(2) td>div>p:nth-child(1n+2)
+    {width: 100%;
+    font-size: 14px; text-align: center; line-height: 20px;
+    color: #777;}
+
+    /*예약하기 오른쪽*/
+    div.airline_reservation_right_ex
+    {width: 270px; 
+    float: right;
+    border: 1px solid #222; box-sizing: border-box;
+    padding-top: 20px; padding-bottom: 20px;}
+
+    /*선택*/
+    div.select_airline_box
+    {width: calc(100% - 40px);
+    margin: 0 auto;}
+    
+    /*성인*/
+    div.adult_airline_box
+    {width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 15px;}
+
+    div.adult_airline_box>div:nth-child(1)
+    {width: calc(100% - 90px);
+    margin-right: 10px;}
+
+    div.adult_airline_box>div:nth-child(1)>p:nth-child(1)
+    {width: 100%;
+    font-size: 15px;
+    color: #555; line-height: 15px;
+    margin-bottom: 5px;}
+
+    div.adult_airline_box>div:nth-child(1)>p:nth-child(2)
+    {width: 100%;
+    font-size: 18px; font-family: 'min_bold'; line-height: 25px;
+    color: #222; word-break: keep-all;}
+
+    #adult_flight_select
+    {width: 80px; height: 35px;
+    border: 1px solid #ccc; box-sizing: border-box;
+    background-color: #fff;
+    outline: none;
+    font-family: 'Pretendard' !important; font-size: 15px;}
+
+
+    /*유아*/
+    div.child_airline_box
+    {width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 15px;}
+
+    div.child_airline_box>div:nth-child(1)
+    {width: calc(100% - 90px);
+    margin-right: 10px;}
+
+    div.child_airline_box>div:nth-child(1)>p:nth-child(1)
+    {width: 100%;
+    font-size: 15px;
+    color: #555; line-height: 15px;
+    margin-bottom: 5px;}
+
+    div.child_airline_box>div:nth-child(1)>p:nth-child(2)
+    {width: 100%;
+    font-size: 18px; font-family: 'min_bold'; line-height: 25px;
+    color: #222; word-break: keep-all;}
+
+    #child_flight_select
+    {width: 80px; height: 35px;
+    border: 1px solid #ccc; box-sizing: border-box;
+    background-color: #fff;
+    outline: none;
+    font-family: 'Pretendard' !important; font-size: 15px;}
+
+
+    /*아동*/
+    div.kids_airline_box
+    {width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 20px;}
+
+    div.kids_airline_box>div:nth-child(1)
+    {width: calc(100% - 90px);
+    margin-right: 10px;}
+
+    div.kids_airline_box>div:nth-child(1)>p:nth-child(1)
+    {width: 100%;
+    font-size: 15px;
+    color: #555; line-height: 15px;
+    margin-bottom: 5px;}
+
+    div.kids_airline_box>div:nth-child(1)>p:nth-child(2)
+    {width: 100%;
+    font-size: 18px; font-family: 'min_bold'; line-height: 25px;
+    color: #222; word-break: keep-all;}
+
+    #kids_flight_select
+    {width: 80px; height: 35px;
+    border: 1px solid #ccc; box-sizing: border-box;
+    background-color: #fff;
+    outline: none;
+    font-family: 'Pretendard' !important; font-size: 15px;}
+
+
+    /*선*/
+    div.airline_reservation_right_line
+    {width: 100%; height: 1px;
+    background-color: #ccc;
+    margin-bottom: 20px;}
+
+    #airline_reservation_btn
+    {width: 100%; height: 45px;
+    border: none; outline: none;
+    font-family: 'Pretendard' !important;
+    background-color: #0053d4; font-size: 15px;
+    text-align: center; line-height: 45px; color: #fff;
+    margin-bottom: 10px;}
+
+    a.open_detaile_airfare
+    {width: 100%; height: 45px;
+    display: block;
+    background-color: #ccc;}
+
+    a.open_detaile_airfare>p
+    {width: 100%;
+    font-size: 15px;
+    text-align: center; line-height: 45px; color: #222;}
+
+    .fixed_right
+    {position: fixed;
+    top: 30px; right: 5%;}
+    
+    /*footer*/
+    .footer_dark
+    {width: 100%;
+    background-color: #222;}
+
+    .footer_dark .footer_top
+    {width: 95%;
+    margin: 0 auto;
+    padding-top: 10px; padding-bottom: 10px;
+    overflow: hidden;}
+
+    .footer_top .footer_top_menu
+    {width: fit-content;
+    float: left;}
+
+    .footer_top_menu>ul
+    {width: fit-content;
+    margin: 0;
+    line-height: 0;}
+
+    .footer_top_menu>ul>li
+    {display: inline-block;
+    font-size: 16px; color: #ddd;
+    margin-right: 5px;}
+
+    .footer_top_menu>ul>li:last-child
+    {margin-right: 0;}
+
+    .footer_top_menu>ul>li>a>p
+    {line-height: 30px;
+    color: #ddd;}
+
+    /*선*/
+    .footer_dark .footer_line_01
+    {width: 100%; height: 1px;
+    background-color: #ddd;}
+      
+    .footer_top .footer_sns
+    {width: fit-content;
+    float: right;}
+
+    .footer_sns>a
+    {display: inline-block;
+    width: 30px; height: 30px;
+    margin-right: 5px;}
+
+    .footer_sns>a:last-child
+    {margin-right: 0;}
+
+    .footer_sns>a img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    /*선*/
+    .footer_dark .footer_line_02
+    {width: 100%; height: 1px;
+    background-color: #ddd;}
+
+    .footer_dark .footer_bottom
+    {width: 95%;
+    margin: 0 auto;
+    padding-top: 20px; padding-bottom: 20px;}
+
+    .footer_bottom>p
+    {font-size: 14px; line-height: 25px;
+    color: #ddd;}
+    
+
+    /*이메일무단수집거부*/
+    div.emaile_no_ex
+    {width: 100%; height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    z-index: 99;
+    backdrop-filter: blur(1px);}
+
+    div.emaile_no_box
+    {width: 600px;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;}
+
+    div.emaile_no_title
+    {width: 100%; height: 50px;
+    background-color: #0053d4;
+    margin-bottom: 10px;}
+
+    div.emaile_no_title>p
+    {width: 100%;
+    text-align: center; line-height: 50px; color: #fff; font-size: 18px;
+    font-family: 'min_bold';}
+
+    div.emaile_contents
+    {width: 560px; height: 300px;
+    overflow-y: scroll;
+    margin: 20px auto;}
+
+    div.emaile_contents>p
+    {width: 98%;
+    margin: 0 auto;
+    font-size: 15px; line-height: 25px; color: #707070;}
+
+    /*스크롤바 바꾸기*/
+    .emaile_contents::-webkit-scrollbar
+    {width: 2px;}
+
+    .emaile_contents::-webkit-scrollbar-thumb
+    {background-color: #0053d4;
+    border-radius: 10px;}
+
+    .emaile_contents::-webkit-scrollbar-track
+    {background-color: #ddd;}
+
+    /*라인*/
+    div.emaile_box_line_01
+    {width: 100%; height: 1px;
+    background-color: #ddd;}
+
+    div.emaile_close
+    {width: 100%; height: 50px;}
+
+    div.emaile_close>p
+    {width: 100%;
+    color: #707070;
+    text-align: center; line-height: 50px; font-size: 16px;}
+
+
+    /*총 가격 팝업*/
+    div.detaile_fee_airline_popup_ex
+    {width: 100%; height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    z-index: 99;
+    backdrop-filter: blur(1px);}
+
+    div.detaile_fee_airline_popup_content
+    {width: 600px; max-height: 70vh;
+    overflow-y: auto;
+    background-color: #fff;
+    margin: 0 auto;
+    border-radius: 5px;}
+
+    .detaile_fee_airline_popup_content::-webkit-scrollbar
+    {width: 0px;}
+
+    /*타이틀*/
+    div.detaile_fee_title
+    {width: 100%; height: 50px;
+    background-color: #0053d4;}
+
+    div.detaile_fee_title>p
+    {width: 100%; 
+    font-size: 18px; color: #fff;
+    line-height: 50px;
+    font-family: 'min_bold'; text-align: center;}
+    
+    /*내용 박스*/
+    div.detaile_fee_txt_box
+    {width: calc(100% - 30px);
+    margin: 0 auto;
+    padding-top: 15px; padding-bottom: 15px;}
+    
+    /*전체 박스*/
+    div.detaile_fee_total
+    {width: 100%;
+    overflow: hidden;}
+
+    div.detaile_fee_total>p:nth-child(1)
+    {width: 90px;
+    margin-right: 10px;
+    font-family: 'min_bold';
+    color: #222; line-height: 25px;
+    float: left;}
+
+    div.detaile_fee_total>p:nth-child(2)
+    {width: calc(100% - 100px);
+    font-family: bold;
+    color: #e5004f; font-size: 18px;
+    text-align: right; line-height: 25px;
+    float: right;}
+
+    /*테이블*/
+    div.detaile_fee_table_ex
+    {width: 100%;
+    margin-bottom: 20px;}
+
+    /*성인*/
+    table.detaile_fee_adult_table
+    {width: 100%;
+    margin-top: 20px; margin-bottom: 10px;
+    border-top: 1px solid #222; border-bottom: 1px solid #ccc;
+    box-sizing: border-box;}
+
+    table.detaile_fee_adult_table tr:nth-child(1) td
+    {border-bottom: 1px solid #ccc; box-sizing: border-box;}
+
+    table.detaile_fee_adult_table tr td:nth-child(1)
+    {width: 170px;}
+
+    table.detaile_fee_adult_table tr td:nth-child(1)>p
+    {width: calc(100% - 20px);
+    margin: 0 auto;
+    line-height: 25px; font-size: 15px;
+    padding-top: 10px; padding-bottom: 10px;
+    color: #555;}
+
+    table.detaile_fee_adult_table tr td:nth-child(2)
+    {width: calc(100% - 170px);}
+
+    table.detaile_fee_adult_table tr td:nth-child(2)>p
+    {width: calc(100% - 20px);
+    margin: 0 auto;
+    line-height: 25px; 
+    padding-top: 5px; padding-bottom: 5px;
+    text-align: right;
+    color: #222;}
+
+    table.detaile_fee_adult_table tr:nth-child(1) td>p
+    {color: #222;}
+
+
+    /*유아*/
+    table.detaile_fee_child_table
+    {width: 100%;
+    margin-bottom: 10px;
+    border-top: 1px solid #222; border-bottom: 1px solid #ccc;
+    box-sizing: border-box;}
+
+    table.detaile_fee_child_table tr:nth-child(1) td
+    {border-bottom: 1px solid #ccc; box-sizing: border-box;}
+
+    table.detaile_fee_child_table tr td:nth-child(1)
+    {width: 170px;}
+
+    table.detaile_fee_child_table tr td:nth-child(1)>p
+    {width: calc(100% - 20px);
+    margin: 0 auto;
+    line-height: 25px; font-size: 15px;
+    padding-top: 10px; padding-bottom: 10px;
+    color: #555;}
+
+    table.detaile_fee_child_table tr td:nth-child(2)
+    {width: calc(100% - 170px);}
+
+    table.detaile_fee_child_table tr td:nth-child(2)>p
+    {width: calc(100% - 20px);
+    margin: 0 auto;
+    line-height: 25px;
+    padding-top: 5px; padding-bottom: 5px;
+    text-align: right;
+    color: #222;}
+
+    table.detaile_fee_child_table tr:nth-child(1) td>p
+    {color: #222;}
+
+
+    /*유아*/
+    table.detaile_fee_infant_table
+    {width: 100%;
+    border-top: 1px solid #222; border-bottom: 1px solid #ccc;
+    box-sizing: border-box;}
+
+    table.detaile_fee_infant_table tr:nth-child(1) td
+    {border-bottom: 1px solid #ccc; box-sizing: border-box;}
+
+    table.detaile_fee_infant_table tr td:nth-child(1)
+    {width: 170px;}
+
+    table.detaile_fee_infant_table tr td:nth-child(1)>p
+    {width: calc(100% - 20px);
+    margin: 0 auto;
+    line-height: 25px; font-size: 15px;
+    padding-top: 10px; padding-bottom: 10px;
+    color: #555;}
+
+    table.detaile_fee_infant_table tr td:nth-child(2)
+    {width: calc(100% - 170px);}
+
+    table.detaile_fee_infant_table tr td:nth-child(2)>p
+    {width: calc(100% - 20px);
+    margin: 0 auto;
+    line-height: 25px;
+    padding-top: 5px; padding-bottom: 5px;
+    text-align: right;
+    color: #222;}
+
+    table.detaile_fee_infant_table tr:nth-child(1) td>p
+    {color: #222;}
+
+    /*항공요금 상세내역 글 박스*/
+    div.detaile_fee_notic_box
+    {width: 100%;
+    margin-bottom: 20px;}
+
+    div.detaile_fee_notic_box>p
+    {width: calc(100% - 15px);
+    margin-left: 15px;
+    line-height: 25px;
+    font-size: 15px; color: #555;
+    position: relative;}
+
+    div.detaile_fee_notic_box>p::before
+    {content: "※";
+    position: absolute;
+    left: -15px; 
+    line-height: 25px;
+    display: block;}
+
+    a.close_detaile_fee
+    {display: block;
+    width: 100%; height: 50px;
+    border: 1px solid #ccc; box-sizing: border-box;}
+
+    a.close_detaile_fee>p
+    {width: 100%;
+    text-align: center; color: #555; line-height: 50px;}
+
+}
+
+@media all and (min-width: 1025px) and (max-width: 1429px)
+{
+    /*항공권검색시트*/
+    div.airline_select_ex
+    {width: 90%;
+    margin: 0 auto;
+    position: relative;
+    top: -50px;}
+
+    div.airline_show_box
+    {width: 100%;
+    display: flex;
+    align-items: stretch;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
+    overflow: hidden;}
+    
+    /*출발지, 도착지, 가는날, 여행인원 박스*/
+    div.airline_select_box
+    {width: calc(100% - 100px);
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    overflow: hidden;}
+
+    div.airline_select_box>div
+    {width: 50%;}
+
+    /*출발지*/
+    div.start_airline_box>div
+    {width: calc(100% - 40px);
+    margin: 0 auto;
+    padding-top: 20px; padding-bottom: 20px;}
+
+    div.start_airline_box>div>p:nth-child(1)
+    {width: 100%;
+    line-height: 20px; color: #555;
+    margin-bottom: 10px;}
+
+    #start_airline
+    {width: 100%; height: 45px;
+    border: none; background-color: transparent;
+    outline: none;
+    font-family: 'min_bold' !important; color: #222; font-size: 16px;}
+
+    #start_airline::placeholder {color: #222;}
+
+
+    /*도착지*/
+    div.arrive_airline_box>div
+    {width: calc(100% - 40px);
+    margin: 0 auto;
+    padding-top: 20px; padding-bottom: 20px;
+    position: relative;}
+
+    div.arrive_airline_box>div>p:nth-child(1)
+    {width: 100%;
+    line-height: 20px; color: #555;
+    margin-bottom: 10px;}
+
+    #arrive_airline
+    {width: 100%; height: 45px;
+    border: none; background-color: transparent;
+    outline: none;
+    font-family: 'min_bold' !important; color: #222; font-size: 16px;}
+
+    #arrive_airline::placeholder {color: #222;}
+
+
+    /*가는 날 오는 날*/
+    div.day_airline_box>div
+    {width: calc(100% - 40px);
+    margin: 0 auto;
+    padding-top: 20px; padding-bottom: 20px;}
+
+    div.day_airline_box>div>div:nth-child(1)
+    {margin-bottom: 10px;}
+
+    div.day_airline_box>div>div>p:nth-child(1)
+    {width: 100%;
+    line-height: 20px; color: #555;
+    margin-bottom: 10px;}
+
+    #day_start_airline, #day_arrive_airline
+    {width: 100%; height: 45px;
+    border: none;
+    line-height: 45px;
+    border: 1px solid #ccc; box-sizing: border-box;
+    text-indent: 5px;
+    background-color: transparent;
+    color: #222; font-family: 'min_bold'; font-size: 16px;
+    position: relative;}
+
+    ::-webkit-calendar-picker-indicator {
+        position: absolute;
+        right: 0; top: 0;
+        opacity: 0;
+        padding-left: 100%;
+        height: 100%;
+    }
+
+    
+    /*여행 인원*/
+    div.person_airline_box>div
+    {width: calc(100% - 40px);
+    margin: 0 auto;
+    padding-top: 20px; padding-bottom: 20px;}
+
+    div.person_airline_box>div>p:nth-child(1)
+    {width: 100%;
+    line-height: 20px; color: #555;
+    margin-bottom: 10px;}
+
+    #person_airline, #person_airline_seat
+    {width: 100%; height: 45px;
+    border: none; background-color: transparent;
+    outline: none;
+    font-family: 'min_bold' !important; color: #222; font-size: 16px;}
+
+    #person_airline
+    {margin-bottom: 10px;}
+
+    #person_airline::placeholder {color: #222;}
+
+    #person_airline_seat::placeholder {color: #222;}
+
+
+    /*검색 버튼*/
+    #search_airline_btn
+    {width: 100px;
+    line-height: 315px;
+    border: none; outline: none;
+    background-color: #0053d4;
+    text-align: center; color: #fff;}
+
+
+    /*출발지 시트*/
+    div.start_airline_sheet
+    {width: calc(50% - 70px);
+    background-color: #fff;
+    border: 1px solid #222; box-sizing: border-box;
+    padding-top: 20px; padding-bottom: 20px;
+    position: absolute; 
+    top: 105px; left: 0;
+    display: none;}
+
+    div.start_airline_sheet>p:nth-child(1)
+    {width: calc(100% - 40px);
+    margin: 0 auto; font-family: 'min_bold';
+    color: #222; line-height: 20px;
+    margin-bottom: 10px;}
+    
+    /*국내 출발*/
+    div.korea_start_airline
+    {width: calc(100% - 40px);
+    margin: 0 auto;
+    border: 1px solid #ccc; box-sizing: border-box;
+    border-bottom: none;
+    overflow: hidden;}
+
+    div.korea_start_airline>p:nth-child(1)
+    {width: 150px;
+    line-height: 40px;
+    border-right: 1px solid #ccc; box-sizing: border-box;
+    background-color: #f3f3f3;
+    font-size: 15px;
+    text-align: center; color: #222;
+    float: left;}
+
+    div.korea_start_airline>ul:nth-child(2)
+    {width: calc(100% - 150px);
+    float: left;}
+
+    div.korea_start_airline>ul:nth-child(2)>li
+    {width: 50%;
+    float: left;}
+
+    div.korea_start_airline>ul:nth-child(2)>li>p
+    {text-align: center; line-height: 40px;
+    color: #777; font-size: 15px;
+    cursor : pointer;}
+    
+    /*동남아*/
+    div.southeast_asia_start_airline
+    {width: calc(100% - 40px);
+    margin: 0 auto;
+    border: 1px solid #ccc; box-sizing: border-box;
+    overflow: hidden;}
+
+    div.southeast_asia_start_airline>p:nth-child(1)
+    {width: 150px;
+    line-height: 80px;
+    border-right: 1px solid #ccc; box-sizing: border-box;
+    background-color: #f3f3f3;
+    font-size: 15px;
+    text-align: center; color: #222;
+    float: left;}
+
+    div.southeast_asia_start_airline>ul:nth-child(2)
+    {width: calc(100% - 150px);
+    float: left;}
+
+    div.southeast_asia_start_airline>ul:nth-child(2)>li
+    {width: 50%;
+    float: left;}
+
+    div.southeast_asia_start_airline>ul:nth-child(2)>li>p
+    {text-align: center; line-height: 40px;
+    color: #777; font-size: 15px;
+    cursor : pointer;}
+
+
+    /*도착지 시트*/
+    div.arrive_airline_sheet
+    {width: calc(50% - 70px);
+    background-color: #fff;
+    border: 1px solid #222; box-sizing: border-box;
+    padding-top: 20px; padding-bottom: 20px;
+    position: absolute; 
+    top: 105px; right: 100px;
+    display: none;}
+
+    div.arrive_airline_sheet>p:nth-child(1)
+    {width: calc(100% - 40px);
+    margin: 0 auto; font-family: 'min_bold';
+    color: #222; line-height: 20px;
+    margin-bottom: 10px;}
+    
+    /*국내 출발*/
+    div.korea_arrive_airline
+    {width: calc(100% - 40px);
+    margin: 0 auto;
+    border: 1px solid #ccc; box-sizing: border-box;
+    border-bottom: none;
+    overflow: hidden;}
+
+    div.korea_arrive_airline>p:nth-child(1)
+    {width: 150px;
+    line-height: 40px;
+    border-right: 1px solid #ccc; box-sizing: border-box;
+    background-color: #f3f3f3;
+    font-size: 15px;
+    text-align: center; color: #222;
+    float: left;}
+
+    div.korea_arrive_airline>ul:nth-child(2)
+    {width: calc(100% - 150px);
+    float: left;}
+
+    div.korea_arrive_airline>ul:nth-child(2)>li
+    {width: 50%;
+    float: left;}
+
+    div.korea_arrive_airline>ul:nth-child(2)>li>p
+    {text-align: center; line-height: 40px;
+    color: #777; font-size: 15px;
+    cursor : pointer;}
+
+    /*동남아*/
+    div.southeast_asia_arrive_airline
+    {width: calc(100% - 40px);
+    margin: 0 auto;
+    border: 1px solid #ccc; box-sizing: border-box;
+    overflow: hidden;}
+
+    div.southeast_asia_arrive_airline>p:nth-child(1)
+    {width: 150px;
+    line-height: 80px;
+    border-right: 1px solid #ccc; box-sizing: border-box;
+    background-color: #f3f3f3;
+    font-size: 15px;
+    text-align: center; color: #222;
+    float: left;}
+
+    div.southeast_asia_arrive_airline>ul:nth-child(2)
+    {width: calc(100% - 150px);
+    float: left;}
+
+    div.southeast_asia_arrive_airline>ul:nth-child(2)>li
+    {width: 50%;
+    float: left;}
+
+    div.southeast_asia_arrive_airline>ul:nth-child(2)>li>p
+    {text-align: center; line-height: 40px;
+    color: #777; font-size: 15px;
+    cursor : pointer;}
+
+
+    /*여행인원 시트지*/
+    div.person_airline_sheet
+    {width: calc(50% - 70px);
+    background-color: #fff;
+    border: 1px solid #222;
+    box-sizing: border-box;
+    padding-top: 20px; padding-bottom: 20px;
+    position: absolute;
+    top: 275px; right: 100px;
+    display: none;}
+
+    div.person_airline_box
+    {width: calc(100% - 40px);
+    margin: 0 auto;
+    margin-bottom: 20px;}
+
+    div.person_airline_box>p:nth-child(1)
+    {width: 100%;
+    color: #222; line-height: 20px;
+    font-family: 'min_bold';
+    margin-bottom: 10px;}
+
+    div.person_airline_box>ul:nth-child(2)
+    {width: 100%;
+    overflow: hidden;}
+
+    div.person_airline_box>ul:nth-child(2)>li
+    {width: 47.5%; height: 40px;
+    border-radius: 20px;
+    background-color: #f3f3f3;
+    float: left;
+    transition: all 0.3s;}
+
+    div.person_airline_box>ul:nth-child(2)>li:nth-child(1), div.person_airline_box>ul:nth-child(2)>li:nth-child(2)
+    {margin-bottom: 10px;}
+
+    div.person_airline_box>ul:nth-child(2)>li:nth-child(odd)
+    {margin-right: 5%;}
+
+    div.person_airline_box>ul:nth-child(2)>li>p
+    {text-align: center; line-height: 40px;
+    font-size: 15px; color: #222;
+    cursor : pointer;}
+
+    div.person_airline_box>ul:nth-child(2)>li:hover
+    {background-color: #0053d4;}
+
+    div.person_airline_box>ul:nth-child(2)>li:hover>p
+    {color: #fff;}
+
+    /*성인, 아동, 유아 선택*/
+    div.person_airline_select_box
+    {width: calc(100% - 40px);
+    margin: 0 auto;
+    margin-bottom: 20px;}
+
+    div.person_airline_select_box>div
+    {width: 100%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;}
+
+    div.person_airline_select_box>div:nth-child(2)
+    {margin-bottom: 10px; margin-top: 10px;}
+
+    div.person_airline_select_box>div>p:nth-child(1)
+    {width: calc(100% - 100px);
+    margin-right: 10px;
+    font-size: 15px; line-height: 25px;
+    color: #555;}
+
+    div.person_airline_select_box>div>p:nth-child(1)>span
+    {color: #222;
+    font-size: 16px; font-family: 'min_bold';}
+
+    #adult_select_f, #child_select_f, #infant_select_f
+    {width: 90px; height: 40px;
+    border: 1px solid #ccc; box-sizing: border-box;
+    background-color: #fff;
+    font-size: 15px; color: #222;}
+    
+    a.close_person_airline_sheet
+    {width: calc(100% - 40px); height: 45px;
+    background-color: #0053d4;
+    display: block;
+    margin: 0 auto;}
+
+    a.close_person_airline_sheet>p
+    {text-align: center;
+    font-size: 15px; color: #fff; line-height: 45px;}
+
+    /*시트관련*/
+    a.mobile_close_start_sheet {display: none;}
+    a.mobile_close_arrive_sheet {display: none;}
+}
+
+@media all and (min-width: 769px) and (max-width : 1024px)
+{   
+    /*웹 헤더*/
+    .erp_header {display: none;}
+
+    /*모바일 헤더*/
+    .mobile_header
+    {width: 100%;
+    display: block;
+    padding-top: 10px; padding-bottom: 10px;
+    background-color: #fff;
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 999;
+    box-shadow: 1px 0px 3px rgba(0, 0, 0, 0.25);}
+
+    div.header_top_mobile
+    {width: 90%;
+    margin: 0 auto;
+    overflow: hidden;}
+
+    div.header_top_mobile>a:nth-child(1)
+    {width: 179px;
+    display: block;
+    float: left;}
+
+    div.header_top_mobile>a:nth-child(1) img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    div.header_top_mobile>label:nth-child(2)
+    {width: 35px; height: 35px;
+    float: right;
+    display: block;}
+
+    div.header_top_mobile>label:nth-child(2) img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    #menu_open_mobile
+    {display: none;}
+
+    #menu_open_mobile:checked ~ .mobile_header .mobile_header_sheet
+    {right: 0;}
+
+    /*sheet*/
+    div.mobile_header_sheet
+    {width: 90%; height:calc(var(--vh, 1vh) * 100);
+    background-color: #fff;
+    position: absolute;
+    top: 0; right: -100%;
+    transition: all 0.3s;
+    overflow-y: scroll;}
+
+    div.icon_header_m
+    {width: 100%;
+    padding-top: 20px; padding-bottom: 20px;
+    background: linear-gradient(to right, #0053d4, #4364f7);}
+
+    div.top_sheet_h
+    {width: 90%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    overflow: hidden;}
+
+    div.top_sheet_h>a:nth-child(1)
+    {width: 25px; height: 25px;
+    float: left;}
+
+    div.top_sheet_h>a:nth-child(1) img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    div.top_sheet_h>label:nth-child(2)
+    {width: 25px; height: 25px;
+    float: right;
+    display: block;}
+
+    div.top_sheet_h>label:nth-child(2) img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    /*gnb_mobile_header*/
+    div.gnb_mobile_header
+    {width: 90%;
+    margin: 0 auto;
+    overflow: hidden;}
+
+    div.gnb_mobile_header>a
+    {width: 25%;
+    float: left;}
+
+    div.gnb_mobile_header>a>div:nth-child(1)
+    {width: 35px; height: 35px;
+    margin: 0 auto;
+    margin-bottom: 10px;}
+
+    div.gnb_mobile_header>a>div:nth-child(1) img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    div.gnb_mobile_header>a>p:nth-child(2)
+    {width: 100%;
+    font-size: 15px; color: #fff; text-align: center;
+    line-height: 30px;}
+
+    /*검색*/
+    div.search_mobile_box
+    {width: 100%;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
+    overflow: hidden;}
+
+    div.search_mobile_box>div
+    {width: 95%;
+    margin: 10px auto;
+    overflow: hidden;}
+
+    #mobile_search_btn
+    {display: none;}
+
+    #mobile_search
+    {width: calc(100% - 30px); height: 35px;
+    float: left;
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+    margin-bottom: 0;
+    font-family: 'Pretendard';}
+
+    div.search_mobile_box>div>label:nth-child(3)
+    {width: 25px; height: 25px;
+    float: right;
+    margin-top: 5px;}
+
+    div.search_mobile_box>div>label:nth-child(3) img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    /*lnb_menu_mobile*/
+    div.lnb_menu_mobile
+    {width: 100%;}
+
+    div.lnb_menu_mobile>ul
+    {width: 100%;}
+
+    div.lnb_menu_mobile>ul>li
+    {width: 100%;
+    border-bottom: 1px solid #ccc; box-sizing: border-box;}
+
+    div.lnb_menu_mobile>ul>li:nth-child(odd)
+    {background-color: #f3f3f3;}
+
+    div.lnb_menu_mobile>ul>li>a
+    {display: block;
+    width: 90%;
+    margin: 0 auto;}
+
+    div.lnb_menu_mobile>ul>li>a>p
+    {width: 100%;
+    font-size: 15px; line-height: 50px;
+    color: #222; font-family: 'min_bold';}
+
+    /*메뉴*/
+    .mobile_lnb_box
+    {width: 100%; height: 50px;
+    background-color: #0096ff;
+    margin-top: 55px;
+    display: block;}
+
+    .mobile_lnb_box .m_lnb_box
+    {width: 95%;
+    margin: 0 auto;}
+
+    .m_lnb_box .m_lnb>p 
+    {text-align: center; color: #fff;
+    line-height: 50px;}
+
+    .m_lnb_box .owl-nav {display: none;}
+
+    .m_lnb_box .owl-dots {display: none;}
+
+    /*이미지 스크롤 막기*/
+    .scrollOff
+    {width: 100%; height: 100vh;
+    position: fixed;
+    overflow : hidden;}  
+
+     /*비주얼 이미지*/
+    div.airline_visual
+    {width: 100%; height: 300px;
+    overflow: hidden;
+    position: relative;}
+
+    /*항공권검색시트*/
+    div.airline_select_ex
+    {width: 90%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 3;
+    top: -50px;}
+
+    div.airline_show_box
+    {width: 100%;
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
+    overflow: hidden;}
+    
+    /*출발지, 도착지, 가는날, 여행인원 박스*/
+    div.airline_select_box
+    {width: 100%;
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    overflow: hidden;}
+
+    div.airline_select_box>div
+    {width: 50%;}
+
+    /*출발지*/
+    div.start_airline_box>div
+    {width: calc(100% - 40px);
+    margin: 0 auto;
+    padding-top: 20px; padding-bottom: 20px;}
+
+    div.start_airline_box>div>p:nth-child(1)
+    {width: 100%;
+    line-height: 20px; color: #555;
+    font-size: 15px;
+    margin-bottom: 5px;}
+
+    #start_airline
+    {width: 100%; height: 45px;
+    border: none; background-color: transparent;
+    outline: none;
+    font-family: 'min_bold' !important; color: #222; font-size: 16px;}
+
+    #start_airline::placeholder {color: #222;}
+
+    /*도착지*/
+    div.arrive_airline_box>div
+    {width: calc(100% - 40px);
+    margin: 0 auto;
+    padding-top: 20px; padding-bottom: 20px;
+    position: relative;}
+
+    div.arrive_airline_box>div>p:nth-child(1)
+    {width: 100%;
+    line-height: 20px; color: #555;
+    font-size: 15px;
+    margin-bottom: 5px;}
+
+    #arrive_airline
+    {width: 100%; height: 45px;
+    border: none; background-color: transparent;
+    outline: none;
+    font-family: 'min_bold' !important; color: #222; font-size: 16px;}
+
+    #arrive_airline::placeholder {color: #222;}
+
+    /*가는 날 오는 날*/
+    div.day_airline_box>div
+    {width: calc(100% - 40px);
+    margin: 0 auto;
+    padding-top: 20px; padding-bottom: 20px;}
+
+    div.day_airline_box>div>div:nth-child(1)
+    {margin-bottom: 10px;}
+
+    div.day_airline_box>div>div>p:nth-child(1)
+    {width: 100%;
+    line-height: 20px; color: #555;
+    font-size: 15px;
+    margin-bottom: 5px;}
+
+    #day_start_airline, #day_arrive_airline
+    {width: 100%; height: 45px;
+    border: none;
+    background: transparent;
+    line-height: 45px;
+    color: #222; font-family: 'min_bold'; font-size: 16px;
+    position: relative;}
+
+    ::-webkit-calendar-picker-indicator {
+        position: absolute;
+        right: 0; top: 0;
+        opacity: 0;
+        padding-left: 100%;
+        height: 100%;
+    }
+
+
+    /*여행 인원*/
+    div.person_airline_box>div
+    {width: calc(100% - 40px);
+    margin: 0 auto;
+    padding-top: 20px; padding-bottom: 20px;}
+
+    div.person_airline_box>div>p:nth-child(1)
+    {width: 100%;
+    line-height: 20px; color: #555;
+    font-size: 15px;
+    margin-bottom: 5px;}
+
+    #person_airline, #person_airline_seat
+    {width: 100%; height: 45px;
+    border: none; background-color: transparent;
+    outline: none;
+    font-family: 'min_bold' !important; color: #222; font-size: 16px;}
+
+    #person_airline
+    {margin-bottom: 10px;}
+
+    #person_airline::placeholder {color: #222;}
+
+    #person_airline_seat::placeholder {color: #222;}
+
+    /*검색 버튼*/
+    #search_airline_btn
+    {width: 100%; height: 50px;
+    line-height: 50px;
+    border: none; outline: none;
+    background-color: #0053d4;
+    text-align: center; color: #fff;}
+
+    /*출발지 시트*/
+    div.start_airline_sheet
+    {width: 50%;
+    background-color: #fff;
+    border: 1px solid #222; box-sizing: border-box;
+    padding-top: 10px; padding-bottom: 10px;
+    position: absolute; 
+    top: 90px; left: 0;
+    display: none;}
+
+    div.start_airline_sheet>p
+    {width: calc(100% - 20px);
+    margin: 0 auto;
+    margin-bottom: 10px;
+    font-size: 15px; color: #222; font-family: 'min_bold';}
+    
+    /*국내*/
+    div.korea_start_airline
+    {width: calc(100% - 20px);
+    margin: 0 auto;
+    overflow: hidden;
+    border: 1px solid #ccc; box-sizing: border-box;}
+
+    div.korea_start_airline>p:nth-child(1)
+    {width: 90px;
+    background-color: #f3f3f3;
+    color: #222; font-size: 15px;
+    text-align: center;
+    line-height: 40px;
+    float: left;}
+
+    div.korea_start_airline>ul:nth-child(2)
+    {width: calc(100% - 90px);
+    float: left;}
+
+    div.korea_start_airline>ul:nth-child(2)>li
+    {width: 50%;
+    float: left;}
+
+    div.korea_start_airline>ul:nth-child(2)>li>p
+    {line-height: 40px;
+    font-size: 15px; text-align: center; color: #555;
+    cursor : pointer;}
+    
+    /*동남아*/
+    div.southeast_asia_start_airline
+    {width: calc(100% - 20px);
+    margin: 0 auto;
+    overflow: hidden;
+    border: 1px solid #ccc; box-sizing: border-box;
+    border-top: none;}
+
+    div.southeast_asia_start_airline>p:nth-child(1)
+    {width: 90px;
+    background-color: #f3f3f3;
+    color: #222; font-size: 15px;
+    text-align: center;
+    line-height: 80px;
+    float: left;}
+
+    div.southeast_asia_start_airline>ul:nth-child(2)
+    {width: calc(100% - 90px);
+    float: left;}
+
+    div.southeast_asia_start_airline>ul:nth-child(2)>li
+    {width: 50%;
+    float: left;}
+
+    div.southeast_asia_start_airline>ul:nth-child(2)>li>p
+    {line-height: 40px;
+    font-size: 15px; text-align: center; color: #555;
+    cursor : pointer;}
+
+
+    /*도착지 시트*/
+    div.arrive_airline_sheet
+    {width: 50%;
+    background-color: #fff;
+    border: 1px solid #222; box-sizing: border-box;
+    padding-top: 10px; padding-bottom: 10px;
+    position: absolute; 
+    top: 90px; right: 0;
+    display: none;}
+
+    div.arrive_airline_sheet>p
+    {width: calc(100% - 20px);
+    margin: 0 auto;
+    margin-bottom: 10px;
+    font-size: 15px; color: #222; font-family: 'min_bold';}
+    
+    /*국내*/
+    div.korea_arrive_airline
+    {width: calc(100% - 20px);
+    margin: 0 auto;
+    overflow: hidden;
+    border: 1px solid #ccc; box-sizing: border-box;}
+
+    div.korea_arrive_airline>p:nth-child(1)
+    {width: 90px;
+    background-color: #f3f3f3;
+    color: #222; font-size: 15px;
+    text-align: center;
+    line-height: 40px;
+    float: left;}
+
+    div.korea_arrive_airline>ul:nth-child(2)
+    {width: calc(100% - 90px);
+    float: left;}
+
+    div.korea_arrive_airline>ul:nth-child(2)>li
+    {width: 50%;
+    float: left;}
+
+    div.korea_arrive_airline>ul:nth-child(2)>li>p
+    {line-height: 40px;
+    font-size: 15px; text-align: center; color: #555;
+    cursor : pointer;}
+    
+    /*동남아*/
+    div.southeast_asia_arrive_airline
+    {width: calc(100% - 20px);
+    margin: 0 auto;
+    overflow: hidden;
+    border: 1px solid #ccc; box-sizing: border-box;
+    border-top: none;}
+
+    div.southeast_asia_arrive_airline>p:nth-child(1)
+    {width: 90px;
+    background-color: #f3f3f3;
+    color: #222; font-size: 15px;
+    text-align: center;
+    line-height: 80px;
+    float: left;}
+
+    div.southeast_asia_arrive_airline>ul:nth-child(2)
+    {width: calc(100% - 90px);
+    float: left;}
+
+    div.southeast_asia_arrive_airline>ul:nth-child(2)>li
+    {width: 50%;
+    float: left;}
+
+    div.southeast_asia_arrive_airline>ul:nth-child(2)>li>p
+    {line-height: 40px;
+    font-size: 15px; text-align: center; color: #555;
+    cursor : pointer;}
+    
+
+    /*여행인원 시트*/
+    div.person_airline_sheet
+    {width: 50%;
+    background-color: #fff;
+    border: 1px solid #222; box-sizing: border-box;
+    padding-top: 10px; padding-bottom: 10px;
+    position: absolute; 
+    top: 255px; right: 0;
+    display: none;}
+
+    div.person_airline_box
+    {width: calc(100% - 20px);
+    margin: 0 auto;
+    margin-bottom: 10px;}
+
+    div.person_airline_box>p:nth-child(1)
+    {width: 100%;
+    font-size: 15px; font-family: 'min_bold';
+    color: #222; line-height: 20px;
+    margin-bottom: 10px;}
+
+    div.person_airline_box>ul
+    {width: 100%;
+    overflow: hidden;}
+
+    div.person_airline_box>ul>li
+    {width: 48.5%; height: 40px;
+    float: left;
+    border-radius: 20px;
+    background-color: #f3f3f3;
+    transition: all 0.3s;}
+
+    div.person_airline_box>ul:nth-child(2)>li:nth-child(1), div.person_airline_box>ul:nth-child(2)>li:nth-child(2)
+    {margin-bottom: 10px;}
+
+    div.person_airline_box>ul:nth-child(2)>li:nth-child(odd)
+    {margin-right: 3%;}
+
+    div.person_airline_box>ul>li>p
+    {text-align: center;
+    font-size: 15px; line-height: 40px;
+    cursor : pointer;}
+
+    div.person_airline_box>ul>li:hover
+    {background-color: #0053d4;}
+
+    div.person_airline_box>ul>li:hover>p
+    {color: #fff;}
+
+    /*성인,아동,유아*/
+    div.person_airline_select_box
+    {width: calc(100% - 20px);
+    margin: 0 auto;
+    margin-bottom: 20px;}
+
+    div.person_airline_select_box>div
+    {width: 100%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;}
+
+    div.person_airline_select_box>div:nth-child(2)
+    {margin-bottom: 10px; margin-top: 10px;}
+
+    div.person_airline_select_box>div>p:nth-child(1)
+    {width: calc(100% - 100px);
+    margin-right: 10px;
+    font-size: 14px; line-height: 25px;
+    color: #555;}
+
+    div.person_airline_select_box>div>p:nth-child(1)>span
+    {color: #222;
+    font-size: 15px; font-family: 'min_bold';}
+
+    #adult_select_f, #child_select_f, #infant_select_f
+    {width: 90px; height: 40px;
+    border: 1px solid #ccc; box-sizing: border-box;
+    background-color: #fff;
+    font-size: 15px; color: #222;}
+
+    a.close_person_airline_sheet
+    {width: calc(100% - 20px); height: 45px;
+    background-color: #0053d4;
+    display: block;
+    margin: 0 auto;}
+
+    a.close_person_airline_sheet>p
+    {text-align: center;
+    font-size: 15px; color: #fff; line-height: 45px;}
+
+    /*시트관련*/
+    a.mobile_close_start_sheet {display: none;}
+    a.mobile_close_arrive_sheet {display: none;}
+
+
+    /*웹 테이블*/
+    div.airline_detaile_txt_ex
+    {width: 100%;}
+
+    div.airline_reservation_right_ex
+    {display: none;}
+
+    table.airline_money_tabel {display: none;}
+
+    /*항공 요금 안내*/
+    div.airline_mobile_ex
+    {width: 100%;
+    display: block;}
+
+    div.airline_money_mobile_box
+    {width: 100%;
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
+    display: flex;
+    align-items: stretch;
+    margin-bottom: 80px;}
+
+    div.airline_money_mobile_box>div
+    {width: 33.333333%;
+    padding-top: 15px; padding-bottom: 15px;
+    border-right: 1px solid #ccc; box-sizing: border-box;}
+
+    div.airline_money_mobile_box>div:last-child
+    {border-right: none;}
+    
+    /*성인*/
+    div.adult_airline_select_box_m
+    {width: calc(100% - 30px);
+    margin: 0 auto;
+    overflow: hidden;
+    margin-bottom: 10px;}
+
+    div.adult_airline_select_box_m>p:nth-child(1)
+    {width: calc(100% - 90px);
+    line-height: 35px; color: #222;
+    margin-right: 10px;
+    float: left;}
+
+    #adult_flight_select_m
+    {width: 80px; height: 35px;
+    border: 1px solid #ccc; box-sizing: border-box;
+    background-color: #fff;
+    outline: none;
+    float: left;
+    font-family: 'Pretendard' !important; font-size: 15px;}
+    
+    /*성인 글*/
+    div.adult_flight_txt_m
+    {width: calc(100% - 30px);
+    margin: 0 auto;}
+
+    div.adult_flight_txt_m>p:nth-child(1)
+    {width: 100%;
+    font-size: 17px;
+    word-break: keep-all;
+    font-family: 'min_bold'; color: #222; line-height: 25px;
+    margin-bottom: 5px;}
+
+    div.adult_flight_txt_m>p:nth-child(2)
+    {width: 100%;
+    font-size: 14px;
+    word-break: keep-all;
+    color: #555; line-height: 20px;}
+
+    div.adult_flight_txt_m>p:nth-child(3)
+    {width: 100%;
+    font-size: 14px;
+    word-break: keep-all;
+    color: #555; line-height: 20px;}
+
+
+    /*유아*/
+    div.child_airline_select_box_m
+    {width: calc(100% - 30px);
+    margin: 0 auto;
+    overflow: hidden;
+    margin-bottom: 10px;}
+
+    div.child_airline_select_box_m>p:nth-child(1)
+    {width: calc(100% - 90px);
+    line-height: 35px; color: #222;
+    margin-right: 10px;
+    float: left;}
+
+    #child_flight_select_m
+    {width: 80px; height: 35px;
+    border: 1px solid #ccc; box-sizing: border-box;
+    background-color: #fff;
+    outline: none;
+    float: left;
+    font-family: 'Pretendard' !important; font-size: 15px;}
+    
+    /*유아 글*/
+    div.child_flight_txt_m
+    {width: calc(100% - 30px);
+    margin: 0 auto;}
+
+    div.child_flight_txt_m>p:nth-child(1)
+    {width: 100%;
+    font-size: 17px;
+    word-break: keep-all;
+    font-family: 'min_bold'; color: #222; line-height: 25px;
+    margin-bottom: 5px;}
+
+    div.child_flight_txt_m>p:nth-child(2)
+    {width: 100%;
+    font-size: 14px;
+    word-break: keep-all;
+    color: #555; line-height: 20px;}
+
+    div.child_flight_txt_m>p:nth-child(3)
+    {width: 100%;
+    font-size: 14px;
+    word-break: keep-all;
+    color: #555; line-height: 20px;}
+
+    /*아동*/
+    div.kids_airline_select_box_m
+    {width: calc(100% - 30px);
+    margin: 0 auto;
+    overflow: hidden;
+    margin-bottom: 10px;}
+
+    div.kids_airline_select_box_m>p:nth-child(1)
+    {width: calc(100% - 90px);
+    line-height: 35px; color: #222;
+    margin-right: 10px;
+    float: left;}
+
+    #kids_flight_select_m
+    {width: 80px; height: 35px;
+    border: 1px solid #ccc; box-sizing: border-box;
+    background-color: #fff;
+    outline: none;
+    float: left;
+    font-family: 'Pretendard' !important; font-size: 15px;}
+    
+    /*아동 글*/
+    div.kids_flight_txt_m
+    {width: calc(100% - 30px);
+    margin: 0 auto;}
+
+    div.kids_flight_txt_m>p:nth-child(1)
+    {width: 100%;
+    font-size: 17px;
+    font-family: 'min_bold'; color: #222; line-height: 25px;
+    margin-bottom: 5px;}
+
+    
+    /*버튼*/
+    div.airline_mobile_btn
+    {width: 100%;
+    overflow: hidden;}
+
+    #airline_reservation_btn_mobile
+    {width: calc(50% - 25px); height: 50px;
+    border: none; outline: none;
+    font-family: 'Pretendard' !important;
+    background-color: #0053d4; font-size: 15px;
+    text-align: center; line-height: 50px; color: #fff;
+    margin-right: 50px;
+    border-radius: 5px;
+    float: left;}
+
+    a.open_detaile_airfare_m
+    {width: calc(50% - 25px); height: 50px;
+    display: block;
+    background-color: #ccc;
+    text-align: center;
+    border-radius: 5px;
+    float: left;}
+
+    a.open_detaile_airfare_m>p
+    {line-height: 50px; text-align: center; font-size: 15px; color: #222;}
+    
+}
+
+@media all and (max-width : 768px)
+{   
+    /*이미지 스크롤 막기*/
+    .scrollOff
+    {width: 100%; height: 100vh;
+    position: fixed;
+    overflow : hidden;}  
+
+     /*웹 헤더*/
+    .erp_header {display: none;}
+
+    /*모바일 헤더*/
+    .mobile_header
+    {width: 100%;
+    padding-top: 10px; padding-bottom: 10px;
+    background-color: #fff;
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 999;
+    box-shadow: 1px 0px 3px rgba(0, 0, 0, 0.25);}
+
+    div.header_top_mobile
+    {width: 90%;
+    margin: 0 auto;
+    overflow: hidden;}
+
+    div.header_top_mobile>a:nth-child(1)
+    {width: 179px;
+    display: block;
+    float: left;}
+
+    div.header_top_mobile>a:nth-child(1) img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    div.header_top_mobile>label:nth-child(2)
+    {width: 35px; height: 35px;
+    float: right;
+    display: block;}
+
+    div.header_top_mobile>label:nth-child(2) img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    #menu_open_mobile
+    {display: none;}
+     
+    #menu_open_mobile:checked ~ .mobile_header .mobile_header_sheet
+    {right: 0;}
+
+    /*sheet*/
+    div.mobile_header_sheet
+    {width: 100%; height:calc(var(--vh, 1vh) * 100);
+    background-color: #fff;
+    position: absolute;
+    top: 0; right: -100%;
+    transition: all 0.3s;
+    overflow-y: scroll;}
+
+    div.icon_header_m
+    {width: 100%;
+    padding-top: 20px; padding-bottom: 20px;
+    background: linear-gradient(to right, #0053d4, #4364f7);}
+
+    div.top_sheet_h
+    {width: 90%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    overflow: hidden;}
+
+    div.top_sheet_h>a:nth-child(1)
+    {width: 25px; height: 25px;
+    float: left;}
+
+    div.top_sheet_h>a:nth-child(1) img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    div.top_sheet_h>label:nth-child(2)
+    {width: 25px; height: 25px;
+    float: right;
+    display: block;}
+
+    div.top_sheet_h>label:nth-child(2) img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+    
+    /*gnb_mobile_header*/
+    div.gnb_mobile_header
+    {width: 90%;
+    margin: 0 auto;
+    overflow: hidden;}
+
+    div.gnb_mobile_header>a
+    {width: 25%;
+    float: left;}
+
+    div.gnb_mobile_header>a>div:nth-child(1)
+    {width: 35px; height: 35px;
+    margin: 0 auto;
+    margin-bottom: 10px;}
+
+    div.gnb_mobile_header>a>div:nth-child(1) img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    div.gnb_mobile_header>a>p:nth-child(2)
+    {width: 100%;
+    font-size: 15px; color: #fff; text-align: center;
+    line-height: 30px;}
+
+    /*검색*/
+    div.search_mobile_box
+    {width: 100%;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
+    overflow: hidden;}
+
+    div.search_mobile_box>div
+    {width: 95%;
+    margin: 10px auto;
+    overflow: hidden;}
+
+    #mobile_search_btn
+    {display: none;}
+
+    #mobile_search
+    {width: calc(100% - 30px); height: 35px;
+    float: left;
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+    margin-bottom: 0;
+    font-family: 'Pretendard';}
+
+    div.search_mobile_box>div>label:nth-child(3)
+    {width: 25px; height: 25px;
+    float: right;
+    margin-top: 5px;}
+
+    div.search_mobile_box>div>label:nth-child(3) img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    /*lnb_menu_mobile*/
+    div.lnb_menu_mobile
+    {width: 100%;}
+
+    div.lnb_menu_mobile>ul
+    {width: 100%;}
+
+    div.lnb_menu_mobile>ul>li
+    {width: 100%;
+    border-bottom: 1px solid #ccc; box-sizing: border-box;}
+
+    div.lnb_menu_mobile>ul>li:nth-child(odd)
+    {background-color: #f3f3f3;}
+
+    div.lnb_menu_mobile>ul>li>a
+    {display: block;
+    width: 90%;
+    margin: 0 auto;}
+
+    div.lnb_menu_mobile>ul>li>a>p
+    {width: 100%;
+    font-size: 15px; line-height: 50px;
+    color: #222; font-family: 'min_bold';}
+    
+    /*메뉴 바*/
+    .mobile_lnb_box
+    {width: 100%; 
+    background-color: #0096ff;
+    margin-top: 55px;}
+
+    .mobile_lnb_box .m_lnb_box
+    {width: 95%;
+    margin: 0 auto;}
+
+    .m_lnb_box .m_lnb>p 
+    {text-align: center; color: #fff;
+    line-height: 45px;
+    font-size: 15px;}
+
+    .m_lnb_box .owl-nav {display: none;}
+
+    .m_lnb_box .owl-dots {display: none;}
+
+    /*비주얼 이미지*/
+    div.airline_visual
+    {width: 100%; height: 250px;
+    overflow: hidden;
+    position: relative;}
+
+    div.airline_visual img
+    {width: 100%; height: 100%;
+    object-fit: cover;
+    transition: all 3s;
+    transform: scale(1.2);}
+
+    div.airline_visual>p:nth-child(2)
+    {width: 100%;
+    text-align: center;
+    font-family: bold; color: #fff;
+    font-size: 28px; line-height: 30px;
+    position: absolute;
+    top: calc(50% - 15px); left: 0;}
+
+    /*항공권 검색*/
+    div.airline_select_ex
+    {width: 90%;
+    margin: 0 auto;
+    position: relative;
+    top: -30px;
+    z-index: 4;}
+
+    div.airline_show_box
+    {width: 100%;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+    overflow: hidden;}
+
+    div.airline_select_box
+    {width: 100%;
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;}
+
+    div.airline_select_box>div:nth-child(1)
+    {width: 50%;
+    border-right: 1px solid #ccc; 
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;}
+
+    div.airline_select_box>div:nth-child(2)
+    {width: 50%;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;}
+
+    div.airline_select_box>div:nth-child(3)
+    {width: 100%;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;}
+
+    div.airline_select_box>div:nth-child(4)
+    {width: 100%;}
+
+
+    /*출발지*/
+    div.start_airline_box>div
+    {width: 90%;
+    margin: 0 auto;
+    padding-top: 15px; padding-bottom: 15px;}
+
+    div.start_airline_box>div>p:nth-child(1)
+    {width: 100%;
+    font-size: 15px; color: #707070; line-height: 20px;
+    margin-bottom: 5px;}
+
+    #start_airline
+    {width: 100%; height: 45px;
+    border: none; background-color: transparent;
+    outline: none;
+    font-family: 'min_bold' !important; color: #222; font-size: 15px;}
+
+    #start_airline::placeholder {color: #222;}
+
+
+    /*도착지*/
+    div.arrive_airline_box>div
+    {width: 90%;
+    margin: 0 auto;
+    padding-top: 15px; padding-bottom: 15px;}
+
+    div.arrive_airline_box>div>p:nth-child(1)
+    {width: 100%;
+    font-size: 15px; color: #707070; line-height: 20px;
+    margin-bottom: 5px;}
+
+    #arrive_airline
+    {width: 100%; height: 45px;
+    border: none; background-color: transparent;
+    outline: none;
+    font-family: 'min_bold' !important; color: #222; font-size: 15px;}
+
+    #arrive_airline::placeholder {color: #222;}
+
+
+    /*가는날,오는날*/
+    div.day_airline_box>div
+    {width: 95%;
+    margin: 0 auto;
+    padding-top: 15px; padding-bottom: 15px;}
+
+    div.day_airline_box>div>div:nth-child(1)
+    {width: 100%;
+    margin-bottom: 5px;}
+
+    div.day_airline_box>div>div>p:nth-child(1)
+    {width: 100%;
+    font-size: 15px; color: #707070; line-height: 20px;
+    margin-bottom: 5px;}
+
+    #day_start_airline, #day_arrive_airline
+    {width: 100%; height: 45px;
+    border: none;
+    border: 1px solid #ccc; box-sizing: border-box;
+    text-indent: 5px;
+    background-color: transparent;
+    line-height: 45px;
+    color: #222; font-family: 'min_bold'; font-size: 15px;
+    position: relative;}
+
+    ::-webkit-calendar-picker-indicator {
+        position: absolute;
+        right: 0; top: 0;
+        opacity: 0;
+        padding-left: 100%;
+        height: 100%;
+    }
+
+
+
+    /*여행인원*/
+    div.person_airline_box>div
+    {width: 95%;
+    margin: 0 auto;
+    padding-top: 15px; padding-bottom: 15px;}
+
+    div.person_airline_box>div>p:nth-child(1)
+    {width: 100%;
+    font-size: 15px; color: #707070; line-height: 20px;
+    margin-bottom: 5px;}
+
+    #person_airline, #person_airline_seat
+    {width: 100%; height: 45px;
+    border: none; background-color: transparent;
+    outline: none;
+    font-family: 'min_bold' !important; color: #222; font-size: 15px;}
+
+    #person_airline::placeholder {color: #222;}
+
+    #person_airline_seat::placeholder {color: #222;}
+
+    /*버튼*/
+    #search_airline_btn
+    {width: 100%; height: 50px;
+    line-height: 50px;
+    font-size: 15px;
+    border: none; outline: none;
+    background-color: #0053d4;
+    text-align: center; color: #fff;
+    font-family: 'Pretendard' !important;}
+
+    /*출발지 시트*/
+    div.start_airline_sheet
+    {width: 50%;
+    position: absolute;
+    top: 85px; left: 0;
+    padding-top: 10px; padding-bottom: 10px;
+    border: 1px solid #222; box-sizing: border-box;
+    background-color: #fff;
+    display: none;}
+
+    div.start_airline_sheet>p:nth-child(1)
+    {width: calc(100% - 20px);
+    margin: 0 auto;
+    font-size: 15px; line-height: 20px; font-family: 'min_bold';
+    color: #222;
+    margin-bottom: 10px;}
+    
+    /*국내*/
+    div.korea_start_airline
+    {width: calc(100% - 20px);
+    margin: 0 auto;
+    overflow: hidden;
+    border: 1px solid #ccc; box-sizing: border-box;}
+
+    div.korea_start_airline>p:nth-child(1)
+    {width: 80px;
+    font-size: 15px;
+    float: left;
+    background-color: #f3f3f3;
+    text-align: center; line-height: 70px;
+    color: #222;}
+
+    div.korea_start_airline>ul:nth-child(2)
+    {width: calc(100% - 80px);
+    float: left;}
+
+    div.korea_start_airline>ul:nth-child(2)>li
+    {width: 100%;}
+
+    div.korea_start_airline>ul:nth-child(2)>li>p
+    {line-height: 35px;
+    text-align: center; font-size: 15px;
+    cursor : pointer;}
+
+    /*동남아*/
+    div.southeast_asia_start_airline
+    {width: calc(100% - 20px);
+    margin: 0 auto;
+    overflow: hidden;
+    border: 1px solid #ccc; box-sizing: border-box;
+    border-top: none;
+    margin-bottom: 15px;}
+
+    div.southeast_asia_start_airline>p:nth-child(1)
+    {width: 80px;
+    font-size: 15px;
+    float: left;
+    background-color: #f3f3f3;
+    text-align: center; line-height: 140px;
+    color: #222;}
+
+    div.southeast_asia_start_airline>ul:nth-child(2)
+    {width: calc(100% - 80px);
+    float: left;}
+
+    div.southeast_asia_start_airline>ul:nth-child(2)>li
+    {width: 100%;}
+
+    div.southeast_asia_start_airline>ul:nth-child(2)>li>p
+    {line-height: 35px;
+    text-align: center; font-size: 15px;
+    cursor : pointer;}
+
+    a.mobile_close_start_sheet
+    {display: block;
+    width: calc(100% - 20px); height: 35px;
+    margin: 0 auto;
+    border: 1px solid #ccc; box-sizing: border-box;}
+
+    a.mobile_close_start_sheet>p
+    {text-align: center; line-height: 35px;
+    font-size: 15px; color: #222;}
+
+
+    /*도착지 시트*/
+    div.arrive_airline_sheet
+    {width: 50%;
+    position: absolute;
+    top: 85px; right: 0;
+    padding-top: 10px; padding-bottom: 10px;
+    border: 1px solid #222; box-sizing: border-box;
+    background-color: #fff;
+    display: none;}
+
+    div.arrive_airline_sheet>p:nth-child(1)
+    {width: calc(100% - 20px);
+    margin: 0 auto;
+    font-size: 15px; line-height: 20px; font-family: 'min_bold';
+    color: #222;
+    margin-bottom: 10px;}
+    
+    /*국내*/
+    div.korea_arrive_airline
+    {width: calc(100% - 20px);
+    margin: 0 auto;
+    overflow: hidden;
+    border: 1px solid #ccc; box-sizing: border-box;}
+
+    div.korea_arrive_airline>p:nth-child(1)
+    {width: 80px;
+    font-size: 15px;
+    float: left;
+    background-color: #f3f3f3;
+    text-align: center; line-height: 70px;
+    color: #222;}
+
+    div.korea_arrive_airline>ul:nth-child(2)
+    {width: calc(100% - 80px);
+    float: left;}
+
+    div.korea_arrive_airline>ul:nth-child(2)>li
+    {width: 100%;}
+
+    div.korea_arrive_airline>ul:nth-child(2)>li>p
+    {line-height: 35px;
+    text-align: center; font-size: 15px;
+    cursor : pointer;}
+
+    /*동남아*/
+    div.southeast_asia_arrive_airline
+    {width: calc(100% - 20px);
+    margin: 0 auto;
+    overflow: hidden;
+    border: 1px solid #ccc; box-sizing: border-box;
+    border-top: none;
+    margin-bottom: 15px;}
+
+    div.southeast_asia_arrive_airline>p:nth-child(1)
+    {width: 80px;
+    font-size: 15px;
+    float: left;
+    background-color: #f3f3f3;
+    text-align: center; line-height: 140px;
+    color: #222;}
+
+    div.southeast_asia_arrive_airline>ul:nth-child(2)
+    {width: calc(100% - 80px);
+    float: left;}
+
+    div.southeast_asia_arrive_airline>ul:nth-child(2)>li
+    {width: 100%;}
+
+    div.southeast_asia_arrive_airline>ul:nth-child(2)>li>p
+    {line-height: 35px;
+    text-align: center; font-size: 15px;
+    cursor : pointer;}
+
+    a.mobile_close_arrive_sheet
+    {display: block;
+    width: calc(100% - 20px); height: 35px;
+    margin: 0 auto;
+    border: 1px solid #ccc; box-sizing: border-box;}
+
+    a.mobile_close_arrive_sheet>p
+    {text-align: center; line-height: 35px;
+    font-size: 15px; color: #222;}
+
+
+    /*여행인원 시트*/
+    div.person_airline_sheet
+    {width: 100%;
+    border: 1px solid #222; box-sizing: border-box;
+    background-color: #fff;
+    padding-top: 10px; padding-bottom: 10px;
+    position: absolute; 
+    top: 406px;
+    display: none;}
+
+    div.person_airline_box
+    {width: calc(100% - 20px);
+    margin: 0 auto;
+    margin-bottom: 10px;}
+
+    div.person_airline_box>p:nth-child(1)
+    {width: 100%;
+    font-size: 15px; line-height: 20px; font-family: 'min_bold';
+    color: #222;
+    margin-bottom: 10px;}
+
+    div.person_airline_box>ul:nth-child(2)
+    {width: 100%;
+    overflow: hidden;}
+
+    div.person_airline_box>ul:nth-child(2)>li
+    {width: 49%; height: 35px;
+    border-radius: 17.5px;
+    background-color: #f3f3f3;
+    float: left;}
+
+    div.person_airline_box>ul:nth-child(2)>li:nth-child(1), div.person_airline_box>ul:nth-child(2)>li:nth-child(2)
+    {margin-bottom: 10px;}
+
+    div.person_airline_box>ul:nth-child(2)>li:nth-child(odd)
+    {margin-right: 2%;}
+
+    div.person_airline_box>ul:nth-child(2)>li>p
+    {font-size: 14px; text-align: center;
+    line-height: 35px; color: #222;
+    cursor : pointer;}
+
+    div.person_airline_select_box
+    {width: calc(100% - 20px);
+    margin: 0 auto;}
+
+    div.person_airline_select_box>div
+    {width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;}
+
+    div.person_airline_select_box>div:last-child
+    {margin-bottom: 0;}
+
+    div.person_airline_select_box>div>p:nth-child(1)
+    {width: calc(100% - 90px);
+    margin-right: 10px;
+    font-size: 14px; line-height: 25px;
+    color: #555;}
+
+    div.person_airline_select_box>div>p:nth-child(1)>span
+    {color: #222;
+    font-size: 15px; font-family: 'min_bold';}
+
+    #adult_select_f, #child_select_f, #infant_select_f
+    {width: 80px; height: 35px;
+    border: 1px solid #ccc; box-sizing: border-box;
+    background-color: #fff; font-size: 15px;
+    outline: none;}
+
+    a.close_person_airline_sheet
+    {width: calc(100% - 20px); height: 45px;
+    margin: 0 auto;
+    margin-top: 20px;
+    display: block;
+    background-color: #0053d4;}
+
+    a.close_person_airline_sheet>p
+    {font-size: 15px; text-align: center;
+    color: #fff; line-height: 45px;}
+
+    /*항공권 디테일*/
+    div.airline_detaile_top
+    {width: 90%;
+    margin: 20px auto;
+    margin-bottom: 30px;}
+
+    div.airline_detaile_top_title
+    {width: 100%;
+    margin-bottom: 20px;}
+
+    div.airline_detaile_top_title>p
+    {width: 100%;
+    font-size: 24px; line-height: 30px; font-family: bold;
+    color: #222;}
+
+    div.airline_detaile_top_line
+    {width: 100%; height: 1px;
+    background-color: #ccc;}
+
+    /*항공권 디테일 글*/
+    div.airline_detaile_ex
+    {width: 90%;
+    margin: 0 auto;
+    margin-bottom: 80px;}
+
+    /*요금 - 웹 테이블*/
+    table.airline_money_tabel
+    {display: none;}
+
+    /*오른쪽*/
+    div.airline_reservation_right_ex
+    {display: none;}
+
+    /*항공정보 타이틀*/
+    div.airline_information_title
+    {width: 100%;
+    margin-bottom: 20px;}
+
+    div.airline_information_title>p
+    {width: 100%;
+    font-size: 17px; font-family: bold; color: #222;
+    line-height: 20px;}
+
+    div.airline_information_title>p::after
+    {content: "";
+    width: 30px; height: 2px;
+    background-color: #0053d4;
+    display: block;
+    margin-top: 5px;}
+
+    /*항공정보테이블*/
+    table.airline_information_tabel
+    {display: none;}
+
+    table.airline_information_tabel_mobile
+    {width: 100%;
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-bottom: 30px;}
+
+    table.airline_information_tabel_mobile tr td
+    {border-bottom: 1px solid #ccc; box-sizing: border-box;}
+
+    table.airline_information_tabel_mobile tr:last-child td
+    {border-bottom: none;}
+
+    table.airline_information_tabel_mobile tr td:nth-child(1)
+    {width: 20%;
+    background-color: #f6f9ff;
+    border-right: 1px solid #ccc; box-sizing: border-box;}
+
+    table.airline_information_tabel_mobile tr td:nth-child(1)>p
+    {width: 90%;
+    margin: 0 auto;
+    padding-top: 15px; padding-bottom: 15px;
+    font-size: 15px; font-family: 'min_bold';
+    line-height: 20px;
+    text-align: center;
+    color: #222;}
+
+    table.airline_information_tabel_mobile tr td:nth-child(2)
+    {width: 80%;}
+
+    table.airline_information_tabel_mobile tr td:nth-child(2)>p
+    {width: calc(100% - 20px);
+    margin: 0 auto;
+    padding-top: 15px; padding-bottom: 15px;
+    font-size: 15px; color: #555; line-height: 20px;
+    word-break: keep-all;}
+
+    /*편명*/
+    div.flight_txt_box_m
+    {width: calc(100% - 20px);
+    margin: 0 auto;
+    padding-top: 15px; padding-bottom: 15px;
+    overflow: hidden;}
+
+    div.flight_txt_box_m>p
+    {font-size: 15px; line-height: 20px; color: #555;
+    float: left;
+    word-wrap: break-word;
+    word-break: break-all;}
+
+    div.flight_txt_box_m>p:nth-child(2)
+    {margin-right: 5px; margin-left: 5px;}
+
+    /*항공편*/
+    div.flight_guide_ex_m
+    {width: calc(100% - 20px);
+    margin: 0 auto;
+    padding-top: 15px; padding-bottom: 15px;}
+    
+    /*가는 편*/
+    div.depart_ex_fly_m
+    {width: 100%;
+    margin-bottom: 15px;}
+
+    div.depart_ex_fly_m>p:nth-child(1)
+    {width: 70px; height: 30px;
+    margin: 0 auto;
+    font-size: 15px;
+    text-align: center; line-height: 30px;
+    border-radius: 15px; color: #0053d4;
+    border: 1px solid #0053d4; box-sizing: border-box;
+    margin-bottom: 10px;}
+
+    div.depart_box_fly_m
+    {width: 100%;
+    display: flex;
+    align-items: center;}
+
+    div.depart_box_fly_m>div:nth-child(1)
+    {width: calc(50% - 25px);}
+
+    div.depart_box_fly_m>div:nth-child(1)>p
+    {text-align: center;}
+
+    div.depart_box_fly_m>div:nth-child(1)>p:nth-child(1)
+    {width: 100%;
+    line-height: 20px; color: #222; font-family: 'min_bold';
+    margin-bottom: 5px;}
+
+    div.depart_box_fly_m>div:nth-child(1)>p:nth-child(2)
+    {width: 100%;
+    line-height: 20px; color: #e5004f; font-family: 'min_bold';
+    margin-bottom: 10px;}
+
+    div.depart_box_fly_m>div:nth-child(1)>p:nth-child(3)
+    {width: 100%;
+    font-size: 15px; color: #555; line-height: 18px;
+    word-break: keep-all;}
+
+    div.depart_box_fly_m>div:nth-child(2)
+    {width: 30px; height: 30px;
+    margin-left: 10px; margin-right: 10px;}
+
+    div.depart_box_fly_m>div:nth-child(2) img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    div.depart_box_fly_m>div:nth-child(3)
+    {width: calc(50% - 25px);}
+
+    div.depart_box_fly_m>div:nth-child(3)>p
+    {text-align: center;}
+
+    div.depart_box_fly_m>div:nth-child(3)>p:nth-child(1)
+    {width: 100%;
+    line-height: 20px; color: #222; font-family: 'min_bold';
+    margin-bottom: 5px;}
+
+    div.depart_box_fly_m>div:nth-child(3)>p:nth-child(2)
+    {width: 100%;
+    line-height: 20px; color: #e5004f; font-family: 'min_bold';
+    margin-bottom: 10px;}
+
+    div.depart_box_fly_m>div:nth-child(3)>p:nth-child(3)
+    {width: 100%;
+    font-size: 15px; color: #555; line-height: 18px;
+    word-break: keep-all;}
+
+    /*오는 편*/
+    div.arrive_ex_fly_m
+    {width: 100%;}
+
+    div.arrive_ex_fly_m>p:nth-child(1)
+    {width: 70px; height: 30px;
+    margin: 0 auto;
+    font-size: 15px;
+    text-align: center; line-height: 30px;
+    border-radius: 15px; color: #0053d4;
+    border: 1px solid #0053d4; box-sizing: border-box;
+    margin-bottom: 10px;}
+
+    div.arrive_box_fly_m
+    {width: 100%;
+    display: flex;
+    align-items: center;}
+
+    div.arrive_box_fly_m>div:nth-child(1)
+    {width: calc(50% - 25px);}
+
+    div.arrive_box_fly_m>div:nth-child(1)>p
+    {text-align: center;}
+
+    div.arrive_box_fly_m>div:nth-child(1)>p:nth-child(1)
+    {width: 100%;
+    line-height: 20px; color: #222; font-family: 'min_bold';
+    margin-bottom: 5px;}
+
+    div.arrive_box_fly_m>div:nth-child(1)>p:nth-child(2)
+    {width: 100%;
+    line-height: 20px; color: #e5004f; font-family: 'min_bold';
+    margin-bottom: 10px;}
+
+    div.arrive_box_fly_m>div:nth-child(1)>p:nth-child(3)
+    {width: 100%;
+    font-size: 15px; color: #555; line-height: 18px;
+    word-break: keep-all;}
+
+    div.arrive_box_fly_m>div:nth-child(2)
+    {width: 30px; height: 30px;
+    margin-left: 10px; margin-right: 10px;}
+
+    div.arrive_box_fly_m>div:nth-child(2) img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    div.arrive_box_fly_m>div:nth-child(3)
+    {width: calc(50% - 25px);}
+
+    div.arrive_box_fly_m>div:nth-child(3)>p
+    {text-align: center;}
+
+    div.arrive_box_fly_m>div:nth-child(3)>p:nth-child(1)
+    {width: 100%;
+    line-height: 20px; color: #222; font-family: 'min_bold';
+    margin-bottom: 5px;}
+
+    div.arrive_box_fly_m>div:nth-child(3)>p:nth-child(2)
+    {width: 100%;
+    line-height: 20px; color: #e5004f; font-family: 'min_bold';
+    margin-bottom: 10px;}
+
+    div.arrive_box_fly_m>div:nth-child(3)>p:nth-child(3)
+    {width: 100%;
+    font-size: 15px; color: #555; line-height: 18px;
+    word-break: keep-all;}
+
+  
+    /*항공 요금 안내 타이틀*/
+    div.airline_money_title
+    {width: 100%;
+    margin-bottom: 20px;}
+
+    div.airline_money_title>p
+    {width: 100%;
+    font-size: 17px; font-family: bold; color: #222;
+    line-height: 20px;}
+
+    div.airline_money_title>p::after
+    {content: "";
+    width: 30px; height: 2px;
+    background-color: #0053d4;
+    display: block;
+    margin-top: 5px;}
+
+    /*항공 요금 안내*/
+    div.airline_mobile_ex
+    {width: 100%;
+    display: block;}
+
+    div.airline_money_mobile_box
+    {width: 100%;
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
+    display: flex;
+    align-items: stretch;
+    margin-bottom: 50px;}
+
+    div.airline_money_mobile_box>div
+    {width: 33.333333%;
+    padding-top: 15px; padding-bottom: 15px;
+    border-right: 1px solid #ccc; box-sizing: border-box;}
+
+    div.airline_money_mobile_box>div:last-child
+    {border-right: none;}
+    
+    /*성인*/
+    div.adult_airline_select_box_m
+    {width: calc(100% - 30px);
+    margin: 0 auto;
+    overflow: hidden;
+    margin-bottom: 10px;}
+
+    div.adult_airline_select_box_m>p:nth-child(1)
+    {width: calc(100% - 90px);
+    line-height: 35px; color: #222;
+    margin-right: 10px;
+    float: left;}
+
+    #adult_flight_select_m
+    {width: 80px; height: 35px;
+    border: 1px solid #ccc; box-sizing: border-box;
+    background-color: #fff;
+    outline: none;
+    float: left;
+    font-family: 'Pretendard' !important; font-size: 15px;}
+    
+    /*성인 글*/
+    div.adult_flight_txt_m
+    {width: calc(100% - 30px);
+    margin: 0 auto;}
+
+    div.adult_flight_txt_m>p:nth-child(1)
+    {width: 100%;
+    font-size: 17px;
+    word-break: keep-all;
+    font-family: 'min_bold'; color: #222; line-height: 25px;
+    margin-bottom: 5px;}
+
+    div.adult_flight_txt_m>p:nth-child(2)
+    {width: 100%;
+    font-size: 14px;
+    word-break: keep-all;
+    color: #555; line-height: 20px;}
+
+    div.adult_flight_txt_m>p:nth-child(3)
+    {width: 100%;
+    font-size: 14px;
+    word-break: keep-all;
+    color: #555; line-height: 20px;}
+
+
+    /*유아*/
+    div.child_airline_select_box_m
+    {width: calc(100% - 30px);
+    margin: 0 auto;
+    overflow: hidden;
+    margin-bottom: 10px;}
+
+    div.child_airline_select_box_m>p:nth-child(1)
+    {width: calc(100% - 90px);
+    line-height: 35px; color: #222;
+    margin-right: 10px;
+    float: left;}
+
+    #child_flight_select_m
+    {width: 80px; height: 35px;
+    border: 1px solid #ccc; box-sizing: border-box;
+    background-color: #fff;
+    outline: none;
+    float: left;
+    font-family: 'Pretendard' !important; font-size: 15px;}
+    
+    /*유아 글*/
+    div.child_flight_txt_m
+    {width: calc(100% - 30px);
+    margin: 0 auto;}
+
+    div.child_flight_txt_m>p:nth-child(1)
+    {width: 100%;
+    font-size: 17px;
+    word-break: keep-all;
+    font-family: 'min_bold'; color: #222; line-height: 25px;
+    margin-bottom: 5px;}
+
+    div.child_flight_txt_m>p:nth-child(2)
+    {width: 100%;
+    font-size: 14px;
+    word-break: keep-all;
+    color: #555; line-height: 20px;}
+
+    div.child_flight_txt_m>p:nth-child(3)
+    {width: 100%;
+    font-size: 14px;
+    word-break: keep-all;
+    color: #555; line-height: 20px;}
+
+    /*아동*/
+    div.kids_airline_select_box_m
+    {width: calc(100% - 30px);
+    margin: 0 auto;
+    overflow: hidden;
+    margin-bottom: 10px;}
+
+    div.kids_airline_select_box_m>p:nth-child(1)
+    {width: calc(100% - 90px);
+    line-height: 35px; color: #222;
+    margin-right: 10px;
+    float: left;}
+
+    #kids_flight_select_m
+    {width: 80px; height: 35px;
+    border: 1px solid #ccc; box-sizing: border-box;
+    background-color: #fff;
+    outline: none;
+    float: left;
+    font-family: 'Pretendard' !important; font-size: 15px;}
+    
+    /*아동 글*/
+    div.kids_flight_txt_m
+    {width: calc(100% - 30px);
+    margin: 0 auto;}
+
+    div.kids_flight_txt_m>p:nth-child(1)
+    {width: 100%;
+    font-size: 17px;
+    font-family: 'min_bold'; color: #222; line-height: 25px;
+    margin-bottom: 5px;}
+
+    
+    /*버튼*/
+    div.airline_mobile_btn
+    {width: 100%;
+    overflow: hidden;}
+
+    #airline_reservation_btn_mobile
+    {width: 47.5%; height: 50px;
+    border: none; outline: none;
+    font-family: 'Pretendard' !important;
+    background-color: #0053d4; font-size: 15px;
+    text-align: center; line-height: 50px; color: #fff;
+    margin-right: 5%;
+    border-radius: 5px;
+    float: left;}
+
+    a.open_detaile_airfare_m
+    {width: 47.5%; height: 50px;
+    display: block;
+    background-color: #ccc;
+    text-align: center;
+    border-radius: 5px;
+    float: left;}
+
+    a.open_detaile_airfare_m>p
+    {line-height: 50px; text-align: center; font-size: 15px; color: #222;}
+
+    /*footer*/
+   .footer_dark
+   {width: 100%;
+   background-color: #222;}
+
+   .footer_dark .footer_top
+   {width: 90%;
+   margin: 0 auto;
+   padding-top: 10px; padding-bottom: 10px;
+   overflow: hidden;}
+
+   .footer_top .footer_top_menu
+   {width: fit-content;
+   float: left;}
+
+   .footer_top_menu>ul
+   {width: fit-content;
+   margin: 0;
+   line-height: 0;}
+
+   .footer_top_menu>ul>li
+   {display: inline-block;
+   font-size: 16px; color: #ddd;
+   margin-right: 5px;}
+
+   .footer_top_menu>ul>li:last-child
+   {margin-right: 0;}
+
+   .footer_top_menu>ul>li>a>p
+   {line-height: 30px;
+   color: #ddd;
+    font-size: 15px;}
+
+   /*선*/
+   .footer_dark .footer_line_01
+   {width: 100%; height: 1px;
+   background-color: #ddd;}
+ 
+   .footer_top .footer_sns
+   {width: fit-content;
+   float: right;}
+
+   .footer_sns>a
+   {display: inline-block;
+   width: 30px; height: 30px;
+   margin-right: 5px;}
+
+   .footer_sns>a:last-child
+   {margin-right: 0;}
+
+   
+   .footer_sns>a img
+   {width: 100%; height: 100%;
+   object-fit: cover;}
+
+   /*선*/
+   .footer_dark .footer_line_02
+   {width: 100%; height: 1px;
+   background-color: #ddd;}
+
+   .footer_dark .footer_bottom
+   {width: 90%;
+   margin: 0 auto;
+   padding-top: 20px; padding-bottom: 20px;}
+
+   .footer_bottom>p
+   {font-size: 14px; line-height: 25px;
+   color: #ddd;} 
+
+    /*항공요금 디테일*/
+    div.detaile_fee_airline_popup_ex
+    {width: 100%; height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    z-index: 9999;
+    backdrop-filter: blur(1px);}
+
+    div.detaile_fee_airline_popup_content
+    {width: 500px; max-height: 60vh;
+    margin: 0 auto;
+    background-color: #fff;
+    overflow-y: auto;
+    border-radius: 5px;}
+
+    .detaile_fee_airline_popup_content::-webkit-scrollbar
+    {width: 0px;}
+
+    /*타이틀*/
+    div.detaile_fee_title
+    {width: 100%; height: 50px;
+    background-color: #0053d4;}
+
+    div.detaile_fee_title>p
+    {width: 100%; 
+    color: #fff;
+    line-height: 50px;
+    font-family: 'min_bold'; text-align: center;}
+    
+    /*내용 박스*/
+    div.detaile_fee_txt_box
+    {width: calc(100% - 30px);
+    margin: 0 auto;
+    padding-top: 15px; padding-bottom: 15px;}
+    
+    /*전체 박스*/
+    div.detaile_fee_total
+    {width: 100%;
+    overflow: hidden;}
+
+    div.detaile_fee_total>p:nth-child(1)
+    {width: 90px;
+    margin-right: 10px;
+    font-family: 'min_bold';
+    color: #222; line-height: 25px;
+    float: left;}
+
+    div.detaile_fee_total>p:nth-child(2)
+    {width: calc(100% - 100px);
+    font-family: bold;
+    color: #e5004f; font-size: 18px;
+    text-align: right; line-height: 25px;
+    float: right;}
+
+    /*테이블*/
+    div.detaile_fee_table_ex
+    {width: 100%;
+    margin-bottom: 20px;}
+
+    /*성인*/
+    table.detaile_fee_adult_table
+    {width: 100%;
+    margin-top: 20px; margin-bottom: 10px;
+    border-top: 1px solid #222; border-bottom: 1px solid #ccc;
+    box-sizing: border-box;}
+
+    table.detaile_fee_adult_table tr:nth-child(1) td
+    {border-bottom: 1px solid #ccc; box-sizing: border-box;}
+
+    table.detaile_fee_adult_table tr td:nth-child(1)
+    {width: 170px;}
+
+    table.detaile_fee_adult_table tr td:nth-child(1)>p
+    {width: calc(100% - 20px);
+    margin: 0 auto;
+    line-height: 25px; font-size: 15px;
+    padding-top: 10px; padding-bottom: 10px;
+    color: #555;}
+
+    table.detaile_fee_adult_table tr td:nth-child(2)
+    {width: calc(100% - 170px);}
+
+    table.detaile_fee_adult_table tr td:nth-child(2)>p
+    {width: calc(100% - 20px);
+    margin: 0 auto;
+    line-height: 25px; 
+    padding-top: 5px; padding-bottom: 5px;
+    text-align: right;
+    color: #222;}
+
+    table.detaile_fee_adult_table tr:nth-child(1) td>p
+    {color: #222;}
+
+
+    /*유아*/
+    table.detaile_fee_child_table
+    {width: 100%;
+    margin-bottom: 10px;
+    border-top: 1px solid #222; border-bottom: 1px solid #ccc;
+    box-sizing: border-box;}
+
+    table.detaile_fee_child_table tr:nth-child(1) td
+    {border-bottom: 1px solid #ccc; box-sizing: border-box;}
+
+    table.detaile_fee_child_table tr td:nth-child(1)
+    {width: 170px;}
+
+    table.detaile_fee_child_table tr td:nth-child(1)>p
+    {width: calc(100% - 20px);
+    margin: 0 auto;
+    line-height: 25px; font-size: 15px;
+    padding-top: 10px; padding-bottom: 10px;
+    color: #555;}
+
+    table.detaile_fee_child_table tr td:nth-child(2)
+    {width: calc(100% - 170px);}
+
+    table.detaile_fee_child_table tr td:nth-child(2)>p
+    {width: calc(100% - 20px);
+    margin: 0 auto;
+    line-height: 25px;
+    padding-top: 5px; padding-bottom: 5px;
+    text-align: right;
+    color: #222;}
+
+    table.detaile_fee_child_table tr:nth-child(1) td>p
+    {color: #222;}
+
+
+    /*유아*/
+    table.detaile_fee_infant_table
+    {width: 100%;
+    border-top: 1px solid #222; border-bottom: 1px solid #ccc;
+    box-sizing: border-box;}
+
+    table.detaile_fee_infant_table tr:nth-child(1) td
+    {border-bottom: 1px solid #ccc; box-sizing: border-box;}
+
+    table.detaile_fee_infant_table tr td:nth-child(1)
+    {width: 170px;}
+
+    table.detaile_fee_infant_table tr td:nth-child(1)>p
+    {width: calc(100% - 20px);
+    margin: 0 auto;
+    line-height: 25px; font-size: 15px;
+    padding-top: 10px; padding-bottom: 10px;
+    color: #555;}
+
+    table.detaile_fee_infant_table tr td:nth-child(2)
+    {width: calc(100% - 170px);}
+
+    table.detaile_fee_infant_table tr td:nth-child(2)>p
+    {width: calc(100% - 20px);
+    margin: 0 auto;
+    line-height: 25px;
+    padding-top: 5px; padding-bottom: 5px;
+    text-align: right;
+    color: #222;}
+
+    table.detaile_fee_infant_table tr:nth-child(1) td>p
+    {color: #222;}
+
+    /*항공요금 상세내역 글 박스*/
+    div.detaile_fee_notic_box
+    {width: 100%;
+    margin-bottom: 20px;}
+
+    div.detaile_fee_notic_box>p
+    {width: calc(100% - 15px);
+    margin-left: 15px;
+    line-height: 25px;
+    font-size: 15px; color: #555;
+    position: relative;}
+
+    div.detaile_fee_notic_box>p::before
+    {content: "※";
+    position: absolute;
+    left: -15px; 
+    line-height: 25px;
+    display: block;}
+
+    a.close_detaile_fee
+    {display: block;
+    width: 100%; height: 50px;
+    border: 1px solid #ccc; box-sizing: border-box;}
+
+    a.close_detaile_fee>p
+    {width: 100%;
+    text-align: center; color: #555; line-height: 50px;}
+
+
+   /*이메일무단수집거부*/
+   div.emaile_no_ex
+   {width: 100%; height: 100vh;
+   background-color: rgba(0, 0, 0, 0.5);
+   position: fixed;
+   top: 0;
+   display: flex;
+   align-items: center;
+   z-index: 9999;
+   backdrop-filter: blur(1px);}
+
+   div.emaile_no_box
+   {width: 500px;
+   margin: 0 auto;
+   border-radius: 5px;
+   overflow: hidden;
+   background-color: #fff;}
+
+   div.emaile_no_title
+   {width: 100%; height: 50px;
+   background-color: #0053d4;}
+
+   div.emaile_no_title>p
+   {width: 100%;
+   text-align: center; line-height: 50px; color: #fff;
+   font-family: 'min_bold';}
+
+   div.emaile_contents
+   {width: 95%; height: 250px;
+   overflow-y: scroll;
+   margin: 2.5% auto;}
+
+   div.emaile_contents>p
+   {width: 95%;
+   margin: 0 auto;
+   font-size: 14px; line-height: 25px; color: #707070;}
+
+   /*스크롤바 바꾸기*/
+   .emaile_contents::-webkit-scrollbar
+   {width: 1px;}
+
+   .emaile_contents::-webkit-scrollbar-thumb
+   {background-color: #0d75bc;
+   border-radius: 10px;}
+
+   .emaile_contents::-webkit-scrollbar-track
+   {background-color: #ddd;}
+
+   /*라인*/
+   div.emaile_box_line_01
+   {width: 100%; height: 1px;
+   background-color: #ddd;}
+
+   div.emaile_close
+   {width: 100%; height: 50px;}
+
+   .emaile_close>p
+   {width: 100%;
+   color: #707070;
+   text-align: center; line-height: 50px;}   
+
+   /*라인*/
+   div.emaile_box_line_01
+   {width: 100%; height: 1px;
+   background-color: #ddd;}
+
+   div.emaile_close
+   {width: 100%; height: 50px;}
+
+   .emaile_close>p
+   {width: 100%;
+   color: #707070;
+   text-align: center; line-height: 50px;}
+
+}
+
+@media all and (max-width: 600px)
+{   
+    /*헤더*/
+    div.gnb_mobile_header>a
+    {width: 50%;
+    float: left;}
+
+    div.gnb_mobile_header>a:nth-child(1), div.gnb_mobile_header>a:nth-child(2)
+    {margin-bottom: 10px;}
+
+    /*비주얼 이미지*/
+    div.airline_visual
+    {width: 100%; height: 180px;}
+
+    div.airline_visual>p:nth-child(2)
+    {font-size: 24px;}
+
+    /*항공권 검색*/
+    div.airline_select_box>div:nth-child(1)
+    {width: 100%;
+    border-right: none; 
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;}
+
+    div.airline_select_box>div:nth-child(2)
+    {width: 100%;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;}
+
+    /*가는 길 오는 길*/
+    div.day_airline_box>div
+    {width: 90%;
+    margin: 0 auto;
+    padding-top: 5%; padding-bottom: 5%;}
+
+    /*여행인원*/
+    div.person_airline_box>div
+    {width: 90%;
+    margin: 0 auto;
+    padding-top: 5%; padding-bottom: 5%;}
+
+    /*출발지 시트*/
+    div.start_airline_sheet
+    {width: 100%;
+    position: absolute;
+    top: 100px; right: 0;
+    padding-top: 10px; padding-bottom: 10px;
+    border: 1px solid #222; box-sizing: border-box;
+    background-color: #fff;
+    display: none;}
+
+    div.start_airline_sheet>p:nth-child(1)
+    {width: 90%;
+    margin: 0 auto;
+    font-size: 15px; line-height: 20px; font-family: 'min_bold';
+    color: #222;
+    margin-bottom: 10px;}
+    
+    /*국내*/
+    div.korea_start_airline
+    {width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+    border: 1px solid #ccc; box-sizing: border-box;}
+
+    /*동남아*/
+    div.southeast_asia_start_airline
+    {width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+    border: 1px solid #ccc; box-sizing: border-box;
+    border-top: none;
+    margin-bottom: 15px;}
+
+    a.mobile_close_start_sheet
+    {display: block;
+    width: 90%; height: 35px;
+    margin: 0 auto;
+    border: 1px solid #ccc; box-sizing: border-box;}
+
+    a.mobile_close_start_sheet>p
+    {text-align: center; line-height: 35px;
+    font-size: 15px; color: #222;}
+
+
+    /*도착지 시트*/
+    div.arrive_airline_sheet
+    {width: 100%;
+    position: absolute;
+    top: 200px; right: 0;
+    padding-top: 10px; padding-bottom: 10px;
+    border: 1px solid #222; box-sizing: border-box;
+    background-color: #fff;
+    display: none;}
+
+    div.arrive_airline_sheet>p:nth-child(1)
+    {width: 90%;
+    margin: 0 auto;
+    font-size: 15px; line-height: 20px; font-family: 'min_bold';
+    color: #222;
+    margin-bottom: 10px;}
+    
+    /*국내*/
+    div.korea_arrive_airline
+    {width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+    border: 1px solid #ccc; box-sizing: border-box;}
+
+    /*동남아*/
+    div.southeast_asia_arrive_airline
+    {width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+    border: 1px solid #ccc; box-sizing: border-box;
+    border-top: none;
+    margin-bottom: 15px;}
+
+    a.mobile_close_arrive_sheet
+    {display: block;
+    width: 90%; height: 35px;
+    margin: 0 auto;
+    border: 1px solid #ccc; box-sizing: border-box;}
+
+    a.mobile_close_arrive_sheet>p
+    {text-align: center; line-height: 35px;
+    font-size: 15px; color: #222;}
+
+    /*여행인원 시트*/
+    div.person_airline_sheet
+    {width: 100%;
+    border: 1px solid #222; box-sizing: border-box;
+    background-color: #fff;
+    padding-top: 10px; padding-bottom: 10px;
+    position: absolute; 
+    top: 536px;
+    overflow: hidden;}
+
+    div.person_airline_box
+    {width: 90%;
+    margin: 0 auto;
+    margin-bottom: 10px;}
+
+    div.person_airline_select_box
+    {width: 90%;
+    margin: 0 auto;}
+
+    /*탑 타이틀*/
+    div.airline_detaile_top_title>p
+    {width: 100%;
+    font-size: 22px; line-height: 30px; font-family: bold;
+    color: #222;}
+
+    /*항공권 상세 정보*/
+    table.airline_information_tabel_mobile
+    {width: 100%;
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-bottom: 30px;}
+
+    table.airline_information_tabel_mobile tr td
+    {border-bottom: 1px solid #ccc; box-sizing: border-box;}
+
+    table.airline_information_tabel_mobile tr:last-child td
+    {border-bottom: none;}
+
+    table.airline_information_tabel_mobile tr td:nth-child(1)
+    {width: 30%;
+    background-color: #f6f9ff;
+    border-right: 1px solid #ccc; box-sizing: border-box;}
+
+    table.airline_information_tabel_mobile tr td:nth-child(1)>p
+    {width: 90%;
+    margin: 0 auto;
+    padding-top: 15px; padding-bottom: 15px;
+    font-size: 15px; font-family: 'min_bold';
+    line-height: 20px;
+    text-align: center;
+    color: #222;}
+
+    table.airline_information_tabel_mobile tr td:nth-child(2)
+    {width: 70%;}
+
+    table.airline_information_tabel_mobile tr td:nth-child(2)>p
+    {width: 90%;
+    margin: 0 auto;
+    padding-top: 15px; padding-bottom: 15px;
+    font-size: 15px; color: #555; line-height: 20px;}
+
+    /*편명*/
+    div.flight_txt_box_m
+    {width: 90%;
+    margin: 0 auto;
+    padding-top: 15px; padding-bottom: 15px;
+    overflow: hidden;}
+
+    /*항공편*/
+    div.flight_guide_ex_m
+    {width: 90%;
+    margin: 0 auto;
+    padding-top: 15px; padding-bottom: 15px;}
+    
+    /*가는 편*/
+    div.depart_ex_fly_m
+    {width: 100%;
+    margin-bottom: 15px;}
+
+    div.depart_box_fly_m
+    {width: 100%;
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;}
+
+    div.depart_box_fly_m>div:nth-child(1)
+    {width: 100%;}
+
+    div.depart_box_fly_m>div:nth-child(2)
+    {width: 30px; height: 30px;
+    margin: 5px auto;}
+
+    div.depart_box_fly_m>div:nth-child(2) img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    div.depart_box_fly_m>div:nth-child(3)
+    {width: 100%;}
+
+    /*오는 편*/
+    div.arrive_ex_fly_m
+    {width: 100%;}
+
+    div.arrive_box_fly_m
+    {width: 100%;
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;}
+
+    div.arrive_box_fly_m>div:nth-child(1)
+    {width: 100%;}
+
+    div.arrive_box_fly_m>div:nth-child(2)
+    {width: 30px; height: 30px;
+    margin: 5px auto;}
+
+    div.arrive_box_fly_m>div:nth-child(2) img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    div.arrive_box_fly_m>div:nth-child(3)
+    {width: 100%;}
+
+
+    /*항공요금 안내*/
+    div.airline_money_mobile_box
+    {width: 100%;
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    margin-bottom: 50px;}
+
+    div.airline_money_mobile_box>div
+    {width: 100%;
+    padding-top: 5%; padding-bottom: 5%;
+    border-right: none; 
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;}
+
+    div.airline_money_mobile_box>div:last-child
+    {border-right: none;
+    border-bottom: none;}
+
+    /*성인*/
+    div.adult_airline_select_box_m
+    {width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+    margin-bottom: 10px;}
+    
+    /*성인 글*/
+    div.adult_flight_txt_m
+    {width: 90%;
+    margin: 0 auto;}
+
+    /*아동*/
+    div.child_airline_select_box_m
+    {width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+    margin-bottom: 10px;}
+    
+    /*아동 글*/
+    div.child_flight_txt_m
+    {width: 90%;
+    margin: 0 auto;}
+
+    /*유아*/
+    div.kids_airline_select_box_m
+    {width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+    margin-bottom: 10px;}
+    
+    /*유아 글*/
+    div.kids_flight_txt_m
+    {width: 90%;
+    margin: 0 auto;}
+
+    /*버튼*/
+    #airline_reservation_btn_mobile
+    {width: 49%; height: 50px;
+    margin-right: 2%;}
+
+    a.open_detaile_airfare_m
+    {width: 49%; height: 50px;}
+
+    /*footer*/
+    .footer_top .footer_top_menu
+    {width: 100%;
+    float: inherit;
+    overflow: hidden;}
+
+    .footer_top_menu>ul
+    {width: 100%;
+    margin-bottom: 10px;}
+
+    .footer_top_menu>ul>li
+    {display: inline-block;
+    margin-right: 5px;}
+
+    .footer_top_menu>ul>li:last-child
+    {margin-right: 0;}
+
+    .footer_top_menu>ul>li>a>p
+    {line-height: 24px;
+    color: #ddd;
+    font-size: 14px;} 
+
+    .footer_top .footer_sns
+    {width: fit-content;
+    float: right;}
+   
+    /*이메일무단수집거부*/
+    div.emaile_no_box
+    {width: 90%;
+    margin: 0 auto;}
+
+    div.emaile_no_title
+    {width: 100%; height: 40px;
+    background-color: #0053d4;}
+
+    div.emaile_no_title>p
+    {width: 100%;
+    text-align: center; line-height: 40px; color: #fff;
+    font-family: 'min_bold';}
+
+    div.emaile_close
+    {width: 100%; height: 40px;}
+
+    .emaile_close>p
+    {width: 100%;
+    color: #707070;
+    text-align: center; line-height: 40px;}
+
+    /*항공요금*/
+    div.detaile_fee_airline_popup_content
+    {width: 90%; max-height: 60vh;
+    margin: 0 auto;
+    background-color: #fff;
+    overflow-y: auto;}
+
+    /*타이틀*/
+    div.detaile_fee_title
+    {height: 40px;}
+
+    div.detaile_fee_title>p
+    {line-height: 40px;}
+
+    /*내용 박스*/
+    div.detaile_fee_txt_box
+    {width: 90%;
+    margin: 0 auto;
+    padding-top: 15px;}
+
+    /*총가격*/
+    div.detaile_fee_total>p:nth-child(2)
+    {word-break: keep-all;
+    word-wrap: break-word;
+    font-size: 16px;}
+
+    /*테이블*/
+    div.detaile_fee_table_ex
+    {width: 100%;
+    margin-bottom: 15px;}
+
+    /*성인 테이블*/
+    table.detaile_fee_adult_table
+    {width: 100%;
+    margin-top: 15px; margin-bottom: 10px;
+    border-top: 1px solid #222; border-bottom: 1px solid #ccc;
+    box-sizing: border-box;}
+
+    table.detaile_fee_adult_table tr:nth-child(1) td
+    {border-bottom: 1px solid #ccc; box-sizing: border-box;}
+
+    table.detaile_fee_adult_table tr td:nth-child(1)
+    {width: 100px;}
+
+    table.detaile_fee_adult_table tr td:nth-child(1)>p
+    {width: calc(100% - 10px);
+    margin: 0 auto;
+    line-height: 20px; font-size: 15px;
+    padding-top: 10px; padding-bottom: 10px;
+    color: #555;
+    word-break: keep-all;}
+
+    table.detaile_fee_adult_table tr td:nth-child(2)
+    {width: calc(100% - 100px);}
+
+    table.detaile_fee_adult_table tr td:nth-child(2)>p
+    {width: calc(100% - 10px);
+    margin: 0 auto;
+    line-height: 20px; 
+    padding-top: 5px; padding-bottom: 5px;
+    font-size: 15px;
+    text-align: right;
+    color: #222;
+    word-break: keep-all;}
+
+    table.detaile_fee_adult_table tr:nth-child(1) td>p
+    {color: #222;}
+
+    /*유아 테이블*/
+    table.detaile_fee_child_table
+    {width: 100%;
+    margin-bottom: 10px;
+    border-top: 1px solid #222; border-bottom: 1px solid #ccc;
+    box-sizing: border-box;}
+
+    table.detaile_fee_child_table tr:nth-child(1) td
+    {border-bottom: 1px solid #ccc; box-sizing: border-box;}
+
+    table.detaile_fee_child_table tr td:nth-child(1)
+    {width: 100px;}
+
+    table.detaile_fee_child_table tr td:nth-child(1)>p
+    {width: calc(100% - 10px);
+    margin: 0 auto;
+    line-height: 20px; font-size: 15px;
+    padding-top: 10px; padding-bottom: 10px;
+    color: #555;
+    word-break: keep-all;}
+
+    table.detaile_fee_child_table tr td:nth-child(2)
+    {width: calc(100% - 100px);}
+
+    table.detaile_fee_child_table tr td:nth-child(2)>p
+    {width: calc(100% - 10px);
+    margin: 0 auto;
+    line-height: 20px; 
+    padding-top: 5px; padding-bottom: 5px;
+    font-size: 15px;
+    text-align: right;
+    color: #222;
+    word-break: keep-all;}
+
+    table.detaile_fee_child_table tr:nth-child(1) td>p
+    {color: #222;}
+
+    /*소아 테이블*/
+    table.detaile_fee_infant_table
+    {width: 100%;
+    border-top: 1px solid #222; border-bottom: 1px solid #ccc;
+    box-sizing: border-box;}
+
+    table.detaile_fee_infant_table tr:nth-child(1) td
+    {border-bottom: 1px solid #ccc; box-sizing: border-box;}
+
+    table.detaile_fee_infant_table tr td:nth-child(1)
+    {width: 100px;}
+
+    table.detaile_fee_infant_table tr td:nth-child(1)>p
+    {width: calc(100% - 10px);
+    margin: 0 auto;
+    line-height: 20px; font-size: 15px;
+    padding-top: 10px; padding-bottom: 10px;
+    color: #555;
+    word-break: keep-all;}
+
+    table.detaile_fee_infant_table tr td:nth-child(2)
+    {width: calc(100% - 100px);}
+
+    table.detaile_fee_infant_table tr td:nth-child(2)>p
+    {width: calc(100% - 10px);
+    margin: 0 auto;
+    line-height: 20px; 
+    padding-top: 5px; padding-bottom: 5px;
+    font-size: 15px;
+    text-align: right;
+    color: #222;
+    word-break: keep-all;}
+
+    table.detaile_fee_infant_table tr:nth-child(1) td>p
+    {color: #222;}
+
+
+    /*항공요금 상세내역 글 박스*/
+    div.detaile_fee_notic_box
+    {width: 100%;
+    margin-bottom: 10px;}
+
+    div.detaile_fee_notic_box>p
+    {line-height: 20px;}
+
+    div.detaile_fee_notic_box>p::before
+    {line-height: 20px;}
+
+
+    /*닫기*/
+    a.close_detaile_fee
+    {display: block;
+    width: 100%; height: 40px;
+    border-top: 1px solid #ccc; box-sizing: border-box;}
+
+    a.close_detaile_fee>p
+    {width: 100%;
+    text-align: center; color: #555; line-height: 40px;}
+
+
+}

@@ -1,0 +1,2327 @@
+* {margin: 0; padding: 0;}
+li {list-style: none;}
+a {text-decoration: none;}
+img {display: block;}
+
+*::-webkit-scrollbar {
+    display: none; /* 크롬, 사파리, 오페라, 엣지 */
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'min_bold';
+    font-weight: 600;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'bold';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.ttf') format("truetype");
+    font-display: swap;
+}
+
+body {font-family: 'Pretendard'; line-height: 16px;}
+
+p {margin-bottom: 0;}
+
+ul {margin: 0; padding: 0;}
+
+input:not([type]), input[type="text"], input[type="password"], 
+input[type="date"], input[type="datetime"], 
+input[type="datetime-local"], input[type="month"], 
+input[type="week"], input[type="email"], input[type="number"], 
+input[type="search"], input[type="tel"], input[type="time"], 
+input[type="url"], input[type="color"], textarea
+{box-shadow: none;
+background-color: #fff;
+padding: 0;
+margin-bottom: 0;
+outline: none;}
+
+input[type="checkbox"]
+{margin-bottom: 0;}
+
+input[type="checkbox"]+label, input[type="radio"]+label 
+{margin: 0;}
+
+input[type="radio"]
+{margin: 0;}
+
+/*이미지 스크롤 막기*/
+.scrollOff
+{width: 100%; height: 100vh;
+position: fixed;
+overflow : hidden;} 
+
+input[type="text"], input[type="password"], input[type="email"], input[type="tel"] {
+   -webkit-appearance: none;
+   -webkit-border-radius: 0;
+}
+
+@media all and (min-width: 1420px)
+{   
+
+     /*비주얼베너*/
+    div.visual_sub_banner
+    {width: 100%; height: 350px;
+    margin-top: 139.44px;
+    overflow: hidden;
+    position: relative;}
+
+    div.visual_sub_banner img
+    {width: 100%; height: 100%;
+    object-fit: cover;
+    transition: all 2s;
+    transform: scale(1.2);}
+
+    p.visual_sub_text
+    {width: 100%;
+    position: absolute;
+    top: calc(50% - 25px); left: 0;
+    text-align: center;
+    opacity: 0;
+    transition: all 2s;
+    font-family: bold; color: #fff;
+    font-size: 42px; line-height: 50px;}
+
+    /*루트*/
+    div.nav_ex
+    {width: 100%;
+    background-color: #51b8ff;}
+
+    nav.nav_box
+    {width: 1400px;
+    margin: 0 auto;}
+
+    nav.nav_box>ul
+    {width: 100%;
+    overflow: hidden;}
+
+    nav.nav_box>ul>li
+    {float: left;}
+
+    nav.nav_box>ul>li:nth-child(1)
+    {width: 20px; height: 20px;
+    margin-top: 10px; margin-bottom: 10px;}
+    
+    nav.nav_box>ul>li:nth-child(1) img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    nav.nav_box>ul>li>p
+    {line-height: 40px;
+    color: #fff;
+    margin-left: 10px; margin-right: 10px;}
+
+    nav.nav_box>ul>li>a>p
+    {line-height: 40px;
+    color: #fff;}
+
+
+    /*예약하기*/
+    div.reservation_ex
+    {width: 800px;
+    margin: 100px auto;
+    margin-bottom: 150px;}
+    
+    /*건강 검진 예약하기 폼*/
+    div.health_screening_reservation_ex
+    {width: 100%; 
+    margin-bottom: 50px;}
+
+    /*건강검진 예약하기 타이틀*/
+    div.health_screening_reservation_title
+    {width: 100%;
+    margin-bottom: 30px;}
+
+    div.health_screening_reservation_title>p:nth-child(1)
+    {width: 100%;
+    text-align: center; line-height: 32px;
+    margin-bottom: 15px;
+    font-size: 28px; font-family: bold; color: #222;}
+
+    div.health_screening_reservation_title>p:nth-child(2)
+    {width: 100%;
+    text-align: center; line-height: 25px; color: #333;}
+
+    div.health_screening_reservation_title>p:nth-child(2)>span
+    {font-family: bold;}
+
+    div.health_screening_reservation_title>p:nth-child(2)>span>span:nth-child(1)
+    {color: #64c8c8;}
+
+    div.health_screening_reservation_title>p:nth-child(2)>span>span:nth-child(2)
+    {color: red;}
+    
+    /*필수 입력*/
+    p.required_txt
+    {width: 100%;
+    text-align: right;
+    line-height: 25px; color: #222;
+    margin-bottom: 30px;}
+
+    p.required_txt>span {color: red;}
+
+    /*아이디 비밀번호*/
+    div.reservation_id_pw_ex
+    {width: 100%;
+    margin-bottom: 50px;}
+    
+    /*아이디*/
+    div.reservation_id_pw_box
+    {width: 100%;
+    margin-bottom: 15px;}
+
+    div.reservation_id_pw_box>p:nth-child(1)
+    {width: 100%;
+    line-height: 25px;
+    color: #222; font-family: 'min_bold';
+    margin-bottom: 10px;}
+
+    div.reservation_id_pw_box>p:nth-child(1)>span {color: red;}
+
+    input[type="email"].input_txt
+    {width: 100%; height: 50px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    outline: none; font-size: 15px;
+    background: #fff; text-indent: 10px; color: #333;
+    font-family: 'Pretendard' !important;}
+
+    /*비밀번호*/
+    input[type="password"].input_txt
+    {width: 100%; height: 50px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    outline: none; font-size: 15px;
+    background: #fff; text-indent: 10px; color: #333;
+    font-family: 'Pretendard' !important;}
+
+    /*환자 입력 정보*/
+    div.patient_information_ex
+    {width: 100%;
+    margin-bottom: 50px;}
+    
+    /*환자 정보 입력 타이틀*/
+    p.patient_information_title
+    {width: 100%;
+    font-size: 22px; font-family: bold; color: #222;
+    line-height: 25px;
+    padding-bottom: 20px; margin-bottom: 30px;
+    border-bottom: 1px solid #ddd; box-sizing: border-box;}
+
+    /*이름*/
+    div.patient_information_name_ex
+    {width: 100%;
+    margin-bottom: 15px;
+    overflow: hidden;}
+
+    div.patient_information_name_ex>p:nth-child(1)
+    {width: 100%;
+    line-height: 25px;
+    color: #222; font-family: 'min_bold';
+    margin-bottom: 10px;}
+
+    div.patient_information_name_ex>p:nth-child(1)>span {color: red;}
+
+    div.patient_information_name_box
+    {width: 100%;
+    overflow: hidden;}
+
+    #patient_information_name_first, #patient_information_name_last
+    {width: calc(50% - 10px); height: 50px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    outline: none;
+    float: left; font-size: 15px;
+    background: #fff; text-indent: 10px; color: #333;
+    font-family: 'Pretendard' !important;}
+
+    #patient_information_name_first
+    {margin-right: 20px;}
+
+    /*공통된 박스 마진 없애기*/
+    div.patient_information_box:last-child
+    {margin-bottom: 0;}
+
+    /*생일, 국적*/
+    div.patient_information_box
+    {width: 100%;
+    margin-bottom: 15px;}
+
+    div.patient_information_box>p:nth-child(1)
+    {width: 100%;
+    line-height: 25px;
+    color: #222; font-family: 'min_bold';
+    margin-bottom: 10px;}
+
+    div.patient_information_box>p:nth-child(1)>span {color: red;}
+
+    input[type="text"].patient_txt
+    {width: 100%; height: 50px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    outline: none; font-size: 15px;
+    background: #fff; text-indent: 10px; color: #333;
+    font-family: 'Pretendard' !important;}
+
+    /*성별*/
+    div.patient_information_gender_box
+    {width: 100%;
+    overflow: hidden;}
+
+    div.patient_information_gender_box>div
+    {width: fit-content;
+    float: left;
+    max-width: calc(50% - 10px);}
+
+    div.patient_information_gender_box>div:nth-child(1)
+    {margin-right: 20px;}
+
+    input[type="radio"].gender_radio_btn
+    {width: 13px; height: 13px;
+    float: left; 
+    margin-right: 5px; outline: none;
+    margin-top: 6px;
+    border: 1px solid #ddd; box-sizing: border-box;}
+
+    div.patient_information_gender_box>div>label:nth-child(2)
+    {width: fit-content;
+    float: left;}
+
+    div.patient_information_gender_box>div>label:nth-child(2)>p
+    {line-height: 25px; color: #222; font-size: 15px;}
+    
+    /*이메일 어드레스*/
+    input[type="email"].patient_txt
+    {width: 100%; height: 50px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    outline: none;
+    background: #fff; text-indent: 10px; color: #333;
+    font-family: 'Pretendard' !important;}
+
+    /*Phone Number*/
+    div.patient_information_phone_box
+    {width: 100%;
+    overflow: hidden;}
+
+    #patient_cellular, #patient_home
+    {width: calc(50% - 10px); height: 50px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    outline: none;
+    float: left; font-size: 15px;
+    background: #fff; text-indent: 10px; color: #333;
+    font-family: 'Pretendard' !important;}
+
+    #patient_cellular
+    {margin-right: 20px;}
+
+    /*주소*/
+    div.patient_information_address_box
+    {width: 100%;}
+
+    #patient_address_home, #patient_address_korea
+    {width: 100%; height: 50px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    outline: none; font-size: 15px;
+    background: #fff; text-indent: 10px; color: #333;
+    font-family: 'Pretendard' !important;}
+
+    #patient_address_home
+    {margin-bottom: 10px;}
+
+    input[type="text"]::placeholder {color: #555;}
+    input[type="tel"]::placeholder {color: #555;}
+
+    /*보험*/
+    div.patient_information_insurance_box
+    {width: 100%;
+    overflow: hidden;}
+
+    div.patient_information_insurance_box>div
+    {width: fit-content;
+    float: left;
+    max-width: calc(50% - 10px);}
+
+    div.patient_information_insurance_box>div:nth-child(1)
+    {margin-right: 20px;}
+
+    input[type="radio"].insurance_radio_btn
+    {width: 13px; height: 13px;
+    float: left;
+    margin-right: 5px; outline: none;
+    margin-top: 6px;
+    border: 1px solid #ddd; box-sizing: border-box;}
+
+    div.patient_information_insurance_box>div>label:nth-child(2)
+    {width: fit-content;
+    float: left;}
+
+    div.patient_information_insurance_box>div>label:nth-child(2)>p
+    {line-height: 25px; color: #222; font-size: 15px;}
+
+    /*선호하는 건강검진 유형*/
+    input[type="text"].preferred_type_health_program_choice
+    {width: 100%; height: 50px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    outline: none; font-size: 15px;
+    background: #fff; text-indent: 10px; color: #333;
+    font-family: 'Pretendard' !important;
+    margin-bottom: 10px;}
+
+    input[type="text"].preferred_type_health_program_choice:last-child
+    {margin-bottom: 0;}
+
+    /*선호하는 건강검진 시간*/
+    input[type="text"].preferred_check_up_date
+    {width: 100%; height: 50px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    outline: none; font-size: 15px;
+    background: #fff; text-indent: 10px; color: #333;
+    font-family: 'Pretendard' !important;
+    margin-bottom: 10px;}
+
+    input[type="text"].preferred_check_up_date:last-child
+    {margin-bottom: 0;}
+
+    /*상태*/
+    div.appointment_health_screening_status_box
+    {width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: hidden;}
+
+    div.appointment_health_screening_status_box>div
+    {width: fit-content;
+    margin-right: 20px; margin-bottom: 10px;
+    overflow: hidden;}
+
+    div.appointment_health_screening_status_box>div:last-child
+    {margin-right: 0;}
+
+    input[type="checkbox"].appointment_health_screening_status_btn
+    {width: 13px; height: 13px;
+    float: left;
+    margin-right: 10px; margin-top: 6px;
+    outline: none;
+    border: 1px solid #ddd; box-sizing: border-box;}
+
+    div.appointment_health_screening_status_box>div>label:nth-child(2)
+    {width: fit-content;
+    display: block;
+    float: left;}
+
+    div.appointment_health_screening_status_box>div>label:nth-child(2)>p
+    {line-height: 25px;
+    color: #555;}
+
+
+    /*예약자 입력 정보*/
+    div.appointment_health_screening_form_ex
+    {width: 100%;}
+    
+    /*예약자 입력 타이틀*/
+    p.appointment_health_screening_title
+    {width: 100%;
+    font-size: 22px; font-family: bold; color: #222;
+    line-height: 25px;
+    padding-bottom: 20px; margin-bottom: 30px;
+    border-bottom: 1px solid #ddd; box-sizing: border-box;}
+
+    /*이용자 인원*/
+    div.health_checkup_uer_ex
+    {width: 100%;
+    margin-bottom: 50px;}
+
+    div.health_checkup_uer_ex:last-child {margin-bottom: 0;}
+
+    p.health_checkup_uer_title
+    {width: fit-content;
+    padding: 5px 10px;
+    border: 1px solid #51b8ff; box-sizing: border-box;
+    line-height: 25px; font-family: 'min_bold'; color: #51b8ff;
+    margin-bottom: 15px;}
+
+    /*이용자 인원 공통된 박스*/
+    div.appointment_health_screening_box
+    {width: 100%;
+    margin-bottom: 15px;}
+
+    div.appointment_health_screening_box:last-child
+    {margin-bottom: 0;}
+
+    div.appointment_health_screening_box>p:nth-child(1)
+    {width: 100%;
+    line-height: 25px;
+    color: #222; font-family: 'min_bold';
+    margin-bottom: 10px;}
+
+    div.appointment_health_screening_box>p:nth-child(1)>span {color: red;}
+
+    /*이름*/
+    div.appointment_health_name_input_box
+    {width: 100%;
+    overflow: hidden;}
+
+    #appointment_health_first_name, #appointment_health_Last_name
+    {width: calc(50% - 10px); height: 50px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    outline: none;
+    float: left; font-size: 15px;
+    background: #fff; text-indent: 10px; color: #333;
+    font-family: 'Pretendard' !important;}
+
+    #appointment_health_first_name
+    {margin-right: 20px;}
+
+     /*성별*/
+    div.appointment_health_gender_box
+    {width: 100%;
+    overflow: hidden;}
+
+    div.appointment_health_gender_box>div
+    {width: fit-content;
+    float: left;
+    max-width: calc(50% - 10px);}
+
+    div.appointment_health_gender_box>div:nth-child(1)
+    {margin-right: 20px;}
+
+    input[type="radio"].gender_radio_btn
+    {width: 13px; height: 13px;
+    float: left; 
+    margin-right: 5px; outline: none;
+    margin-top: 6px;
+    border: 1px solid #ddd; box-sizing: border-box;}
+
+    div.appointment_health_gender_box>div>label:nth-child(2)
+    {width: fit-content;
+    float: left;}
+
+    div.appointment_health_gender_box>div>label:nth-child(2)>p
+    {line-height: 25px; color: #222; font-size: 15px;}
+
+    /*여권번호*/
+    div.appointment_health_passport_input_box
+    {width: 100%;
+    overflow: hidden;}
+
+    input[type="text"].appointment_health_passport_box
+    {width: calc(50% - 10px); height: 50px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    outline: none;
+    float: left; font-size: 15px;
+    background: #fff; text-indent: 10px; color: #333;
+    font-family: 'Pretendard' !important;}
+
+    input[type="text"].appointment_health_passport_box:nth-child(1)
+    {margin-right: 20px;}
+
+    #appointment_health_passport_number, #appointment_health_passport_issue
+    {margin-bottom: 10px;}
+
+    /*약물복용이력*/
+    #appointment_health_screening_drug_box
+    {width: 100%; height: 150px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    background: #fff;
+    font-family: 'Pretendard' !important;
+    padding: 10px; color: #222;
+    outline: none; resize: none;}
+
+    /*수술이력*/
+    #appointment_health_screening_operation_box
+    {width: 100%; height: 150px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    background: #fff;
+    font-family: 'Pretendard' !important;
+    padding: 10px; color: #222;
+    outline: none; resize: none;}
+
+
+
+    /*기타 문의 사항*/
+    div.reservation_other_inquiries_box
+    {width: 100%;
+    margin-bottom: 30px;}
+
+    div.reservation_other_inquiries_box>p:nth-child(1)
+    {width: 100%;
+    line-height: 25px;
+    color: #222; font-family: 'min_bold';
+    margin-bottom: 10px;}
+
+    #other_inquiries_box
+    {width: 100%; height: 150px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    background: #fff;
+    font-family: 'Pretendard' !important;
+    padding: 10px; color: #222;
+    outline: none; resize: none;}
+
+
+    /*개인정보*/
+    div.reservation_personal_information_ex
+    {width: 100%;
+    margin-bottom: 50px;}
+
+    div.reservation_personal_information_ex>p:nth-child(1)
+    {width: 100%;
+    line-height: 25px;
+    color: #222; font-family: 'min_bold';
+    margin-bottom: 10px;}
+
+    div.reservation_personal_information_ex>p:nth-child(1)>span
+    {color: red;}
+
+    div.personal_information_contents_box
+    {width: 100%; height: 150px;
+    overflow-y: scroll;
+    border: 1px solid #ddd; box-sizing: border-box;
+    margin-bottom: 20px;}
+
+    div.personal_information_contents_box>p
+    {width: calc(100% - 20px);
+    margin: 0 auto;
+    color: #555;
+    font-size: 15px; line-height: 25px; word-break: keep-all;
+    padding-top: 10px; padding-bottom: 10px;}
+
+    div.personal_information_contents_box>p>span
+    {font-family: 'min_bold';
+    color: #222;}
+
+    /*동의 박스*/
+    div.reservation_personal_information_agree_box
+    {width: 100%;
+    overflow: hidden;}
+
+    #reservation_personal_information_agree
+    {width: 13px; height: 13px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    outline: none;
+    margin-top: 3.5px;
+    float: left; margin-right: 10px;}
+
+    div.reservation_personal_information_agree_box>label:nth-child(2)
+    {width: calc(100% - 23px);
+    float: left;
+    display: block;}
+
+    div.reservation_personal_information_agree_box>label:nth-child(2)>p
+    {width: 100%;
+    line-height: 20px; color: #222;}
+
+
+
+
+    /*총 결제 금액*/
+    div.reservation_total_pay_ex
+    {width: 100%;
+    padding-top: 30px; padding-bottom: 30px;
+    border-top: 1px solid #222; border-bottom: 1px solid #ddd;
+    box-sizing: border-box;
+    margin-bottom: 80px;
+    overflow: hidden;}
+    
+    /*총 결제 금액 박스*/
+    div.reservation_total_pay_box
+    {width: 300px;
+    margin-right: 30px;
+    float: left;}
+
+    div.reservation_total_pay_box>p:nth-child(1)
+    {width: 100%;
+    font-size: 22px; font-family: bold; color: #222;
+    line-height: 30px;
+    margin-bottom: 30px;}
+
+    
+    /*결제할 내역 정보*/
+    div.reservation_totla_pay_detaile_box
+    {width: calc(100% - 330px);
+    float: left;}
+
+    ul.reservation_product_ex
+    {width: 100%;}
+
+    li.reservation_product_title
+    {width: 100%;
+    margin-bottom: 5px;}
+
+    li.reservation_product_title>p:nth-child(1)
+    {width: 100%;
+    word-break: keep-all;
+    font-family: bold; color: #1f4e79; line-height: 25px;}
+
+    li.reservation_product_box
+    {width: 100%;
+    margin-bottom: 10px;}
+
+    li.reservation_product_box>p
+    {width: 100%;
+    word-break: keep-all;
+    font-size: 14px; color: #555; line-height: 20px;}
+
+    li.reservation_product_box>p:nth-child(1) {font-family: 'min_bold'; color: #222;}
+
+    li.reservation_product_pay
+    {width: 100%;}
+
+    li.reservation_product_pay>p
+    {width: 100%;
+    text-align: right; color: red; line-height: 25px; word-break: keep-all;}
+
+    div.reservation_product_total_box
+    {width: 100%;
+    margin-top: 20px;
+    padding-top: 30px;
+    border-top: 1px dotted #ddd; box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    overflow: hidden;}
+
+    div.reservation_product_total_box>p:nth-child(1)
+    {width: 51px;
+    margin-right: 10px; font-size: 22px;
+    color: #222;}
+
+    div.reservation_product_total_box>p:nth-child(2)
+    {width: calc(100% - 61px);
+    word-break: keep-all;
+    text-align: right;
+    font-size: 22px; font-family: bold; color: red;}
+
+    div.reservation_product_total_box>p:nth-child(2)>span
+    {font-family: 'Pretendard';
+    font-size: 15px;}
+
+
+    /*버튼*/
+    #reservation_submit_btn
+    {width: 200px; height: 50px;
+    border-radius: 5px;
+    border: none; background-color: #51b8ff; color: #fff;
+    font-size: 16px;
+    font-family: 'Pretendard' !important; text-align: center; line-height: 50px;
+    margin-left: calc(50% - 100px); margin-right: calc(50% - 100px);
+    transition: all 0.3s;}
+
+    #reservation_submit_btn:hover
+    {background-color: #1f4e79;}
+
+
+
+    /*완료창*/
+    div.reservation_submit_popup_ex
+    {width: 100%; height: 100vh;
+    background-color: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(2px);
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+
+    div.reservation_submit_popup_box
+    {width: 600px;
+    border-radius: 5px;
+    padding-top: 60px; padding-bottom: 60px;
+    background-color: #fff;}
+
+    div.reservation_submit_popup_box>div:nth-child(1)
+    {width: 70px; height: 70px;
+    margin: 0 auto;
+    margin-bottom: 10px;}
+
+    div.reservation_submit_popup_box>div:nth-child(1) img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    div.reservation_submit_popup_box>p
+    {width: calc(100% - 60px);
+    margin: 0 auto;
+    text-align: center; word-break: keep-all;}
+
+    div.reservation_submit_popup_box>p:nth-child(2)
+    {font-size: 24px; line-height: 30px;
+    font-family: bold; color: #222;
+    margin-bottom: 5px;}
+
+    div.reservation_submit_popup_box>p:nth-child(3)
+    {line-height: 25px; color: #555;
+    margin-bottom: 30px;}
+
+    a.back_main_btn
+    {width: calc(100% - 60px); height: 50px;
+    margin: 0 auto;
+    border-radius: 5px;
+    background-color: #51b8ff;
+    display: block;
+    transition: all 0.3s;}
+
+    a.back_main_btn>p
+    {width: 100%; text-align: center;
+    line-height: 50px; color: #fff;}
+
+    a.back_main_btn:hover
+    {background-color: #1f4e79;}
+
+
+}
+
+@media all and (min-width: 769px) and (max-width: 1419px)
+{   
+
+      /*비주얼베너*/
+    div.visual_sub_banner
+    {width: 100%; height: 350px;
+    margin-top: 139.44px;
+    overflow: hidden;
+    position: relative;}
+
+    div.visual_sub_banner img
+    {width: 100%; height: 100%;
+    object-fit: cover;
+    transition: all 2s;
+    transform: scale(1.2);}
+
+    p.visual_sub_text
+    {width: 100%;
+    position: absolute;
+    top: calc(50% - 25px); left: 0;
+    text-align: center;
+    opacity: 0;
+    transition: all 2s;
+    font-family: bold; color: #fff;
+    font-size: 42px; line-height: 50px;}
+
+    /*루트*/
+    div.nav_ex
+    {width: 100%;
+    background-color: #51b8ff;}
+
+    nav.nav_box
+    {width: 90%;
+    margin: 0 auto;}
+
+    nav.nav_box>ul
+    {width: 100%;
+    overflow: hidden;}
+
+    nav.nav_box>ul>li
+    {float: left;}
+
+    nav.nav_box>ul>li:nth-child(1)
+    {width: 20px; height: 20px;
+    margin-top: 10px; margin-bottom: 10px;}
+    
+    nav.nav_box>ul>li:nth-child(1) img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    nav.nav_box>ul>li>p
+    {line-height: 40px;
+    color: #fff;
+    margin-left: 10px; margin-right: 10px;}
+
+    nav.nav_box>ul>li>a>p
+    {line-height: 40px;
+    color: #fff;}
+
+
+
+    /*예약하기*/
+    div.reservation_ex
+    {width: 800px;
+    margin: 100px auto;
+    margin-bottom: 150px;}
+    
+    /*건강 검진 예약하기 폼*/
+    div.health_screening_reservation_ex
+    {width: 100%; 
+    margin-bottom: 50px;}
+
+    /*건강검진 예약하기 타이틀*/
+    div.health_screening_reservation_title
+    {width: 100%;
+    margin-bottom: 30px;}
+
+    div.health_screening_reservation_title>p:nth-child(1)
+    {width: 100%;
+    text-align: center; line-height: 32px;
+    margin-bottom: 15px;
+    font-size: 28px; font-family: bold; color: #222;}
+
+    div.health_screening_reservation_title>p:nth-child(2)
+    {width: 100%;
+    text-align: center; line-height: 25px; color: #333;}
+
+    div.health_screening_reservation_title>p:nth-child(2)>span
+    {font-family: bold;}
+
+    div.health_screening_reservation_title>p:nth-child(2)>span>span:nth-child(1)
+    {color: #64c8c8;}
+
+    div.health_screening_reservation_title>p:nth-child(2)>span>span:nth-child(2)
+    {color: red;}
+    
+    /*필수 입력*/
+    p.required_txt
+    {width: 100%;
+    text-align: right;
+    line-height: 25px; color: #222;
+    margin-bottom: 30px;}
+
+    p.required_txt>span {color: red;}
+
+    /*아이디 비밀번호*/
+    div.reservation_id_pw_ex
+    {width: 100%;
+    margin-bottom: 50px;}
+    
+    /*아이디*/
+    div.reservation_id_pw_box
+    {width: 100%;
+    margin-bottom: 15px;}
+
+    div.reservation_id_pw_box>p:nth-child(1)
+    {width: 100%;
+    line-height: 25px;
+    color: #222; font-family: 'min_bold';
+    margin-bottom: 10px;}
+
+    div.reservation_id_pw_box>p:nth-child(1)>span {color: red;}
+
+    input[type="email"].input_txt
+    {width: 100%; height: 50px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    outline: none; font-size: 15px;
+    background: #fff; text-indent: 10px; color: #333;
+    font-family: 'Pretendard' !important;}
+
+    /*비밀번호*/
+    input[type="password"].input_txt
+    {width: 100%; height: 50px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    outline: none; font-size: 15px;
+    background: #fff; text-indent: 10px; color: #333;
+    font-family: 'Pretendard' !important;}
+
+    /*환자 입력 정보*/
+    div.patient_information_ex
+    {width: 100%;
+    margin-bottom: 50px;}
+    
+    /*환자 정보 입력 타이틀*/
+    p.patient_information_title
+    {width: 100%;
+    font-size: 22px; font-family: bold; color: #222;
+    line-height: 25px;
+    padding-bottom: 20px; margin-bottom: 30px;
+    border-bottom: 1px solid #ddd; box-sizing: border-box;}
+
+    /*이름*/
+    div.patient_information_name_ex
+    {width: 100%;
+    margin-bottom: 15px;
+    overflow: hidden;}
+
+    div.patient_information_name_ex>p:nth-child(1)
+    {width: 100%;
+    line-height: 25px;
+    color: #222; font-family: 'min_bold';
+    margin-bottom: 10px;}
+
+    div.patient_information_name_ex>p:nth-child(1)>span {color: red;}
+
+    div.patient_information_name_box
+    {width: 100%;
+    overflow: hidden;}
+
+    #patient_information_name_first, #patient_information_name_last
+    {width: calc(50% - 10px); height: 50px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    outline: none;
+    float: left; font-size: 15px;
+    background: #fff; text-indent: 10px; color: #333;
+    font-family: 'Pretendard' !important;}
+
+    #patient_information_name_first
+    {margin-right: 20px;}
+
+    /*공통된 박스 마진 없애기*/
+    div.patient_information_box:last-child
+    {margin-bottom: 0;}
+
+    /*생일, 국적*/
+    div.patient_information_box
+    {width: 100%;
+    margin-bottom: 15px;}
+
+    div.patient_information_box>p:nth-child(1)
+    {width: 100%;
+    line-height: 25px;
+    color: #222; font-family: 'min_bold';
+    margin-bottom: 10px;}
+
+    div.patient_information_box>p:nth-child(1)>span {color: red;}
+
+    input[type="text"].patient_txt
+    {width: 100%; height: 50px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    outline: none; font-size: 15px;
+    background: #fff; text-indent: 10px; color: #333;
+    font-family: 'Pretendard' !important;}
+
+    /*성별*/
+    div.patient_information_gender_box
+    {width: 100%;
+    overflow: hidden;}
+
+    div.patient_information_gender_box>div
+    {width: fit-content;
+    float: left;
+    max-width: calc(50% - 10px);}
+
+    div.patient_information_gender_box>div:nth-child(1)
+    {margin-right: 20px;}
+
+    input[type="radio"].gender_radio_btn
+    {width: 13px; height: 13px;
+    float: left; 
+    margin-right: 5px; outline: none;
+    margin-top: 6px;
+    border: 1px solid #ddd; box-sizing: border-box;}
+
+    div.patient_information_gender_box>div>label:nth-child(2)
+    {width: fit-content;
+    float: left;}
+
+    div.patient_information_gender_box>div>label:nth-child(2)>p
+    {line-height: 25px; color: #222; font-size: 15px;}
+    
+    /*이메일 어드레스*/
+    input[type="email"].patient_txt
+    {width: 100%; height: 50px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    outline: none;
+    background: #fff; text-indent: 10px; color: #333;
+    font-family: 'Pretendard' !important;}
+
+    /*Phone Number*/
+    div.patient_information_phone_box
+    {width: 100%;
+    overflow: hidden;}
+
+    #patient_cellular, #patient_home
+    {width: calc(50% - 10px); height: 50px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    outline: none;
+    float: left; font-size: 15px;
+    background: #fff; text-indent: 10px; color: #333;
+    font-family: 'Pretendard' !important;}
+
+    #patient_cellular
+    {margin-right: 20px;}
+
+    /*주소*/
+    div.patient_information_address_box
+    {width: 100%;}
+
+    #patient_address_home, #patient_address_korea
+    {width: 100%; height: 50px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    outline: none; font-size: 15px;
+    background: #fff; text-indent: 10px; color: #333;
+    font-family: 'Pretendard' !important;}
+
+    #patient_address_home
+    {margin-bottom: 10px;}
+
+    input[type="text"]::placeholder {color: #555;}
+    input[type="tel"]::placeholder {color: #555;}
+
+    /*보험*/
+    div.patient_information_insurance_box
+    {width: 100%;
+    overflow: hidden;}
+
+    div.patient_information_insurance_box>div
+    {width: fit-content;
+    float: left;
+    max-width: calc(50% - 10px);}
+
+    div.patient_information_insurance_box>div:nth-child(1)
+    {margin-right: 20px;}
+
+    input[type="radio"].insurance_radio_btn
+    {width: 13px; height: 13px;
+    float: left;
+    margin-right: 5px; outline: none;
+    margin-top: 6px;
+    border: 1px solid #ddd; box-sizing: border-box;}
+
+    div.patient_information_insurance_box>div>label:nth-child(2)
+    {width: fit-content;
+    float: left;}
+
+    div.patient_information_insurance_box>div>label:nth-child(2)>p
+    {line-height: 25px; color: #222; font-size: 15px;}
+
+    /*상태*/
+    div.appointment_health_screening_status_box
+    {width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: hidden;}
+
+    div.appointment_health_screening_status_box>div
+    {width: fit-content;
+    margin-right: 10px; margin-bottom: 10px;
+    overflow: hidden;}
+
+    div.appointment_health_screening_status_box>div:last-child
+    {margin-right: 0;}
+
+    input[type="checkbox"].appointment_health_screening_status_btn
+    {width: 13px; height: 13px;
+    float: left;
+    margin-right: 5px; margin-top: 6px;
+    outline: none;
+    border: 1px solid #ddd; box-sizing: border-box;}
+
+    div.appointment_health_screening_status_box>div>label:nth-child(2)
+    {width: fit-content;
+    display: block;
+    float: left;}
+
+    div.appointment_health_screening_status_box>div>label:nth-child(2)>p
+    {line-height: 25px;
+    color: #555;}
+
+    /*선호하는 건강검진 유형*/
+    input[type="text"].preferred_type_health_program_choice
+    {width: 100%; height: 50px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    outline: none; font-size: 15px;
+    background: #fff; text-indent: 10px; color: #333;
+    font-family: 'Pretendard' !important;
+    margin-bottom: 10px;}
+
+    input[type="text"].preferred_type_health_program_choice:last-child
+    {margin-bottom: 0;}
+
+    /*선호하는 건강검진 시간*/
+    input[type="text"].preferred_check_up_date
+    {width: 100%; height: 50px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    outline: none; font-size: 15px;
+    background: #fff; text-indent: 10px; color: #333;
+    font-family: 'Pretendard' !important;
+    margin-bottom: 10px;}
+
+    input[type="text"].preferred_check_up_date:last-child
+    {margin-bottom: 0;}
+
+
+    /*예약자 입력 정보*/
+    div.appointment_health_screening_form_ex
+    {width: 100%;}
+    
+    /*예약자 입력 타이틀*/
+    p.appointment_health_screening_title
+    {width: 100%;
+    font-size: 22px; font-family: bold; color: #222;
+    line-height: 25px;
+    padding-bottom: 20px; margin-bottom: 30px;
+    border-bottom: 1px solid #ddd; box-sizing: border-box;}
+
+    /*이용자 인원*/
+    div.health_checkup_uer_ex
+    {width: 100%;
+    margin-bottom: 50px;}
+
+    div.health_checkup_uer_ex:last-child {margin-bottom: 0;}
+
+    p.health_checkup_uer_title
+    {width: fit-content;
+    padding: 5px 10px;
+    border: 1px solid #51b8ff; box-sizing: border-box;
+    line-height: 25px; font-family: 'min_bold'; color: #51b8ff;
+    margin-bottom: 15px;}
+
+    /*이용자 인원 공통된 박스*/
+    div.appointment_health_screening_box
+    {width: 100%;
+    margin-bottom: 15px;}
+
+    div.appointment_health_screening_box:last-child
+    {margin-bottom: 0;}
+
+    div.appointment_health_screening_box>p:nth-child(1)
+    {width: 100%;
+    line-height: 25px;
+    color: #222; font-family: 'min_bold';
+    margin-bottom: 10px;}
+
+    div.appointment_health_screening_box>p:nth-child(1)>span {color: red;}
+
+    /*이름*/
+    div.appointment_health_name_input_box
+    {width: 100%;
+    overflow: hidden;}
+
+    #appointment_health_first_name, #appointment_health_Last_name
+    {width: calc(50% - 10px); height: 50px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    outline: none;
+    float: left; font-size: 15px;
+    background: #fff; text-indent: 10px; color: #333;
+    font-family: 'Pretendard' !important;}
+
+    #appointment_health_first_name
+    {margin-right: 20px;}
+
+     /*성별*/
+    div.appointment_health_gender_box
+    {width: 100%;
+    overflow: hidden;}
+
+    div.appointment_health_gender_box>div
+    {width: fit-content;
+    float: left;
+    max-width: calc(50% - 10px);}
+
+    div.appointment_health_gender_box>div:nth-child(1)
+    {margin-right: 20px;}
+
+    input[type="radio"].gender_radio_btn
+    {width: 13px; height: 13px;
+    float: left; 
+    margin-right: 5px; outline: none;
+    margin-top: 6px;
+    border: 1px solid #ddd; box-sizing: border-box;}
+
+    div.appointment_health_gender_box>div>label:nth-child(2)
+    {width: fit-content;
+    float: left;}
+
+    div.appointment_health_gender_box>div>label:nth-child(2)>p
+    {line-height: 25px; color: #222; font-size: 15px;}
+
+    /*여권번호*/
+    div.appointment_health_passport_input_box
+    {width: 100%;
+    overflow: hidden;}
+
+    input[type="text"].appointment_health_passport_box
+    {width: calc(50% - 10px); height: 50px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    outline: none;
+    float: left; font-size: 15px;
+    background: #fff; text-indent: 10px; color: #333;
+    font-family: 'Pretendard' !important;}
+
+    input[type="text"].appointment_health_passport_box:nth-child(1)
+    {margin-right: 20px;}
+
+    #appointment_health_passport_number, #appointment_health_passport_issue
+    {margin-bottom: 10px;}
+
+    /*약물복용이력*/
+    #appointment_health_screening_drug_box
+    {width: 100%; height: 150px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    background: #fff;
+    font-family: 'Pretendard' !important;
+    padding: 10px; color: #222;
+    outline: none; resize: none;}
+
+    /*수술이력*/
+    #appointment_health_screening_operation_box
+    {width: 100%; height: 150px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    background: #fff;
+    font-family: 'Pretendard' !important;
+    padding: 10px; color: #222;
+    outline: none; resize: none;}
+
+
+
+    /*기타 문의 사항*/
+    div.reservation_other_inquiries_box
+    {width: 100%;
+    margin-bottom: 30px;}
+
+    div.reservation_other_inquiries_box>p:nth-child(1)
+    {width: 100%;
+    line-height: 25px;
+    color: #222; font-family: 'min_bold';
+    margin-bottom: 10px;}
+
+    #other_inquiries_box
+    {width: 100%; height: 150px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    background: #fff;
+    font-family: 'Pretendard' !important;
+    padding: 10px; color: #222;
+    outline: none; resize: none;}
+
+
+    /*개인정보*/
+    div.reservation_personal_information_ex
+    {width: 100%;
+    margin-bottom: 50px;}
+
+    div.reservation_personal_information_ex>p:nth-child(1)
+    {width: 100%;
+    line-height: 25px;
+    color: #222; font-family: 'min_bold';
+    margin-bottom: 10px;}
+
+    div.reservation_personal_information_ex>p:nth-child(1)>span
+    {color: red;}
+
+    div.personal_information_contents_box
+    {width: 100%; height: 150px;
+    overflow-y: scroll;
+    border: 1px solid #ddd; box-sizing: border-box;
+    margin-bottom: 20px;}
+
+    div.personal_information_contents_box>p
+    {width: calc(100% - 20px);
+    margin: 0 auto;
+    color: #555;
+    font-size: 15px; line-height: 25px; word-break: keep-all;
+    padding-top: 10px; padding-bottom: 10px;}
+
+    div.personal_information_contents_box>p>span
+    {font-family: 'min_bold';
+    color: #222;}
+
+    /*동의 박스*/
+    div.reservation_personal_information_agree_box
+    {width: 100%;
+    overflow: hidden;}
+
+    #reservation_personal_information_agree
+    {width: 13px; height: 13px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    outline: none;
+    margin-top: 3.5px;
+    float: left; margin-right: 10px;}
+
+    div.reservation_personal_information_agree_box>label:nth-child(2)
+    {width: calc(100% - 23px);
+    float: left;
+    display: block;}
+
+    div.reservation_personal_information_agree_box>label:nth-child(2)>p
+    {width: 100%;
+    line-height: 20px; color: #222;}
+
+
+
+
+    /*총 결제 금액*/
+    div.reservation_total_pay_ex
+    {width: 100%;
+    padding-top: 30px; padding-bottom: 30px;
+    border-top: 1px solid #222; border-bottom: 1px solid #ddd;
+    box-sizing: border-box;
+    margin-bottom: 80px;
+    overflow: hidden;}
+    
+    /*총 결제 금액 박스*/
+    div.reservation_total_pay_box
+    {width: 300px;
+    margin-right: 30px;
+    float: left;}
+
+    div.reservation_total_pay_box>p:nth-child(1)
+    {width: 100%;
+    font-size: 22px; font-family: bold; color: #222;
+    line-height: 30px;
+    margin-bottom: 30px;}
+
+    
+    /*결제할 내역 정보*/
+    div.reservation_totla_pay_detaile_box
+    {width: calc(100% - 330px);
+    float: left;}
+
+    ul.reservation_product_ex
+    {width: 100%;}
+
+    li.reservation_product_title
+    {width: 100%;
+    margin-bottom: 5px;}
+
+    li.reservation_product_title>p:nth-child(1)
+    {width: 100%;
+    word-break: keep-all;
+    font-family: bold; color: #1f4e79; line-height: 25px;}
+
+    li.reservation_product_box
+    {width: 100%;
+    margin-bottom: 10px;}
+
+    li.reservation_product_box>p
+    {width: 100%;
+    word-break: keep-all;
+    font-size: 14px; color: #555; line-height: 20px;}
+
+    li.reservation_product_box>p:nth-child(1) {font-family: 'min_bold'; color: #222;}
+
+    li.reservation_product_pay
+    {width: 100%;}
+
+    li.reservation_product_pay>p
+    {width: 100%;
+    text-align: right; color: red; line-height: 25px; word-break: keep-all;}
+
+    div.reservation_product_total_box
+    {width: 100%;
+    margin-top: 20px;
+    padding-top: 30px;
+    border-top: 1px dotted #ddd; box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    overflow: hidden;}
+
+    div.reservation_product_total_box>p:nth-child(1)
+    {width: 51px;
+    margin-right: 10px; font-size: 22px;
+    color: #222;}
+
+    div.reservation_product_total_box>p:nth-child(2)
+    {width: calc(100% - 61px);
+    word-break: keep-all;
+    text-align: right;
+    font-size: 22px; font-family: bold; color: red;}
+
+    div.reservation_product_total_box>p:nth-child(2)>span
+    {font-family: 'Pretendard';
+    font-size: 15px;}
+
+
+    /*버튼*/
+    #reservation_submit_btn
+    {width: 200px; height: 50px;
+    border-radius: 5px;
+    font-size: 16px;
+    border: none; background-color: #51b8ff; color: #fff;
+    font-family: 'Pretendard' !important; text-align: center; line-height: 50px;
+    margin-left: calc(50% - 100px); margin-right: calc(50% - 100px);
+    transition: all 0.3s;}
+
+    #reservation_submit_btn:hover
+    {background-color: #1f4e79;}
+
+
+
+      /*완료창*/
+    div.reservation_submit_popup_ex
+    {width: 100%; height: 100vh;
+    background-color: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(2px);
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+
+    div.reservation_submit_popup_box
+    {width: 600px;
+    border-radius: 5px;
+    padding-top: 60px; padding-bottom: 60px;
+    background-color: #fff;}
+
+    div.reservation_submit_popup_box>div:nth-child(1)
+    {width: 70px; height: 70px;
+    margin: 0 auto;
+    margin-bottom: 10px;}
+
+    div.reservation_submit_popup_box>div:nth-child(1) img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    div.reservation_submit_popup_box>p
+    {width: calc(100% - 60px);
+    margin: 0 auto;
+    text-align: center; word-break: keep-all;}
+
+    div.reservation_submit_popup_box>p:nth-child(2)
+    {font-size: 24px; line-height: 30px;
+    font-family: bold; color: #222;
+    margin-bottom: 5px;}
+
+    div.reservation_submit_popup_box>p:nth-child(3)
+    {line-height: 25px; color: #555;
+    margin-bottom: 30px;}
+
+    a.back_main_btn
+    {width: calc(100% - 60px); height: 50px;
+    margin: 0 auto;
+    border-radius: 5px;
+    background-color: #51b8ff;
+    display: block;
+    transition: all 0.3s;}
+
+    a.back_main_btn>p
+    {width: 100%; text-align: center;
+    line-height: 50px; color: #fff;}
+
+    a.back_main_btn:hover
+    {background-color: #1f4e79;}
+}
+
+@media all and (min-width: 769px) and (max-width: 1279px)
+{
+    /*비주얼배너*/
+    div.visual_sub_banner
+    {margin-top: 0;}
+}
+
+
+@media all and (min-width: 769px) and (max-width: 1024px)
+{
+    div.reservation_ex
+    {width: 90%;}
+}
+
+@media all and (max-width: 768px)
+{   
+    /*비주얼베너*/
+    div.visual_sub_banner
+    {width: 100%; height: 250px;
+    overflow: hidden;
+    position: relative;}
+
+    div.visual_sub_banner img
+    {width: 100%; height: 100%;
+    object-fit: cover;
+    transition: all 2s;
+    transform: scale(1.2);}
+
+    p.visual_sub_text
+    {width: 100%;
+    position: absolute;
+    top: calc(50% - 20px); left: 0;
+    text-align: center;
+    opacity: 0;
+    transition: all 2s;
+    font-family: bold; color: #fff;
+    font-size: 32px; line-height: 40px;}
+
+    /*루트*/
+    div.nav_ex
+    {width: 100%;
+    background-color: #51b8ff;}
+
+    nav.nav_box
+    {width: 90%;
+    margin: 0 auto;}
+
+    nav.nav_box>ul
+    {width: 100%;
+    overflow: hidden;}
+
+    nav.nav_box>ul>li
+    {float: left;}
+
+    nav.nav_box>ul>li:nth-child(1)
+    {width: 20px; height: 20px;
+    margin-top: 10px; margin-bottom: 10px;
+    margin-right: 10px;}
+
+    nav.nav_box>ul>li:nth-child(1)>a img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    nav.nav_box>ul>li:nth-child(2)
+    {width: fit-content;
+    margin-right: 10px;}
+
+    nav.nav_box>ul>li:nth-child(2)>p
+    {font-size: 15px; line-height: 40px; color: #fff;}
+
+    nav.nav_box>ul>li:nth-child(3)
+    {width: fit-content;
+    max-width: calc(100% - 50px);}
+
+    nav.nav_box>ul>li:nth-child(3)>a>p
+    {font-size: 15px; line-height: 40px; 
+    color: #fff;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;}
+
+
+    /*전체 박스*/
+    div.reservation_ex
+    {width: 90%;
+    margin: 50px auto;
+    margin-bottom: 80px;}
+    
+    /*입력 폼*/
+    div.health_screening_reservation_ex
+    {width: 100%;
+    margin-bottom: 30px;}
+
+    /*타이틀*/
+    div.health_screening_reservation_title
+    {width: 100%;
+    margin-bottom: 30px;}
+
+    div.health_screening_reservation_title>p
+    {width: 90%;
+    margin: 0 auto;
+    text-align: center;}
+
+    div.health_screening_reservation_title>p:nth-child(1)
+    {font-size: 22px; font-family: bold; line-height: 28px;
+    word-break: keep-all; color: #222;
+    margin-bottom: 10px;}
+
+    div.health_screening_reservation_title>p:nth-child(2)
+    {font-size: 15px; word-break: keep-all;
+    line-height: 20px; color: #555;}
+
+    div.health_screening_reservation_title>p:nth-child(2)>span
+    {font-family: bold;}
+
+    div.health_screening_reservation_title>p:nth-child(2)>span>span:nth-child(1)
+    {color: #64c8c8;}
+
+    div.health_screening_reservation_title>p:nth-child(2)>span>span:nth-child(2)
+    {color: red;}
+    
+    /*필수 입력*/
+    p.required_txt
+    {width: 100%;
+    font-size: 15px; text-align: right;
+    margin-bottom: 30px; padding-top: 30px;
+    border-top: 1px solid #ddd; box-sizing: border-box;
+    color: #222; line-height: 20px;}
+
+    p.required_txt>span {color: red;}
+
+    /*아이디, 비번*/
+    div.reservation_id_pw_ex
+    {width: 100%;
+    margin-bottom: 30px;}
+
+    div.reservation_id_pw_box
+    {width: 100%;
+    margin-bottom: 15px;}
+
+    div.reservation_id_pw_box:last-child
+    {margin-bottom: 0;}
+
+    div.reservation_id_pw_box>p:nth-child(1)
+    {width: 100%;
+    line-height: 20px; font-size: 15px;
+    font-family: 'min_bold'; color: #222;
+    margin-bottom: 10px;}
+
+    div.reservation_id_pw_box>p:nth-child(1)>span
+    {color: red;}
+    
+    #username_txt_box, #password_txt_box
+    {width: 100%; height: 40px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    outline: none; font-size: 14px;
+    background: #fff; text-indent: 5px; color: #222;
+    font-family: 'Pretendard' !important;}
+
+    /*색상 선택*/
+    input[type="text"]::placeholder
+    {color: #222;}
+    
+    input[type="tel"]::placeholder
+    {color: #222;}
+
+    /*예약자 정보 입력*/
+    div.patient_information_ex
+    {width: 100%;
+    margin-bottom: 30px;}
+
+    p.patient_information_title
+    {width: 100%;
+    font-size: 19px; font-family: bold; line-height: 25px;
+    padding-bottom: 15px; color: #222;
+    word-break: keep-all;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ddd; box-sizing: border-box;}
+
+    div.patient_information_name_ex
+    {width: 100%;
+    margin-bottom: 30px;}
+
+    /*공통된 박스*/
+    div.patient_information_box
+    {width: 100%;
+    margin-bottom: 15px;}
+
+    div.patient_information_box:last-child
+    {margin-bottom: 0;}
+
+    div.patient_information_box>p:nth-child(1)
+    {width: 100%;
+    line-height: 20px; font-size: 15px;
+    font-family: 'min_bold'; color: #222;
+    margin-bottom: 10px;}
+
+    div.patient_information_box>p:nth-child(1)>span
+    {color: red;}
+    
+    /*이름*/
+    div.patient_information_name_ex
+    {width: 100%;
+    margin-bottom: 15px;}
+
+    div.patient_information_name_ex>p:nth-child(1)
+    {width: 100%;
+    line-height: 20px; font-size: 15px;
+    font-family: 'min_bold'; color: #222;
+    margin-bottom: 10px;}
+
+    div.patient_information_name_ex>p:nth-child(1)>span
+    {color: red;}
+
+    div.patient_information_name_box
+    {width: 100%;
+    overflow: hidden;}
+
+    #patient_information_name_first, #patient_information_name_last
+    {width: 49%; height: 40px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    outline: none; font-size: 14px;
+    float: left;
+    background: #fff; text-indent: 5px; color: #222;
+    font-family: 'Pretendard' !important;}
+
+    #patient_information_name_first
+    {margin-right: 2%;}
+
+    /*생년월일, 국적*/
+    input[type="text"].patient_txt
+    {width: 100%; height: 40px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    outline: none; font-size: 14px;
+    background: #fff; text-indent: 5px; color: #222;
+    font-family: 'Pretendard' !important;}
+
+    /*성별*/
+    div.patient_information_gender_box
+    {width: 100%;
+    overflow: hidden;}
+
+    div.patient_information_gender_box>div
+    {width: fit-content;
+    max-width: calc(50% - 7.5px);
+    float: left;}
+
+    div.patient_information_gender_box>div:nth-child(1)
+    {margin-right: 15px;}
+
+    input[type="radio"].gender_radio_btn
+    {width: 13px; height: 13px;
+    float: left;
+    margin-right: 10px; margin-top: 5px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    outline: none;}
+
+    div.patient_information_gender_box>div>label
+    {width: fit-content;
+    max-width: calc(100% - 23px);
+    float: left;
+    display: block;}
+
+    div.patient_information_gender_box>div>label>p
+    {font-size: 15px; line-height: 25px; color: #222;}
+    
+    /*이메일 주소*/
+    input[type="email"].patient_txt
+    {width: 100%; height: 40px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    outline: none; font-size: 14px;
+    background: #fff; text-indent: 5px; color: #222;
+    font-family: 'Pretendard' !important;}
+
+    /*전화번호*/
+    div.patient_information_phone_box
+    {width: 100%;}
+
+    /*예약자 전화번호*/
+    #patient_cellular, #patient_home
+    {width: 100%; height: 40px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    outline: none; font-size: 14px;
+    background: #fff; text-indent: 5px; color: #222;
+    font-family: 'Pretendard' !important;}
+
+    #patient_cellular
+    {margin-bottom: 10px;}
+
+    /*주소*/
+    div.patient_information_address_box
+    {width: 100%;}
+
+    /*예약자 전화번호*/
+    #patient_address_home, #patient_address_korea
+    {width: 100%; height: 40px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    outline: none; font-size: 14px;
+    background: #fff; text-indent: 5px; color: #222;
+    font-family: 'Pretendard' !important;}
+
+    #patient_address_home
+    {margin-bottom: 10px;}
+
+    /*보험*/
+    div.patient_information_insurance_box
+    {width: 100%;
+    overflow: hidden;}
+
+    div.patient_information_insurance_box>div
+    {float: left;}
+
+    div.patient_information_insurance_box>div:nth-child(1)
+    {width: 48px;
+    margin-right: 15px;}
+
+    div.patient_information_insurance_box>div:nth-child(2)
+    {width: calc(100% - 48px - 15px);}
+
+    input[type="radio"].insurance_radio_btn
+    {width: 13px; height: 13px;
+    float: left;
+    margin-right: 10px; margin-top: 5px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    outline: none;}
+
+    div.patient_information_insurance_box>div>label
+    {width: calc(100% - 23px);
+    float: left;
+    display: block;}
+
+    div.patient_information_insurance_box>div>label>p
+    {font-size: 15px; line-height: 25px; color: #222;}
+
+    /*선호하는 건강검진*/
+    input[type="text"].preferred_type_health_program_choice
+    {width: 100%; height: 40px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    outline: none; font-size: 14px;
+    background: #fff; text-indent: 5px; color: #222;
+    font-family: 'Pretendard' !important;
+    margin-bottom: 10px;}
+
+    input[type="text"].preferred_type_health_program_choice:last-child
+    {margin-bottom: 0;}
+
+    /*선호하는 건강검진 시간*/
+    input[type="text"].preferred_check_up_date
+    {width: 100%; height: 40px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    outline: none; font-size: 14px;
+    background: #fff; text-indent: 5px; color: #222;
+    font-family: 'Pretendard' !important;
+    margin-bottom: 10px;}
+
+    input[type="text"].preferred_check_up_date:last-child
+    {margin-bottom: 0;}
+
+    /*동반자 정보 입력*/
+    div.appointment_health_screening_form_ex
+    {width: 100%;
+    margin-bottom: 30px;}
+
+    p.appointment_health_screening_title
+    {width: 100%;
+    font-size: 19px; font-family: bold; line-height: 25px;
+    padding-bottom: 15px; color: #222;
+    word-break: keep-all;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ddd; box-sizing: border-box;}
+
+    div.health_checkup_uer_ex
+    {width: 100%;}
+
+    /*동반자 카운트*/
+    p.health_checkup_uer_title
+    {width: fit-content;
+    max-width: 100%;
+    font-size: 15px;
+    padding: 5px 10px; background-color: #1f4e79; color: #fff;
+    line-height: 20px;
+    margin-bottom: 20px;}
+
+    /*공통된 박스*/
+    div.appointment_health_screening_box
+    {width: 100%;
+    margin-bottom: 15px;}
+
+    div.appointment_health_screening_box:last-child
+    {margin-bottom: 0;}
+
+    div.appointment_health_screening_box>p:nth-child(1)
+    {width: 100%;
+    line-height: 20px; font-size: 15px;
+    font-family: 'min_bold'; color: #222;
+    margin-bottom: 10px;}
+
+    div.appointment_health_screening_box>p:nth-child(1)>span
+    {color: red;}
+    
+    /*이름*/
+    div.appointment_health_name_input_box
+    {width: 100%;
+    overflow: hidden;}
+
+    #appointment_health_first_name, #appointment_health_Last_name
+    {width: 49%; height: 40px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    outline: none; font-size: 14px;
+    float: left;
+    background: #fff; text-indent: 5px; color: #222;
+    font-family: 'Pretendard' !important;}
+
+    #appointment_health_first_name
+    {margin-right: 2%;}
+
+    /*성별*/
+    div.appointment_health_gender_box
+    {width: 100%;
+    overflow: hidden;}
+
+    div.appointment_health_gender_box>div
+    {width: fit-content;
+    max-width: calc(50% - 7.5px);
+    float: left;}
+
+    div.appointment_health_gender_box>div:nth-child(1)
+    {margin-right: 15px;}
+
+    div.appointment_health_gender_box>div>label
+    {width: fit-content;
+    max-width: calc(100% - 23px);
+    float: left;
+    display: block;}
+
+    div.appointment_health_gender_box>div>label>p
+    {font-size: 15px; line-height: 25px; color: #222;}
+
+    /*여권*/
+    input[type="text"].appointment_health_passport_box
+    {width: 100%; height: 40px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    outline: none; font-size: 14px;
+    background: #fff; text-indent: 5px; color: #222;
+    font-family: 'Pretendard' !important;
+    margin-bottom: 10px;}
+
+    input[type="text"].appointment_health_passport_box:last-child
+    {margin-bottom: 0;}
+
+    /*상태*/
+    div.appointment_health_screening_status_box
+    {width: 100%;}
+
+    div.appointment_health_screening_status_box>div
+    {width: 100%;
+    overflow: hidden;
+    margin-bottom: 10px;}
+
+    div.appointment_health_screening_status_box>div:last-child
+    {margin-bottom: 0;}
+
+    input[type="checkbox"].appointment_health_screening_status_btn
+    {width: 13px; height: 13px;
+    margin-right: 5px;
+    float: left; margin-top: 3.5px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    outline: none;}
+
+    div.appointment_health_screening_status_box>div>label:nth-child(2)
+    {width: calc(100% - 18px);
+    display: block;
+    float: left;}
+
+    div.appointment_health_screening_status_box>div>label:nth-child(2)>p
+    {font-size: 15px; color: #222; line-height: 20px;
+    word-break: keep-all;}
+
+    /*약물복용*/
+    #appointment_health_screening_drug_box
+    {width: 100%; height: 100px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    outline: none; resize: none;
+    padding: 10px;
+    background: #fff;}
+
+    /*수술*/
+    #appointment_health_screening_operation_box
+    {width: 100%; height: 100px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    outline: none; resize: none;
+    padding: 10px;
+    background: #fff;}
+
+    /*문의사항*/
+    div.reservation_other_inquiries_box
+    {width: 100%;
+    margin-bottom: 15px;}
+
+    div.reservation_other_inquiries_box>p:nth-child(1)
+    {width: 100%;
+    line-height: 20px; font-size: 15px;
+    font-family: 'min_bold'; color: #222;
+    margin-bottom: 10px;}
+
+    div.reservation_other_inquiries_box>p:nth-child(1)>span
+    {color: red;}
+
+    #other_inquiries_box
+    {width: 100%; height: 100px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    outline: none; resize: none;
+    padding: 10px;
+    background: #fff;}
+
+    /*동의 체크*/
+    div.reservation_personal_information_ex
+    {width: 100%;
+    margin-bottom: 30px;}
+
+    div.reservation_personal_information_ex>p:nth-child(1)
+    {width: 100%;
+    line-height: 20px; font-size: 15px;
+    font-family: 'min_bold'; color: #222;
+    margin-bottom: 10px;}
+
+    div.reservation_personal_information_ex>p:nth-child(1)>span
+    {color: red;}
+
+    div.personal_information_contents_box
+    {width: 100%; height: 150px;
+    overflow-y: scroll;
+    background-color: #f3f3f3;
+    margin-bottom: 15px;}
+
+    div.personal_information_contents_box>p
+    {width: calc(100% - 20px);
+    margin: 0 auto;
+    color: #222; 
+    font-size: 14px; line-height: 20px;
+    padding-top: 10px; padding-bottom: 10px;}
+
+    div.personal_information_contents_box>p>span
+    {font-family: 'min_bold';}
+
+    div.reservation_personal_information_agree_box
+    {width: 100%;
+    overflow: hidden;}
+
+    #reservation_personal_information_agree
+    {width: 13px; height: 13px;
+    margin-right: 5px;
+    float: left; margin-top: 3.5px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    outline: none;}
+
+    div.reservation_personal_information_agree_box>label:nth-child(2)
+    {width: calc(100% - 18px);
+    display: block;
+    float: left;}
+
+    div.reservation_personal_information_agree_box>label:nth-child(2)>p
+    {font-size: 15px; color: #222; line-height: 20px;
+    word-break: keep-all;}
+    
+    /*가격*/
+    div.reservation_total_pay_ex
+    {width: 100%;
+    padding-top: 15px; padding-bottom: 30px;
+    border-top: 1px solid #222; border-bottom: 1px solid #ddd;
+    box-sizing: border-box;
+    margin-bottom: 50px;}
+
+    div.reservation_total_pay_box
+    {width: 100%;
+    margin-bottom: 15px;}
+
+    div.reservation_total_pay_box>p 
+    {width: 100%;
+    font-family: bold; color: #222; line-height: 25px;
+    font-size: 19px;}
+
+    ul.reservation_product_ex
+    {width: 100%;}
+
+    li.reservation_product_title
+    {width: 100%;
+    margin-bottom: 5px;}
+
+    li.reservation_product_title>p
+    {width: 100%;
+    font-family: 'min_bold'; color: #1f4e79;
+    word-break: keep-all;
+    font-size: 15px; line-height: 20px;}
+
+    li.reservation_product_box
+    {width: 100%;
+    margin-bottom: 10px;}
+    
+    li.reservation_product_box>p
+    {width: 100%;
+    font-size: 14px; line-height: 20px;
+    word-break: keep-all; color: #555;}
+
+    li.reservation_product_box>p:nth-child(1)
+    {font-family: 'min_bold';}
+
+    li.reservation_product_pay
+    {width: 100%;}
+    
+    li.reservation_product_pay>p
+    {width: 100%;
+    text-align: right; color: red; line-height: 25px;}
+
+    /*전체 금액*/
+    div.reservation_product_total_box
+    {width: 100%;
+    padding-top: 30px; margin-top: 20px;
+    border-top: 1px dotted #ddd; box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    overflow: hidden;}
+
+    div.reservation_product_total_box>p:nth-child(1)
+    {width: 38px;
+    margin-right: 10px; line-height: 25px;
+    color: #222;
+    font-size: 17px;}
+
+    div.reservation_product_total_box>p:nth-child(2)
+    {width: calc(100% - 48px);
+    text-align: right;
+    font-family: bold; word-break: keep-all;
+    color: red; font-size: 19px; line-height: 25px;}
+
+    div.reservation_product_total_box>p:nth-child(2)>span
+    {font-size: 15px; font-family: 'Pretendard';}
+
+
+    /*버튼*/
+    #reservation_submit_btn
+    {width: 200px; height: 50px;
+    border-radius: 5px;
+    font-size: 15px;
+    border: none; background-color: #51b8ff; color: #fff;
+    font-family: 'Pretendard' !important; text-align: center; line-height: 50px;
+    margin-left: calc(50% - 100px); margin-right: calc(50% - 100px);
+    transition: all 0.3s;}
+
+
+    /*팝업창*/
+    div.reservation_submit_popup_ex
+    {width: 100%; height: 100vh;
+    background-color: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(2px);
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+
+    div.reservation_submit_popup_box
+    {width: 500px;
+    border-radius: 5px;
+    padding-top: 50px; padding-bottom: 50px;
+    background-color: #fff;}
+
+    div.reservation_submit_popup_box>div:nth-child(1)
+    {width: 60px; height: 60px;
+    margin: 0 auto;
+    margin-bottom: 10px;}
+
+    div.reservation_submit_popup_box>div:nth-child(1) img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    div.reservation_submit_popup_box>p
+    {width: calc(100% - 60px);
+    margin: 0 auto;
+    word-break: keep-all; text-align: center;}
+
+    div.reservation_submit_popup_box>p:nth-child(2)
+    {font-size: 22px; font-family: bold; line-height: 30px;
+    color: #222;
+    margin-bottom: 5px;}
+
+    div.reservation_submit_popup_box>p:nth-child(3)
+    {font-size: 15px; color: #555; line-height: 20px;
+    margin-bottom: 30px;}
+
+    a.back_main_btn
+    {width: calc(100% - 40px); height: 50px;
+    display: block;
+    background-color: #1f4e79;
+    border-radius: 5px;
+    margin: 0 auto;}
+
+    a.back_main_btn>p
+    {text-align: center; line-height: 50px; color: #fff;}
+
+
+
+}
+
+@media all and (max-width: 600px)
+{   
+     /*비주얼 배너*/
+    div.visual_sub_banner
+    {width: 100%; height: 200px;
+    overflow: hidden;
+    position: relative;}
+
+    /*비주얼 배너*/
+    div.visual_sub_banner img
+    {width: 100%; height: 100%;
+    object-fit: cover;
+    transition: all 2s;
+    transform: scale(1.2);}
+
+    p.visual_sub_text
+    {width: 90%;
+    position: absolute;
+    top: calc(50% + 5px); left: 5%;
+    text-align: center;
+    opacity: 0;
+    transition: all 2s;
+    word-break: keep-all;
+    font-family: bold; color: #fff;
+    font-size: 24px; line-height: 30px;}
+
+    
+    /*큰 타이틀*/
+    div.health_screening_reservation_title>p
+    {width: 100%;
+    text-align: center;}
+
+    /*예약자 이름*/
+    #patient_information_name_first, #patient_information_name_last
+    {width: 100%; height: 40px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    outline: none; font-size: 14px;
+    float: inherit;
+    background: #fff; text-indent: 5px; color: #222;
+    font-family: 'Pretendard' !important;}
+
+    #patient_information_name_first
+    {margin-right: 0;
+    margin-bottom: 10px;}
+
+    /*동반자 이름*/
+    #appointment_health_first_name, #appointment_health_Last_name
+    {width: 100%; height: 40px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    outline: none; font-size: 14px;
+    float: inherit;
+    background: #fff; text-indent: 5px; color: #222;
+    font-family: 'Pretendard' !important;}
+
+    #appointment_health_first_name
+    {margin-right: 0;
+    margin-bottom: 10px;}
+
+    /*버튼*/
+    #reservation_submit_btn
+    {width: 100%; height: 50px;
+    border-radius: 5px;
+    font-size: 15px;
+    border: none; background-color: #51b8ff; color: #fff;
+    font-family: 'Pretendard' !important; text-align: center; line-height: 50px;
+    margin-left: 0; margin-right: 0;}
+
+
+
+     /*팝업창*/
+    div.reservation_submit_popup_ex
+    {width: 100%; height: 100vh;
+    background-color: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(2px);
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+
+    div.reservation_submit_popup_box
+    {width: 90%;
+    border-radius: 5px;
+    padding-top: 30px; padding-bottom: 30px;
+    background-color: #fff;}
+
+    div.reservation_submit_popup_box>div:nth-child(1)
+    {width: 60px; height: 60px;
+    margin: 0 auto;
+    margin-bottom: 10px;}
+
+    div.reservation_submit_popup_box>div:nth-child(1) img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    div.reservation_submit_popup_box>p
+    {width: 90%;
+    margin: 0 auto;
+    word-break: keep-all; text-align: center;}
+
+    div.reservation_submit_popup_box>p:nth-child(2)
+    {font-size: 18px; font-family: bold; line-height: 25px;
+    color: #222;
+    margin-bottom: 5px;}
+
+    div.reservation_submit_popup_box>p:nth-child(3)
+    {font-size: 15px; color: #555; line-height: 20px;
+    margin-bottom: 30px;}
+
+    a.back_main_btn
+    {width: 90%; height: 50px;
+    display: block;
+    background-color: #1f4e79;
+    border-radius: 5px; 
+    margin: 0 auto;}
+
+    a.back_main_btn>p
+    {text-align: center; line-height: 50px; color: #fff; font-size: 15px;}
+}

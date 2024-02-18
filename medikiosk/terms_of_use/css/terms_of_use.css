@@ -1,0 +1,1331 @@
+* {margin: 0; padding: 0;}
+li {list-style: none;}
+a {text-decoration: none;}
+img {display: block;}
+
+*::-webkit-scrollbar {
+    display: none; /* 크롬, 사파리, 오페라, 엣지 */
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'min_bold';
+    font-weight: 600;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'bold';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.ttf') format("truetype");
+    font-display: swap;
+}
+
+body {font-family: 'Pretendard'; line-height: 16px;}
+
+p {margin-bottom: 0;}
+
+ul {margin: 0; padding: 0;}
+
+input:not([type]), input[type="text"], input[type="password"], 
+input[type="date"], input[type="datetime"], 
+input[type="datetime-local"], input[type="month"], 
+input[type="week"], input[type="email"], input[type="number"], 
+input[type="search"], input[type="tel"], input[type="time"], 
+input[type="url"], input[type="color"], textarea
+{box-shadow: none;
+background-color: #fff;
+padding: 0;
+margin-bottom: 0;
+outline: none;}
+
+input[type="checkbox"]
+{margin-bottom: 0;}
+
+input[type="checkbox"]+label, input[type="radio"]+label 
+{margin: 0;}
+
+ul li ol
+{margin: 0; padding: 0;}
+
+ul li ol ul
+{margin: 0; padding: 0;}
+
+ul li ul
+{margin: 0; padding: 0;}
+
+@media all and (min-width: 1420px)
+{
+     /*이용약관*/
+    div.terms_of_use_ex
+    {width: 1400px;
+    margin: 150px auto;
+    margin-top: 239.44px;}
+
+    div.terms_of_use_title
+    {width: 100%;
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #ddd; box-sizing: border-box;}
+
+    div.terms_of_use_title>p
+    {width: 100%;
+    text-align: center;
+    font-size: 28px; font-family: bold; color: #000; line-height: 30px;}
+
+    /*컨텐츠 박스*/
+    div.terms_of_use_contents_ex
+    {width: 100%;}
+
+    ul.terms_of_use_contents
+    {width: 100%;}
+
+    ul.terms_of_use_contents>li 
+    {width: 100%;
+    margin-bottom: 30px;}
+
+    ul.terms_of_use_contents>li:last-child
+    {margin-bottom: 0;}
+    
+    /*제 1장*/
+    li.terms_of_use_01_ex>p
+    {width: 100%;
+    color: #000;
+    font-size: 20px; word-break: keep-all;
+    font-family: 'min_bold'; line-height: 25px;}
+
+    ol.terms_of_use_01
+    {margin-top: 15px;}
+
+    ol.terms_of_use_01>li
+    {margin-bottom: 10px;}
+
+    ol.terms_of_use_01>li:last-child
+    {margin-bottom: 0;}
+
+    ol.terms_of_use_01>li>p
+    {width: 100%;
+    font-family: 'min_bold'; line-height: 25px;
+    color: #333; word-break: keep-all;
+    margin-bottom: 5px;}
+
+    ol.terms_of_use_01>li>ul
+    {width: 100%;}
+
+    ol.terms_of_use_01>li>ul>li
+    {width: 100%;}
+
+    ol.terms_of_use_01>li>ul>li>p
+    {width: 100%;
+    word-break: keep-all; line-height: 30px;
+    color: #555;}
+
+    ol.terms_of_use_01_min_box
+    {width: 100%;
+    margin-top: 5px;}
+
+    ol.terms_of_use_01_min_box>li
+    {width: calc(100% - 15px);
+    margin-left: 15px;
+    list-style: decimal;}
+
+    ol.terms_of_use_01_min_box>li::marker
+    {font-size: 15px; color: #777;}
+
+    ol.terms_of_use_01_min_box>li>p
+    {width: 100%;
+    word-break: keep-all;
+    font-size: 15px; line-height: 25px; color: #777;}
+
+    /*제 2장*/
+    li.terms_of_use_02_ex>p
+    {width: 100%;
+    color: #000;
+    font-size: 20px;
+    font-family: 'min_bold'; line-height: 25px;
+    word-break: keep-all;}
+
+    li.terms_of_use_02_ex>ul>li
+    {width: 100%;
+    margin-top: 15px;}
+
+    li.terms_of_use_02_ex>ul>li>p
+    {width: 100%;
+    font-family: 'min_bold'; line-height: 25px;
+    color: #333;
+    margin-bottom: 5px;
+    word-break: keep-all;}
+
+    ol.terms_of_use_02_min_box_01
+    {width: 100%;}
+
+    ol.terms_of_use_02_min_box_01>li
+    {width: calc(100% - 15px);
+    margin-left: 15px;
+    list-style: decimal;}
+
+    ol.terms_of_use_02_min_box_01>li::marker
+    {line-height: 30px; color: #333;}
+    
+    ol.terms_of_use_02_min_box_01>li>p
+    {width: 100%;
+    line-height: 30px; color: #333;
+    word-break: keep-all;}
+
+    ol.terms_of_use_02_min_box_02
+    {width: 100%;
+    margin-top: 5px;}
+
+    ol.terms_of_use_02_min_box_02>li
+    {width: calc(100% - 15px);
+    list-style: disc;
+    margin-left: 15px;}
+
+    ol.terms_of_use_02_min_box_02>li::marker
+    {line-height: 25px; color: #777; font-size: 15px;}
+
+    ol.terms_of_use_02_min_box_02>li>p
+    {width: 100%;
+    word-break: keep-all;
+    font-size: 15px; line-height: 25px;
+    color: #777;}
+
+    /*제 3장*/
+    li.terms_of_use_03_ex>p
+    {width: 100%;
+    color: #000;
+    font-size: 20px;
+    font-family: 'min_bold'; line-height: 25px;
+    word-break: keep-all;}
+
+    li.terms_of_use_03_ex>ul>li
+    {width: 100%;
+    margin-top: 15px;}
+
+    li.terms_of_use_03_ex>ul>li>p
+    {width: 100%;
+    font-family: 'min_bold'; line-height: 25px;
+    color: #333;
+    margin-bottom: 5px;
+    word-break: keep-all;}
+
+    ol.terms_of_use_03_min_box_01
+    {width: 100%;}
+
+    ol.terms_of_use_03_min_box_01>li
+    {width: calc(100% - 15px);
+    margin-left: 15px;
+    list-style: decimal;}
+
+    ol.terms_of_use_03_min_box_01>li::marker
+    {line-height: 30px; color: #333;}
+
+    ol.terms_of_use_03_min_box_01>li>p
+    {width: 100%;
+    line-height: 30px; color: #333;}
+
+    ol.terms_of_use_03_min_box_02
+    {width: 100%;}
+
+    ol.terms_of_use_03_min_box_02>li>p
+    {width: 100%;
+    line-height: 30px; color: #333;}
+
+    ol.terms_of_use_03_min_box_03
+    {width: 100%;
+    margin-top: 5px;}
+
+    ol.terms_of_use_03_min_box_03>li
+    {width: calc(100% - 15px);
+    list-style: decimal;
+    margin-left: 15px;}
+
+    ol.terms_of_use_03_min_box_03>li::marker
+    {line-height: 25px; color: #777; font-size: 15px;}
+
+    ol.terms_of_use_03_min_box_03>li>p
+    {width: 100%;
+    word-break: keep-all;
+    font-size: 15px; line-height: 25px;
+    color: #777;}
+
+    ol.terms_of_use_03_min_box_04
+    {width: 100%;
+    margin-top: 5px;}
+
+    ol.terms_of_use_03_min_box_04>li
+    {width: calc(100% - 15px);
+    margin-left: 15px;
+    list-style: decimal;}
+
+    ol.terms_of_use_03_min_box_04>li::marker
+    {color: #333; line-height: 30px;}
+
+    ol.terms_of_use_03_min_box_04>li>p
+    {word-break: keep-all;
+    color: #333; line-height: 30px;}
+
+    ol.terms_of_use_03_min_box_05
+    {width: 100%;
+    margin-top: 5px; margin-bottom: 5px;}
+
+    ol.terms_of_use_03_min_box_05>li
+    {width: calc(100% - 15px);
+    list-style: disc;
+    margin-left: 15px;}
+
+    ol.terms_of_use_03_min_box_05>li::marker
+    {color: #777; font-size: 15px; line-height: 25px;}
+
+    ol.terms_of_use_03_min_box_05>li>p
+    {width: 100%;
+    word-break: keep-all;
+    font-size: 15px; line-height: 25px;
+    color: #777;}
+
+    /*4장*/
+    li.terms_of_use_04_ex>p
+    {width: 100%;
+    color: #000;
+    font-size: 20px;
+    font-family: 'min_bold'; line-height: 25px;
+    word-break: keep-all;}
+
+    ol.terms_of_use_04_list_ex
+    {width: 100%;
+    margin-top: 15px;}
+
+    ol.terms_of_use_04_list_ex>li
+    {margin-bottom: 15px;}
+
+    ol.terms_of_use_04_list_ex>li:last-child
+    {margin-bottom: 0;}
+
+    /*4장 1조*/
+    li.terms_of_use_04_list_ex_01
+    {width: 100%;}
+
+    li.terms_of_use_04_list_ex_01>p
+    {width: 100%;
+    line-height: 25px; font-family: 'min_bold'; color: #333;
+    word-break: keep-all;}
+
+    li.terms_of_use_04_list_ex_01>ol
+    {width: 100%;
+    margin-top: 5px;}
+
+    li.terms_of_use_04_list_ex_01>ol>li
+    {width: calc(100% - 15px);
+    margin-left: 15px;
+    list-style: decimal;}
+
+    li.terms_of_use_04_list_ex_01>ol>li::marker
+    {color: #333; line-height: 30px;}
+
+    li.terms_of_use_04_list_ex_01>ol>li>p
+    {word-break: keep-all;
+    color: #333; line-height: 30px;}
+
+    /*4장 2조*/
+    li.terms_of_use_04_list_ex_02
+    {width: 100%;}
+
+    li.terms_of_use_04_list_ex_02>p
+    {width: 100%;
+    line-height: 25px; font-family: 'min_bold'; color: #333;
+    word-break: keep-all;}
+
+    li.terms_of_use_04_list_ex_02>ol
+    {width: 100%;
+    margin-top: 5px;}
+
+    li.terms_of_use_04_list_ex_02>ol>li
+    {width: calc(100% - 15px);
+    margin-left: 15px;
+    list-style: decimal;}
+
+    li.terms_of_use_04_list_ex_02>ol>li::marker
+    {color: #333; line-height: 30px;}
+
+    li.terms_of_use_04_list_ex_02>ol>li>p
+    {word-break: keep-all;
+    color: #333; line-height: 30px;}
+
+    li.terms_of_use_04_list_ex_02>ol>li>ol
+    {width: 100%;
+    margin-top: 5px; margin-bottom: 5px;}
+
+    li.terms_of_use_04_list_ex_02>ol>li>ol>li
+    {width: calc(100% - 15px);
+    list-style: disc;
+    margin-left: 15px;}
+
+    li.terms_of_use_04_list_ex_02>ol>li>ol>li::marker
+    {color: #777; font-size: 15px; line-height: 25px;}
+
+    li.terms_of_use_04_list_ex_02>ol>li>ol>li>p
+    {width: 100%;
+    word-break: keep-all;
+    font-size: 15px; line-height: 25px;
+    color: #777;}
+
+     /*5장*/
+    li.terms_of_use_05_ex>p
+    {width: 100%;
+    color: #000;
+    font-size: 20px;
+    font-family: 'min_bold'; line-height: 25px;
+    word-break: keep-all;}
+
+    li.terms_of_use_05_ex>ol
+    {width: 100%;
+    margin-top: 15px;}
+
+    li.terms_of_use_05_ex>ol>li
+    {margin-bottom: 15px;}
+
+    li.terms_of_use_05_ex>ol>li:last-child
+    {margin-bottom: 0;}
+
+    /*5장 1조*/
+    li.terms_of_use_05_list_01
+    {width: 100%;}
+
+    li.terms_of_use_05_list_01>p
+    {width: 100%;
+    line-height: 25px; font-family: 'min_bold'; color: #333;
+    word-break: keep-all;}
+
+    li.terms_of_use_05_list_01>ol
+    {width: 100%;
+    margin-top: 5px;}
+
+    li.terms_of_use_05_list_01>ol>li
+    {width: calc(100% - 15px);
+    margin-left: 15px;
+    list-style: decimal;}
+
+    li.terms_of_use_05_list_01>ol>li::marker
+    {color: #333; line-height: 30px;}
+
+    li.terms_of_use_05_list_01>ol>li>p
+    {word-break: keep-all;
+    color: #333; line-height: 30px;}
+
+    li.terms_of_use_05_list_01>ol>li>ol
+    {width: 100%;
+    margin-top: 5px;}
+
+    li.terms_of_use_05_list_01>ol>li>ol>li
+    {width: calc(100% - 15px);
+    list-style: disc;
+    margin-left: 15px;}
+
+    li.terms_of_use_05_list_01>ol>li>ol>li::marker
+    {color: #777; font-size: 15px; line-height: 25px;}
+
+    li.terms_of_use_05_list_01>ol>li>ol>li>p
+    {width: 100%;
+    word-break: keep-all;
+    font-size: 15px; line-height: 25px;
+    color: #777;}
+
+
+    /*5장 2조*/
+    li.terms_of_use_05_list_02
+    {width: 100%;}
+
+    li.terms_of_use_05_list_02>p
+    {width: 100%;
+    line-height: 25px; font-family: 'min_bold'; color: #333;
+    word-break: keep-all;}
+
+    li.terms_of_use_05_list_02>ol
+    {width: 100%;
+    margin-top: 5px;}
+
+    li.terms_of_use_05_list_02>ol>li
+    {width: calc(100% - 15px);
+    margin-left: 15px;
+    list-style: decimal;}
+
+    li.terms_of_use_05_list_02>ol>li::marker
+    {color: #333; line-height: 30px;}
+
+    li.terms_of_use_05_list_02>ol>li>p
+    {word-break: keep-all;
+    color: #333; line-height: 30px;}
+
+    /*6장*/
+    li.terms_of_use_06_ex>p
+    {width: 100%;
+    color: #000;
+    font-size: 20px;
+    font-family: 'min_bold'; line-height: 25px;
+    word-break: keep-all;}
+
+    li.terms_of_use_06_ex>ol
+    {width: 100%;
+    margin-top: 15px;}
+
+    li.terms_of_use_06_ex>ol>li 
+    {width: 100%;}
+
+    li.terms_of_use_06_ex>ol>li>p
+    {width: 100%;
+    word-break: keep-all; line-height: 30px;
+    color: #333;}
+   
+}
+
+@media all and (min-width: 769px) and (max-width : 1419px)
+{
+    /*이용약관*/
+    div.terms_of_use_ex
+    {width: 90%;
+    margin: 150px auto;
+    margin-top: 239.44px;}
+
+    div.terms_of_use_title
+    {width: 100%;
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #ddd; box-sizing: border-box;}
+
+    div.terms_of_use_title>p
+    {width: 100%;
+    text-align: center;
+    font-size: 28px; font-family: bold; color: #000; line-height: 30px;}
+
+    /*컨텐츠 박스*/
+    div.terms_of_use_contents_ex
+    {width: 100%;}
+
+    ul.terms_of_use_contents
+    {width: 100%;}
+
+    ul.terms_of_use_contents>li 
+    {width: 100%;
+    margin-bottom: 30px;}
+
+    ul.terms_of_use_contents>li:last-child
+    {margin-bottom: 0;}
+    
+    /*제 1장*/
+    li.terms_of_use_01_ex>p
+    {width: 100%;
+    color: #000;
+    font-size: 20px; word-break: keep-all;
+    font-family: 'min_bold'; line-height: 25px;}
+
+    ol.terms_of_use_01
+    {margin-top: 15px;}
+
+    ol.terms_of_use_01>li
+    {margin-bottom: 10px;}
+
+    ol.terms_of_use_01>li:last-child
+    {margin-bottom: 0;}
+
+    ol.terms_of_use_01>li>p
+    {width: 100%;
+    font-family: 'min_bold'; line-height: 25px;
+    color: #333; word-break: keep-all;
+    margin-bottom: 5px;}
+
+    ol.terms_of_use_01>li>ul
+    {width: 100%;}
+
+    ol.terms_of_use_01>li>ul>li
+    {width: 100%;}
+
+    ol.terms_of_use_01>li>ul>li>p
+    {width: 100%;
+    word-break: keep-all; line-height: 30px;
+    color: #555;}
+
+    ol.terms_of_use_01_min_box
+    {width: 100%;
+    margin-top: 5px;}
+
+    ol.terms_of_use_01_min_box>li
+    {width: calc(100% - 15px);
+    margin-left: 15px;
+    list-style: decimal;}
+
+    ol.terms_of_use_01_min_box>li::marker
+    {font-size: 15px; color: #777;}
+
+    ol.terms_of_use_01_min_box>li>p
+    {width: 100%;
+    word-break: keep-all;
+    font-size: 15px; line-height: 25px; color: #777;}
+
+    /*제 2장*/
+    li.terms_of_use_02_ex>p
+    {width: 100%;
+    color: #000;
+    font-size: 20px;
+    font-family: 'min_bold'; line-height: 25px;
+    word-break: keep-all;}
+
+    li.terms_of_use_02_ex>ul>li
+    {width: 100%;
+    margin-top: 15px;}
+
+    li.terms_of_use_02_ex>ul>li>p
+    {width: 100%;
+    font-family: 'min_bold'; line-height: 25px;
+    color: #333;
+    margin-bottom: 5px;
+    word-break: keep-all;}
+
+    ol.terms_of_use_02_min_box_01
+    {width: 100%;}
+
+    ol.terms_of_use_02_min_box_01>li
+    {width: calc(100% - 15px);
+    margin-left: 15px;
+    list-style: decimal;}
+
+    ol.terms_of_use_02_min_box_01>li::marker
+    {line-height: 30px; color: #333;}
+    
+    ol.terms_of_use_02_min_box_01>li>p
+    {width: 100%;
+    line-height: 30px; color: #333;
+    word-break: keep-all;}
+
+    ol.terms_of_use_02_min_box_02
+    {width: 100%;
+    margin-top: 5px;}
+
+    ol.terms_of_use_02_min_box_02>li
+    {width: calc(100% - 15px);
+    list-style: disc;
+    margin-left: 15px;}
+
+    ol.terms_of_use_02_min_box_02>li::marker
+    {line-height: 25px; color: #777; font-size: 15px;}
+
+    ol.terms_of_use_02_min_box_02>li>p
+    {width: 100%;
+    word-break: keep-all;
+    font-size: 15px; line-height: 25px;
+    color: #777;}
+
+    /*제 3장*/
+    li.terms_of_use_03_ex>p
+    {width: 100%;
+    color: #000;
+    font-size: 20px;
+    font-family: 'min_bold'; line-height: 25px;
+    word-break: keep-all;}
+
+    li.terms_of_use_03_ex>ul>li
+    {width: 100%;
+    margin-top: 15px;}
+
+    li.terms_of_use_03_ex>ul>li>p
+    {width: 100%;
+    font-family: 'min_bold'; line-height: 25px;
+    color: #333;
+    margin-bottom: 5px;
+    word-break: keep-all;}
+
+    ol.terms_of_use_03_min_box_01
+    {width: 100%;}
+
+    ol.terms_of_use_03_min_box_01>li
+    {width: calc(100% - 15px);
+    margin-left: 15px;
+    list-style: decimal;}
+
+    ol.terms_of_use_03_min_box_01>li>p
+    {width: 100%;
+    line-height: 30px; color: #333;}
+
+    ol.terms_of_use_03_min_box_01>li::marker
+    {line-height: 30px; color: #333;}
+
+    ol.terms_of_use_03_min_box_02
+    {width: 100%;}
+
+    ol.terms_of_use_03_min_box_02>li>p
+    {width: 100%;
+    line-height: 30px; color: #333;
+    word-break: keep-all;}
+
+    ol.terms_of_use_03_min_box_03
+    {width: 100%;
+    margin-top: 5px;}
+
+    ol.terms_of_use_03_min_box_03>li
+    {width: calc(100% - 15px);
+    list-style: decimal;
+    margin-left: 15px;}
+
+    ol.terms_of_use_03_min_box_03>li::marker
+    {line-height: 25px; color: #777; font-size: 15px;}
+
+    ol.terms_of_use_03_min_box_03>li>p
+    {width: 100%;
+    word-break: keep-all;
+    font-size: 15px; line-height: 25px;
+    color: #777;}
+
+    ol.terms_of_use_03_min_box_04
+    {width: 100%;
+    margin-top: 5px;}
+
+    ol.terms_of_use_03_min_box_04>li
+    {width: calc(100% - 15px);
+    margin-left: 15px;
+    list-style: decimal;}
+
+    ol.terms_of_use_03_min_box_04>li::marker
+    {color: #333; line-height: 30px;}
+
+    ol.terms_of_use_03_min_box_04>li>p
+    {word-break: keep-all;
+    color: #333; line-height: 30px;}
+
+    ol.terms_of_use_03_min_box_05
+    {width: 100%;
+    margin-top: 5px; margin-bottom: 5px;}
+
+    ol.terms_of_use_03_min_box_05>li
+    {width: calc(100% - 15px);
+    list-style: disc;
+    margin-left: 15px;}
+
+    ol.terms_of_use_03_min_box_05>li::marker
+    {color: #777; font-size: 15px; line-height: 25px;}
+
+    ol.terms_of_use_03_min_box_05>li>p
+    {width: 100%;
+    word-break: keep-all;
+    font-size: 15px; line-height: 25px;
+    color: #777;}
+
+    /*4장*/
+    li.terms_of_use_04_ex>p
+    {width: 100%;
+    color: #000;
+    font-size: 20px;
+    font-family: 'min_bold'; line-height: 25px;
+    word-break: keep-all;}
+
+    ol.terms_of_use_04_list_ex
+    {width: 100%;
+    margin-top: 15px;}
+
+    ol.terms_of_use_04_list_ex>li
+    {margin-bottom: 15px;}
+
+    ol.terms_of_use_04_list_ex>li:last-child
+    {margin-bottom: 0;}
+
+    /*4장 1조*/
+    li.terms_of_use_04_list_ex_01
+    {width: 100%;}
+
+    li.terms_of_use_04_list_ex_01>p
+    {width: 100%;
+    line-height: 25px; font-family: 'min_bold'; color: #333;
+    word-break: keep-all;}
+
+    li.terms_of_use_04_list_ex_01>ol
+    {width: 100%;
+    margin-top: 5px;}
+
+    li.terms_of_use_04_list_ex_01>ol>li
+    {width: calc(100% - 15px);
+    margin-left: 15px;
+    list-style: decimal;}
+
+    li.terms_of_use_04_list_ex_01>ol>li::marker
+    {color: #333; line-height: 30px;}
+
+    li.terms_of_use_04_list_ex_01>ol>li>p
+    {word-break: keep-all;
+    color: #333; line-height: 30px;}
+
+    /*4장 2조*/
+    li.terms_of_use_04_list_ex_02
+    {width: 100%;}
+
+    li.terms_of_use_04_list_ex_02>p
+    {width: 100%;
+    line-height: 25px; font-family: 'min_bold'; color: #333;
+    word-break: keep-all;}
+
+    li.terms_of_use_04_list_ex_02>ol
+    {width: 100%;
+    margin-top: 5px;}
+
+    li.terms_of_use_04_list_ex_02>ol>li
+    {width: calc(100% - 15px);
+    margin-left: 15px;
+    list-style: decimal;}
+
+    li.terms_of_use_04_list_ex_02>ol>li::marker
+    {color: #333; line-height: 30px;}
+
+    li.terms_of_use_04_list_ex_02>ol>li>p
+    {word-break: keep-all;
+    color: #333; line-height: 30px;}
+
+    li.terms_of_use_04_list_ex_02>ol>li>ol
+    {width: 100%;
+    margin-top: 5px; margin-bottom: 5px;}
+
+    li.terms_of_use_04_list_ex_02>ol>li>ol>li
+    {width: calc(100% - 15px);
+    list-style: disc;
+    margin-left: 15px;}
+
+    li.terms_of_use_04_list_ex_02>ol>li>ol>li::marker
+    {color: #777; font-size: 15px; line-height: 25px;}
+
+    li.terms_of_use_04_list_ex_02>ol>li>ol>li>p
+    {width: 100%;
+    word-break: keep-all;
+    font-size: 15px; line-height: 25px;
+    color: #777;}
+
+     /*5장*/
+    li.terms_of_use_05_ex>p
+    {width: 100%;
+    color: #000;
+    font-size: 20px;
+    font-family: 'min_bold'; line-height: 25px;
+    word-break: keep-all;}
+
+    li.terms_of_use_05_ex>ol
+    {width: 100%;
+    margin-top: 15px;}
+
+    li.terms_of_use_05_ex>ol>li
+    {margin-bottom: 15px;}
+
+    li.terms_of_use_05_ex>ol>li:last-child
+    {margin-bottom: 0;}
+
+    /*5장 1조*/
+    li.terms_of_use_05_list_01
+    {width: 100%;}
+
+    li.terms_of_use_05_list_01>p
+    {width: 100%;
+    line-height: 25px; font-family: 'min_bold'; color: #333;
+    word-break: keep-all;}
+
+    li.terms_of_use_05_list_01>ol
+    {width: 100%;
+    margin-top: 5px;}
+
+    li.terms_of_use_05_list_01>ol>li
+    {width: calc(100% - 15px);
+    margin-left: 15px;
+    list-style: decimal;}
+
+    li.terms_of_use_05_list_01>ol>li::marker
+    {color: #333; line-height: 30px;}
+
+    li.terms_of_use_05_list_01>ol>li>p
+    {word-break: keep-all;
+    color: #333; line-height: 30px;}
+
+    li.terms_of_use_05_list_01>ol>li>ol
+    {width: 100%;
+    margin-top: 5px;}
+
+    li.terms_of_use_05_list_01>ol>li>ol>li
+    {width: calc(100% - 15px);
+    list-style: disc;
+    margin-left: 15px;}
+
+    li.terms_of_use_05_list_01>ol>li>ol>li::marker
+    {color: #777; font-size: 15px; line-height: 25px;}
+
+    li.terms_of_use_05_list_01>ol>li>ol>li>p
+    {width: 100%;
+    word-break: keep-all;
+    font-size: 15px; line-height: 25px;
+    color: #777;}
+
+
+    /*5장 2조*/
+    li.terms_of_use_05_list_02
+    {width: 100%;}
+
+    li.terms_of_use_05_list_02>p
+    {width: 100%;
+    line-height: 25px; font-family: 'min_bold'; color: #333;
+    word-break: keep-all;}
+
+    li.terms_of_use_05_list_02>ol
+    {width: 100%;
+    margin-top: 5px;}
+
+    li.terms_of_use_05_list_02>ol>li
+    {width: calc(100% - 15px);
+    margin-left: 15px;
+    list-style: decimal;}
+
+    li.terms_of_use_05_list_02>ol>li::marker
+    {color: #333; line-height: 30px;}
+
+    li.terms_of_use_05_list_02>ol>li>p
+    {word-break: keep-all;
+    color: #333; line-height: 30px;}
+
+    /*6장*/
+    li.terms_of_use_06_ex>p
+    {width: 100%;
+    color: #000;
+    font-size: 20px;
+    font-family: 'min_bold'; line-height: 25px;
+    word-break: keep-all;}
+
+    li.terms_of_use_06_ex>ol
+    {width: 100%;
+    margin-top: 15px;}
+
+    li.terms_of_use_06_ex>ol>li 
+    {width: 100%;}
+
+    li.terms_of_use_06_ex>ol>li>p
+    {width: 100%;
+    word-break: keep-all; line-height: 30px;
+    color: #333;}
+}
+
+@media all and (min-width: 769px) and (max-width: 1279px)
+{
+     /*이용약관*/
+     div.terms_of_use_ex
+     {width: 90%;
+     margin: 150px auto;
+     margin-top: 175px;}
+}
+
+@media all and (max-width: 768px)
+{
+    /*이용약관*/
+    div.terms_of_use_ex
+    {width: 90%;
+    margin: 0 auto;
+    margin-top: 120px;
+    margin-bottom: 80px;}
+
+    div.terms_of_use_title
+    {width: 100%;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ddd; box-sizing: border-box;}
+
+    div.terms_of_use_title>p
+    {width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    word-break: keep-all;
+    font-size: 22px; font-family: bold; color: #000; line-height: 30px;}
+
+    /*이용약관 폼*/
+    div.terms_of_use_contents_ex
+    {width: 100%;}
+
+    ul.terms_of_use_contents
+    {width: 100%;}
+
+    ul.terms_of_use_contents>li 
+    {margin-bottom: 30px;}
+
+    ul.terms_of_use_contents>li:last-child
+    {margin-bottom: 0;}
+
+    /*제 1장*/
+    li.terms_of_use_01_ex>p
+    {width: 100%;
+    word-break: keep-all;
+    font-size: 18px;
+    line-height: 25px; font-family: bold; color: #000;}
+
+    ol.terms_of_use_01
+    {width: 100%;
+    margin-top: 15px;}
+
+    ol.terms_of_use_01>li
+    {width: 100%;
+    margin-bottom: 10px;}
+
+    ol.terms_of_use_01>li:last-child
+    {margin-bottom: 0;}
+
+    ol.terms_of_use_01>li>p:nth-child(1)
+    {width: 100%;
+    word-break: keep-all;
+    line-height: 25px; font-family: 'min_bold'; color: #333;}
+
+    ol.terms_of_use_01>li>ul:nth-child(2)
+    {width: 100%;
+    margin-top: 5px;}
+
+    ol.terms_of_use_01>li>ul:nth-child(2)>li
+    {width: 100%;}
+
+    ol.terms_of_use_01>li>ul:nth-child(2)>li>p
+    {width: 100%;
+    line-height: 25px; font-size: 15px;
+    word-break: keep-all;}
+
+    ol.terms_of_use_01_min_box
+    {width: 100%;
+    margin-top: 5px;}
+
+    ol.terms_of_use_01_min_box>li
+    {width: calc(100% - 15px);
+    margin-left: 15px;
+    list-style: decimal;}
+
+    ol.terms_of_use_01_min_box>li::marker
+    {font-size: 14px; line-height: 25px;
+    color: #777;}
+
+    ol.terms_of_use_01_min_box>li>p
+    {width: 100%;
+    font-size: 14px; line-height: 25px;
+    color: #777; word-break: keep-all;}
+
+    /*2장*/
+    li.terms_of_use_02_ex>p 
+    {width: 100%;
+    word-break: keep-all;
+    font-size: 18px;
+    line-height: 25px; font-family: bold; color: #000;}
+
+    li.terms_of_use_02_ex>ul
+    {width: 100%;
+    margin-top: 15px;}
+
+    li.terms_of_use_02_ex>ul>li
+    {margin-bottom: 10px;}
+
+    li.terms_of_use_02_ex>ul>li:last-child
+    {margin-bottom: 0;}
+
+    li.terms_of_use_02_ex>ul>li>p:nth-child(1)
+    {width: 100%;
+    word-break: keep-all;
+    line-height: 25px; font-family: 'min_bold'; color: #333;}
+    
+    li.terms_of_use_02_ex>ul>li>ol
+    {width: 100%;
+    margin-top: 5px;}
+
+    li.terms_of_use_02_ex>ul>li>ol>li
+    {width: calc(100% - 15px);
+    margin-left: 15px;
+    list-style: decimal;}
+
+    li.terms_of_use_02_ex>ul>li>ol>li::marker
+    {font-size: 15px; line-height: 25px;
+    color: #333;}
+
+    li.terms_of_use_02_ex>ul>li>ol>li>p
+    {width: 100%;
+    font-size: 15px; line-height: 25px;
+    color: #333; word-break: keep-all;}
+
+    ol.terms_of_use_02_min_box_02
+    {width: 100%;
+    margin-top: 5px;}
+
+    ol.terms_of_use_02_min_box_02>li
+    {width: calc(100% - 15px);
+    margin-left: 15px;
+    list-style: disc;}
+
+    ol.terms_of_use_02_min_box_02>li::marker
+    {font-size: 14px; line-height: 25px; color: #777;}
+
+    ol.terms_of_use_02_min_box_02>li>p
+    {width: 100%;
+    word-break: keep-all;
+    font-size: 14px; line-height: 25px; color: #777;}
+
+    /*3장*/
+    li.terms_of_use_03_ex>p 
+    {width: 100%;
+    word-break: keep-all;
+    font-size: 18px;
+    line-height: 25px; font-family: bold; color: #000;}
+
+    li.terms_of_use_03_ex>ul
+    {width: 100%;
+    margin-top: 15px;}
+
+    li.terms_of_use_03_ex>ul>li
+    {width: 100%;
+    margin-bottom: 10px;}
+
+    li.terms_of_use_03_ex>ul>li:last-child
+    {margin-bottom: 0;}
+
+    li.terms_of_use_03_ex>ul>li>p:nth-child(1)
+    {width: 100%;
+    word-break: keep-all;
+    line-height: 25px; font-family: 'min_bold'; color: #333;}
+
+    li.terms_of_use_03_ex>ul>li>ol
+    {width: 100%;
+    margin-top: 5px;}
+
+    ol.terms_of_use_03_min_box_01>li
+    {width: calc(100% - 15px);
+    margin-left: 15px;
+    list-style: decimal;}
+
+    ol.terms_of_use_03_min_box_01>li::marker
+    {font-size: 15px; color: #333; line-height: 25px;}
+
+    ol.terms_of_use_03_min_box_01>li>p
+    {width: 100%;
+    font-size: 15px; line-height: 25px;
+    word-break: keep-all;
+    color: #333;}
+
+    ol.terms_of_use_03_min_box_02>li
+    {width: 100%;}
+
+    ol.terms_of_use_03_min_box_02>li>p
+    {width: 100%;
+    font-size: 15px; line-height: 25px;
+    word-break: keep-all;
+    color: #333;}
+
+    ol.terms_of_use_03_min_box_02>li
+    {width: 100%;}
+
+    ol.terms_of_use_03_min_box_02>li>ol
+    {width: 100%;
+    margin-top: 5px;}
+
+    ol.terms_of_use_03_min_box_02>li>ol>li
+    {width: calc(100% - 15px);
+    margin-left: 15px;
+    list-style: decimal;}
+
+    ol.terms_of_use_03_min_box_02>li>ol>li::marker
+    {font-size: 14px; line-height: 25px; color: #777;}
+
+    ol.terms_of_use_03_min_box_02>li>ol>li>p
+    {width: 100%;
+    font-size: 14px; line-height: 25px;
+    color: #777; word-break: keep-all;}
+
+    ol.terms_of_use_03_min_box_04
+    {width: 100%;}
+
+    ol.terms_of_use_03_min_box_04>li
+    {width: calc(100% - 15px);
+    margin-left: 15px;
+    list-style: decimal;}
+
+    ol.terms_of_use_03_min_box_04>li::marker
+    {font-size: 15px; color: #333; line-height: 25px;}
+
+    ol.terms_of_use_03_min_box_04>li>p
+    {width: 100%;
+    font-size: 15px; line-height: 25px; color: #333;
+    word-break: keep-all;}
+
+    ol.terms_of_use_03_min_box_05
+    {width: 100%;
+    margin-top: 5px; margin-bottom: 5px;}
+
+    ol.terms_of_use_03_min_box_05>li
+    {width: calc(100% - 15px);
+    margin-left: 15px;
+    list-style: disc;}
+
+    ol.terms_of_use_03_min_box_05>li::marker
+    {font-size: 14px; color: #777; line-height: 25px;}
+
+    ol.terms_of_use_03_min_box_05>li>p
+    {width: 100%;
+    font-size: 14px; line-height: 25px; color: #777;
+    word-break: keep-all;}
+
+    /*4장*/
+    li.terms_of_use_04_ex>p 
+    {width: 100%;
+    word-break: keep-all;
+    font-size: 18px;
+    line-height: 25px; font-family: bold; color: #000;}
+
+    li.terms_of_use_04_ex>ol
+    {width: 100%;
+    margin-top: 15px;}
+
+    li.terms_of_use_04_ex>ol>li
+    {width: 100%;
+    margin-bottom: 10px;}
+
+    li.terms_of_use_04_ex>ol>li:last-child
+    {margin-bottom: 0;}
+
+    li.terms_of_use_04_ex>ol>li>p:nth-child(1)
+    {width: 100%;
+    word-break: keep-all;
+    line-height: 25px; font-family: 'min_bold'; color: #333;}
+
+    li.terms_of_use_04_ex>ol>li>ol
+    {width: 100%;
+    margin-top: 5px;}
+
+    li.terms_of_use_04_list_ex_01>ol>li
+    {width: calc(100% - 15px);
+    margin-left: 15px;
+    list-style: decimal;}
+
+    li.terms_of_use_04_list_ex_01>ol>li::marker
+    {font-size: 15px; line-height: 25px; color: #333;}
+
+    li.terms_of_use_04_list_ex_01>ol>li>p
+    {width: 100%;
+    font-size: 15px; line-height: 25px; word-break: keep-all;
+    color: #333;}
+
+    li.terms_of_use_04_list_ex_02>ol>li
+    {width: calc(100% - 15px);
+    margin-left: 15px;
+    list-style: decimal;}
+
+    li.terms_of_use_04_list_ex_02>ol>li::marker
+    {font-size: 15px; line-height: 25px; color: #333;}
+
+    li.terms_of_use_04_list_ex_02>ol>li>p
+    {width: 100%;
+    font-size: 15px; line-height: 25px; word-break: keep-all;
+    color: #333;}
+
+    li.terms_of_use_04_list_ex_02>ol>li>ol
+    {width: 100%;
+    margin-top: 5px; margin-bottom: 5px;}
+
+    li.terms_of_use_04_list_ex_02>ol>li>ol>li
+    {width: calc(100% - 15px);
+    margin-left: 15px;
+    list-style: disc;}
+
+    li.terms_of_use_04_list_ex_02>ol>li>ol>li::marker
+    {font-size: 14px; line-height: 25px; color: #555;}
+
+    li.terms_of_use_04_list_ex_02>ol>li>ol>li>p
+    {width: 100%;
+    word-break: keep-all;
+    font-size: 14px; line-height: 25px; color: #555;}
+    
+    /*5장*/
+    li.terms_of_use_05_ex>p:nth-child(1)
+    {width: 100%;
+    word-break: keep-all;
+    font-size: 18px;
+    line-height: 25px; font-family: bold; color: #000;}
+
+    li.terms_of_use_05_ex>ol
+    {width: 100%;
+    margin-top: 15px;}
+
+    li.terms_of_use_05_ex>ol>li
+    {width: 100%;
+    margin-bottom: 10px;}
+
+    li.terms_of_use_05_ex>ol>li:last-child
+    {margin-bottom: 0;}
+
+    li.terms_of_use_05_ex>ol>li>p:nth-child(1)
+    {width: 100%;
+    word-break: keep-all;
+    line-height: 25px; font-family: 'min_bold'; color: #333;}
+
+    li.terms_of_use_05_ex>ol>li>ol
+    {width: 100%;
+    margin-top: 5px;}
+
+    li.terms_of_use_05_ex>ol>li>ol>li
+    {width: calc(100% - 15px);
+    margin-left: 15px;
+    list-style: decimal;}
+
+    li.terms_of_use_05_ex>ol>li>ol>li::marker
+    {font-size: 15px; line-height: 25px; color: #333;}
+
+    li.terms_of_use_05_ex>ol>li>ol>li>p
+    {width: 100%;
+    font-size: 15px; line-height: 25px; color: #333;
+    word-break: keep-all;}
+
+    li.terms_of_use_05_ex>ol>li>ol>li>ol
+    {width: 100%;
+    margin-top: 5px;}
+
+    li.terms_of_use_05_ex>ol>li>ol>li>ol>li
+    {width: calc(100% - 15px);
+    margin-left: 15px;
+    list-style: disc;}
+
+    li.terms_of_use_05_ex>ol>li>ol>li>ol>li::marker
+    {color: #555; line-height: 25px; font-size: 14px;}
+
+    li.terms_of_use_05_ex>ol>li>ol>li>ol>li>p
+    {width: 100%;
+    word-break: keep-all;
+    font-size: 14px; line-height: 25px; color: #555;}
+
+
+    /*6장*/
+    li.terms_of_use_06_ex>p 
+    {width: 100%;
+    word-break: keep-all;
+    font-size: 18px;
+    line-height: 25px; font-family: bold; color: #000;}
+
+    li.terms_of_use_06_ex>ol
+    {width: 100%;
+    margin-top: 15px;}
+
+    li.terms_of_use_06_ex>ol>li
+    {width: 100%;}
+
+    li.terms_of_use_06_ex>ol>li>p
+    {width: 100%;
+    font-size: 15px; line-height: 25px; color: #333;
+    word-break: keep-all;}
+
+}

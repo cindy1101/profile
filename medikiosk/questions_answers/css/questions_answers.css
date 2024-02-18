@@ -1,0 +1,900 @@
+* {margin: 0; padding: 0;}
+li {list-style: none;}
+a {text-decoration: none;}
+img {display: block;}
+
+*::-webkit-scrollbar {
+    display: none; /* 크롬, 사파리, 오페라, 엣지 */
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'min_bold';
+    font-weight: 600;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'bold';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.ttf') format("truetype");
+    font-display: swap;
+}
+
+body {font-family: 'Pretendard'; line-height: 16px;}
+
+p {margin-bottom: 0;}
+
+ul {margin: 0; padding: 0;}
+
+input:not([type]), input[type="text"], input[type="password"], 
+input[type="date"], input[type="datetime"], 
+input[type="datetime-local"], input[type="month"], 
+input[type="week"], input[type="email"], input[type="number"], 
+input[type="search"], input[type="tel"], input[type="time"], 
+input[type="url"], input[type="color"], textarea
+{box-shadow: none;
+background-color: #fff;
+padding: 0;
+margin-bottom: 0;
+outline: none;}
+
+input[type="checkbox"]
+{margin-bottom: 0;}
+
+input[type="checkbox"]+label, input[type="radio"]+label 
+{margin: 0;}
+
+/*페이징버튼 제어*/
+ul.pagination
+{margin-left: 0;}
+
+ul.pagination li
+{height: fit-content;
+margin-left: 0;
+font-size: 16px;}
+
+ul.pagination li a
+{color: #222;
+padding: 5px 10px;
+border: none;
+border-radius: 0;
+text-align: center; line-height: 20px;}
+
+.page-item:not(:first-child) .page-link
+{margin-left: 0;}
+
+/*부트스트랩 클릭시 생기는 선 삭제*/
+.page-link:focus, .page-link:active 
+{outline: none;
+box-shadow: none;
+background-color: transparent !important;}
+
+.page-link:focus, .page-link:hover 
+{background-color: transparent !important;
+color: #51b8ff !important;}
+
+.page-link:focus, .page-link:active 
+{color: #51b8ff !important;
+font-family: bold;}
+
+
+@media all and (min-width: 1420px)
+{
+    /*비주얼베너*/
+    div.visual_sub_banner
+    {width: 100%; height: 350px;
+    margin-top: 139.44px;
+    overflow: hidden;
+    position: relative;}
+
+    div.visual_sub_banner img
+    {width: 100%; height: 100%;
+    object-fit: cover;
+    transition: all 2s;
+    transform: scale(1.2);}
+
+    p.visual_sub_text
+    {width: 100%;
+    position: absolute;
+    top: calc(50% - 25px); left: 0;
+    text-align: center;
+    opacity: 0;
+    transition: all 2s;
+    font-family: bold; color: #fff;
+    font-size: 42px; line-height: 50px;}
+
+    /*루트*/
+    div.nav_ex
+    {width: 100%;
+    background-color: #51b8ff;}
+
+    nav.nav_box
+    {width: 1400px;
+    margin: 0 auto;}
+
+    nav.nav_box>ul
+    {width: 100%;
+    overflow: hidden;}
+
+    nav.nav_box>ul>li
+    {float: left;}
+
+    nav.nav_box>ul>li:nth-child(1)
+    {width: 20px; height: 20px;
+    margin-top: 10px; margin-bottom: 10px;}
+    
+    nav.nav_box>ul>li:nth-child(1) img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    nav.nav_box>ul>li>p
+    {line-height: 40px;
+    color: #fff;
+    margin-left: 10px; margin-right: 10px;}
+
+    nav.nav_box>ul>li>a>p
+    {line-height: 40px;
+    color: #fff;}
+
+    /*Q&A 박스*/
+    div.questions_answers_ex
+    {width: 1400px;
+    margin: 100px auto;
+    margin-bottom: 150px;}
+
+    /*타이틀*/
+    div.questions_answers_title_ex
+    {width: 100%;
+    margin-bottom: 50px;}
+
+    div.questions_answers_title_ex>p:nth-child(1)
+    {width: 100%;
+    text-align: center; line-height: 30px;
+    font-size: 28px; color: #222;
+    font-family: 'min_bold';
+    margin-bottom: 20px;}
+
+    div.questions_answers_title_ex>p:nth-child(1)>span
+    {font-size: 16px;}
+
+    div.questions_answers_title_ex>p:nth-child(2)
+    {width: 100%;
+    text-align: center; line-height: 25px;
+    color: #8e8e8e;}
+
+    /*검색박스*/
+    div.search_question_answers_ex
+    {width: 100%;
+    overflow: hidden;
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+    border-bottom: 1px solid #222; box-sizing: border-box;}
+
+    div.search_question_answers_box
+    {width: 440px;
+    float: right;}
+
+    #search_question_answers_txt_box
+    {width: 300px; height: 40px;
+    background: #fff;
+    border: 1px solid #444; box-sizing: border-box;
+    font-family: 'Pretendard' !important;
+    float: left;
+    font-size: 15px; color: #555;
+    text-indent: 10px;
+    margin-right: 10px;
+    outline: none;}
+
+    #search_question_answers_txt_box::placeholder {color: #555;}
+
+    #search_question_answers_submit
+    {width: 80px; height: 40px;
+    border: none; outline: none;
+    background-color: #222;
+    color: #fff;
+    font-size: 15px; line-height: 40px; text-align: center;
+    float: left;
+    transition: all 0.3s;}
+
+    #search_question_answers_submit:hover
+    {background-color: #51b8ff;}
+    
+    /*라벨 박스*/
+    input[type="checkbox"].questions_answers_label
+    {display: none;}
+
+    div.questions_answers_contents_ex
+    {width: 100%;}
+
+    div.questions_answers_label_box
+    {width: 100%;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    overflow: hidden;}
+
+    div.questions_answers_label_box>label
+    {display: block;
+    width: 18.4%;
+    border-radius: 5px;
+    margin-right: 2%; margin-bottom: 20px;
+    border: 1px solid #51b8ff; box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;}
+
+    div.questions_answers_label_box>label:nth-child(5n+5)
+    {margin-right: 0;}
+
+    div.questions_answers_label_box>label>p
+    {width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 15px; padding-bottom: 15px;
+    color: #51b8ff;
+    font-size: 15px; line-height: 20px;
+    transition: all 0.3s;}
+
+
+    /*addclass*/
+    .background_color_add
+    {background-color: #51b8ff !important;}
+
+    .txt_color_add
+    {color: #fff !important;}
+
+
+    /*질문*/
+    div.questions_answers_contents_product_ex
+    {width: 100%;}
+
+    div.questions_answers_contents_product
+    {width: 100%;}
+
+    ul.fnq_quextion_box
+    {width: 100%;}
+
+    li.fna_quextion_list
+    {width: 100%;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    margin-bottom: 10px;
+    cursor: pointer;}
+
+    li.fna_quextion_list:last-child
+    {margin-bottom: 0;}
+
+    div.fna_quextion_list_box
+    {width: calc(100% - 40px);
+    margin: 0 auto;
+    padding-top: 20px; padding-bottom: 20px;
+    overflow: hidden;}
+
+    div.fna_quextion_list_box>p:nth-child(1)
+    {width: 20px;
+    float: left;
+    margin-right: 10px;
+    line-height: 25px; font-size: 18px;
+    color: #51b8ff; font-family: bold;}
+
+    div.fna_quextion_list_box>p:nth-child(2)
+    {width: calc(100% - 30px);
+    float: left;
+    line-height: 25px;
+    color: #222;}
+
+    /*해당 질문이 없을 때*/
+    p.no_questions_txt
+    {width: 100%;
+    text-align: center;
+    line-height: 20px; color: #222;
+    padding-top: 100px; padding-bottom: 100px;}
+
+    
+}
+
+@media all and (min-width: 769px) and (max-width : 1419px)
+{
+     /*비주얼베너*/
+    div.visual_sub_banner
+    {width: 100%; height: 350px;
+    margin-top: 139.44px;
+    overflow: hidden;
+    position: relative;}
+
+    div.visual_sub_banner img
+    {width: 100%; height: 100%;
+    object-fit: cover;
+    transition: all 2s;
+    transform: scale(1.2);}
+
+    p.visual_sub_text
+    {width: 100%;
+    position: absolute;
+    top: calc(50% - 25px); left: 0;
+    text-align: center;
+    opacity: 0;
+    transition: all 2s;
+    font-family: bold; color: #fff;
+    font-size: 42px; line-height: 50px;}
+
+    /*루트*/
+    div.nav_ex
+    {width: 100%;
+    background-color: #51b8ff;}
+
+    nav.nav_box
+    {width: 90%;
+    margin: 0 auto;}
+
+    nav.nav_box>ul
+    {width: 100%;
+    overflow: hidden;}
+
+    nav.nav_box>ul>li
+    {float: left;}
+
+    nav.nav_box>ul>li:nth-child(1)
+    {width: 20px; height: 20px;
+    margin-top: 10px; margin-bottom: 10px;}
+    
+    nav.nav_box>ul>li:nth-child(1) img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    nav.nav_box>ul>li>p
+    {line-height: 40px;
+    color: #fff;
+    margin-left: 10px; margin-right: 10px;}
+
+    nav.nav_box>ul>li>a>p
+    {line-height: 40px;
+    color: #fff;}
+
+    /*전체 박스*/
+    div.questions_answers_ex
+    {width: 90%;
+    margin: 100px auto;
+    margin-bottom: 150px;}
+
+    /*전체 박스 타이틀*/
+    div.questions_answers_title_ex
+    {width: 100%;
+    margin-bottom: 50px;}
+
+    div.questions_answers_title_ex>p:nth-child(1)
+    {width: 100%;
+    text-align: center; line-height: 30px;
+    font-size: 28px; color: #222;
+    font-family: 'min_bold';
+    margin-bottom: 20px;}
+
+    div.questions_answers_title_ex>p:nth-child(1)>span
+    {font-size: 16px;}
+
+    div.questions_answers_title_ex>p:nth-child(2)
+    {width: 100%;
+    text-align: center; line-height: 25px;
+    color: #8e8e8e;}
+
+    /*검색 박스*/
+    div.search_question_answers_ex
+    {width: 100%;
+    overflow: hidden;
+    margin-bottom: 50px; padding-bottom: 50px;
+    border-bottom: 1px solid #222; box-sizing: border-box;}
+
+    div.search_question_answers_box
+    {width: 440px;
+    float: right;}
+
+    #search_question_answers_txt_box
+    {width: 300px; height: 40px;
+    background: #fff;
+    border: 1px solid #444; box-sizing: border-box;
+    font-family: 'Pretendard' !important;
+    float: left;
+    font-size: 15px; color: #555;
+    text-indent: 10px;
+    margin-right: 10px;
+    outline: none;}
+
+    #search_question_answers_txt_box::placeholder {color: #555;}
+
+    #search_question_answers_submit
+    {width: 80px; height: 40px;
+    border: none; outline: none;
+    background-color: #222;
+    color: #fff;
+    font-size: 15px; line-height: 40px; text-align: center;
+    float: left;
+    transition: all 0.3s;}
+
+    #search_question_answers_submit:hover
+    {background-color: #51b8ff;}
+
+     /*라벨 박스*/
+    input[type="checkbox"].questions_answers_label
+    {display: none;}
+
+    div.questions_answers_contents_ex
+    {width: 100%;}
+
+    div.questions_answers_label_box
+    {width: 100%;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    overflow: hidden;}
+
+    div.questions_answers_label_box>label
+    {display: block;
+    width: 23.5%;
+    border-radius: 5px;
+    margin-right: 2%; margin-bottom: 20px;
+    border: 1px solid #51b8ff; box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;}
+
+    div.questions_answers_label_box>label:nth-child(4n+4)
+    {margin-right: 0;}
+
+    div.questions_answers_label_box>label>p
+    {width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 15px; padding-bottom: 15px;
+    color: #51b8ff;
+    font-size: 15px; line-height: 20px;
+    transition: all 0.3s;}
+
+    /*addclass*/
+    .background_color_add
+    {background-color: #51b8ff !important;}
+
+    .txt_color_add
+    {color: #fff !important;}
+
+    /*질문 박스*/
+    div.questions_answers_contents_product_ex
+    {width: 100%;}
+    
+    /*질문 감싼 박스*/
+    div.questions_answers_contents_product_box
+    {width: 100%;}
+
+    /*상품 없을 때*/
+    p.no_questions_txt
+    {width: 100%;
+    text-align: center; line-height: 20px;
+    color: #222;
+    padding-top: 100px; padding-bottom: 100px;}
+
+    /*질문만 있는 박스*/
+    div.questions_answers_contents_product
+    {width: 100%;}
+
+    ul.fnq_quextion_box
+    {width: 100%;}
+
+    li.fna_quextion_list
+    {width: 100%;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    margin-bottom: 10px;}
+
+    li.fna_quextion_list:last-child
+    {margin-bottom: 0;}
+
+    div.fna_quextion_list_box
+    {width: calc(100% - 40px);
+    margin: 0 auto;
+    padding-top: 20px; padding-bottom: 20px;
+    overflow: hidden;}
+
+    div.fna_quextion_list_box>p:nth-child(1)
+    {width: 20px;
+    float: left;
+    margin-right: 10px;
+    line-height: 25px; font-size: 18px;
+    color: #51b8ff; font-family: bold;}
+
+    div.fna_quextion_list_box>p:nth-child(2)
+    {width: calc(100% - 30px);
+    float: left;
+    line-height: 25px;
+    color: #222;}
+
+
+}
+
+@media all and (min-width: 769px) and (max-width: 1279px)
+{
+    /*비주얼배너*/
+    div.visual_sub_banner
+    {margin-top: 0;}
+}
+
+@media all and (min-width : 769px) and (max-width: 1024px)
+{   
+    /*검색 박스*/
+    div.search_question_answers_ex
+    {width: 100%;
+    overflow: hidden;
+    margin-bottom: 50px; padding-bottom: 50px;
+    border-bottom: 1px solid #222; box-sizing: border-box;}
+
+    div.search_question_answers_box
+    {width: fit-content;
+    float: right;}
+
+    #search_question_answers_txt_box
+    {width: 270px; height: 40px;
+    background: #fff;
+    border: 1px solid #444; box-sizing: border-box;
+    font-family: 'Pretendard' !important;
+    float: left;
+    font-size: 14px; color: #555;
+    text-indent: 5px;
+    margin-right: 10px;
+    outline: none;}
+
+    #search_question_answers_txt_box::placeholder {color: #555;}
+
+    #search_question_answers_submit
+    {width: 80px; height: 40px;
+    border: none; outline: none;
+    background-color: #222;
+    color: #fff;
+    font-size: 15px; line-height: 40px; text-align: center;
+    float: left;
+    transition: all 0.3s;}
+
+    #search_question_answers_submit:hover
+    {background-color: #51b8ff;}
+
+    /*라벨 박스*/
+    div.questions_answers_label_box>label
+    {display: block;
+    width: 32%;
+    border-radius: 5px;
+    margin-right: 2%; margin-bottom: 20px;
+    border: 1px solid #51b8ff; box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;}
+
+    div.questions_answers_label_box>label:nth-child(4n+4)
+    {margin-right: 2%;}
+
+    div.questions_answers_label_box>label:nth-child(3n+3)
+    {margin-right: 0;}
+}
+
+@media all and (max-width : 768px)
+{
+    /*비주얼베너*/
+    div.visual_sub_banner
+    {width: 100%; height: 250px;
+    overflow: hidden;
+    position: relative;}
+
+    div.visual_sub_banner img
+    {width: 100%; height: 100%;
+    object-fit: cover;
+    transition: all 2s;
+    transform: scale(1.2);}
+
+    p.visual_sub_text
+    {width: 100%;
+    position: absolute;
+    top: calc(50% - 20px); left: 0;
+    text-align: center;
+    opacity: 0;
+    transition: all 2s;
+    font-family: bold; color: #fff;
+    font-size: 32px; line-height: 40px;}
+
+    /*루트*/
+    div.nav_ex
+    {width: 100%;
+    background-color: #51b8ff;}
+
+    nav.nav_box
+    {width: 90%;
+    margin: 0 auto;}
+
+    nav.nav_box>ul
+    {width: 100%;
+    overflow: hidden;}
+
+    nav.nav_box>ul>li
+    {float: left;}
+
+    nav.nav_box>ul>li:nth-child(1)
+    {width: 20px; height: 20px;
+    margin-top: 10px; margin-bottom: 10px;
+    margin-right: 10px;}
+
+    nav.nav_box>ul>li:nth-child(1)>a img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    nav.nav_box>ul>li:nth-child(2)
+    {width: fit-content;
+    margin-right: 10px;}
+
+    nav.nav_box>ul>li:nth-child(2)>p
+    {font-size: 15px; line-height: 40px; color: #fff;}
+
+    nav.nav_box>ul>li:nth-child(3)
+    {width: fit-content;
+    max-width: calc(100% - 50px);}
+
+    nav.nav_box>ul>li:nth-child(3)>a>p
+    {font-size: 15px; line-height: 40px; 
+    color: #fff;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;}
+
+    /*질문 큰 박스*/
+    div.questions_answers_ex
+    {width: 90%;
+    margin: 50px auto;
+    margin-bottom: 80px;}
+
+    /*타이틀*/
+    div.questions_answers_title_ex
+    {width: 100%;
+    margin-bottom: 30px;}
+
+    div.questions_answers_title_ex>p:nth-child(1)
+    {width: 100%;
+    text-align: center; line-height: 30px;
+    font-size: 24px; color: #222;
+    font-family: 'min_bold';
+    word-break: keep-all;
+    margin-bottom: 10px;}
+
+    div.questions_answers_title_ex>p:nth-child(1)>span
+    {font-size: 16px;}
+
+    div.questions_answers_title_ex>p:nth-child(2)
+    {width: 100%;
+    font-size: 15px; line-height: 20px; text-align: center;
+    color: #555; word-break: keep-all;}
+
+     /*검색*/
+    div.search_question_answers_ex
+    {width: 100%;
+    margin-top: 30px; margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #222; box-sizing: border-box;}
+
+    div.search_question_answers_box
+    {width: fit-content;
+    margin: 0 auto;
+    overflow: hidden;}
+
+    #search_question_answers_txt_box
+    {width: 275px; height: 40px;
+    background: #fff;
+    border: 1px solid #444; box-sizing: border-box;
+    font-family: 'Pretendard' !important;
+    float: left;
+    font-size: 14px; color: #555;
+    text-indent: 5px;
+    margin-right: 10px;
+    outline: none;}
+
+    #search_question_answers_txt_box::placeholder {color: #555;}
+
+    #search_question_answers_submit
+    {width: 80px; height: 40px;
+    border: none; outline: none;
+    background-color: #222;
+    color: #fff;
+    font-size: 15px; line-height: 40px; text-align: center;
+    float: left;}
+
+    /*라벨 박스*/
+    input[type="checkbox"].questions_answers_label
+    {display: none;}
+
+    /*라벨 큰 박스*/
+    div.questions_answers_contents_ex
+    {width: 100%;}
+
+    /*라벨만 박스*/
+    div.questions_answers_label_box
+    {width: 100%;
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    overflow: hidden;}
+
+
+
+    div.questions_answers_label_box>label
+    {display: block;
+    width: 49%;
+    border-radius: 5px;
+    margin-right: 2%; margin-bottom: 10px;
+    border: 1px solid #51b8ff; box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+
+    div.questions_answers_label_box>label:nth-child(2n+2)
+    {margin-right: 0;}
+
+    div.questions_answers_label_box>label>p
+    {width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 15px; padding-bottom: 15px;
+    color: #51b8ff;
+    font-size: 14px; line-height: 20px;
+    word-break: keep-all;}
+
+    /*질문 전체 박스*/
+    div.questions_answers_contents_product_ex
+    {width: 100%;}
+
+    div.questions_answers_contents_product_box
+    {width: 100%;}
+
+    /*상품 없을 때*/
+    p.no_questions_txt
+    {width: 100%;
+    text-align: center; font-size: 15px;
+    line-height: 20px; color: #222;
+    padding-top: 100px; padding-bottom: 100px;
+    word-break: keep-all;}
+
+    /*질문*/
+    div.questions_answers_contents_product
+    {width: 100%;}
+
+    ul.fnq_quextion_box
+    {width: 100%;}
+
+    li.fna_quextion_list
+    {width: 100%;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    margin-bottom: 10px;}
+
+    li.fna_quextion_list:last-child
+    {margin-bottom: 0;}
+
+    div.fna_quextion_list_box
+    {width: calc(100% - 40px);
+    margin: 0 auto;
+    overflow: hidden;
+    padding-top: 20px; padding-bottom: 20px;}
+
+    div.fna_quextion_list_box>p:nth-child(1)
+    {width: 20px;
+    float: left;
+    margin-right: 10px;
+    line-height: 22px; font-size: 18px;
+    color: #51b8ff; font-family: bold;}
+
+    div.fna_quextion_list_box>p:nth-child(2)
+    {width: calc(100% - 30px);
+    float: left;
+    line-height: 22px;
+    color: #222;
+    font-size: 15px;
+    word-break: keep-all;}
+
+}
+
+@media all and (max-width: 600px)
+{
+    /*비주얼베너*/
+    div.visual_sub_banner
+    {width: 100%; height: 200px;
+    overflow: hidden;
+    position: relative;}
+
+    p.visual_sub_text
+    {width: 90%;
+    position: absolute;
+    top: calc(50% + 5px); left: 5%;
+    text-align: center;
+    opacity: 0;
+    transition: all 2s;
+    word-break: keep-all;
+    font-family: bold; color: #fff;
+    font-size: 24px; line-height: 30px;}
+    
+    /*검색박스*/
+    div.search_question_answers_box
+    {width: 100%;
+    overflow: hidden;}
+
+    #search_question_answers_txt_box
+    {width: calc(100% - 90px); height: 40px;
+    background: #fff;
+    border: 1px solid #444; box-sizing: border-box;
+    font-family: 'Pretendard' !important;
+    float: left;
+    font-size: 14px; color: #555;
+    text-indent: 5px;
+    margin-right: 10px;
+    outline: none;}
+
+    #search_question_answers_txt_box::placeholder {color: #555;}
+
+    #search_question_answers_submit
+    {width: 80px; height: 40px;
+    border: none; outline: none;
+    background-color: #222;
+    color: #fff;
+    font-size: 15px; line-height: 40px; text-align: center;
+    float: left;}
+
+    /*질문*/
+    div.fna_quextion_list_box
+    {width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+    padding-top: 15px; padding-bottom: 15px;}
+
+    div.fna_quextion_list_box>p:nth-child(1)
+    {width: 20px;
+    float: left;
+    margin-right: 5px;
+    line-height: 20px; font-size: 18px;
+    color: #51b8ff; font-family: bold;}
+
+    div.fna_quextion_list_box>p:nth-child(2)
+    {width: calc(100% - 25px);
+    float: left;
+    line-height: 20px;
+    color: #222;
+    font-size: 14px;
+    word-break: keep-all;}
+}
+
+@media all and (max-width: 319px)
+{
+    div.questions_answers_title_ex>p:nth-child(2)
+    {width: 90%;
+    margin: 0 auto;
+    font-size: 15px; line-height: 20px; text-align: center;
+    color: #555; word-break: keep-all;}
+}

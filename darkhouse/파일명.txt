@@ -1,0 +1,15 @@
+event : 이벤트/기획전
+find_password : 비밀번호 찾기
+find_id : 아이디 찾기
+join : 회원가입
+login : 로그인
+mypage : 마이페이지
+notic : 공지사항
+privacy_policy : 개인정보처리방침
+secession : 회원탈퇴
+travel_terms : 여행약관
+index : 메인
+reservation_list : 예약확인
+notic_detaile : 공지사항 디테일
+event_detaile : 기획전/이벤트 디테일
+reservation : 예약하기

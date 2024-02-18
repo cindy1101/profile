@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마이페이지</title>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/owl.carousel.js"></script>
+    <link href="../css/owl.carousel.min.css" rel="stylesheet">
+    <link href="../css/owl.theme.default.min.css" rel="stylesheet">
+    <link href="../css/docs.theme.min.css" rel="stylesheet">
+    <link href="css/mypage.css" rel="stylesheet">
+</head>
+<body>
+
+    
+    <input type="checkbox" id="menu_open_mobile">
+
+    <header class="mobile_header">
+        
+        <div class="header_top_mobile">
+
+            <a href="../index.html">
+                <img src="../img/dark_logo.png">
+            </a>
+
+            <label for="menu_open_mobile">
+                <img src="../img/mobile_icon_open.png">
+            </label>
+
+        </div><!--header_top_mobile-->
+
+        <div class="mobile_header_sheet">
+
+            <div class="icon_header_m">
+
+                <div class="top_sheet_h">
+
+                    <a href="../index.html">
+                        <img src="../img/home_icon.png">
+                    </a>
+
+                    <label for="menu_open_mobile">
+                        <img src="../img/close_btn.png">
+                    </label>
+
+                </div><!--top_sheet_h-->
+
+                <div class="gnb_mobile_header">
+
+                    <a href="../login/login.html">
+                        <div>
+                            <img src="../img/login_icon.png">
+                        </div>
+                        <p>로그인</p>
+                    </a>
+    
+                    <a href="../join/join.html">
+                        <div>
+                            <img src="../img/join_icon.png">
+                        </div>
+                        <p>회원가입</p>
+                    </a>
+    
+    
+                    <a href="../reservation_list/reservation_list.html">
+                        <div>
+                            <img src="../img/reservation_icon.png">
+                        </div>
+                        <p>예약확인</p>
+                    </a>
+    
+    
+                    <a href="../mypage/mypage.html">
+                        <div>
+                            <img src="../img/mypage_icon.png">
+                        </div>
+                        <p>마이페이지</p>
+                    </a>
+
+                </div><!--gnb_mobile_header-->
+
+            </div><!--icon_header_m-->
+
+            <div class="search_mobile_box">
+
+                <div>
+                    <input type="text" id="mobile_search" placeholder="검색어를 입력하세요">
+
+                    <input type="submit" id="mobile_search_btn">
+    
+                    <label for="mobile_search_btn">
+                        <img src="../img/search_icon.png">
+                    </label>
+                </div>
+
+            </div><!--search_mobile_box-->
+
+            <div class="lnb_menu_mobile">
+
+                <ul>
+                    <li>
+                        <a href="../sub/sub.html">
+                            <p>다낭</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../sub/sub.html">
+                            <p>나트랑</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../sub/sub.html">
+                            <p>하노이</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../sub/sub.html">
+                            <p>달랏</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../sub/sub.html">
+                            <p>장가계</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../airline/airline.html">
+                            <p>항공권</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../notic/notic.html">
+                            <p>공지사항</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../event/event.html">
+                            <p>이벤트/기획전</p>
+                        </a>
+                    </li>
+                </ul>
+
+            </div><!--lnb_menu_mobile-->
+
+        </div><!--mobile_header_sheet-->
+
+    </header><!--mobile_header-->
+    
+    <header class="erp_header">
+
+        <div class="erp_header_top">
+
+            <a href="../index.html">
+                <img src="../img/dark_logo.png">
+            </a>
+
+            <div class="search_ex">
+
+                <input type="text" id="search_txt" placeholder="검색어를 입력하세요.">
+
+                <input type="submit" id="search_button">
+
+                <label for="search_button">
+                    <img src="../img/search_icon.png">
+                </label>
+
+            </div><!--search_ex-->
+
+            <div class="gnb_menu_erp">
+                <ul>
+                    <li>
+                        <a href="../login/login.html">
+                            <p>로그인</p>
+                        </a>
+                    </li>
+
+                    <li></li>
+
+                    <li>
+                        <a href="../join/join.html">
+                            <p>회원가입</p>
+                        </a>
+                    </li>
+
+                    <li></li>
+
+                    <li>
+                        <a href="../reservation_list/reservation_list.html">
+                            <p>예약확인</p>
+                        </a>
+                    </li>
+
+                    <li></li>
+
+                    <li>
+                        <a href="../mypage/mypage.html">
+                            <p>마이페이지</p>
+                        </a>
+                    </li>
+                </ul>
+            </div><!--gnb_menu_erp-->
+
+        </div><!--erp_header_top-->
+
+        <div class="erp_header_bottom">
+
+            <ul>
+                <li>
+                    <a href="../sub/sub.html">
+                        <p>다낭</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../sub/sub.html">
+                        <p>나트랑</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../sub/sub.html">
+                        <p>하노이</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../sub/sub.html">
+                        <p>달랏</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../sub/sub.html">
+                        <p>장가계</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../airline/airline.html">
+                        <p>항공권</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../notic/notic.html">
+                        <p>공지사항</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../event/event.html">
+                        <p>이벤트/기획전</p>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="call_box">
+
+                <div>
+                    <img src="../img/call_icon_header.png">
+                </div>
+
+                <div>
+                    <p>고객센터</p>
+                    <p>1588-1588</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </header><!--erp_header-->
+
+    <div class="mobile_lnb_box">
+
+        <div class="owl-carousel owl-theme m_lnb_box">
+
+            <a href="../sub/sub.html" class="item m_lnb">
+                <p>다낭</p>
+            </a>
+
+            <a href="../sub/sub.html" class="item m_lnb">
+                <p>나트랑</p>
+            </a>
+
+            <a href="../sub/sub.html" class="item m_lnb">
+                <p>하노이</p>
+            </a>
+
+            <a href="../sub/sub.html" class="item m_lnb">
+                <p>달랏</p>
+            </a>
+
+            <a href="../sub/sub.html" class="item m_lnb">
+                <p>장가계</p>
+            </a>
+
+            <a href="../airline/airline.html" class="item m_lnb">
+                <p>항공권</p>
+            </a>
+            
+            <a href="../notic/notic.html" class="item m_lnb">
+                <p>공지사항</p>
+            </a>
+
+            <a href="../event/event.html" class="item m_lnb">
+                <p>기획전&이벤트</p>
+            </a>
+
+        </div>
+
+    </div><!--mobile_lnb_box-->
+    
+    <div class="mypage_ex">
+
+        <div class="mypage_line"></div>
+
+        <div class="mypage_title">
+            <p><span>홍길동</span> 님<br>
+            만나서 반가워요.</p>
+        </div><!--mypage_title-->
+
+        <div class="mypage_form_ex">
+
+            <form>
+
+                <div class="id_mypage">
+                    <p>아이디(이메일)</p>
+                    <input type="text" id="id_mypage_txt" readonly>
+                </div><!--id_mypage-->
+
+                <div class="name_mypage">
+                    <p>이름</p>
+                    <input type="text" id="name_mypage_txt">
+                </div><!--name_mypage-->
+
+                <div class="tour_mypage">
+                    <p>여행사명</p>
+                    <input type="text" id="tour_mypage_txt">
+                </div>
+
+                <div class="phone_mypage">
+                    <p>휴대전화</p>
+                    <input type="tel" id="phone_mypage_txt" placeholder="- 제외 숫자만 입력">
+                </div><!--phone_mypage-->
+
+                <div class="password_mypage">
+                    
+                    <div class="password_mp_title">
+
+                        <p>비밀번호 변경</p>
+                        <p class="no_password_mp">비밀번호가 일치하지 않습니다.</p>
+                        <p class="answer_password_mp">비밀번호가 일치합니다.</p>
+
+                    </div><!--password_mp_title-->
+
+                    <input type="password" id="password_mypage_txt_01" placeholder="현재 비밀번호">
+                    <input type="password" id="password_mypage_txt_02" placeholder="새로운 비밀번호">
+                    <input type="password" id="password_mypage_txt_03" placeholder="새로운 비밀번호 확인">
+                
+                </div><!--password_mypage-->
+
+                <div class="recheck_mypage">
+
+                    <p>수신설정</p>
+
+                    <div class="event_information_ex">
+                        <p>마케팅 및 이벤트 목적의 개인정보 수집 및 이용 동의함 <span>22.01.16</span></p>
+                        
+                        <a href="javascript:void(0);" id="event_popup_open">
+                            <p>전문보기</p>
+                        </a>
+                    </div>
+
+                    <div class="advertisement_ex">
+
+                        <div class="advertisement_txt">
+                            <p>광고성 정보 수신 철회함 <span>22.01.16</span></p>
+                            <a href="javascript:void(0);" id="advertisement_open">
+                                <p>전문보기</p>
+                            </a>
+                        </div><!--advertisement_txt-->
+
+                        <div class="advertisement_check">
+
+                            <div>
+                                <input type="checkbox" id="sms_mp">
+
+                                <label for="sms_mp" class="sms_checkbox_img">
+                                </label>
+
+                                <label for="sms_mp">
+                                    <p>SMS</p>
+                                </label>
+
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="mms_mp">
+
+                                <label for="mms_mp" class="mms_checkbox_img">
+                                </label>
+
+                                <label for="mms_mp">
+                                    <p>MMS</p>
+                                </label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="emaile_mp">
+
+                                <label for="emaile_mp" class="emaile_checkbox_img">
+                                </label>
+
+                                <label for="emaile_mp">
+                                    <p>이메일</p>
+                                </label>
+                            </div>
+
+                        </div><!--advertisement_check-->
+
+                    </div><!--advertisement_ex-->
+
+                </div><!--recheck_mypage-->
+
+                <div class="mypage_btn_box">
+
+                    <input type="submit" id="correction_btn_mp" value="변경하기">
+
+                    <a href="../secession/secession.html">
+                        <p>회원탈퇴</p>
+                    </a>
+
+                </div><!--mypage_btn_box-->
+
+            </form>
+
+        </div><!--mypage_form_ex-->
+
+    </div><!--mypage_ex-->
+
+    <footer class="footer_dark">
+
+        <div class="footer_line_01"></div>
+
+        <div class="footer_top">
+            
+            <div class="footer_top_menu">
+
+                <ul>
+                    <li>
+                        <a href="../travel_terms/travel_terms.html">
+                            <p>여행약관</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../privacy_policy/privacy_policy.html">
+                            <p>개인정보처리방침</p>
+                        </a>
+                    </li>
+
+                    <li id="open_emaile">
+                        <a href="javascript:void(0);">
+                            <p>이메일주소무단수집</p>
+                        </a>
+                    </li>
+                </ul>
+
+            </div><!--footer_top_menu-->
+
+            <div class="footer_sns">
+
+                <a href="#">
+                    <img src="../img/instar_icon.png">
+                </a>
+
+                <a href="#">
+                    <img src="../img/kakao_icon.png">
+                </a>
+
+                <a href="#">
+                    <img src="../img/blog_icon.png">
+                </a>
+
+            </div><!--footer_sns-->
+
+        </div><!--footer_top-->
+
+        <div class="footer_line_02"></div>
+
+        <div class="footer_bottom">
+            <p>다크호스투어(주)</p>
+            <p>대표이사 : 황윤석 | 주소 : 광주광역시 서구 상무중앙로 114, 219호(치평동 랜드피아오피스텔)<br>
+            사업자등록번호 : (주)다크호스투어(DARKHORSE TOUR) | 통신판매업신고번호 : 제 2017-광주 서구-0466호 | 대표전화 : 062-228-1119<br>
+            Copyright ⓒ(주)다크호스투어 All Rights Reserved</p>
+        </div>
+    </footer><!--footer_dark-->
+
+    <div class="emaile_no_ex" id="emale_no_ex" style="display: none;">
+
+        <div class="emaile_no_box">
+
+            <div class="emaile_no_title">
+                <p>이메일 무단 수집 거부</p>
+            </div><!--emaile_no_title-->
+
+            <div class="emaile_contents">
+                <p>
+                    본 웹사이트에 게시된 이메일 주소가 전자우편 수집 프로그램이나 그 밖의 기술적 장치 를 이용하여 무단으로 수집되는 것을 거부하며,<br>
+                    이를 위반시 정보통신망법에 의해 형사 처벌됨을 유념하시기 바랍니다.<br><br>
+
+
+                    정보통신망 이용촉진 및 정보보호 등에 관한 법률<br>
+
+                    제50조의2 (전자우편주소의 무단 수집행위 등 금지)<br>
+
+                    누구든지 인터넷 홈페이지 운영자 또는 관리자의 사전 동의 없이 인터넷 홈페이지에서 자동으로 전자우편주소를 수집 하는 프로그램 그 밖의 기술적 장치를 이용하여 전자우편주소를 수집하여서는 아니된다.<br>
+                    누구든지 제1항의 규정을 위반하여 수집된 전자우편주소를 판매ㆍ유통하여서는 아니된다.<br>
+                    누구든지 제1항 및 제2항의 규정에 의하여 수집ㆍ판매 및 유통이 금지된 전자우편주소임을 알고 이를 정보 전송에 이용하여서는 아니된다.<br><br>
+
+
+                    제74조 (벌칙) 다음 각호의 1에 해당하는 자는 1천만원 이하의 벌금에 처한다.<br>
+
+                    제8조제4항의 규정을 위반하여 표시ㆍ판매 또는 판매할 목적으로 진열한 자<br>
+                    제44조의7제1항제1호의 규정을 위반하여 음란한 부호ㆍ문언ㆍ음향ㆍ화상 또는 영상을 배포ㆍ판매ㆍ임대하거나 공연히 전시한 자<br>
+                    제44조의7제1항제3호의 규정을 위반하여 공포심이나 불안감을 유발하는 부호ㆍ문언ㆍ음향ㆍ화상 또는 영상을 반복적으로 상대방에게 도달하게 한 자<br>
+                    제50조제6항의 규정을 위반하여 기술적 조치를 한 자<br>
+                    제50조의8의 규정을 위반하여 광고성 정보를 전송한 자 제50조의2의 규정을 위반하여 전자우편 주소를 수집ㆍ판매ㆍ유통 또는 정보전송에 이용한 자<br>
+                    제50조의8의 규정을 위반하여 광고성 정보를 전송한 자<br>
+                    제53조제4항을 위반하여 등록사항의 변경등록 또는 사업의 양도ㆍ양수 또는 합병ㆍ상속의 신고를 하지 아니한 자<br>
+                </p>
+            </div><!--emaile_contents-->
+
+            <div class="emaile_box_line_01"></div>
+
+            <div class="emaile_close" id="emaile_close_btn">
+                <p style="cursor: pointer;">확인</p>
+            </div>
+
+        </div><!--emaile_no_box-->
+
+    </div><!--emaile_no_ex-->
+
+    <div class="event_information_popup_ex" id="event_information_popup" style="display: none;">
+
+        <div class="event_information_popup">
+
+            <div class="event_information_popup_title">
+                <p>광고성 개인정보 수집</p>
+            </div><!--event_information_popup_title-->
+
+            <div class="event_information_popup_txt">
+
+                <p>
+                    <span>[선택] 광고성 목적의 개인정보 수집 및 이용 동의</span><br>
+                    동의를 거부할 수 있으며 동의를 거부하셔도 서비스를 이용하실 수 있습니다.<br><br>
+                    <span>수집항목</span><br>
+                    서비스 이용기록, 결제기록, 휴대전화번호, 이메일, 본인확인정보(이름, 생년월일, 성별, 통신사명, 휴대전화번호, 동일인식별정도 (CI), 중복가입확인정보(DI), 내/외국인정보), 접속IP정보, 쿠키 등의 광고식별자<br><br>
+                    <span>수집목적</span><br>
+                    (맞춤형) 광고 및 마케팅 참여기회 제공<br><br>
+                    <span>보유기간</span><br>
+                    동의철회 또는 회원탈퇴시 지체없이 파기
+                </p>
+
+            </div><!--event_information_popup_txt-->
+
+            <div class="event_information_popup_line"></div>
+
+            <a href="javascript:void(0);" class="event_information_popup_close" id="event_popup_close">
+                <p>확인</p>
+            </a><!--event_information_popup_close-->
+
+        </div><!--event_information_popup-->
+
+    </div><!--event_information_popup_ex-->
+
+
+    <div class="advertisement_popup_ex" id="advertisement_popup" style="display: none;">
+
+        <div class="advertisement_popup">
+
+            <div class="advertisement_popup_title">
+                <p>광고성 정보 수신 동의</p>
+            </div><!--advertisement_popup_title-->
+
+            <div class="advertisement_popup_txt">
+                <p>
+                    <span>[선택] 광고성 정보 수신 동의에 대한 약관</span><br>
+                    회원님이 수집 및 이용에 동의한 개인 정보를 이용하여 SMS, MMS, 이메일, 푸시 알림 등 다양한 전자적 전송 매체를 통해 오전 8시부터 오후 9시까지 개인 맞춤형 광고 및 정보를 전송할 수 있습니다. 본 동의는 거부하실 수 있으나, 거부 시 이벤트 및 프로모션 안내를 받아보실 수 없습니다.<br><br>
+                    광고성 정보 수신 변경은<br>
+                    1. 다크호스투어 고객센터 (1588-1855)로 요청<br>
+                    2. SMS, MMS, 이메일, 푸쉬 : 웹 브라우저에서 마이페이지에서 변경할 수 있습니다.
+                </p>
+            </div><!--advertisement_popup_txt-->
+
+            <div class="advertisement_popup_line"></div>
+
+            <a href="javascript:void(0);" class="advertisement_popup_close" id="advertisement_close">
+                <p>확인</p>
+            </a><!--advertisement_popup_close-->
+
+
+        </div><!--advertisement_popup-->
+
+    </div><!--advertisement_popup_ex-->
+
+    <script>
+
+        $(function(){
+
+            //광고성개인정보수집
+            $("#event_popup_open").click(function(){
+
+                $('body').addClass('scrollOff').on('scroll touchmove mousewheel', function(e){
+                e.preventDefault();});
+
+                $("#event_information_popup").fadeIn(100);
+
+                const body = document.querySelector('body');
+                body.style.overflowY = 'hidden'
+
+            });
+
+            $("#event_popup_close").click(function(){
+
+                $('body').removeClass('scrollOff').off('scroll touchmove mousewheel'); 
+                EventClose(); 
+
+                const body = document.querySelector('body');
+                body.style.overflowY = 'scroll'
+
+                });
+
+                function EventClose(){
+                $("#event_information_popup").fadeOut(100);}
+
+            });
+
+            //광고성정보수신동의
+            $("#advertisement_open").click(function(){
+
+                $('body').addClass('scrollOff').on('scroll touchmove mousewheel', function(e){
+                e.preventDefault();});
+
+                $("#advertisement_popup").fadeIn(100);
+
+                const body = document.querySelector('body');
+                body.style.overflowY = 'hidden'
+
+            });
+
+            $("#advertisement_close").click(function(){
+
+                $('body').removeClass('scrollOff').off('scroll touchmove mousewheel'); 
+                AdvertisementClose(); 
+
+                const body = document.querySelector('body');
+                body.style.overflowY = 'scroll'
+
+            });
+
+            function AdvertisementClose(){
+            $("#advertisement_popup").fadeOut(100);}
+
+    </script>
+
+    <script src="../js/total.js"></script>
+
+</body>
+</html>

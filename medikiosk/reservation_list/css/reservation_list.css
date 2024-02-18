@@ -1,0 +1,908 @@
+* {margin: 0; padding: 0;}
+li {list-style: none;}
+a {text-decoration: none;}
+img {display: block;}
+
+*::-webkit-scrollbar {
+    display: none; /* 크롬, 사파리, 오페라, 엣지 */
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'min_bold';
+    font-weight: 600;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'bold';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.ttf') format("truetype");
+    font-display: swap;
+}
+
+body {font-family: 'Pretendard'; line-height: 16px;}
+
+p {margin-bottom: 0;}
+
+ul {margin: 0; padding: 0;}
+
+input:not([type]), input[type="text"], input[type="password"], 
+input[type="date"], input[type="datetime"], 
+input[type="datetime-local"], input[type="month"], 
+input[type="week"], input[type="email"], input[type="number"], 
+input[type="search"], input[type="tel"], input[type="time"], 
+input[type="url"], input[type="color"], textarea
+{box-shadow: none;
+background-color: #fff;
+padding: 0;
+margin-bottom: 0;
+outline: none;}
+
+input[type="checkbox"]
+{margin-bottom: 0;}
+
+input[type="checkbox"]+label, input[type="radio"]+label 
+{margin: 0;}
+
+/*페이징버튼 제어*/
+ul.pagination
+{margin-left: 0;}
+
+ul.pagination li
+{height: fit-content;
+margin-left: 0;
+font-size: 16px;}
+
+ul.pagination li a
+{color: #222;
+padding: 5px 10px;
+border: none;
+border-radius: 0;
+text-align: center; line-height: 20px;}
+
+.page-item:not(:first-child) .page-link
+{margin-left: 0;}
+
+/*부트스트랩 클릭시 생기는 선 삭제*/
+.page-link:focus, .page-link:active 
+{outline: none;
+box-shadow: none;
+background-color: transparent !important;}
+
+.page-link:focus, .page-link:hover 
+{background-color: transparent !important;
+color: #51b8ff !important;}
+
+.page-link:focus, .page-link:active 
+{color: #51b8ff !important;
+font-family: bold;}
+
+
+@media all and (min-width: 1420px)
+{   
+    /*비주얼베너*/
+    div.visual_sub_banner
+    {width: 100%; height: 350px;
+    margin-top: 139.44px;
+    overflow: hidden;
+    position: relative;}
+
+    div.visual_sub_banner img
+    {width: 100%; height: 100%;
+    object-fit: cover;
+    transition: all 2s;
+    transform: scale(1.2);}
+
+    p.visual_sub_text
+    {width: 100%;
+    position: absolute;
+    top: calc(50% - 25px); left: 0;
+    text-align: center;
+    opacity: 0;
+    transition: all 2s;
+    font-family: bold; color: #fff;
+    font-size: 42px; line-height: 50px;}
+
+    /*루트*/
+    div.nav_ex
+    {width: 100%;
+    background-color: #51b8ff;}
+
+    nav.nav_box
+    {width: 1400px;
+    margin: 0 auto;}
+
+    nav.nav_box>ul
+    {width: 100%;
+    overflow: hidden;}
+
+    nav.nav_box>ul>li
+    {float: left;}
+
+    nav.nav_box>ul>li:nth-child(1)
+    {width: 20px; height: 20px;
+    margin-top: 10px; margin-bottom: 10px;}
+    
+    nav.nav_box>ul>li:nth-child(1) img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    nav.nav_box>ul>li>p
+    {line-height: 40px;
+    color: #fff;
+    margin-left: 10px; margin-right: 10px;}
+
+    nav.nav_box>ul>li>a>p
+    {line-height: 40px;
+    color: #fff;}
+
+    /*예약 현황*/
+    div.reservation_list_ex
+    {width: 1200px;
+    margin: 100px auto;
+    margin-bottom: 150px;}
+    
+    /*타이틀*/
+    div.reservation_list_title
+    {width: 100%;
+    margin-bottom: 30px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #222; box-sizing: border-box;}
+    
+    div.reservation_list_title>p
+    {width: 100%;
+    font-size: 32px; font-family: bold; color: #222;
+    line-height: 40px; text-align: center;}
+    
+    /*예약 리스트*/
+    div.reservation_list_prodcut_ex
+    {width: 100%;
+    margin-bottom: 80px;}
+
+    /*병원 건강 검진*/
+    div.reservation_list_product_contents_ex
+    {width: 100%;
+    border: 1px solid #ddd; box-sizing: border-box;
+    border-radius: 5px; overflow: hidden;
+    margin-bottom: 20px;}
+
+    div.reservation_list_product_contents_ex:last-child
+    {margin-bottom: 0;}
+    
+    div.reservation_list_product_contents_box
+    {width: calc(100% - 40px);
+    margin: 0 auto;
+    padding-top: 20px; padding-bottom: 20px;
+    display: flex;
+    align-items: center;}
+    
+    /*이미지*/
+    div.reservation_list_product_img_box
+    {width: 300px; height: 0;
+    padding-bottom: 25.908%;
+    border-radius: 5px;
+    margin-right: 30px;
+    position: relative;
+    overflow: hidden;}
+
+    div.reservation_list_product_img_box img
+    {width: 100%; height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0; left: 0;}
+    
+    /*글 전체 박스*/
+    div.reservation_list_product_txt_box
+    {width: calc(100% - 330px);
+    overflow: hidden;}
+    
+    /*상품 텍스트*/
+    div.reservation_list_product_txt
+    {width: 100%;
+    margin-bottom: 50px;}
+
+    p.product_name_title
+    {width: 100%;
+    font-size: 22px; line-height: 30px; font-family: bold;
+    color: #222; word-break: keep-all;
+    margin-bottom: 20px;}
+
+    /*예약 시간*/
+    div.product_time_title
+    {width: 100%;
+    margin-bottom: 5px;
+    overflow: hidden;}
+
+    div.product_time_title>p:nth-child(1)
+    {width: fit-content;
+    max-width: 130px;
+    float: left;
+    line-height: 25px;
+    color: #222; font-family: 'min_bold';
+    margin-right: 10px;}
+
+    div.product_time_title>p:nth-child(2)
+    {width: fit-content;
+    max-width: calc(100% - 140px);
+    color: #222; line-height: 25px;
+    float: left;}
+
+    /*결제 일자*/
+    div.product_pay_title
+    {width: 100%;
+    margin-bottom: 30px;
+    overflow: hidden;}
+
+    div.product_pay_title>p:nth-child(1)
+    {width: fit-content;
+    max-width: 130px;
+    float: left;
+    line-height: 25px;
+    color: #222; font-family: 'min_bold';
+    margin-right: 10px;}
+
+    div.product_pay_title>p:nth-child(2)
+    {width: fit-content;
+    max-width: calc(100% - 140px);
+    color: #222; line-height: 25px;
+    float: left;}
+
+    /*총가격*/
+    p.product_total_title
+    {width: 100%;
+    font-size: 22px; line-height: 30px; text-align: right;
+    font-family: bold; color: red;}
+
+    p.product_total_title>span
+    {font-family: 'Pretendard';
+    font-size: 15px;}
+
+    /*예약 버튼*/
+    div.reservation_list_product_txt_btn_box
+    {width: fit-content;
+    float: right;}
+
+    div.reservation_list_product_txt_btn_box>a
+    {width: 210px; height: 50px;
+    float: left;
+    border-radius: 5px;
+    display: block;
+    transition: all 0.3s;}
+
+    div.reservation_list_product_txt_btn_box>a:nth-child(1)
+    {margin-right: 10px;
+    background-color: #ddd;}
+
+    div.reservation_list_product_txt_btn_box>a:nth-child(2)
+    {background-color: #51b8ff;}
+
+    div.reservation_list_product_txt_btn_box>a>p
+    {width: 100%;
+    text-align: center; line-height: 50px;
+    transition: all 0.3s;}
+
+    div.reservation_list_product_txt_btn_box>a:nth-child(1)>p
+    {color: #222;}
+
+    div.reservation_list_product_txt_btn_box>a:nth-child(2)>p
+    {color: #fff;}
+
+    div.reservation_list_product_txt_btn_box>a:nth-child(1):hover
+    {background-color: #aaa;}
+
+    div.reservation_list_product_txt_btn_box>a:nth-child(1):hover>p
+    {color: #fff;}
+
+    div.reservation_list_product_txt_btn_box>a:nth-child(2):hover
+    {background-color: #1f4e79;}
+   
+    /*페이지버튼*/
+    div.page_btn
+    {width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+}
+
+@media all and (min-width: 769px) and (max-width : 1419px)
+{   
+     /*비주얼베너*/
+    div.visual_sub_banner
+    {width: 100%; height: 350px;
+    margin-top: 139.44px;
+    overflow: hidden;
+    position: relative;}
+
+    div.visual_sub_banner img
+    {width: 100%; height: 100%;
+    object-fit: cover;
+    transition: all 2s;
+    transform: scale(1.2);}
+
+    p.visual_sub_text
+    {width: 100%;
+    position: absolute;
+    top: calc(50% - 25px); left: 0;
+    text-align: center;
+    opacity: 0;
+    transition: all 2s;
+    font-family: bold; color: #fff;
+    font-size: 42px; line-height: 50px;}
+
+    /*루트*/
+    div.nav_ex
+    {width: 100%;
+    background-color: #51b8ff;}
+
+    nav.nav_box
+    {width: 90%;
+    margin: 0 auto;}
+
+    nav.nav_box>ul
+    {width: 100%;
+    overflow: hidden;}
+
+    nav.nav_box>ul>li
+    {float: left;}
+
+    nav.nav_box>ul>li:nth-child(1)
+    {width: 20px; height: 20px;
+    margin-top: 10px; margin-bottom: 10px;}
+    
+    nav.nav_box>ul>li:nth-child(1) img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    nav.nav_box>ul>li>p
+    {line-height: 40px;
+    color: #fff;
+    margin-left: 10px; margin-right: 10px;}
+
+    nav.nav_box>ul>li>a>p
+    {line-height: 40px;
+    color: #fff;}
+
+    /*전체 박스*/
+    div.reservation_list_ex
+    {width: 90%;
+    margin: 100px auto;
+    margin-bottom: 150px;}
+
+    /*타이틀*/
+    div.reservation_list_title
+    {width: 100%;
+    margin-bottom: 30px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #222; box-sizing: border-box;}
+
+    div.reservation_list_title>p
+    {width: 100%;
+    font-size: 32px; font-family: bold; color: #222;
+    line-height: 40px; text-align: center;}
+
+    /*예약 리스트*/
+    div.reservation_list_prodcut_ex
+    {width: 100%;
+    margin-bottom: 80px;}
+
+    div.reservation_list_product_contents_ex
+    {width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    margin-bottom: 20px;
+    overflow: hidden;}
+
+    div.reservation_list_product_contents_ex:last-child
+    {margin-bottom: 0;}
+
+    div.reservation_list_product_contents_box
+    {width: calc(100% - 40px);
+    margin: 0 auto;
+    padding-top: 20px; padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;}
+
+    /*이미지*/
+    div.reservation_list_product_img_box
+    {width: 25%; height: 0;
+    padding-bottom: 25%;
+    border-radius: 5px;
+    margin-right: 3%;
+    position: relative;
+    overflow: hidden;}
+
+    div.reservation_list_product_img_box img
+    {width: 100%; height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0; left: 0;}
+
+    /*전체 글*/
+    div.reservation_list_product_txt_box
+    {width: 72%;}
+
+    /*버튼 마진 줄 수 있는 박스*/
+    div.reservation_list_product_txt
+    {width: 100%;
+    margin-bottom: 30px;}
+
+    /*제목*/
+    p.product_name_title
+    {width: 100%;
+    font-size: 22px; line-height: 26px; font-family: bold;
+    color: #222; word-break: keep-all;
+    margin-bottom: 10px;}
+
+    /*예약 시간*/
+    div.product_time_title
+    {width: 100%;
+    margin-bottom: 5px;
+    overflow: hidden;}
+
+    div.product_time_title>p:nth-child(1)
+    {width: fit-content;
+    max-width: 130px;
+    float: left;
+    line-height: 20px;
+    font-size: 15px;
+    color: #222; font-family: 'min_bold';
+    margin-right: 10px;}
+
+    div.product_time_title>p:nth-child(2)
+    {width: fit-content;
+    max-width: calc(100% - 140px);
+    font-size: 15px;
+    color: #222; line-height: 20px;
+    float: left;}
+
+    /*결제 일자*/
+    div.product_pay_title
+    {width: 100%;
+    margin-bottom: 30px;
+    overflow: hidden;}
+
+    div.product_pay_title>p:nth-child(1)
+    {width: fit-content;
+    max-width: 130px;
+    float: left;
+    line-height: 20px;
+    font-size: 15px;
+    color: #222; font-family: 'min_bold';
+    margin-right: 10px;}
+
+    div.product_pay_title>p:nth-child(2)
+    {width: fit-content;
+    max-width: calc(100% - 140px);
+    font-size: 15px;
+    color: #222; line-height: 20px;
+    float: left;}
+
+    /*총가격*/
+    p.product_total_title
+    {width: 100%;
+    font-size: 22px; line-height: 30px; text-align: right;
+    font-family: bold; color: red;}
+
+    p.product_total_title>span
+    {font-family: 'Pretendard';
+    font-size: 15px;}
+
+    /*예약 버튼*/
+    div.reservation_list_product_txt_btn_box
+    {width: fit-content;
+    float: right;}
+
+    div.reservation_list_product_txt_btn_box>a
+    {width: 190px; height: 50px;
+    float: left;
+    border-radius: 5px;
+    display: block;
+    transition: all 0.3s;}
+
+    div.reservation_list_product_txt_btn_box>a:nth-child(1)
+    {margin-right: 10px;
+    background-color: #ddd;}
+
+    div.reservation_list_product_txt_btn_box>a:nth-child(2)
+    {background-color: #51b8ff;}
+
+    div.reservation_list_product_txt_btn_box>a>p
+    {width: 100%;
+    text-align: center; line-height: 50px;
+    font-size: 15px;
+    transition: all 0.3s;}
+
+    div.reservation_list_product_txt_btn_box>a:nth-child(1)>p
+    {color: #222;}
+
+    div.reservation_list_product_txt_btn_box>a:nth-child(2)>p
+    {color: #fff;}
+
+    div.reservation_list_product_txt_btn_box>a:nth-child(1):hover
+    {background-color: #aaa;}
+
+    div.reservation_list_product_txt_btn_box>a:nth-child(1):hover>p
+    {color: #fff;}
+
+    div.reservation_list_product_txt_btn_box>a:nth-child(2):hover
+    {background-color: #1f4e79;}
+
+    /*페이지버튼*/
+    div.page_btn
+    {width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+
+}
+
+@media all and (min-width: 769px) and (max-width: 1279px)
+{
+    /*비주얼배너*/
+    div.visual_sub_banner
+    {margin-top: 0;}
+}
+
+
+@media all and (min-width : 769px) and (max-width: 1024px)
+{
+    /*이미지*/
+    div.reservation_list_product_img_box
+    {width: 30%; height: 0;
+    padding-bottom: 30%;
+    border-radius: 5px;
+    margin-right: 3%;
+    position: relative;
+    overflow: hidden;}
+
+    div.reservation_list_product_img_box img
+    {width: 100%; height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0; left: 0;}
+
+    /*전체 글*/
+    div.reservation_list_product_txt_box
+    {width: 67%;}
+
+    /*제목*/
+    p.product_name_title
+    {width: 100%;
+    font-size: 20px; line-height: 25px; font-family: bold;
+    color: #222; word-break: keep-all;
+    margin-bottom: 10px;}
+
+    /*가격*/
+    p.product_total_title
+    {width: 100%;
+    font-size: 20px; line-height: 30px; text-align: right;
+    font-family: bold; color: red;}
+}
+
+@media all and (max-width : 768px)
+{   
+    /*비주얼베너*/
+    div.visual_sub_banner
+    {width: 100%; height: 250px;
+    overflow: hidden;
+    position: relative;}
+
+    div.visual_sub_banner img
+    {width: 100%; height: 100%;
+    object-fit: cover;
+    transition: all 2s;
+    transform: scale(1.2);}
+
+    p.visual_sub_text
+    {width: 100%;
+    position: absolute;
+    top: calc(50% - 20px); left: 0;
+    text-align: center;
+    opacity: 0;
+    transition: all 2s;
+    font-family: bold; color: #fff;
+    font-size: 32px; line-height: 40px;}
+
+    /*루트*/
+    div.nav_ex
+    {width: 100%;
+    background-color: #51b8ff;}
+
+    nav.nav_box
+    {width: 90%;
+    margin: 0 auto;}
+
+    nav.nav_box>ul
+    {width: 100%;
+    overflow: hidden;}
+
+    nav.nav_box>ul>li
+    {float: left;}
+
+    nav.nav_box>ul>li:nth-child(1)
+    {width: 20px; height: 20px;
+    margin-top: 10px; margin-bottom: 10px;
+    margin-right: 10px;}
+
+    nav.nav_box>ul>li:nth-child(1)>a img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    nav.nav_box>ul>li:nth-child(2)
+    {width: fit-content;
+    margin-right: 10px;}
+
+    nav.nav_box>ul>li:nth-child(2)>p
+    {font-size: 15px; line-height: 40px; color: #fff;}
+
+    nav.nav_box>ul>li:nth-child(3)
+    {width: fit-content;
+    max-width: calc(100% - 50px);}
+
+    nav.nav_box>ul>li:nth-child(3)>a>p
+    {font-size: 15px; line-height: 40px; 
+    color: #fff;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;}
+
+    /*전체 박스*/
+    div.reservation_list_ex
+    {width: 90%;
+    margin: 50px auto;
+    margin-bottom: 80px;}
+
+    /*타이틀*/
+    div.reservation_list_title
+    {width: 100%;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #222; box-sizing: border-box;}
+
+    div.reservation_list_title>p
+    {width: 100%;
+    text-align: center; line-height: 30px;
+    font-size: 24px; color: #222;
+    font-family: 'bold';
+    word-break: keep-all;}
+
+    /*리스트 컨텐츠 박스*/
+    div.reservation_list_prodcut_ex
+    {width: 100%;
+    margin-bottom: 50px;}
+
+    div.reservation_list_product_contents_ex
+    {width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    overflow: hidden;
+    margin-bottom: 15px;}
+
+    div.reservation_list_product_contents_ex:last-child
+    {margin-bottom: 0;}
+
+    div.reservation_list_product_contents_box
+    {width: calc(100% - 20px);
+    margin: 0 auto;
+    padding-top: 10px; padding-bottom: 10px;
+    display: flex;
+    align-items: center;}
+
+    /*이미지*/
+    div.reservation_list_product_img_box
+    {width: 30%; height: 0;
+    padding-bottom: 30%;
+    margin-right: 2%;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;}
+
+    div.reservation_list_product_img_box img
+    {width: 100%; height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0; left: 0;}
+
+    /*텍스트*/
+    div.reservation_list_product_txt_box
+    {width: 68%;}
+
+    div.reservation_list_product_txt
+    {width: 100%;
+    margin-bottom: 20px;}
+
+    /*타이틀*/
+    p.product_name_title
+    {width: 100%;
+    font-family: bold; color: #222; line-height: 25px;
+    font-size: 18px; word-break: keep-all;
+    margin-bottom: 10px;}
+
+    /*예약 시간*/
+    div.product_time_title
+    {width: 100%;
+    margin-bottom: 5px;
+    overflow: hidden;}
+
+    div.product_time_title>p:nth-child(1)
+    {width: fit-content;
+    max-width: 120px;
+    float: left;
+    line-height: 20px;
+    font-size: 14px;
+    word-break: keep-all;
+    color: #222; font-family: 'min_bold';
+    margin-right: 5px;}
+
+    div.product_time_title>p:nth-child(2)
+    {width: fit-content;
+    max-width: calc(100% - 125px);
+    font-size: 14px;
+    word-break: keep-all;
+    color: #222; line-height: 20px;
+    float: left;}
+
+    /*결제 일자*/
+    div.product_pay_title
+    {width: 100%;
+    margin-bottom: 20px;
+    overflow: hidden;}
+
+    div.product_pay_title>p:nth-child(1)
+    {width: fit-content;
+    max-width: 100px;
+    float: left;
+    line-height: 20px;
+    font-size: 14px;
+    color: #222; font-family: 'min_bold';
+    word-break: keep-all;
+    margin-right: 5px;}
+
+    div.product_pay_title>p:nth-child(2)
+    {width: fit-content;
+    max-width: calc(100% - 105px);
+    font-size: 14px;
+    word-break: keep-all;
+    color: #222; line-height: 20px;
+    float: left;}
+
+    /*총가격*/
+    p.product_total_title
+    {width: 100%;
+    font-size: 18px; line-height: 25px; text-align: right;
+    font-family: bold; color: red;}
+
+    p.product_total_title>span
+    {font-family: 'Pretendard';
+    font-size: 14px;}
+
+    /*버튼*/
+    div.reservation_list_product_txt_btn_box
+    {width: 100%;
+    overflow: hidden;}
+
+    div.reservation_list_product_txt_btn_box>a
+    {width: 100%; height: 45px;
+    display: block;
+    border-radius: 5px;}
+
+    div.reservation_list_product_txt_btn_box>a>p
+    {text-align: center; line-height: 45px;
+    font-size: 15px;}
+
+    div.reservation_list_product_txt_btn_box>a:nth-child(1)
+    {background-color: #ddd;
+    margin-bottom: 5px;}
+
+    div.reservation_list_product_txt_btn_box>a:nth-child(1)>p
+    {color: #222;}
+
+    div.reservation_list_product_txt_btn_box>a:nth-child(2)
+    {background-color: #1f4e79;}
+
+    div.reservation_list_product_txt_btn_box>a:nth-child(2)>p
+    {color: #fff;}
+
+    /*페이지버튼*/
+    div.page_btn
+    {width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+
+}
+
+@media all and (max-width: 600px)
+{   
+    /*비주얼 배너*/
+    div.visual_sub_banner
+    {width: 100%; height: 200px;
+    overflow: hidden;
+    position: relative;}
+
+    /*비주얼 배너*/
+    div.visual_sub_banner img
+    {width: 100%; height: 100%;
+    object-fit: cover;
+    transition: all 2s;
+    transform: scale(1.2);}
+
+    p.visual_sub_text
+    {width: 90%;
+    position: absolute;
+    top: calc(50% + 5px); left: 5%;
+    text-align: center;
+    opacity: 0;
+    transition: all 2s;
+    word-break: keep-all;
+    font-family: bold; color: #fff;
+    font-size: 24px; line-height: 30px;}
+    
+    /*리스트*/
+    div.reservation_list_product_contents_ex
+    {width: 90%;
+    margin: 0 auto;
+    border-radius: 5px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    overflow: hidden;
+    margin-bottom: 15px;}
+
+    div.reservation_list_product_contents_box
+    {width: 90%;
+    margin: 0 auto;
+    padding-top: 5%; padding-bottom: 5%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;}
+
+    /*이미지*/
+    div.reservation_list_product_img_box
+    {width: 100%; height: 0;
+    padding-bottom: 100%;
+    margin-right: 0;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 10px;}
+
+    div.reservation_list_product_img_box img
+    {width: 100%; height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0; left: 0;}
+
+    /*텍스트*/
+    div.reservation_list_product_txt_box
+    {width: 100%;}
+}
+
+@media all and (max-width: 319px)
+{   
+    /*리스트*/
+    div.reservation_list_product_contents_ex
+    {width: 100%;}
+}

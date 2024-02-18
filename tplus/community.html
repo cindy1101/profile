@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, minimum-scale=1.0, user-scalable=no">
+    <title>커뮤니티</title>
+
+    <script src="lib/code.jquery.com_jquery-3.7.1.min.js"></script>
+
+    <!--페이징버튼-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <script src="lib/header.js"></script>
+
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+    <header class="tplus_header">
+
+        <div class="header_wrap">
+
+            <a href="index.html" class="header_logo">
+                <img src="img/color_logo.png">
+            </a>
+
+            <nav class="header_gnb">
+
+                <ul>
+                    <li>
+                        <a href="about.html">
+                            <p>ABOUT US</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="business.html">
+                            <p>BUSINESS</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="portfolio.html">
+                            <p>PORTFOLIO</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="now.html">
+                            <p>NOW</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="community.html">
+                            <p>COMMUNITY</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="inquiry.html">
+                            <p>INQUIRY</p>
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header><!--tplus_header end-->
+
+    <header class="tplus_mobile_header">
+
+        <div class="tplus_mobile_header_top">
+
+            <a href="index.html" class="mobile_header_logo">
+                <img src="img/color_logo.png">
+            </a>
+
+            <div class="menu_open_m">
+                <img src="img/menu_open_btn.png">
+            </div>
+
+        </div><!--tplus_mobile_header_top end-->
+
+
+        <div class="tplus_mobile_header_sheet">
+
+            <div class="tplus_mobile_header_sheet_cont">
+
+                <div class="menu_close_m">
+                    <img src="img/menu_close_icon.png">
+                </div>
+
+                <nav class="tplus_mobile_lnb">
+
+                    <ul>
+                        <li>
+                            <a href="about.html">
+                                <p>ABOUT US</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="business.html">
+                                <p>BUSINESS</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="portfolio.html">
+                                <p>PORTFOLIO</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="now.html">
+                                <p>NOW</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="community.html">
+                                <p>COMMUNITY</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="inquiry.html">
+                                <p>INQUIRY</p>
+                            </a>
+                        </li>
+                        
+                    </ul>
+
+                </nav><!--tplus_mobile_lnb end-->
+                
+
+            </div><!--tplus_mobile_header_sheet_cont end-->
+
+        </div><!--tplus_mobile_header_sheet end-->
+
+        
+
+    </header><!--tplus_mobile_header end-->
+    
+    <div class="community_page_ex">
+
+        <div class="sub_root_box">
+
+            <a href="index.html">
+                <img src="img/home_icon.png" alt="">
+            </a>
+
+            <p>></p>
+
+            <p>COMMUNITY</p>
+
+        </div><!--sub_root_box end-->
+
+        <div class="sub_title_box">
+
+            <p>COMMUNITY</p>
+
+        </div><!--sub_title_box-->
+
+        <div class="community_page_cont_ex">
+
+            <div class="community_page_cont_label_box">
+
+                <a href="#" class="community_page_cont_chk_btn">
+                    <p>전체</p>
+                </a>
+
+                <a href="#">
+                    <p>공지</p>
+                </a>
+
+                <a href="#">
+                    <p>보도자료</p>
+                </a>
+
+                <a href="#">
+                    <p>갤러리</p>
+                </a>
+
+            </div><!--community_page_cont_label_box-->
+
+            <div class="search_total_cont_ex">
+
+                <p class="sub_total_txt">Total <span>33건</span></p>
+
+                <div class="sub_search_cont_ex">
+
+                    <div class="sub_search_cont_box">
+    
+                        <input type="text" class="search_cont_box_txt" placeholder="검색어를 입력하세요.">
+    
+                        <input type="submit" id="search_cont_submit_btn">
+    
+                        <label for="search_cont_submit_btn" class="search_cont_submit_btn_icon">
+                            <img src="img/search_icon.png">
+                        </label>
+    
+                    </div><!--sub_search_cont_box-->
+    
+                </div><!--sub_search_cont_ex-->
+
+            </div><!--search_total_cont_ex-->
+
+            <p class="community_page_no_cont" style="display: none;">등록된 게시물이 없습니다.</p>
+
+            <ul class="community_page_cont_detaile_title">
+
+                <li>
+                    <p>번호</p>
+                </li>
+
+                <li>
+                    <p>제목</p>
+                </li>
+
+                <li>
+                    <p>글쓴이</p>
+                </li>
+
+                <li>
+                    <p>조회</p>
+                </li>
+
+                <li>
+                    <p>날짜</p>
+                </li>
+
+            </ul><!--community_page_cont_detaile_title-->
+
+            <ul class="community_page_cont_detaile">
+
+                <li>
+                    <p>33</p>
+                </li>
+
+                <li>
+                    <a href="community_detaile.html">
+                        <p><span>보도자료</span>부산시「2022 사랑의 김치나눔 한마당」개최</p>
+                    </a>
+                </li>
+
+                <li>
+                    <p>최고관리자</p>
+                </li>
+
+                <li>
+                    <p>1736</p>
+                </li>
+
+                <li>
+                    <p>23.03.28</p>
+                </li>
+
+            </ul><!--community_page_cont_detaile-->
+
+            <ul class="community_page_cont_detaile">
+
+                <li>
+                    <p>32</p>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <p><span>보도자료</span>창원서 '제15회 자율관리어업 전국대회' 개최 [창원소식]</p>
+                    </a>
+                </li>
+
+                <li>
+                    <p>최고관리자</p>
+                </li>
+
+                <li>
+                    <p>1736</p>
+                </li>
+
+                <li>
+                    <p>23.03.28</p>
+                </li>
+
+            </ul><!--community_page_cont_detaile-->
+
+            <ul class="community_page_cont_detaile">
+
+                <li>
+                    <p>31</p>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <p><span>보도자료</span>‘창원 밀리터리 게임 페스타’ 성황리 개최</p>
+                    </a>
+                </li>
+
+                <li>
+                    <p>최고관리자</p>
+                </li>
+
+                <li>
+                    <p>1736</p>
+                </li>
+
+                <li>
+                    <p>23.03.28</p>
+                </li>
+
+            </ul><!--community_page_cont_detaile-->
+
+            <ul class="community_page_cont_detaile">
+
+                <li>
+                    <p>30</p>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <p><span>보도자료</span>기장군, “반갑다 멸치야” 20일 기장멸치축제 개최</p>
+                    </a>
+                </li>
+
+                <li>
+                    <p>최고관리자</p>
+                </li>
+
+                <li>
+                    <p>1736</p>
+                </li>
+
+                <li>
+                    <p>23.03.28</p>
+                </li>
+
+            </ul><!--community_page_cont_detaile-->
+
+            <ul class="community_page_cont_detaile">
+
+                <li>
+                    <p>29</p>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <p><span>보도자료</span>2022 더 클래식 김해 오디션의 주인공은?</p>
+                    </a>
+                </li>
+
+                <li>
+                    <p>최고관리자</p>
+                </li>
+
+                <li>
+                    <p>1736</p>
+                </li>
+
+                <li>
+                    <p>23.03.28</p>
+                </li>
+
+            </ul><!--community_page_cont_detaile-->
+
+            <ul class="community_page_cont_detaile">
+
+                <li>
+                    <p>28</p>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <p><span>보도자료</span>
+                            [포토뉴스] 제23회 부산국제관광전 개최 </p>
+                    </a>
+                </li>
+
+                <li>
+                    <p>최고관리자</p>
+                </li>
+
+                <li>
+                    <p>1736</p>
+                </li>
+
+                <li>
+                    <p>23.03.28</p>
+                </li>
+
+            </ul><!--community_page_cont_detaile-->
+
+            <ul class="community_page_cont_detaile">
+
+                <li>
+                    <p>27</p>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <p><span>보도자료</span>금정구, ‘2022년 제10회 평생학습박람회’ 성료</p>
+                    </a>
+                </li>
+
+                <li>
+                    <p>최고관리자</p>
+                </li>
+
+                <li>
+                    <p>1736</p>
+                </li>
+
+                <li>
+                    <p>23.03.28</p>
+                </li>
+
+            </ul><!--community_page_cont_detaile-->
+
+            <ul class="community_page_cont_detaile">
+
+                <li>
+                    <p>26</p>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <p><span>보도자료</span>김해 은하사, 제1회 가야불교역사문화제 개최</p>
+                    </a>
+                </li>
+
+                <li>
+                    <p>최고관리자</p>
+                </li>
+
+                <li>
+                    <p>1736</p>
+                </li>
+
+                <li>
+                    <p>23.03.28</p>
+                </li>
+
+            </ul><!--community_page_cont_detaile-->
+
+            <ul class="community_page_cont_detaile">
+
+                <li>
+                    <p>25</p>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <p><span>보도자료</span>부산항일학생의거 82주년 및 제7회 부산항일학생의 날 기념행사 개최</p>
+                    </a>
+                </li>
+
+                <li>
+                    <p>최고관리자</p>
+                </li>
+
+                <li>
+                    <p>1736</p>
+                </li>
+
+                <li>
+                    <p>23.03.28</p>
+                </li>
+
+            </ul><!--community_page_cont_detaile-->
+
+            <ul class="community_page_cont_detaile">
+
+                <li>
+                    <p>24</p>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <p><span>보도자료</span>기장군, 동암항 어촌뉴딜300사업 준공식 개최</p>
+                    </a>
+                </li>
+
+                <li>
+                    <p>최고관리자</p>
+                </li>
+
+                <li>
+                    <p>1736</p>
+                </li>
+
+                <li>
+                    <p>23.03.28</p>
+                </li>
+
+            </ul><!--community_page_cont_detaile-->
+
+            <ul class="community_page_cont_detaile">
+
+                <li>
+                    <p>23</p>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <p><span>보도자료</span>한국앱손, 인쇄 때 열 안나오는 '히트프리' 캠페인 부스 설치</p>
+                    </a>
+                </li>
+
+                <li>
+                    <p>최고관리자</p>
+                </li>
+
+                <li>
+                    <p>1736</p>
+                </li>
+
+                <li>
+                    <p>23.03.28</p>
+                </li>
+
+            </ul><!--community_page_cont_detaile-->
+
+            <ul class="community_page_cont_detaile">
+
+                <li>
+                    <p>22</p>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <p><span>갤러리</span>국제 크루즈 환대행사 (2023)</p>
+                    </a>
+                </li>
+
+                <li>
+                    <p>최고관리자</p>
+                </li>
+
+                <li>
+                    <p>1736</p>
+                </li>
+
+                <li>
+                    <p>23.03.28</p>
+                </li>
+
+            </ul><!--community_page_cont_detaile-->
+
+            <ul class="community_page_cont_detaile">
+
+                <li>
+                    <p>21</p>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <p><span>갤러리</span>부산경남봉제산업협동조합장 이취임식 (2023)</p>
+                    </a>
+                </li>
+
+                <li>
+                    <p>최고관리자</p>
+                </li>
+
+                <li>
+                    <p>1736</p>
+                </li>
+
+                <li>
+                    <p>23.03.28</p>
+                </li>
+
+            </ul><!--community_page_cont_detaile-->
+
+            <ul class="community_page_cont_detaile">
+
+                <li>
+                    <p>20</p>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <p><span>갤러리</span>에너지신사업 혁신공유대학 부산권역 공동 성과공유회 (2023)</p>
+                    </a>
+                </li>
+
+                <li>
+                    <p>최고관리자</p>
+                </li>
+
+                <li>
+                    <p>1736</p>
+                </li>
+
+                <li>
+                    <p>23.03.28</p>
+                </li>
+
+            </ul><!--community_page_cont_detaile-->
+
+            <ul class="community_page_cont_detaile">
+
+                <li>
+                    <p>19</p>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <p><span>갤러리</span>한국앱손기업홍보체험행사 (2023)</p>
+                    </a>
+                </li>
+
+                <li>
+                    <p>최고관리자</p>
+                </li>
+
+                <li>
+                    <p>1736</p>
+                </li>
+
+                <li>
+                    <p>23.03.28</p>
+                </li>
+
+            </ul><!--community_page_cont_detaile-->
+
+
+            <div class="page_btn_box">
+
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                    </ul>
+                </nav>
+
+            </div><!--page_btn_box-->
+
+        </div><!--community_page_cont_ex-->
+
+    </div><!--community_page_ex-->
+
+    <footer class="tplus_footer_ex">
+
+        <div class="footer_box">
+
+            <a href="#" class="footer_logo">
+                <img src="img/white_logo.png" alt="">
+            </a>
+
+            <div class="footer_cont">
+
+                <p>대표자 : 이기형</p>
+                <p>주소 : 부산광역시 동래구 사직로 7 (사직동, 포스카빌딩 7층)</p>
+                <p>사업자 등록번호 : 607-81-97964</p>
+                <p>전화문의 : 051-503-0882</p>
+                <p>이메일 : tplus@tplusmice.co.kr</p>
+                <p>Copyright ⓒ 2023 T Plus. All right reserved.</p>
+
+            </div><!--footer_cont-->
+
+        </div><!--footer_box-->
+
+    </footer><!--tplus_footer_ex-->
+
+</body>
+</html>

@@ -1,0 +1,974 @@
+* {margin: 0; padding: 0;}
+li {list-style: none;}
+a {text-decoration: none;}
+img {display: block;}
+
+*::-webkit-scrollbar {
+    display: none; /* 크롬, 사파리, 오페라, 엣지 */
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'min_bold';
+    font-weight: 600;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'bold';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.ttf') format("truetype");
+    font-display: swap;
+}
+
+body {font-family: 'Pretendard'; line-height: 16px;}
+
+p {margin-bottom: 0;}
+
+ul {margin: 0; padding: 0;}
+
+input:not([type]), input[type="text"], input[type="password"], 
+input[type="date"], input[type="datetime"], 
+input[type="datetime-local"], input[type="month"], 
+input[type="week"], input[type="email"], input[type="number"], 
+input[type="search"], input[type="tel"], input[type="time"], 
+input[type="url"], input[type="color"], textarea
+{box-shadow: none;
+background-color: #fff;
+padding: 0;
+margin-bottom: 0;
+outline: none;}
+
+input[type="checkbox"]
+{margin-bottom: 0;}
+
+input[type="checkbox"]+label, input[type="radio"]+label 
+{margin: 0;}
+
+@media all and (min-width: 1420px)
+{   
+    /*비주얼베너*/
+    div.visual_sub_banner
+    {width: 100%; height: 350px;
+    margin-top: 139.44px;
+    overflow: hidden;
+    position: relative;}
+
+    div.visual_sub_banner img
+    {width: 100%; height: 100%;
+    object-fit: cover;
+    transition: all 2s;
+    transform: scale(1.2);}
+
+    p.visual_sub_text
+    {width: 100%;
+    position: absolute;
+    top: calc(50% - 25px); left: 0;
+    text-align: center;
+    opacity: 0;
+    transition: all 2s;
+    font-family: bold; color: #fff;
+    font-size: 42px; line-height: 50px;}
+
+    /*루트*/
+    div.nav_ex
+    {width: 100%;
+    background-color: #51b8ff;}
+
+    nav.nav_box
+    {width: 1400px;
+    margin: 0 auto;
+    overflow: hidden;}
+
+    nav.nav_box>ul
+    {width: 100%;
+    overflow: hidden;}
+
+    nav.nav_box>ul>li
+    {float: left;}
+
+    nav.nav_box>ul>li:nth-child(1)
+    {width: 20px; height: 20px;
+    margin-top: 10px; margin-bottom: 10px;}
+    
+    nav.nav_box>ul>li:nth-child(1) img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    nav.nav_box>ul>li>p
+    {line-height: 40px;
+    color: #fff;
+    margin-left: 10px; margin-right: 10px;}
+
+    nav.nav_box>ul>li>a>p
+    {line-height: 40px;
+    color: #fff;}
+
+    /*디테일*/
+    div.wellness_programs_detaile_ex
+    {width: 1400px;
+    margin: 100px auto;
+    margin-bottom: 150px;}
+
+    /*타이틀*/
+    div.wellness_programs_detaile_title
+    {width: 100%;
+    margin-bottom: 50px; padding-bottom: 30px;
+    border-bottom: 1px solid #222; box-sizing: border-box;}
+
+    div.wellness_programs_detaile_title>p:nth-child(1)
+    {width: 100%;
+    font-family: 'min_bold'; line-height: 25px;
+    color: #51b8ff; 
+    margin-bottom: 10px;}
+
+    div.wellness_programs_detaile_title>p:nth-child(2)
+    {width: 100%;
+    font-size: 28px; font-family: bold; line-height: 32px;
+    color: #222; word-break: keep-all;}
+
+    /*비주얼 슬라이드 이미지*/
+    div.wellness_programs_detaile_visual
+    {width: 100%;
+    margin-bottom: 30px;}
+
+    div.wellness_programs_detaile_visual_img
+    {width: 100%; height: 0;
+    position: relative;
+    padding-bottom: 100%;
+    border-radius: 5px;
+    overflow: hidden;}
+
+    div.wellness_programs_detaile_visual_img img
+    {width: 100%; height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0; left: 0;}
+
+    /*소개*/
+    div.wellness_programs_introduction
+    {width: 100%; 
+    background-color: #f3f3f3;
+    margin-bottom: 50px;}
+
+    div.wellness_programs_introduction>p
+    {width: calc(100% - 40px);
+    margin: 0 auto;
+    font-size: 15px; line-height: 25px; color: #222;
+    word-break: keep-all;
+    padding-top: 20px; padding-bottom: 20px;}
+
+    /*기타 입력 사항*/
+    div.wellness_programs_detailed_information_box
+    {width: 100%;
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    overflow: hidden;
+    margin-bottom: 80px;}
+    
+    /*박스*/
+    div.wellness_programs_detailed_information_box>div
+    {width: 48.5%;
+    margin-right: 3%;
+    margin-bottom: 30px;}
+
+    div.wellness_programs_detailed_information_box>div:nth-child(2n+2)
+    {margin-right: 0;}
+
+    div.wellness_programs_detailed_information_box>div:last-child
+    {margin-bottom: 0;}
+
+    div.wellness_programs_detailed_information_icon_ex
+    {width: 100%;
+    margin-bottom: 10px;}
+
+    div.wellness_programs_detailed_information_icon_box
+    {width: 30px; height: 30px;
+    margin-bottom: 10px;}
+
+    div.wellness_programs_detailed_information_icon_box img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    p.wellness_programs_detailed_information_icon_title
+    {width: 100%;
+    font-size: 17px;
+    font-family: bold; color: #222; line-height: 25px;}
+    
+    /*내용*/
+    p.wellness_programs_detailed_information_contents
+    {width: 100%;
+    word-break: keep-all; line-height: 25px;
+    color: #555;}
+    
+    /*링크*/
+    a.wellness_programs_detailed_information_link
+    {width: 100%;
+    display: block;}
+
+    a.wellness_programs_detailed_information_link>p
+    {width: 100%;
+    word-break: keep-all; line-height: 25px;
+    color: #51b8ff; text-decoration: underline;
+    text-decoration-color: #51b8ff;}
+
+    /*이전 글 다음 글*/
+    div.wellness_programs_link_ex
+    {width: 100%;
+    border-top: 1px solid #ddd; box-sizing: border-box;
+    border-bottom: 1px solid #ddd; box-sizing: border-box;
+    margin-bottom: 80px;}
+
+    /*이전글*/
+    a.prve_wellness
+    {width: 100%;
+    display: block;
+    padding-top: 20px; padding-bottom: 20px;
+    border-bottom: 1px solid #ddd; box-sizing: border-box;}
+
+    a.prve_wellness>div
+    {width: calc(100% - 50px);
+    margin: 0 auto;
+    overflow: hidden;}
+
+    a.prve_wellness>div>p
+    {float: left;
+    line-height: 25px;
+    transition: all 0.3s;}
+
+    a.prve_wellness>div>p:nth-child(1)
+    {width: 150px;
+    text-align: center;
+    font-family: 'min_bold';
+    color: #222;}
+
+    a.prve_wellness>div>p:nth-child(2)
+    {width: calc(100% - 150px);
+    color: #555;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;}
+
+    a.prve_wellness:hover>div>p
+    {color: #51b8ff;}
+    
+    /*다음 글*/
+    a.next_wellness
+    {width: 100%;
+    display: block;
+    padding-top: 20px; padding-bottom: 20px;}
+
+    a.next_wellness>div
+    {width: calc(100% - 50px);
+    margin: 0 auto;
+    overflow: hidden;}
+
+    a.next_wellness>div>p
+    {float: left;
+    line-height: 25px;
+    transition: all 0.3s;}
+
+    a.next_wellness>div>p:nth-child(1)
+    {width: 150px;
+    text-align: center;
+    font-family: 'min_bold';
+    color: #222;}
+
+    a.next_wellness>div>p:nth-child(2)
+    {width: calc(100% - 150px);
+    color: #555;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;}
+
+    a.next_wellness:hover>div>p
+    {color: #51b8ff;}
+
+    /*목록으로*/
+    a.back_wellness_btn
+    {width: 126px; height: 45px;
+    margin: 0 auto;
+    border-radius: 5px;
+    background-color: #222;
+    display: block;
+    transition: all 0.3s;}
+
+    a.back_wellness_btn>p
+    {color: #fff;
+    line-height: 45px; text-align: center;}
+
+    a.back_wellness_btn:hover
+    {background-color: #51b8ff;}
+
+}
+
+@media all and (min-width: 769px) and (max-width : 1419px)
+{   
+     /*비주얼베너*/
+    div.visual_sub_banner
+    {width: 100%; height: 350px;
+    margin-top: 139.44px;
+    overflow: hidden;
+    position: relative;}
+
+    div.visual_sub_banner img
+    {width: 100%; height: 100%;
+    object-fit: cover;
+    transition: all 2s;
+    transform: scale(1.2);}
+
+    p.visual_sub_text
+    {width: 100%;
+    position: absolute;
+    top: calc(50% - 25px); left: 0;
+    text-align: center;
+    opacity: 0;
+    transition: all 2s;
+    font-family: bold; color: #fff;
+    font-size: 42px; line-height: 50px;}
+
+     /*루트*/
+    div.nav_ex
+    {width: 100%;
+    background-color: #51b8ff;}
+
+    nav.nav_box
+    {width: 90%;
+    margin: 0 auto;}
+
+    nav.nav_box>ul
+    {width: 100%;
+    overflow: hidden;}
+
+    nav.nav_box>ul>li
+    {width: fit-content;
+    float: left;
+    margin-right: 10px;}
+
+    nav.nav_box>ul>li:nth-child(1)
+    {width: 20px; height: 20px;
+    margin-top: 10px; margin-bottom: 10px;}
+
+    nav.nav_box>ul>li:nth-child(1)>a
+    {width: 100%; height: 100%;
+    display: block;}
+
+    nav.nav_box>ul>li:nth-child(1)>a img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    nav.nav_box>ul>li>p
+    {line-height: 40px; color: #fff;}
+
+    nav.nav_box>ul>li:last-child>a>p
+    {line-height: 40px; color: #fff;}
+
+    nav.nav_box>ul>li:last-child
+    {margin-right: 0;}
+
+    /*전체 박스*/
+    div.wellness_programs_detaile_ex
+    {width: 90%;
+    margin: 100px auto;
+    margin-bottom: 150px;}
+
+    /*타이틀*/
+    div.wellness_programs_detaile_title
+    {width: 100%;
+    margin-bottom: 50px; padding-bottom: 30px;
+    border-bottom: 1px solid #222; box-sizing: border-box;}
+
+    div.wellness_programs_detaile_title>p:nth-child(1)
+    {width: 100%;
+    font-size: 17px; font-family: 'min_bold'; color: #51b8ff;
+    line-height: 25px; word-break: keep-all;
+    margin-bottom: 5px;}
+
+    div.wellness_programs_detaile_title>p:nth-child(2)
+    {width: 100%;
+    font-size: 28px; font-family: bold; line-height: 32px;
+    color: #222; word-break: keep-all;}
+
+    /*비주얼 슬라이드 이미지*/
+    div.wellness_programs_detaile_visual
+    {width: 100%;
+    margin-bottom: 30px;}
+
+    div.wellness_programs_detaile_visual_img
+    {width: 100%; height: 0;
+    position: relative;
+    padding-bottom: 100%;
+    border-radius: 5px;
+    overflow: hidden;}
+
+    div.wellness_programs_detaile_visual_img img
+    {width: 100%; height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0; left: 0;}
+
+    /*소개*/
+    div.wellness_programs_introduction
+    {width: 100%; 
+    background-color: #f3f3f3;
+    margin-bottom: 50px;}
+
+    div.wellness_programs_introduction>p
+    {width: calc(100% - 40px);
+    margin: 0 auto;
+    font-size: 15px; line-height: 25px; color: #222;
+    word-break: keep-all;
+    padding-top: 20px; padding-bottom: 20px;}
+
+     /*기타 입력 사항*/
+    div.wellness_programs_detailed_information_box
+    {width: 100%;
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    overflow: hidden;
+    margin-bottom: 80px;}
+    
+    /*박스*/
+    div.wellness_programs_detailed_information_box>div
+    {width: 48.5%;
+    margin-right: 3%;
+    margin-bottom: 30px;}
+
+    div.wellness_programs_detailed_information_box>div:nth-child(2n+2)
+    {margin-right: 0;}
+
+    div.wellness_programs_detailed_information_box>div:last-child
+    {margin-bottom: 0;}
+
+    div.wellness_programs_detailed_information_icon_ex
+    {width: 100%;
+    margin-bottom: 15px;}
+
+    div.wellness_programs_detailed_information_icon_box
+    {width: 35px; height: 35px;
+    margin-bottom: 10px;}
+
+    div.wellness_programs_detailed_information_icon_box img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    p.wellness_programs_detailed_information_icon_title
+    {width: 100%;
+    font-size: 20px;
+    font-family: bold; color: #222; line-height: 25px;}
+    
+    /*내용*/
+    p.wellness_programs_detailed_information_contents
+    {width: 100%;
+    word-break: keep-all; line-height: 25px;
+    color: #555;}
+    
+    /*링크*/
+    a.wellness_programs_detailed_information_link
+    {width: 100%;
+    display: block;}
+
+    a.wellness_programs_detailed_information_link>p
+    {width: 100%;
+    word-break: keep-all; line-height: 25px;
+    color: #51b8ff; text-decoration: underline;
+    text-decoration-color: #51b8ff;}
+
+    /*링크 박스*/
+    div.wellness_programs_link_ex
+    {width: 100%;
+    border-top: 1px solid #ddd; border-bottom: 1px solid #ddd;
+    box-sizing: border-box;
+    margin-bottom: 80px;}
+    
+    /*이전글*/
+    a.prve_wellness
+    {width: 100%;
+    display: block;
+    border-bottom: 1px solid #ddd; box-sizing: border-box;
+    padding-top: 20px; padding-bottom: 20px;}
+
+    a.prve_wellness>div
+    {width: calc(100% - 30px);
+    margin: 0 auto;
+    overflow: hidden;}
+
+    a.prve_wellness>div>p
+    {float: left;
+    line-height: 25px;
+    transition: all 0.3s;}
+
+    a.prve_wellness>div>p:nth-child(1)
+    {width: 150px;
+    text-align: center;
+    font-family: 'min_bold';
+    color: #222;}
+
+    a.prve_wellness>div>p:nth-child(2)
+    {width: calc(100% - 150px);
+    color: #555;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;}
+
+    a.prve_wellness:hover>div>p
+    {color: #51b8ff;}
+
+     /*다음 글*/
+    a.next_wellness
+    {width: 100%;
+    display: block;
+    padding-top: 20px; padding-bottom: 20px;}
+
+    a.next_wellness>div
+    {width: calc(100% - 30px);
+    margin: 0 auto;
+    overflow: hidden;}
+
+    a.next_wellness>div>p
+    {float: left;
+    line-height: 25px;
+    transition: all 0.3s;}
+
+    a.next_wellness>div>p:nth-child(1)
+    {width: 150px;
+    text-align: center;
+    font-family: 'min_bold';
+    color: #222;}
+
+    a.next_wellness>div>p:nth-child(2)
+    {width: calc(100% - 150px);
+    color: #555;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;}
+
+    a.next_wellness:hover>div>p
+    {color: #51b8ff;}
+
+     /*목록으로*/
+    a.back_wellness_btn
+    {width: 126px; height: 45px;
+    margin: 0 auto;
+    border-radius: 5px;
+    background-color: #222;
+    display: block;
+    transition: all 0.3s;}
+
+    a.back_wellness_btn>p
+    {color: #fff;
+    line-height: 45px; text-align: center;}
+
+    a.back_wellness_btn:hover
+    {background-color: #51b8ff;}
+
+}
+
+@media all and (min-width: 769px) and (max-width: 1279px)
+{
+    /*비주얼배너*/
+    div.visual_sub_banner
+    {margin-top: 0;}
+}
+
+@media all and (max-width : 768px)
+{   
+    /*비주얼베너*/
+    div.visual_sub_banner
+    {width: 100%; height: 250px;
+    overflow: hidden;
+    position: relative;}
+
+    div.visual_sub_banner img
+    {width: 100%; height: 100%;
+    object-fit: cover;
+    transition: all 2s;
+    transform: scale(1.2);}
+
+    p.visual_sub_text
+    {width: 100%;
+    position: absolute;
+    top: calc(50% - 20px); left: 0;
+    text-align: center;
+    opacity: 0;
+    transition: all 2s;
+    font-family: bold; color: #fff;
+    font-size: 32px; line-height: 40px;}
+
+    /*루트*/
+    div.nav_ex
+    {width: 100%;
+    background-color: #51b8ff;}
+
+    nav.nav_box
+    {width: 90%;
+    margin: 0 auto;}
+
+    nav.nav_box>ul
+    {width: 100%;
+    overflow: hidden;}
+
+    nav.nav_box>ul>li
+    {float: left;}
+
+    nav.nav_box>ul>li:nth-child(1)
+    {width: 20px; height: 20px;
+    margin-top: 10px; margin-bottom: 10px;
+    margin-right: 10px;}
+
+    nav.nav_box>ul>li:nth-child(1)>a img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    nav.nav_box>ul>li:nth-child(2)
+    {width: fit-content;
+    margin-right: 10px;}
+
+    nav.nav_box>ul>li:nth-child(2)>p
+    {font-size: 15px; line-height: 40px; color: #fff;}
+
+    nav.nav_box>ul>li:nth-child(3)
+    {width: fit-content;
+    max-width: calc(100% - 50px);}
+
+    nav.nav_box>ul>li:nth-child(3)>a>p
+    {font-size: 15px; line-height: 40px; 
+    color: #fff;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;}
+
+    /*전체박스*/
+    div.wellness_programs_detaile_ex
+    {width: 90%;
+    margin: 50px auto;
+    margin-bottom: 80px;}
+
+    /*타이틀*/
+    div.wellness_programs_detaile_title
+    {width: 100%;
+    padding-bottom: 30px; margin-bottom: 30px;
+    border-bottom: 1px solid #222; box-sizing: border-box;}
+
+    div.wellness_programs_detaile_title>p:nth-child(1)
+    {width: 100%;
+    font-family: 'min_bold'; color: #51b8ff; line-height: 20px;
+    word-break: keep-all; font-size: 15px;
+    margin-bottom: 5px;}
+
+    div.wellness_programs_detaile_title>p:nth-child(2)
+    {width: 100%;
+    word-break: keep-all;
+    font-size: 22px; font-family: bold; color: #222; line-height: 27px;}
+
+    /*비주얼 슬라이드 이미지*/
+    div.wellness_programs_detaile_visual
+    {width: 100%;
+    margin-bottom: 20px;}
+
+    div.wellness_programs_detaile_visual_img
+    {width: 100%; height: 0;
+    position: relative;
+    padding-bottom: 100%;
+    border-radius: 5px;
+    overflow: hidden;}
+
+    div.wellness_programs_detaile_visual_img img
+    {width: 100%; height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0; left: 0;}
+
+    /*소개*/
+    div.wellness_programs_introduction
+    {width: 100%; max-height: 250px;
+    overflow-y: scroll;
+    background-color: #f3f3f3;
+    margin-bottom: 30px;}
+
+    /*스크롤바 바꾸기*/
+    .wellness_programs_introduction::-webkit-scrollbar
+    {width: 2px;
+    display: block;}
+
+    .wellness_programs_introduction::-webkit-scrollbar-thumb
+    {background-color: #51b8ff;
+    border-radius: 10px;}
+
+    .wellness_programs_introduction::-webkit-scrollbar-track
+    {background-color: #ddd;}
+    
+    div.wellness_programs_introduction>p
+    {width: calc(100% - 40px);
+    margin: 0 auto;
+    font-size: 15px; line-height: 25px; color: #222;
+    word-break: keep-all;
+    padding-top: 20px; padding-bottom: 20px;}
+
+    /*기타 입력 사항*/
+    div.wellness_programs_detailed_information_box
+    {width: 100%;
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    margin-bottom: 50px;}
+
+    div.wellness_programs_detailed_information_box>div
+    {width: 48.5%;
+    margin-right: 3%;
+    margin-bottom: 20px;}
+
+    div.wellness_programs_detailed_information_box>div:nth-child(2n+2)
+    {margin-right: 0;}
+
+    div.wellness_programs_detailed_information_box>div:last-child
+    {margin-bottom: 0;}
+
+    /*아이콘 박스*/
+    div.wellness_programs_detailed_information_icon_ex
+    {width: 100%;
+    margin-bottom: 10px;}
+
+    div.wellness_programs_detailed_information_icon_box
+    {width: 30px; height: 30px;
+    margin-bottom: 10px;}
+
+    div.wellness_programs_detailed_information_icon_box img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    p.wellness_programs_detailed_information_icon_title
+    {width: 100%;
+    font-family: bold; color: #222; line-height: 25px;
+    font-size: 17px;
+    word-break: keep-all;}
+
+    p.wellness_programs_detailed_information_contents
+    {width: 100%;
+    word-break: keep-all;
+    font-size: 15px; color: #555; line-height: 22px;}
+
+    a.wellness_programs_detailed_information_link
+    {width: 100%;
+    display: block;}
+
+    a.wellness_programs_detailed_information_link>p
+    {width: 100%;
+    word-break: break-all; line-height: 22px;
+    font-size: 15px;
+    color: #51b8ff; text-decoration: underline;
+    text-decoration-color: #51b8ff;}
+    
+    /*링크 박스*/
+    div.wellness_programs_link_ex
+    {width: 100%;
+    border-top: 1px solid #ddd; border-bottom: 1px solid #ddd;
+    box-sizing: border-box;
+    margin-bottom: 50px;}
+    
+    /*이전글*/
+    a.prve_wellness
+    {width: 100%;
+    display: block;
+    padding-top: 20px; padding-bottom: 20px;
+    border-bottom: 1px solid #ddd; box-sizing: border-box;}
+
+    a.prve_wellness>div
+    {width: calc(100% - 20px);
+    margin: 0 auto;
+    overflow: hidden;}
+
+    a.prve_wellness>div>p
+    {float: left;
+    line-height: 25px;
+    font-size: 15px;
+    transition: all 0.3s;}
+
+    a.prve_wellness>div>p:nth-child(1)
+    {width: 100px;
+    text-align: center;
+    font-family: 'min_bold';
+    color: #222;}
+
+    a.prve_wellness>div>p:nth-child(2)
+    {width: calc(100% - 100px);
+    color: #555;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;}
+
+    /*다음 글*/
+    a.next_wellness
+    {width: 100%;
+    display: block;
+    padding-top: 20px; padding-bottom: 20px;}
+
+    a.next_wellness>div
+    {width: calc(100% - 20px);
+    margin: 0 auto;
+    overflow: hidden;}
+
+    a.next_wellness>div>p
+    {float: left;
+    font-size: 15px;
+    line-height: 25px;}
+
+    a.next_wellness>div>p:nth-child(1)
+    {width: 100px;
+    text-align: center;
+    font-family: 'min_bold';
+    color: #222;}
+
+    a.next_wellness>div>p:nth-child(2)
+    {width: calc(100% - 100px);
+    color: #555;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;}
+
+    /*목록으로*/
+    a.back_wellness_btn
+    {width: 126px; height: 45px;
+    margin: 0 auto;
+    border-radius: 5px;
+    background-color: #51b8ff;
+    display: block;
+    transition: all 0.3s;}
+
+    a.back_wellness_btn>p
+    {color: #fff;
+    line-height: 45px; text-align: center;}
+
+}
+
+@media all and (max-width: 600px)
+{   
+    /*비주얼배너*/
+    div.visual_sub_banner
+    {width: 100%; height: 200px;
+    overflow: hidden;
+    position: relative;}
+
+    /*비주얼 배너*/
+    div.visual_sub_banner img
+    {width: 100%; height: 100%;
+    object-fit: cover;
+    transition: all 2s;
+    transform: scale(1.2);}
+
+    p.visual_sub_text
+    {width: 90%;
+    position: absolute;
+    top: calc(50% + 5px); left: 5%;
+    text-align: center;
+    opacity: 0;
+    transition: all 2s;
+    word-break: keep-all;
+    font-family: bold; color: #fff;
+    font-size: 24px; line-height: 30px;}
+
+    /*소개 내용*/
+    div.wellness_programs_introduction>p
+    {width: 90%; 
+    margin: 0 auto;
+    font-size: 14px; line-height: 22px; color: #222;
+    word-break: keep-all;
+    padding-top: 5%; padding-bottom: 5%;}
+
+    /*기타 입력 사항*/
+    div.wellness_programs_detailed_information_box
+    {width: 100%;
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    margin-bottom: 50px;}
+
+    div.wellness_programs_detailed_information_box>div
+    {width: 100%;
+    margin-right: 0%;
+    margin-bottom: 20px;}
+
+    div.wellness_programs_detailed_information_box>div:nth-child(2n+2)
+    {margin-right: 0;}
+
+    div.wellness_programs_detailed_information_box>div:last-child
+    {margin-bottom: 0;}
+
+    /*이전 글*/
+    a.prve_wellness>div
+    {width: 90%;
+    margin: 0 auto;
+    overflow: hidden;}
+
+    a.prve_wellness>div>p:nth-child(1)
+    {width: 80px;
+    text-align: center;
+    font-family: 'min_bold';
+    color: #222;}
+
+    a.prve_wellness>div>p:nth-child(2)
+    {width: calc(100% - 80px);
+    color: #555;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;}
+
+    /*다음 글*/
+    a.next_wellness>div
+    {width: 90%;
+    margin: 0 auto;
+    overflow: hidden;}
+
+    a.next_wellness>div>p:nth-child(1)
+    {width: 80px;
+    text-align: center;
+    font-family: 'min_bold';
+    color: #222;}
+
+    a.next_wellness>div>p:nth-child(2)
+    {width: calc(100% - 80px);
+    color: #555;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;}
+
+    
+}
+
+@media all and (max-width: 356px)
+{
+    p.visual_sub_text_long
+    {width: 90%;
+    position: absolute;
+    top: calc(50% - 15px); left: 5%;
+    text-align: center;
+    opacity: 0;
+    transition: all 2s;
+    word-break: keep-all;
+    font-family: bold; color: #fff;
+    font-size: 24px; line-height: 30px;}
+}
